@@ -60,6 +60,10 @@ edit ogp_hotkeys.cfg and delete the line : bind d "r_fullscreen 1", then restart
 
 === ChangeLog ===
 
+2.1
+- bugfix: low grass preset disabling trees shadows
+- shadows settings improvement
+
 2.0
 - Added multiple CVarGroups
 - Does not reset every settings (physics, etc.)
@@ -69,6 +73,7 @@ edit ogp_hotkeys.cfg and delete the line : bind d "r_fullscreen 1", then restart
 - Tweaked shadows for each preset.
 - Tweaked grass for each preset.
 - Added hotkeys to switch individual sub-presets
+- Reduced preset number to only 4 (was 5).
 
 1.31
 fixed black eyes
