@@ -29,6 +29,8 @@ Note: root means the game's root folder, eg: "C:\Program Files (x86)\Steam\steam
 Alternatively, if you already have your own user.cfg, copy the content of "root\optimized_graphic_presets\user.cfg" at the end of it.
 
 3) Add "+exec user.cfg" (without quotes) as game's launch options. cf https://support.steampowered.com/kb_article.php?ref=1040-JWMT-2947
+If you are using non-steam version, create a shortcut for KingdomCome.exe, and add "+exec user.cfg" (without quotes) to its target property. eg:
+"C:\Games\KCD\Bin\Win64\KingdomCome.exe" +exec user.cfg
 
 
 === Usage ===
@@ -70,6 +72,12 @@ edit ogp_hotkeys.cfg and delete the line : bind d "r_fullscreen 1", then restart
 
 
 === ChangeLog ===
+
+2.21
+- bugfix highest preset uses highest settings (ultra was the same as high except for lod)
+- shadow presets : r_ShadowCastingLightsMaxCount 0/10/15/20/25 instead of 3 for all (caused shadow flickering because engine looks to randomly pick light...)
+- moved d and esc hotkey to user.cfg (so user can disable them)
+- increased e_ViewDistMin for low and medium lod presets
 
 2.2
 - hopefully fixed blackface
