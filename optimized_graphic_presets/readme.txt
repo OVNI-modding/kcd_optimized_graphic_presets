@@ -43,6 +43,17 @@ Important: if you modify in-game settings, you have to press F5 afterward, to re
 Note: There's more hotkeys to switch presets for individual categories (shadows, grass, etc.), see ogp_hotkeys.cfg .
 
 
+=== Hotkeys List ===
+
+F1 to F4 = mod's ugly, low, medium, high presets
+F5 = reload user.cfg
+F6 to F10 = vanilla's low, medium, high, very high, ultra presets
+6 to 9 = global illumination quality levels
+Numpad 0, 1, 4, 7 = shadows quality levels
+Numpad 2, 5, 8, / = grass quality levels
+Numpad 3, 6, 9, * = lod quality levels
+
+
 === FAQ / TROUBLESHOOTING ===
 
 Q: How to re-enable motion blur ?
@@ -59,6 +70,17 @@ edit ogp_hotkeys.cfg and delete the line : bind d "r_fullscreen 1", then restart
 
 
 === ChangeLog ===
+
+2.2
+- hopefully fixed blackface
+- fixed some shadow flickering
+- added CVarGroups to revert vanilla settings for each categories.
+- disabled r_VolumetricFogSunLightCorrection (effect only visible if volfog enabled).
+- reduced max shadow sources to 3 (should improve perfs vs npcs with torches)
+- ugly presets is less ugly (enabled grass-terrain color blending + ssdo + less obvious grass popup), costs ~5% FPS more.
+- added a new profile (low had became too heavy)
+- increased ssdo str, reduced min radius (so shadow-less glass looks better).
+- non-ugly presets use r_AntialiasingTAAPattern (better subsampling)
 
 2.1
 - bugfix: low grass preset disabling trees shadows
@@ -87,7 +109,7 @@ fixed black eyes
 - low preset is faster (should be on pair with vanilla low preset)
 
 1.21
-minot global illumination settings tweaks
+minor global illumination settings tweaks
 
 1.2
 - disabled global illumination for ugly presets. As a result you will have to use torches more often but the fps boost is quite huge.
