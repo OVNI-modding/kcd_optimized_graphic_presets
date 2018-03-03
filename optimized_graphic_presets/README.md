@@ -61,7 +61,7 @@ Edit user.cfg and delete the line : bind d "r_fullscreen 1", then restart the ga
 **Q: How to XYZ ?**
 Probably by creating your own profile.
 - make a copy of Config/template.cfg and rename it as you please eg: my_profile.cfg
-- make the change you which in that copy (documentation is within the file).
+- make the changes you wish in that copy (documentation is within the file).
 - edit user.cfg to replace "loadconfig medium" by "loadconfig my_profile" (or whatever you named it).
 
 
