@@ -40,6 +40,9 @@ Numpad 3, 6, 9, * = lod quality levels (from ugly to high)
 FAQ / TROUBLESHOOTING
 =====================
 
+**Q: How to start the game directly with another preset ?**
+Edit user.cfg and modify line "loadconfig medium" (the comment above it explains it all).
+
 **Q: How to fix blocky faces ?**
 Set an higher global illumination resolution using hotkeys and/or change sys_spec_ogp_gi value (0/1/2/3/4).
 
@@ -52,7 +55,7 @@ Edit user.cfg and add r_DeferredShading3PL=2 at the end.
 **Q: How to re-enable wind on grass animation ?**
 Edit user.cfg and add e_MergedMeshesUseSpines=1 at the end.
 
-**Q: I don't want to auto-switch to native fullscreen.**
+**Q: How to disable native fullscreen auto-switch ?**
 Edit user.cfg and delete the line : bind d "r_fullscreen 1", then restart the game.
 
 **Q: How to XYZ ?**
