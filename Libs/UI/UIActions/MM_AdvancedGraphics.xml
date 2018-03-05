@@ -1,24 +1,24 @@
 <Graph Description="" Group="MM_PagesShared" enabled="1" MultiPlayer="ClientServer">
  <Nodes>
-  <Node Id="1" Class="UI:Action:Start" pos="-4338,-2628,0">
+  <Node Id="1" Class="UI:Action:Start" pos="-3762,-630,0">
    <Inputs UseAsState="1"/>
   </Node>
-  <Node Id="144" Class="UI:Functions:MainMenu:AddButton" pos="28116,-1566,0">
+  <Node Id="144" Class="UI:Functions:MainMenu:AddButton" pos="-1458,-270,0">
    <Inputs instanceID="-1" id="ID_RESET_ADVANCED_GRAPHIC" containerIndex="1" uiText="@ui_reset" actionType="reset" tooltip="" disable="0" sound=""/>
   </Node>
-  <Node Id="145" Class="UI:Functions:MainMenu:AddButton" pos="28638,-1278,0">
+  <Node Id="145" Class="UI:Functions:MainMenu:AddButton" pos="-990,-324,0">
    <Inputs instanceID="-1" id="ID_APPLY_ADVANCED_GRAPHICS" containerIndex="1" uiText="Apply (without leaving)" actionType="apply" tooltip="" disable="0" sound=""/>
   </Node>
-  <Node Id="146" Class="UI:Functions:MainMenu:AddButton" pos="29124,-1278,0">
+  <Node Id="146" Class="UI:Functions:MainMenu:AddButton" pos="-504,-324,0">
    <Inputs instanceID="-1" id="IDD_Back" containerIndex="1" uiText="@ui_back" actionType="back" tooltip="" disable="0" sound=""/>
   </Node>
-  <Node Id="229" Class="UI:Functions:MainMenu:SetContainer" pos="-3654,-2484,0">
+  <Node Id="229" Class="UI:Functions:MainMenu:SetContainer" pos="-3078,-486,0">
    <Inputs instanceID="-1" containerIndex="0" ButtonXPos="1500" ButtonYPos="430" MaxButtons="7"/>
   </Node>
-  <Node Id="555" Class="UI:Functions:MainMenu:ClearAll" pos="-3960,-2628,0">
+  <Node Id="555" Class="UI:Functions:MainMenu:ClearAll" pos="-3384,-630,0">
    <Inputs instanceID="-1" useLastSelect="0"/>
   </Node>
-  <Node Id="556" Class="UI:Functions:MainMenu:SetTitleBox" pos="-3654,-2628,0">
+  <Node Id="556" Class="UI:Functions:MainMenu:SetTitleBox" pos="-3078,-630,0">
    <Inputs instanceID="-1" header="@ui_AdvancedGraphicTitle"/>
   </Node>
   <Node Id="665" Class="UI:Functions:MainMenu:SetChoice" pos="4698,-16542,0">
@@ -187,21 +187,21 @@
   <Node Id="1403" Class="Math:BooleanFrom" pos="2718,-19314,0">
    <Inputs Value="0"/>
   </Node>
-  <Node Id="1404" Name="Try_to_load_xml,_store_success_result_within_token" Class="_commentbox" pos="-2970,-5062.687,0">
+  <Node Id="1404" Name="Try_to_load_xml,_store_success_result_within_token" Class="_commentbox" pos="-2970,-5278.3164,0">
    <Inputs TextSize="1" Color="0.27451,0.352941,0.705882" DisplayFilled="1" DisplayBox="1" SortPriority="16"/>
    <ResizeBorder X="0" Y="0" Width="972" Height="396"/>
-   <NodeSize Width="4156.9873" Height="647.69617"/>
+   <NodeSize Width="7567.8564" Height="863.32617"/>
   </Node>
-  <Node Id="1943" Class="Xml:SaveDocument" pos="32904,8226,0">
+  <Node Id="1943" Class="Xml:SaveDocument" pos="-1314,4644,0">
    <Inputs File="ogp_settings.xml" Location="3" Overwrite="1"/>
   </Node>
-  <Node Id="1944" Class="UI:Action:End" pos="33858,8334,0">
+  <Node Id="1944" Class="UI:Action:End" pos="-360,4752,0">
    <Inputs UseAsState="1" Args=""/>
   </Node>
-  <Node Id="1945" Class="Debug:Log" pos="33372,8190,0">
+  <Node Id="1945" Class="Debug:Log" pos="-846,4608,0">
    <Inputs message="[OGP]Error: Failed to create ogp_settings.xml"/>
   </Node>
-  <Node Id="1947" Name="This_graph_assumes_that:\n-_for_every_sys_spec_ogp_x,_there&apos;s_a_sys_spec_ogp_x_vanilla" Class="_comment" pos="-4626,-2862,0"/>
+  <Node Id="1947" Name="This_graph_assumes_that:\n-_for_every_sys_spec_ogp_x,_there&apos;s_a_sys_spec_ogp_x_vanilla" Class="_comment" pos="-4050,-864,0"/>
   <Node Id="1954" Class="UI:Functions:MainMenu:AddChoicesButton" pos="3618,-558,0">
    <Inputs instanceID="-1" buttonId="" containerIndex="0" uiText="Global illumination" tooltip="Light diffusion/bouncing" disable="0" sound=""/>
   </Node>
@@ -265,82 +265,82 @@
   <Node Id="1974" Class="String:SetString" pos="3582,-702,0">
    <Inputs In="sys_spec_ogp_gi"/>
   </Node>
-  <Node Id="1975" Class="Debug:ConsoleVariable" pos="4716,5292,0">
+  <Node Id="1975" Class="Debug:ConsoleVariable" pos="4644,3690,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="1976" Class="UI:Functions:MainMenu:GetChoice" pos="3726,5328,0">
+  <Node Id="1976" Class="UI:Functions:MainMenu:GetChoice" pos="3654,3726,0">
    <Inputs instanceID="-1" id="" containerIndex="0"/>
   </Node>
-  <Node Id="1977" Class="Math:Less" pos="4212,5220,0">
+  <Node Id="1977" Class="Math:Less" pos="4140,3618,0">
    <Inputs A="0" B="10"/>
   </Node>
-  <Node Id="1978" Class="Debug:ConsoleVariable" pos="4716,5418,0">
+  <Node Id="1978" Class="Debug:ConsoleVariable" pos="4644,3816,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="1979" Class="Math:Calculate" pos="4212,5454,0">
+  <Node Id="1979" Class="Math:Calculate" pos="4140,3852,0">
    <Inputs Op="1" A="0" B="10"/>
   </Node>
-  <Node Id="1980" Class="String:Concat" pos="4428,5544,0">
+  <Node Id="1980" Class="String:Concat" pos="4356,3942,0">
    <Inputs String1="" String2="_vanilla"/>
   </Node>
-  <Node Id="1981" Class="Xml:NewChild" pos="4014,5796,0">
+  <Node Id="1981" Class="Xml:NewChild" pos="4122,4914,0">
    <Inputs Name="" Active="1"/>
   </Node>
-  <Node Id="1982" Class="Xml:SetValue" pos="4950,5796,0">
+  <Node Id="1982" Class="Xml:SetValue" pos="5058,4914,0">
    <Inputs />
   </Node>
-  <Node Id="1983" Class="Xml:GetRoot" pos="3672,5796,0">
+  <Node Id="1983" Class="Xml:GetRoot" pos="3780,4914,0">
    <Inputs />
   </Node>
-  <Node Id="1984" Class="UI:Functions:MainMenu:GetChoice" pos="4410,5796,0">
+  <Node Id="1984" Class="UI:Functions:MainMenu:GetChoice" pos="4518,4914,0">
    <Inputs instanceID="-1" id="" containerIndex="0"/>
   </Node>
-  <Node Id="1990" Class="UI:Events:MainMenu:OnButton" pos="-5364,5418,0">
+  <Node Id="1990" Class="UI:Events:MainMenu:OnButton" pos="-5328,1440,0">
    <Inputs instanceID="-1" Port="0" Idx="ID_RESET_ADVANCED_GRAPHIC"/>
   </Node>
-  <Node Id="1991" Class="UI:Events:MainMenu:OnButton" pos="-5364,5796,0">
+  <Node Id="1991" Class="UI:Events:MainMenu:OnButton" pos="-3240,3852,0">
    <Inputs instanceID="-1" Port="0" Idx="ID_APPLY_ADVANCED_GRAPHICS"/>
   </Node>
-  <Node Id="1992" Class="UI:Events:MainMenu:OnButton" pos="-5436,6282,0">
+  <Node Id="1992" Class="UI:Events:MainMenu:OnButton" pos="-5148,5004,0">
    <Inputs instanceID="-1" Port="0" Idx="IDD_Back"/>
   </Node>
-  <Node Id="1993" Class="UI:Action:End" pos="-5130,6282,0">
+  <Node Id="1993" Class="UI:Action:End" pos="-4842,5004,0">
    <Inputs UseAsState="1" Args=""/>
   </Node>
-  <Node Id="1994" Class="UI:Functions:MainMenu:AddConfirmation" pos="-4716,5868,0" InHideMask="4095" OutHideMask="3">
+  <Node Id="1994" Class="UI:Functions:MainMenu:AddConfirmation" pos="-4680,1890,0" InHideMask="4095" OutHideMask="3">
    <Inputs instanceID="-1" confirmationId="APPLY_ADVANCED_GRAPHICS" uiQuestion="@ui_ApplyChanges" uiAnswer0="@ui_Yes" uiAnswer1="@ui_No" defaultSelect0="1" tooltip0="" tooltip1="" actionBackOnAnswer="1" sound0="" sound1=""/>
   </Node>
-  <Node Id="1995" Class="UI:Events:MainMenu:OnConfirm" pos="-4356,5868,0" InHideMask="7" OutHideMask="15">
+  <Node Id="1995" Class="UI:Events:MainMenu:OnConfirm" pos="-4320,1890,0" InHideMask="7" OutHideMask="15">
    <Inputs instanceID="-1" Port="0" Idx="APPLY_ADVANCED_GRAPHICS"/>
   </Node>
-  <Node Id="1996" Class="UI:Functions:MainMenu:AddConfirmation" pos="-4878,5418,0">
+  <Node Id="1996" Class="UI:Functions:MainMenu:AddConfirmation" pos="-4842,1440,0">
    <Inputs instanceID="-1" confirmationId="RESET_ADVANCED_GRAPHIC" uiQuestion="@ui_ResetDefault" uiAnswer0="@ui_Yes" uiAnswer1="@ui_No" defaultSelect0="0" tooltip0="" tooltip1="" actionBackOnAnswer="1" sound0="" sound1=""/>
   </Node>
-  <Node Id="1997" Class="UI:Events:MainMenu:OnConfirm" pos="-4338,5418,0">
+  <Node Id="1997" Class="UI:Events:MainMenu:OnConfirm" pos="-4302,1440,0">
    <Inputs instanceID="-1" Port="0" Idx="RESET_ADVANCED_GRAPHIC"/>
   </Node>
-  <Node Id="1998" Class="UI:Functions:MainMenu:AddConfirmation" pos="-4878,6174,0">
+  <Node Id="1998" Class="UI:Functions:MainMenu:AddConfirmation" pos="-4590,4896,0">
    <Inputs instanceID="-1" confirmationId="APPLY_ADVANCED_GRAPHICS_BACK" uiQuestion="@ui_ApplyChanges" uiAnswer0="@ui_Yes" uiAnswer1="@ui_No" defaultSelect0="0" tooltip0="" tooltip1="" actionBackOnAnswer="-1" sound0="" sound1=""/>
   </Node>
-  <Node Id="1999" Class="UI:Events:MainMenu:OnButton" pos="-5274,6174,0">
+  <Node Id="1999" Class="UI:Events:MainMenu:OnButton" pos="-4986,4896,0">
    <Inputs instanceID="-1" Port="0" Idx="IDD_Back_Confirm"/>
   </Node>
-  <Node Id="2000" Class="UI:Events:MainMenu:OnConfirm" pos="-4302,6174,0">
+  <Node Id="2000" Class="UI:Events:MainMenu:OnConfirm" pos="-4014,4896,0">
    <Inputs instanceID="-1" Port="0" Idx="APPLY_ADVANCED_GRAPHICS_BACK"/>
   </Node>
-  <Node Id="2001" Class="Logic:Any" pos="-3186,5796,0" InHideMask="1017">
+  <Node Id="2001" Class="Logic:Any" pos="-1980,3834,0" InHideMask="1020">
    <Inputs />
   </Node>
-  <Node Id="2002" Class="Math:Equal" pos="-3762,6246,0">
+  <Node Id="2002" Class="Math:Equal" pos="-3474,4968,0">
    <Inputs A="0" B="0"/>
   </Node>
-  <Node Id="2003" Class="UI:Action:End" pos="-3564,6390,0">
+  <Node Id="2003" Class="UI:Action:End" pos="-3276,5112,0">
    <Inputs UseAsState="1" Args=""/>
   </Node>
-  <Node Id="2004" Class="Xml:NewDocument" pos="-2916,5814,0">
+  <Node Id="2004" Class="Xml:NewDocument" pos="-1926,4986,0">
    <Inputs Root="Root"/>
   </Node>
-  <Node Id="2005" Class="Debug:Log" pos="-2592,6048,0">
+  <Node Id="2005" Class="Debug:Log" pos="-1602,5220,0">
    <Inputs message="[OGP]Error: Failed to create xml document"/>
   </Node>
   <Node Id="2006" Class="UI:Functions:MainMenu:AddChoicesButton" pos="6822,-522,0">
@@ -406,34 +406,34 @@
   <Node Id="2026" Class="String:SetString" pos="6696,-702,0">
    <Inputs In="sys_spec_ogp_grass"/>
   </Node>
-  <Node Id="2027" Class="Debug:ConsoleVariable" pos="7902,5328,0">
+  <Node Id="2027" Class="Debug:ConsoleVariable" pos="7830,3726,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2028" Class="UI:Functions:MainMenu:GetChoice" pos="6912,5364,0">
+  <Node Id="2028" Class="UI:Functions:MainMenu:GetChoice" pos="6840,3762,0">
    <Inputs instanceID="-1" id="" containerIndex="0"/>
   </Node>
-  <Node Id="2029" Class="Math:Less" pos="7398,5256,0">
+  <Node Id="2029" Class="Math:Less" pos="7326,3654,0">
    <Inputs A="0" B="10"/>
   </Node>
-  <Node Id="2030" Class="Debug:ConsoleVariable" pos="7902,5454,0">
+  <Node Id="2030" Class="Debug:ConsoleVariable" pos="7830,3852,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2031" Class="Math:Calculate" pos="7398,5490,0">
+  <Node Id="2031" Class="Math:Calculate" pos="7326,3888,0">
    <Inputs Op="1" A="0" B="10"/>
   </Node>
-  <Node Id="2032" Class="String:Concat" pos="7614,5580,0">
+  <Node Id="2032" Class="String:Concat" pos="7542,3978,0">
    <Inputs String1="" String2="_vanilla"/>
   </Node>
-  <Node Id="2033" Class="Xml:NewChild" pos="7218,5832,0">
+  <Node Id="2033" Class="Xml:NewChild" pos="7326,4950,0">
    <Inputs Name="" Active="1"/>
   </Node>
-  <Node Id="2034" Class="Xml:SetValue" pos="8154,5832,0">
+  <Node Id="2034" Class="Xml:SetValue" pos="8262,4950,0">
    <Inputs />
   </Node>
-  <Node Id="2035" Class="Xml:GetRoot" pos="6876,5832,0">
+  <Node Id="2035" Class="Xml:GetRoot" pos="6984,4950,0">
    <Inputs />
   </Node>
-  <Node Id="2036" Class="UI:Functions:MainMenu:GetChoice" pos="7614,5832,0">
+  <Node Id="2036" Class="UI:Functions:MainMenu:GetChoice" pos="7722,4950,0">
    <Inputs instanceID="-1" id="" containerIndex="0"/>
   </Node>
   <Node Id="2039" Class="UI:Functions:MainMenu:AddChoicesButton" pos="9738,-540,0">
@@ -499,34 +499,34 @@
   <Node Id="2059" Class="String:SetString" pos="9630,-738,0">
    <Inputs In="sys_spec_ogp_lod"/>
   </Node>
-  <Node Id="2060" Class="Debug:ConsoleVariable" pos="10818,5310,0">
+  <Node Id="2060" Class="Debug:ConsoleVariable" pos="10746,3708,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2061" Class="UI:Functions:MainMenu:GetChoice" pos="9828,5346,0">
+  <Node Id="2061" Class="UI:Functions:MainMenu:GetChoice" pos="9756,3744,0">
    <Inputs instanceID="-1" id="" containerIndex="0"/>
   </Node>
-  <Node Id="2062" Class="Math:Less" pos="10314,5238,0">
+  <Node Id="2062" Class="Math:Less" pos="10242,3636,0">
    <Inputs A="0" B="10"/>
   </Node>
-  <Node Id="2063" Class="Debug:ConsoleVariable" pos="10818,5436,0">
+  <Node Id="2063" Class="Debug:ConsoleVariable" pos="10746,3834,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2064" Class="Math:Calculate" pos="10314,5472,0">
+  <Node Id="2064" Class="Math:Calculate" pos="10242,3870,0">
    <Inputs Op="1" A="0" B="10"/>
   </Node>
-  <Node Id="2065" Class="String:Concat" pos="10530,5562,0">
+  <Node Id="2065" Class="String:Concat" pos="10458,3960,0">
    <Inputs String1="" String2="_vanilla"/>
   </Node>
-  <Node Id="2066" Class="Xml:NewChild" pos="10134,5814,0">
+  <Node Id="2066" Class="Xml:NewChild" pos="10242,4932,0">
    <Inputs Name="" Active="1"/>
   </Node>
-  <Node Id="2067" Class="Xml:SetValue" pos="11070,5814,0">
+  <Node Id="2067" Class="Xml:SetValue" pos="11178,4932,0">
    <Inputs />
   </Node>
-  <Node Id="2068" Class="Xml:GetRoot" pos="9792,5814,0">
+  <Node Id="2068" Class="Xml:GetRoot" pos="9900,4932,0">
    <Inputs />
   </Node>
-  <Node Id="2069" Class="UI:Functions:MainMenu:GetChoice" pos="10530,5814,0">
+  <Node Id="2069" Class="UI:Functions:MainMenu:GetChoice" pos="10638,4932,0">
    <Inputs instanceID="-1" id="" containerIndex="0"/>
   </Node>
   <Node Id="2101" Class="UI:Functions:MainMenu:AddChoicesButton" pos="594,-486,0">
@@ -574,34 +574,34 @@
   <Node Id="2121" Class="String:SetString" pos="180,-684,0">
    <Inputs In="sys_spec_ogp_antialiasing"/>
   </Node>
-  <Node Id="2122" Class="Debug:ConsoleVariable" pos="1728,5382,0">
+  <Node Id="2122" Class="Debug:ConsoleVariable" pos="1656,3780,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2123" Class="UI:Functions:MainMenu:GetChoice" pos="738,5418,0">
+  <Node Id="2123" Class="UI:Functions:MainMenu:GetChoice" pos="666,3816,0">
    <Inputs instanceID="-1" id="" containerIndex="0"/>
   </Node>
-  <Node Id="2124" Class="Math:Less" pos="1224,5310,0">
+  <Node Id="2124" Class="Math:Less" pos="1152,3708,0">
    <Inputs A="0" B="10"/>
   </Node>
-  <Node Id="2125" Class="Debug:ConsoleVariable" pos="1728,5508,0">
+  <Node Id="2125" Class="Debug:ConsoleVariable" pos="1656,3906,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2126" Class="Math:Calculate" pos="1224,5544,0">
+  <Node Id="2126" Class="Math:Calculate" pos="1152,3942,0">
    <Inputs Op="1" A="0" B="10"/>
   </Node>
-  <Node Id="2127" Class="String:Concat" pos="1440,5634,0">
+  <Node Id="2127" Class="String:Concat" pos="1368,4032,0">
    <Inputs String1="" String2="_vanilla"/>
   </Node>
-  <Node Id="2128" Class="Xml:NewChild" pos="990,5868,0">
+  <Node Id="2128" Class="Xml:NewChild" pos="1098,4986,0">
    <Inputs Name="" Active="1"/>
   </Node>
-  <Node Id="2129" Class="Xml:SetValue" pos="1926,5868,0">
+  <Node Id="2129" Class="Xml:SetValue" pos="2034,4986,0">
    <Inputs />
   </Node>
-  <Node Id="2130" Class="Xml:GetRoot" pos="648,5868,0">
+  <Node Id="2130" Class="Xml:GetRoot" pos="756,4986,0">
    <Inputs />
   </Node>
-  <Node Id="2131" Class="UI:Functions:MainMenu:GetChoice" pos="1386,5868,0">
+  <Node Id="2131" Class="UI:Functions:MainMenu:GetChoice" pos="1494,4986,0">
    <Inputs instanceID="-1" id="" containerIndex="0"/>
   </Node>
   <Node Id="2132" Class="UI:Functions:MainMenu:AddChoicesButton" pos="12852,-522,0">
@@ -667,34 +667,34 @@
   <Node Id="2152" Class="String:SetString" pos="12474,-684,0">
    <Inputs In="sys_spec_ogp_shading"/>
   </Node>
-  <Node Id="2153" Class="Debug:ConsoleVariable" pos="13716,5490,0">
+  <Node Id="2153" Class="Debug:ConsoleVariable" pos="13788,3780,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2154" Class="UI:Functions:MainMenu:GetChoice" pos="12726,5526,0">
+  <Node Id="2154" Class="UI:Functions:MainMenu:GetChoice" pos="12798,3816,0">
    <Inputs instanceID="-1" id="" containerIndex="0"/>
   </Node>
-  <Node Id="2155" Class="Math:Less" pos="13212,5418,0">
+  <Node Id="2155" Class="Math:Less" pos="13284,3708,0">
    <Inputs A="0" B="10"/>
   </Node>
-  <Node Id="2156" Class="Debug:ConsoleVariable" pos="13716,5616,0">
+  <Node Id="2156" Class="Debug:ConsoleVariable" pos="13788,3906,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2157" Class="Math:Calculate" pos="13212,5652,0">
+  <Node Id="2157" Class="Math:Calculate" pos="13284,3942,0">
    <Inputs Op="1" A="0" B="10"/>
   </Node>
-  <Node Id="2158" Class="String:Concat" pos="13428,5742,0">
+  <Node Id="2158" Class="String:Concat" pos="13500,4032,0">
    <Inputs String1="" String2="_vanilla"/>
   </Node>
-  <Node Id="2159" Class="Xml:NewChild" pos="13248,5832,0">
+  <Node Id="2159" Class="Xml:NewChild" pos="13356,4950,0">
    <Inputs Name="" Active="1"/>
   </Node>
-  <Node Id="2160" Class="Xml:SetValue" pos="14184,5832,0">
+  <Node Id="2160" Class="Xml:SetValue" pos="14292,4950,0">
    <Inputs />
   </Node>
-  <Node Id="2161" Class="Xml:GetRoot" pos="12906,5832,0">
+  <Node Id="2161" Class="Xml:GetRoot" pos="13014,4950,0">
    <Inputs />
   </Node>
-  <Node Id="2162" Class="UI:Functions:MainMenu:GetChoice" pos="13644,5832,0">
+  <Node Id="2162" Class="UI:Functions:MainMenu:GetChoice" pos="13752,4950,0">
    <Inputs instanceID="-1" id="" containerIndex="0"/>
   </Node>
   <Node Id="2163" Class="UI:Functions:MainMenu:AddChoicesButton" pos="15822,-612,0">
@@ -760,34 +760,34 @@
   <Node Id="2183" Class="String:SetString" pos="15462,-738,0">
    <Inputs In="sys_spec_ogp_shadows"/>
   </Node>
-  <Node Id="2184" Class="Debug:ConsoleVariable" pos="16686,5400,0">
+  <Node Id="2184" Class="Debug:ConsoleVariable" pos="16614,3798,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2185" Class="UI:Functions:MainMenu:GetChoice" pos="15696,5436,0">
+  <Node Id="2185" Class="UI:Functions:MainMenu:GetChoice" pos="15624,3834,0">
    <Inputs instanceID="-1" id="" containerIndex="0"/>
   </Node>
-  <Node Id="2186" Class="Math:Less" pos="16182,5328,0">
+  <Node Id="2186" Class="Math:Less" pos="16110,3726,0">
    <Inputs A="0" B="10"/>
   </Node>
-  <Node Id="2187" Class="Debug:ConsoleVariable" pos="16686,5526,0">
+  <Node Id="2187" Class="Debug:ConsoleVariable" pos="16614,3924,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2188" Class="Math:Calculate" pos="16182,5562,0">
+  <Node Id="2188" Class="Math:Calculate" pos="16110,3960,0">
    <Inputs Op="1" A="0" B="10"/>
   </Node>
-  <Node Id="2189" Class="String:Concat" pos="16398,5652,0">
+  <Node Id="2189" Class="String:Concat" pos="16326,4050,0">
    <Inputs String1="" String2="_vanilla"/>
   </Node>
-  <Node Id="2190" Class="Xml:NewChild" pos="16056,5850,0">
+  <Node Id="2190" Class="Xml:NewChild" pos="16164,4968,0">
    <Inputs Name="" Active="1"/>
   </Node>
-  <Node Id="2191" Class="Xml:SetValue" pos="16992,5850,0">
+  <Node Id="2191" Class="Xml:SetValue" pos="17100,4968,0">
    <Inputs />
   </Node>
-  <Node Id="2192" Class="Xml:GetRoot" pos="15714,5850,0">
+  <Node Id="2192" Class="Xml:GetRoot" pos="15822,4968,0">
    <Inputs />
   </Node>
-  <Node Id="2193" Class="UI:Functions:MainMenu:GetChoice" pos="16452,5850,0">
+  <Node Id="2193" Class="UI:Functions:MainMenu:GetChoice" pos="16560,4968,0">
    <Inputs instanceID="-1" id="" containerIndex="0"/>
   </Node>
   <Node Id="2194" Class="UI:Functions:MainMenu:AddChoicesButton" pos="18612,-558,0">
@@ -832,34 +832,34 @@
   <Node Id="2214" Class="String:SetString" pos="18288,-684,0">
    <Inputs In="r_MotionBlur"/>
   </Node>
-  <Node Id="2215" Class="Debug:ConsoleVariable" pos="19476,5454,0">
+  <Node Id="2215" Class="Debug:ConsoleVariable" pos="19404,3852,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2216" Class="UI:Functions:MainMenu:GetChoice" pos="18486,5490,0">
+  <Node Id="2216" Class="UI:Functions:MainMenu:GetChoice" pos="18414,3888,0">
    <Inputs instanceID="-1" id="" containerIndex="0"/>
   </Node>
-  <Node Id="2217" Class="Math:Less" pos="18972,5382,0">
+  <Node Id="2217" Class="Math:Less" pos="18900,3780,0">
    <Inputs A="0" B="10"/>
   </Node>
-  <Node Id="2218" Class="Debug:ConsoleVariable" pos="19476,5580,0">
+  <Node Id="2218" Class="Debug:ConsoleVariable" pos="19404,3978,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2219" Class="Math:Calculate" pos="18972,5616,0">
+  <Node Id="2219" Class="Math:Calculate" pos="18900,4014,0">
    <Inputs Op="1" A="0" B="10"/>
   </Node>
-  <Node Id="2220" Class="String:Concat" pos="19188,5706,0">
+  <Node Id="2220" Class="String:Concat" pos="19116,4104,0">
    <Inputs String1="" String2="_vanilla"/>
   </Node>
-  <Node Id="2221" Class="Xml:NewChild" pos="18846,5904,0">
+  <Node Id="2221" Class="Xml:NewChild" pos="18954,5022,0">
    <Inputs Name="" Active="1"/>
   </Node>
-  <Node Id="2222" Class="Xml:SetValue" pos="19782,5904,0">
+  <Node Id="2222" Class="Xml:SetValue" pos="19890,5022,0">
    <Inputs />
   </Node>
-  <Node Id="2223" Class="Xml:GetRoot" pos="18504,5904,0">
+  <Node Id="2223" Class="Xml:GetRoot" pos="18612,5022,0">
    <Inputs />
   </Node>
-  <Node Id="2224" Class="UI:Functions:MainMenu:GetChoice" pos="19242,5904,0">
+  <Node Id="2224" Class="UI:Functions:MainMenu:GetChoice" pos="19350,5022,0">
    <Inputs instanceID="-1" id="" containerIndex="0"/>
   </Node>
   <Node Id="2327" Class="UI:Functions:MainMenu:AddChoiceOption" pos="1134,900,0">
@@ -940,27 +940,109 @@
   <Node Id="2352" Class="UI:Functions:MainMenu:GetChoice" pos="-19008,4212,0">
    <Inputs instanceID="-1" id="" containerIndex="0"/>
   </Node>
-  <Node Id="2353" Class="Mission:GameTokenSet" pos="-3402,6228,0">
+  <Node Id="2353" Class="Mission:GameTokenSet" pos="-2934,4842,0">
    <Inputs gametoken_Token="leave_after_apply" Value=""/>
   </Node>
-  <Node Id="2354" Class="Mission:GameTokenGet" pos="33282,8316,0">
+  <Node Id="2354" Class="Mission:GameTokenGet" pos="-936,4734,0">
    <Inputs gametoken_Token="leave_after_apply"/>
   </Node>
-  <Node Id="2357" Class="Math:BooleanFrom" pos="33642,8316,0">
+  <Node Id="2357" Class="Math:BooleanFrom" pos="-576,4734,0">
    <Inputs Value="0"/>
   </Node>
-  <Node Id="2360" Class="Debug:ExecuteString" pos="11232,5364,0">
+  <Node Id="2360" Class="Debug:ExecuteString" pos="11160,3762,0">
    <Inputs String="e_UberlodActivate" NextFrame="0"/>
   </Node>
-  <Node Id="2361" Class="Logic:Any" pos="11088,5310,0">
+  <Node Id="2361" Class="Logic:Any" pos="11016,3708,0">
    <Inputs />
   </Node>
+  <Node Id="2362" Class="String:SetString" pos="6084,-18,0">
+   <Inputs In="Note: requires to leave menu to fully apply."/>
+  </Node>
+  <Node Id="2367" Class="UI:Functions:MainMenu:AddChoicesButton" pos="21294,-468,0">
+   <Inputs instanceID="-1" buttonId="" containerIndex="0" uiText="Motion Blur" tooltip="" disable="0" sound=""/>
+  </Node>
+  <Node Id="2368" Class="UI:Functions:MainMenu:AddChoiceOption" pos="21834,36,0">
+   <Inputs instanceID="-1" choiceId="11" buttonId="" containerIndex="0" uiText="vanilla_low" tooltip="" disable="0"/>
+  </Node>
+  <Node Id="2370" Class="UI:Functions:MainMenu:AddChoiceOption" pos="21834,288,0">
+   <Inputs instanceID="-1" choiceId="17" buttonId="" containerIndex="0" uiText="vanilla_medium" tooltip="" disable="0"/>
+  </Node>
+  <Node Id="2371" Class="String:SetString" pos="20898,-342,0">
+   <Inputs In="physics-quality"/>
+  </Node>
+  <Node Id="2372" Class="Mission:GameTokenGet" pos="21168,2790,0">
+   <Inputs gametoken_Token="ogp_settings_exists"/>
+  </Node>
+  <Node Id="2373" Class="Math:BooleanFrom" pos="21564,2790,0">
+   <Inputs Value="0"/>
+  </Node>
+  <Node Id="2374" Class="UI:Functions:MainMenu:SetChoice" pos="22212,2664,0">
+   <Inputs instanceID="-1" id="" containerIndex="0" choiceId="0"/>
+  </Node>
+  <Node Id="2375" Class="Debug:ConsoleVariable" pos="21798,2664,0">
+   <Inputs CVar="" Value=""/>
+  </Node>
+  <Node Id="2376" Class="UI:Functions:MainMenu:SetChoice" pos="22518,2862,0">
+   <Inputs instanceID="-1" id="" containerIndex="0" choiceId="0"/>
+  </Node>
+  <Node Id="2377" Class="Xml:GetChild" pos="22068,2880,0">
+   <Inputs Name="" Create="0"/>
+  </Node>
+  <Node Id="2378" Class="Xml:GetValue" pos="22302,2880,0">
+   <Inputs />
+  </Node>
+  <Node Id="2379" Class="Xml:GetRoot" pos="21834,2880,0">
+   <Inputs />
+  </Node>
+  <Node Id="2380" Class="String:SetString" pos="20898,-594,0">
+   <Inputs In="sys_spec_ogp_physics"/>
+  </Node>
+  <Node Id="2381" Class="Debug:ConsoleVariable" pos="22086,3942,0">
+   <Inputs CVar="" Value=""/>
+  </Node>
+  <Node Id="2382" Class="UI:Functions:MainMenu:GetChoice" pos="21096,3978,0">
+   <Inputs instanceID="-1" id="" containerIndex="0"/>
+  </Node>
+  <Node Id="2383" Class="Math:Less" pos="21582,3870,0">
+   <Inputs A="0" B="10"/>
+  </Node>
+  <Node Id="2384" Class="Debug:ConsoleVariable" pos="22086,4068,0">
+   <Inputs CVar="" Value=""/>
+  </Node>
+  <Node Id="2385" Class="Math:Calculate" pos="21582,4104,0">
+   <Inputs Op="1" A="0" B="10"/>
+  </Node>
+  <Node Id="2386" Class="String:Concat" pos="21798,4194,0">
+   <Inputs String1="" String2="_vanilla"/>
+  </Node>
+  <Node Id="2387" Class="Xml:NewChild" pos="21636,5112,0">
+   <Inputs Name="" Active="1"/>
+  </Node>
+  <Node Id="2388" Class="Xml:SetValue" pos="22572,5112,0">
+   <Inputs />
+  </Node>
+  <Node Id="2389" Class="Xml:GetRoot" pos="21294,5112,0">
+   <Inputs />
+  </Node>
+  <Node Id="2390" Class="UI:Functions:MainMenu:GetChoice" pos="22032,5112,0">
+   <Inputs instanceID="-1" id="" containerIndex="0"/>
+  </Node>
+  <Node Id="2391" Class="Time:Delay" pos="-2214,-360,0">
+   <Inputs delay="0.1" resetOnInput="0"/>
+  </Node>
+  <Node Id="2394" Class="Time:Delay" pos="-1602,4662,0">
+   <Inputs delay="0.1" resetOnInput="0"/>
+  </Node>
+  <Node Id="2395" Name="Ui_creation_pipeline" Class="_comment" pos="-1890,-504,0"/>
+  <Node Id="2396" Name="Apply_(without_saving)_pipeline" Class="_comment" pos="-1008,3816,0"/>
+  <Node Id="2397" Name="Save_pipeline" Class="_comment" pos="-2160,4968,0"/>
  </Nodes>
  <Edges>
   <Edge nodeIn="555" nodeOut="1" portIn="Call" portOut="StartAction" enabled="1"/>
   <Edge nodeIn="1400" nodeOut="1" portIn="Execute" portOut="StartAction" enabled="1"/>
   <Edge nodeIn="146" nodeOut="145" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2101" nodeOut="229" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="2391" nodeOut="229" portIn="in" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="229" nodeOut="555" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="556" nodeOut="555" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="947" nodeOut="665" portIn="Get" portOut="OnCall" enabled="1"/>
@@ -1081,12 +1163,12 @@
   <Edge nodeIn="1975" nodeOut="1976" portIn="Value" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="1977" nodeOut="1976" portIn="A" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="1979" nodeOut="1976" portIn="A" portOut="ReturnVal" enabled="1"/>
+  <Edge nodeIn="2028" nodeOut="1976" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="1975" nodeOut="1977" portIn="Set" portOut="true" enabled="1"/>
   <Edge nodeIn="1978" nodeOut="1977" portIn="Set" portOut="false" enabled="1"/>
   <Edge nodeIn="1978" nodeOut="1979" portIn="Value" portOut="out" enabled="1"/>
   <Edge nodeIn="1978" nodeOut="1980" portIn="CVar" portOut="Out" enabled="1"/>
   <Edge nodeIn="1984" nodeOut="1981" portIn="Call" portOut="Success" enabled="1"/>
-  <Edge nodeIn="2028" nodeOut="1982" portIn="Call" portOut="Success" enabled="1"/>
   <Edge nodeIn="2035" nodeOut="1982" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="1981" nodeOut="1983" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="1982" nodeOut="1984" portIn="Execute" portOut="OnCall" enabled="1"/>
@@ -1094,18 +1176,18 @@
   <Edge nodeIn="1996" nodeOut="1990" portIn="Call" portOut="onEvent" enabled="1"/>
   <Edge nodeIn="2001" nodeOut="1991" portIn="in1" portOut="onEvent" enabled="1"/>
   <Edge nodeIn="1993" nodeOut="1992" portIn="EndAction" portOut="onEvent" enabled="1"/>
-  <Edge nodeIn="2001" nodeOut="1995" portIn="in2" portOut="onEvent" enabled="1"/>
   <Edge nodeIn="1998" nodeOut="1999" portIn="instanceID" portOut="instanceID" enabled="1"/>
   <Edge nodeIn="1998" nodeOut="1999" portIn="Call" portOut="onEvent" enabled="1"/>
   <Edge nodeIn="2002" nodeOut="2000" portIn="A" portOut="res" enabled="1"/>
-  <Edge nodeIn="2004" nodeOut="2001" portIn="Execute" portOut="out" enabled="1"/>
-  <Edge nodeIn="2001" nodeOut="2002" portIn="in3" portOut="true" enabled="1"/>
+  <Edge nodeIn="2123" nodeOut="2001" portIn="Call" portOut="out" enabled="1"/>
+  <Edge nodeIn="2001" nodeOut="2002" portIn="in2" portOut="true" enabled="1"/>
   <Edge nodeIn="2003" nodeOut="2002" portIn="EndAction" portOut="false" enabled="1"/>
+  <Edge nodeIn="2004" nodeOut="2002" portIn="Execute" portOut="true" enabled="1"/>
   <Edge nodeIn="2353" nodeOut="2002" portIn="Trigger" portOut="true" enabled="1"/>
   <Edge nodeIn="2353" nodeOut="2002" portIn="Value" portOut="true" enabled="1"/>
   <Edge nodeIn="2005" nodeOut="2004" portIn="input" portOut="Fail" enabled="1"/>
-  <Edge nodeIn="2123" nodeOut="2004" portIn="Call" portOut="Success" enabled="1"/>
   <Edge nodeIn="2130" nodeOut="2004" portIn="Execute" portOut="Success" enabled="1"/>
+  <Edge nodeIn="2394" nodeOut="2004" portIn="in" portOut="Success" enabled="1"/>
   <Edge nodeIn="2007" nodeOut="2006" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2039" nodeOut="2006" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2008" nodeOut="2007" portIn="Call" portOut="OnCall" enabled="1"/>
@@ -1150,12 +1232,12 @@
   <Edge nodeIn="2027" nodeOut="2028" portIn="Value" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="2029" nodeOut="2028" portIn="A" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="2031" nodeOut="2028" portIn="A" portOut="ReturnVal" enabled="1"/>
+  <Edge nodeIn="2061" nodeOut="2028" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2027" nodeOut="2029" portIn="Set" portOut="true" enabled="1"/>
   <Edge nodeIn="2030" nodeOut="2029" portIn="Set" portOut="false" enabled="1"/>
   <Edge nodeIn="2030" nodeOut="2031" portIn="Value" portOut="out" enabled="1"/>
   <Edge nodeIn="2030" nodeOut="2032" portIn="CVar" portOut="Out" enabled="1"/>
   <Edge nodeIn="2036" nodeOut="2033" portIn="Call" portOut="Success" enabled="1"/>
-  <Edge nodeIn="2061" nodeOut="2034" portIn="Call" portOut="Success" enabled="1"/>
   <Edge nodeIn="2068" nodeOut="2034" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="2033" nodeOut="2035" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="2034" nodeOut="2036" portIn="Execute" portOut="OnCall" enabled="1"/>
@@ -1204,6 +1286,7 @@
   <Edge nodeIn="2060" nodeOut="2061" portIn="Value" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="2062" nodeOut="2061" portIn="A" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="2064" nodeOut="2061" portIn="A" portOut="ReturnVal" enabled="1"/>
+  <Edge nodeIn="2154" nodeOut="2061" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2060" nodeOut="2062" portIn="Set" portOut="true" enabled="1"/>
   <Edge nodeIn="2063" nodeOut="2062" portIn="Set" portOut="false" enabled="1"/>
   <Edge nodeIn="2361" nodeOut="2063" portIn="in2" portOut="CurValue" enabled="1"/>
@@ -1246,6 +1329,7 @@
   <Edge nodeIn="2116" nodeOut="2121" portIn="CVar" portOut="Out" enabled="1"/>
   <Edge nodeIn="2122" nodeOut="2121" portIn="CVar" portOut="Out" enabled="1"/>
   <Edge nodeIn="2127" nodeOut="2121" portIn="String1" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1976" nodeOut="2123" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2122" nodeOut="2123" portIn="Value" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="2124" nodeOut="2123" portIn="A" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="2126" nodeOut="2123" portIn="A" portOut="ReturnVal" enabled="1"/>
@@ -1254,7 +1338,6 @@
   <Edge nodeIn="2125" nodeOut="2126" portIn="Value" portOut="out" enabled="1"/>
   <Edge nodeIn="2125" nodeOut="2127" portIn="CVar" portOut="Out" enabled="1"/>
   <Edge nodeIn="2131" nodeOut="2128" portIn="Call" portOut="Success" enabled="1"/>
-  <Edge nodeIn="1976" nodeOut="2129" portIn="Call" portOut="Success" enabled="1"/>
   <Edge nodeIn="1983" nodeOut="2129" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="2128" nodeOut="2130" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="2129" nodeOut="2131" portIn="Execute" portOut="OnCall" enabled="1"/>
@@ -1303,12 +1386,12 @@
   <Edge nodeIn="2153" nodeOut="2154" portIn="Value" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="2155" nodeOut="2154" portIn="A" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="2157" nodeOut="2154" portIn="A" portOut="ReturnVal" enabled="1"/>
+  <Edge nodeIn="2185" nodeOut="2154" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2153" nodeOut="2155" portIn="Set" portOut="true" enabled="1"/>
   <Edge nodeIn="2156" nodeOut="2155" portIn="Set" portOut="false" enabled="1"/>
   <Edge nodeIn="2156" nodeOut="2157" portIn="Value" portOut="out" enabled="1"/>
   <Edge nodeIn="2156" nodeOut="2158" portIn="CVar" portOut="Out" enabled="1"/>
   <Edge nodeIn="2162" nodeOut="2159" portIn="Call" portOut="Success" enabled="1"/>
-  <Edge nodeIn="2185" nodeOut="2160" portIn="Call" portOut="Success" enabled="1"/>
   <Edge nodeIn="2192" nodeOut="2160" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="2159" nodeOut="2161" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="2160" nodeOut="2162" portIn="Execute" portOut="OnCall" enabled="1"/>
@@ -1357,18 +1440,18 @@
   <Edge nodeIn="2184" nodeOut="2185" portIn="Value" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="2186" nodeOut="2185" portIn="A" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="2188" nodeOut="2185" portIn="A" portOut="ReturnVal" enabled="1"/>
+  <Edge nodeIn="2216" nodeOut="2185" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2184" nodeOut="2186" portIn="Set" portOut="true" enabled="1"/>
   <Edge nodeIn="2187" nodeOut="2186" portIn="Set" portOut="false" enabled="1"/>
   <Edge nodeIn="2187" nodeOut="2188" portIn="Value" portOut="out" enabled="1"/>
   <Edge nodeIn="2187" nodeOut="2189" portIn="CVar" portOut="Out" enabled="1"/>
   <Edge nodeIn="2193" nodeOut="2190" portIn="Call" portOut="Success" enabled="1"/>
-  <Edge nodeIn="2216" nodeOut="2191" portIn="Call" portOut="Success" enabled="1"/>
   <Edge nodeIn="2223" nodeOut="2191" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="2190" nodeOut="2192" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="2191" nodeOut="2193" portIn="Execute" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2191" nodeOut="2193" portIn="Value" portOut="ReturnVal" enabled="1"/>
-  <Edge nodeIn="145" nodeOut="2194" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2195" nodeOut="2194" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="2367" nodeOut="2194" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2196" nodeOut="2195" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2204" nodeOut="2196" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2206" nodeOut="2204" portIn="Trigger" portOut="OnCall" enabled="1"/>
@@ -1397,12 +1480,13 @@
   <Edge nodeIn="2215" nodeOut="2216" portIn="Value" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="2217" nodeOut="2216" portIn="A" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="2219" nodeOut="2216" portIn="A" portOut="ReturnVal" enabled="1"/>
+  <Edge nodeIn="2382" nodeOut="2216" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2215" nodeOut="2217" portIn="Set" portOut="true" enabled="1"/>
   <Edge nodeIn="2218" nodeOut="2217" portIn="Set" portOut="false" enabled="1"/>
   <Edge nodeIn="2218" nodeOut="2219" portIn="Value" portOut="out" enabled="1"/>
   <Edge nodeIn="2218" nodeOut="2220" portIn="CVar" portOut="Out" enabled="1"/>
   <Edge nodeIn="2224" nodeOut="2221" portIn="Call" portOut="Success" enabled="1"/>
-  <Edge nodeIn="1943" nodeOut="2222" portIn="Execute" portOut="Success" enabled="1"/>
+  <Edge nodeIn="2389" nodeOut="2222" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="2221" nodeOut="2223" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="2222" nodeOut="2224" portIn="Execute" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2222" nodeOut="2224" portIn="Value" portOut="ReturnVal" enabled="1"/>
@@ -1448,6 +1532,53 @@
   <Edge nodeIn="2357" nodeOut="2354" portIn="Value" portOut="OutValue" enabled="1"/>
   <Edge nodeIn="1944" nodeOut="2357" portIn="EndAction" portOut="True" enabled="1"/>
   <Edge nodeIn="2360" nodeOut="2361" portIn="Set" portOut="out" enabled="1"/>
+  <Edge nodeIn="2006" nodeOut="2362" portIn="tooltip" portOut="Out" enabled="1"/>
+  <Edge nodeIn="2007" nodeOut="2362" portIn="tooltip" portOut="Out" enabled="1"/>
+  <Edge nodeIn="2008" nodeOut="2362" portIn="tooltip" portOut="Out" enabled="1"/>
+  <Edge nodeIn="2009" nodeOut="2362" portIn="tooltip" portOut="Out" enabled="1"/>
+  <Edge nodeIn="2010" nodeOut="2362" portIn="uiText" portOut="Out" enabled="1"/>
+  <Edge nodeIn="2012" nodeOut="2362" portIn="uiText" portOut="Out" enabled="1"/>
+  <Edge nodeIn="2013" nodeOut="2362" portIn="tooltip" portOut="Out" enabled="1"/>
+  <Edge nodeIn="2014" nodeOut="2362" portIn="tooltip" portOut="Out" enabled="1"/>
+  <Edge nodeIn="2015" nodeOut="2362" portIn="tooltip" portOut="Out" enabled="1"/>
+  <Edge nodeIn="2016" nodeOut="2362" portIn="tooltip" portOut="Out" enabled="1"/>
+  <Edge nodeIn="2368" nodeOut="2367" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="2370" nodeOut="2368" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="2372" nodeOut="2370" portIn="Trigger" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="2367" nodeOut="2371" portIn="buttonId" portOut="Out" enabled="1"/>
+  <Edge nodeIn="2368" nodeOut="2371" portIn="buttonId" portOut="Out" enabled="1"/>
+  <Edge nodeIn="2370" nodeOut="2371" portIn="buttonId" portOut="Out" enabled="1"/>
+  <Edge nodeIn="2374" nodeOut="2371" portIn="id" portOut="Out" enabled="1"/>
+  <Edge nodeIn="2376" nodeOut="2371" portIn="id" portOut="Out" enabled="1"/>
+  <Edge nodeIn="2377" nodeOut="2371" portIn="Name" portOut="Out" enabled="1"/>
+  <Edge nodeIn="2382" nodeOut="2371" portIn="id" portOut="Out" enabled="1"/>
+  <Edge nodeIn="2387" nodeOut="2371" portIn="Name" portOut="Out" enabled="1"/>
+  <Edge nodeIn="2390" nodeOut="2371" portIn="id" portOut="Out" enabled="1"/>
+  <Edge nodeIn="2373" nodeOut="2372" portIn="Value" portOut="OutValue" enabled="1"/>
+  <Edge nodeIn="2375" nodeOut="2373" portIn="Get" portOut="False" enabled="1"/>
+  <Edge nodeIn="2379" nodeOut="2373" portIn="Execute" portOut="True" enabled="1"/>
+  <Edge nodeIn="2374" nodeOut="2375" portIn="Call" portOut="CurValue" enabled="1"/>
+  <Edge nodeIn="2374" nodeOut="2375" portIn="choiceId" portOut="CurValue" enabled="1"/>
+  <Edge nodeIn="2378" nodeOut="2377" portIn="Execute" portOut="Success" enabled="1"/>
+  <Edge nodeIn="2376" nodeOut="2378" portIn="Call" portOut="Success" enabled="1"/>
+  <Edge nodeIn="2376" nodeOut="2378" portIn="choiceId" portOut="Value" enabled="1"/>
+  <Edge nodeIn="2377" nodeOut="2379" portIn="Execute" portOut="Success" enabled="1"/>
+  <Edge nodeIn="2375" nodeOut="2380" portIn="CVar" portOut="Out" enabled="1"/>
+  <Edge nodeIn="2381" nodeOut="2380" portIn="CVar" portOut="Out" enabled="1"/>
+  <Edge nodeIn="2386" nodeOut="2380" portIn="String1" portOut="Out" enabled="1"/>
+  <Edge nodeIn="2381" nodeOut="2382" portIn="Value" portOut="ReturnVal" enabled="1"/>
+  <Edge nodeIn="2383" nodeOut="2382" portIn="A" portOut="ReturnVal" enabled="1"/>
+  <Edge nodeIn="2385" nodeOut="2382" portIn="A" portOut="ReturnVal" enabled="1"/>
+  <Edge nodeIn="2381" nodeOut="2383" portIn="Set" portOut="true" enabled="1"/>
+  <Edge nodeIn="2384" nodeOut="2383" portIn="Set" portOut="false" enabled="1"/>
+  <Edge nodeIn="2384" nodeOut="2385" portIn="Value" portOut="out" enabled="1"/>
+  <Edge nodeIn="2384" nodeOut="2386" portIn="CVar" portOut="Out" enabled="1"/>
+  <Edge nodeIn="2390" nodeOut="2387" portIn="Call" portOut="Success" enabled="1"/>
+  <Edge nodeIn="2387" nodeOut="2389" portIn="Execute" portOut="Success" enabled="1"/>
+  <Edge nodeIn="2388" nodeOut="2390" portIn="Execute" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="2388" nodeOut="2390" portIn="Value" portOut="ReturnVal" enabled="1"/>
+  <Edge nodeIn="145" nodeOut="2391" portIn="Call" portOut="out" enabled="1"/>
+  <Edge nodeIn="1943" nodeOut="2394" portIn="Execute" portOut="out" enabled="1"/>
  </Edges>
  <GraphTokens>
   <Token Name="leave_after_apply" Type="6"/>
