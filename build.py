@@ -4,10 +4,12 @@ version='3.0.0'
 name='optimized_graphic_presets'
 
 import os
+import io
 import zipfile
 
-gamePackageName=f'zzz_{name}.pak'
-zout = zipfile.ZipFile( gamePackageName, 'w', compression=zipfile.ZIP_STORED )
+
+gamePackage = io.BytesIO()
+zout = zipfile.ZipFile( gamePackage, 'w', compression=zipfile.ZIP_STORED )
 
 directory = os.path.join('Config', 'CVarGroups')
 for file in os.listdir(directory):
@@ -24,7 +26,7 @@ zout.close()
 
 
 zipFilename=f'kcd_{name}_{version}.zip'
-zout = zipfile.ZipFile( zipFilename, 'w', compression=zipfile.ZIP_DEFLATED )
+zout = zipfile.ZipFile( os.path.join('builds', zipFilename), 'w', compression=zipfile.ZIP_DEFLATED )
 
 zout.write('ogp_hotkeys.cfg')
 
@@ -39,6 +41,7 @@ for file in os.listdir(directory):
 	filename = os.fsdecode(file)
 	zout.write( os.path.join(directory, filename) )
 
-zout.write( gamePackageName, arcname=os.path.join('Data', gamePackageName) )
+gamePackageName=f'zzz_{name}.pak'
+zout.writestr( os.path.join('Data', gamePackageName), gamePackage.getvalue() )
 
 zout.close()
