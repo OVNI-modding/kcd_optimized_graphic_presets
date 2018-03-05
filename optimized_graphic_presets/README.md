@@ -52,9 +52,6 @@ Edit user.cfg and add r_motionblur=1 (camera motion blur) or r_motionblur=2 (per
 **Q: How to re-enable rim light ?**
 Edit user.cfg and add r_DeferredShading3PL=2 at the end.
 
-**Q: How to re-enable wind on grass animation ?**
-Edit user.cfg and add e_MergedMeshesUseSpines=1 at the end.
-
 **Q: How to disable native fullscreen auto-switch ?**
 Edit user.cfg and delete the line : bind d "r_fullscreen 1", then restart the game.
 
