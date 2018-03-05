@@ -17,11 +17,16 @@ for file in os.listdir(directory):
 fullFilename = os.path.join('Libs', 'UI', 'UIActions', 'MM_AdvancedGraphics.xml')
 zout.write(fullFilename)
 
+fullFilename = os.path.join('Libs', 'UI', 'UIActions', 'MM_IngameMenu.xml')
+zout.write(fullFilename)
+
 zout.close()
 
 
 zipFilename=f'kcd_{name}_{version}.zip'
 zout = zipfile.ZipFile( zipFilename, 'w', compression=zipfile.ZIP_DEFLATED )
+
+zout.write('ogp_hotkeys.cfg')
 
 directory = 'Config'
 for file in os.listdir(directory):
