@@ -22,7 +22,7 @@
    <Inputs gametoken_Token="ogp_settings_exists" Value=""/>
   </Node>
   <Node Id="1400" Class="Xml:OpenDocument" pos="-4284,-1584,0">
-   <Inputs File="ogp_settings.xml" Location="1"/>
+   <Inputs File="ogp_settings.xml" Location="3"/>
   </Node>
   <Node Id="1401" Class="Mission:GameTokenSet" pos="-3762,-1512,0">
    <Inputs gametoken_Token="ogp_settings_exists" Value=""/>
@@ -30,13 +30,13 @@
   <Node Id="1402" Class="Logic:NOT" pos="-3942,-1476,0">
    <Inputs in="0"/>
   </Node>
-  <Node Id="1404" Name="Try_to_load_xml,_store_success_result_within_token" Class="_commentbox" pos="-4338,-1785.5918,0">
+  <Node Id="1404" Name="Try_to_load_xml,_store_success_result_within_token" Class="_commentbox" pos="-4338,-1774.1362,0">
    <Inputs TextSize="1" Color="0.27451,0.352941,0.705882" DisplayFilled="1" DisplayBox="1" SortPriority="16"/>
    <ResizeBorder X="0" Y="0" Width="972" Height="396"/>
-   <NodeSize Width="972" Height="441.82776"/>
+   <NodeSize Width="972" Height="430.37204"/>
   </Node>
   <Node Id="1943" Class="Xml:SaveDocument" pos="49158,6570,0">
-   <Inputs File="ogp_settings.xml" Location="1" Overwrite="1"/>
+   <Inputs File="ogp_settings.xml" Location="3" Overwrite="1"/>
   </Node>
   <Node Id="1944" Class="UI:Action:End" pos="49464,6642,0">
    <Inputs UseAsState="1" Args=""/>
@@ -47,9 +47,6 @@
   <Node Id="1947" Name="This_graph_assumes_that:\n-_for_every_sys_spec_ogp_x,_there&apos;s_a_sys_spec_ogp_x_vanilla" Class="_comment" pos="-5598,-828,0"/>
   <Node Id="1990" Class="UI:Events:MainMenu:OnButton" pos="-5328,1440,0">
    <Inputs instanceID="-1" Port="0" Idx="ID_RESET_ADVANCED_GRAPHIC"/>
-  </Node>
-  <Node Id="1991" Class="UI:Events:MainMenu:OnButton" pos="-5346,2628,0">
-   <Inputs instanceID="-1" Port="0" Idx="ID_APPLY_ADVANCED_GRAPHICS"/>
   </Node>
   <Node Id="1992" Class="UI:Events:MainMenu:OnButton" pos="-5472,4446,0">
    <Inputs instanceID="-1" Port="0" Idx="IDD_Back"/>
@@ -94,7 +91,7 @@
    <Inputs message="[OGP]Error: Failed to create xml document"/>
   </Node>
   <Node Id="2469" Class="UI:Functions:MainMenu:AddChoicesButton" pos="2448,-486,0">
-   <Inputs instanceID="-1" buttonId="" containerIndex="0" uiText="Anti-Aliasing" tooltip="" disable="0" sound=""/>
+   <Inputs instanceID="-1" buttonId="" containerIndex="0" uiText="Anti-Aliasing" tooltip="Recommended: high" disable="0" sound=""/>
   </Node>
   <Node Id="2470" Class="UI:Functions:MainMenu:AddChoiceOption" pos="2844,-486,0">
    <Inputs instanceID="-1" choiceId="0" buttonId="" containerIndex="0" uiText="ugly" tooltip="off" disable="0"/>
@@ -112,7 +109,7 @@
    <Inputs instanceID="-1" choiceId="4" buttonId="" containerIndex="0" uiText="ultra" tooltip="SMAA + TAA 4x" disable="0"/>
   </Node>
   <Node Id="2475" Class="UI:Functions:MainMenu:AddChoiceOption" pos="2844,594,0">
-   <Inputs instanceID="-1" choiceId="11" buttonId="" containerIndex="0" uiText="insane" tooltip="SSAA" disable="0"/>
+   <Inputs instanceID="-1" choiceId="11" buttonId="" containerIndex="0" uiText="Insane" tooltip="SSAA 2x" disable="0"/>
   </Node>
   <Node Id="2480" Class="String:SetString" pos="2052,-414,0">
    <Inputs In="sys_spec_ogp_antialiasing"/>
@@ -171,8 +168,8 @@
   <Node Id="2499" Class="UI:Functions:MainMenu:GetChoice" pos="2520,4464,0">
    <Inputs instanceID="-1" id="" containerIndex="0"/>
   </Node>
-  <Node Id="2501" Class="UI:Functions:MainMenu:AddChoicesButton" pos="6228,-504,0">
-   <Inputs instanceID="-1" buttonId="" containerIndex="0" uiText="Motion Blur" tooltip="" disable="0" sound=""/>
+  <Node Id="2501" Class="UI:Functions:MainMenu:AddChoicesButton" pos="6102,-504,0">
+   <Inputs instanceID="-1" buttonId="" containerIndex="0" uiText="Motion Blur" tooltip="Recommended: off" disable="0" sound=""/>
   </Node>
   <Node Id="2502" Class="UI:Functions:MainMenu:AddChoiceOption" pos="6642,-504,0">
    <Inputs instanceID="-1" choiceId="0" buttonId="" containerIndex="0" uiText="off" tooltip="" disable="0"/>
@@ -183,7 +180,7 @@
   <Node Id="2504" Class="UI:Functions:MainMenu:AddChoiceOption" pos="6642,-54,0">
    <Inputs instanceID="-1" choiceId="2" buttonId="" containerIndex="0" uiText="camera+objets" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2512" Class="String:SetString" pos="5940,-432,0">
+  <Node Id="2512" Class="String:SetString" pos="5814,-432,0">
    <Inputs In="r_motionblur"/>
   </Node>
   <Node Id="2513" Class="Mission:GameTokenGet" pos="7344,-486,0">
@@ -741,8 +738,8 @@
   <Node Id="2852" Class="UI:Functions:MainMenu:AddChoiceOption" pos="34740,1926,0">
    <Inputs instanceID="-1" choiceId="17" buttonId="" containerIndex="0" uiText="vanilla_ultra" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2853" Class="String:SetString" pos="33984,18,0">
-   <Inputs In="sys_spec_ogp_"/>
+  <Node Id="2853" Class="String:SetString" pos="33930,18,0">
+   <Inputs In="sys_spec_ogp_shading"/>
   </Node>
   <Node Id="2854" Class="Mission:GameTokenGet" pos="35442,-18,0">
    <Inputs gametoken_Token="ogp_settings_exists"/>
@@ -1050,6 +1047,15 @@
   <Node Id="2960" Class="Debug:ExecuteString" pos="28746,2610,0">
    <Inputs String="e_UberlodActivate" NextFrame="0"/>
   </Node>
+  <Node Id="2961" Class="UI:Events:MainMenu:OnButton" pos="-4824,2610,0">
+   <Inputs instanceID="-1" Port="0" Idx="ID_APPLY_ADVANCED_GRAPHICS"/>
+  </Node>
+  <Node Id="2963" Class="UI:Events:MainMenu:OnButton" pos="-4644,2772,0">
+   <Inputs instanceID="-1" Port="-1" Idx=""/>
+  </Node>
+  <Node Id="2964" Class="UI:Events:MainMenu:OnControlChanged" pos="-4572,2916,0">
+   <Inputs instanceID="-1" Port="-1" Idx=""/>
+  </Node>
  </Nodes>
  <Edges>
   <Edge nodeIn="555" nodeOut="1" portIn="Call" portOut="StartAction" enabled="1"/>
@@ -1066,7 +1072,6 @@
   <Edge nodeIn="1944" nodeOut="1943" portIn="EndAction" portOut="Done" enabled="1"/>
   <Edge nodeIn="1945" nodeOut="1943" portIn="input" portOut="Fail" enabled="1"/>
   <Edge nodeIn="1996" nodeOut="1990" portIn="Call" portOut="onEvent" enabled="1"/>
-  <Edge nodeIn="2001" nodeOut="1991" portIn="in1" portOut="onEvent" enabled="1"/>
   <Edge nodeIn="1993" nodeOut="1992" portIn="EndAction" portOut="onEvent" enabled="1"/>
   <Edge nodeIn="1998" nodeOut="1999" portIn="instanceID" portOut="instanceID" enabled="1"/>
   <Edge nodeIn="1998" nodeOut="1999" portIn="Call" portOut="onEvent" enabled="1"/>
@@ -1639,6 +1644,7 @@
   <Edge nodeIn="2950" nodeOut="2952" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="2951" nodeOut="2953" portIn="Execute" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2951" nodeOut="2953" portIn="Value" portOut="ReturnVal" enabled="1"/>
+  <Edge nodeIn="2001" nodeOut="2964" portIn="in1" portOut="onEvent" enabled="1"/>
  </Edges>
  <GraphTokens>
   <Token Name="ogp_settings_exists" Type="6"/>

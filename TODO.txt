@@ -1,0 +1,39 @@
+
+
+TODO r_DetailDistance
+TODO e_LightVolumes
+TODO e_DynamicLightsMaxEntityLights
+TODO r_DepthOfField (cannot mod directly)
+
+
+[X] No more confirmation for Apply button
+[X] Removed blur within menu, so you can see the effect of different settings.
+[X] removed revert button
+[ ] graphic simple preset menu
+[ ] load xml settings when game starts
+
+[ ] test why lod is shit in main menu e_LodRatio
+[ ] reduce ssdo
+
+[ ] ssdo settings off light medum strong
+
+
+
+[X] Anti-aliasing
+[X] Motion blur
+[X] Wind on grass
+[X] Grass cast shadows
+[X] Drunk sharpening
+
+
+[X] Global Illumionation
+[X] grass
+[X] lod
+[X] physics
+[X] shading
+[ ] shadows
+[ ] ssdo off/modded/vanilla
+[ ] particles
+[ ] texture
+[ ] water
+[ ] sys_spec_GameEffects
