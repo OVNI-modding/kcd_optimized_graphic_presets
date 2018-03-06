@@ -3,10 +3,10 @@
   <Node Id="1" Class="UI:Action:Start" pos="-5310,-594,0">
    <Inputs UseAsState="1"/>
   </Node>
-  <Node Id="145" Class="UI:Functions:MainMenu:AddButton" pos="-3492,-324,0">
+  <Node Id="145" Class="UI:Functions:MainMenu:AddButton" pos="45558,-864,0">
    <Inputs instanceID="-1" id="ID_APPLY_ADVANCED_GRAPHICS" containerIndex="1" uiText="Apply (without leaving)" actionType="apply" tooltip="" disable="0" sound=""/>
   </Node>
-  <Node Id="146" Class="UI:Functions:MainMenu:AddButton" pos="-3024,-324,0">
+  <Node Id="146" Class="UI:Functions:MainMenu:AddButton" pos="46026,-864,0">
    <Inputs instanceID="-1" id="IDD_Back" containerIndex="1" uiText="@ui_back" actionType="back" tooltip="" disable="0" sound=""/>
   </Node>
   <Node Id="229" Class="UI:Functions:MainMenu:SetContainer" pos="-4626,-450,0">
@@ -22,7 +22,7 @@
    <Inputs gametoken_Token="ogp_settings_exists" Value=""/>
   </Node>
   <Node Id="1400" Class="Xml:OpenDocument" pos="-4284,-1584,0">
-   <Inputs File="ogp_settings.xml" Location="3"/>
+   <Inputs File="ogp_settings.xml" Location="1"/>
   </Node>
   <Node Id="1401" Class="Mission:GameTokenSet" pos="-3762,-1512,0">
    <Inputs gametoken_Token="ogp_settings_exists" Value=""/>
@@ -30,18 +30,18 @@
   <Node Id="1402" Class="Logic:NOT" pos="-3942,-1476,0">
    <Inputs in="0"/>
   </Node>
-  <Node Id="1404" Name="Try_to_load_xml,_store_success_result_within_token" Class="_commentbox" pos="-4338,-2200.0137,0">
+  <Node Id="1404" Name="Try_to_load_xml,_store_success_result_within_token" Class="_commentbox" pos="-4338,-1785.5918,0">
    <Inputs TextSize="1" Color="0.27451,0.352941,0.705882" DisplayFilled="1" DisplayBox="1" SortPriority="16"/>
    <ResizeBorder X="0" Y="0" Width="972" Height="396"/>
-   <NodeSize Width="7560.7754" Height="856.24548"/>
+   <NodeSize Width="972" Height="441.82776"/>
   </Node>
-  <Node Id="1943" Class="Xml:SaveDocument" pos="-2286,4104,0">
-   <Inputs File="ogp_settings.xml" Location="3" Overwrite="1"/>
+  <Node Id="1943" Class="Xml:SaveDocument" pos="49158,6570,0">
+   <Inputs File="ogp_settings.xml" Location="1" Overwrite="1"/>
   </Node>
-  <Node Id="1944" Class="UI:Action:End" pos="-1332,4212,0">
+  <Node Id="1944" Class="UI:Action:End" pos="49464,6642,0">
    <Inputs UseAsState="1" Args=""/>
   </Node>
-  <Node Id="1945" Class="Debug:Log" pos="-1818,4068,0">
+  <Node Id="1945" Class="Debug:Log" pos="49464,6534,0">
    <Inputs message="[OGP]Error: Failed to create ogp_settings.xml"/>
   </Node>
   <Node Id="1947" Name="This_graph_assumes_that:\n-_for_every_sys_spec_ogp_x,_there&apos;s_a_sys_spec_ogp_x_vanilla" Class="_comment" pos="-5598,-828,0"/>
@@ -93,21 +93,6 @@
   <Node Id="2005" Class="Debug:Log" pos="-2574,4680,0">
    <Inputs message="[OGP]Error: Failed to create xml document"/>
   </Node>
-  <Node Id="2353" Class="Mission:GameTokenSet" pos="-3258,4284,0">
-   <Inputs gametoken_Token="leave_after_apply" Value=""/>
-  </Node>
-  <Node Id="2354" Class="Mission:GameTokenGet" pos="-1908,4194,0">
-   <Inputs gametoken_Token="leave_after_apply"/>
-  </Node>
-  <Node Id="2357" Class="Math:BooleanFrom" pos="-1548,4194,0">
-   <Inputs Value="0"/>
-  </Node>
-  <Node Id="2391" Class="Time:Delay" pos="-3762,-324,0">
-   <Inputs delay="1" resetOnInput="0"/>
-  </Node>
-  <Node Id="2394" Class="Time:Delay" pos="-2574,4122,0">
-   <Inputs delay="1" resetOnInput="0"/>
-  </Node>
   <Node Id="2469" Class="UI:Functions:MainMenu:AddChoicesButton" pos="2448,-486,0">
    <Inputs instanceID="-1" buttonId="" containerIndex="0" uiText="Anti-Aliasing" tooltip="" disable="0" sound=""/>
   </Node>
@@ -132,939 +117,944 @@
   <Node Id="2480" Class="String:SetString" pos="2052,-414,0">
    <Inputs In="sys_spec_ogp_antialiasing"/>
   </Node>
-  <Node Id="2481" Class="Mission:GameTokenGet" pos="3546,-468,0">
+  <Node Id="2481" Class="Mission:GameTokenGet" pos="3438,-432,0">
    <Inputs gametoken_Token="ogp_settings_exists"/>
   </Node>
-  <Node Id="2482" Class="Math:BooleanFrom" pos="3906,-468,0">
+  <Node Id="2482" Class="Math:BooleanFrom" pos="3798,-432,0">
    <Inputs Value="0"/>
   </Node>
-  <Node Id="2483" Class="UI:Functions:MainMenu:SetChoice" pos="4338,-558,0">
+  <Node Id="2483" Class="UI:Functions:MainMenu:SetChoice" pos="4230,-522,0">
    <Inputs instanceID="-1" id="" containerIndex="0" choiceId="0"/>
   </Node>
-  <Node Id="2484" Class="Debug:ConsoleVariable" pos="4104,-540,0">
+  <Node Id="2484" Class="Debug:ConsoleVariable" pos="3996,-504,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2485" Class="UI:Functions:MainMenu:SetChoice" pos="4698,-414,0">
+  <Node Id="2485" Class="UI:Functions:MainMenu:SetChoice" pos="4590,-378,0">
    <Inputs instanceID="-1" id="" containerIndex="0" choiceId="0"/>
   </Node>
-  <Node Id="2486" Class="Xml:GetChild" pos="4302,-414,0">
+  <Node Id="2486" Class="Xml:GetChild" pos="4194,-378,0">
    <Inputs Name="" Create="0"/>
   </Node>
-  <Node Id="2487" Class="Xml:GetValue" pos="4500,-414,0">
+  <Node Id="2487" Class="Xml:GetValue" pos="4392,-378,0">
    <Inputs />
   </Node>
-  <Node Id="2488" Class="Xml:GetRoot" pos="4104,-414,0">
+  <Node Id="2488" Class="Xml:GetRoot" pos="3996,-378,0">
    <Inputs />
   </Node>
-  <Node Id="2490" Class="Debug:ConsoleVariable" pos="4068,-90,0">
+  <Node Id="2490" Class="Debug:ConsoleVariable" pos="2736,2538,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2491" Class="UI:Functions:MainMenu:GetChoice" pos="3582,-18,0">
+  <Node Id="2491" Class="UI:Functions:MainMenu:GetChoice" pos="2250,2610,0">
    <Inputs instanceID="-1" id="" containerIndex="0"/>
   </Node>
-  <Node Id="2492" Class="Math:Less" pos="3906,-72,0">
+  <Node Id="2492" Class="Math:Less" pos="2574,2556,0">
    <Inputs A="0" B="10"/>
   </Node>
-  <Node Id="2493" Class="Debug:ConsoleVariable" pos="4338,54,0">
+  <Node Id="2493" Class="Debug:ConsoleVariable" pos="3006,2682,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2494" Class="Math:Calculate" pos="3906,36,0">
+  <Node Id="2494" Class="Math:Calculate" pos="2574,2664,0">
    <Inputs Op="1" A="0" B="10"/>
   </Node>
-  <Node Id="2495" Class="String:Concat" pos="4122,54,0">
+  <Node Id="2495" Class="String:Concat" pos="2790,2682,0">
    <Inputs String1="" String2="_vanilla"/>
   </Node>
-  <Node Id="2496" Class="Xml:NewChild" pos="3780,432,0">
+  <Node Id="2496" Class="Xml:NewChild" pos="2322,4464,0">
    <Inputs Name="" Active="1"/>
   </Node>
-  <Node Id="2497" Class="Xml:SetValue" pos="4284,432,0">
+  <Node Id="2497" Class="Xml:SetValue" pos="2826,4464,0">
    <Inputs />
   </Node>
-  <Node Id="2498" Class="Xml:GetRoot" pos="3582,432,0">
+  <Node Id="2498" Class="Xml:GetRoot" pos="2124,4464,0">
    <Inputs />
   </Node>
-  <Node Id="2499" Class="UI:Functions:MainMenu:GetChoice" pos="3978,432,0">
+  <Node Id="2499" Class="UI:Functions:MainMenu:GetChoice" pos="2520,4464,0">
    <Inputs instanceID="-1" id="" containerIndex="0"/>
   </Node>
-  <Node Id="2501" Class="UI:Functions:MainMenu:AddChoicesButton" pos="2394,1890,0">
+  <Node Id="2501" Class="UI:Functions:MainMenu:AddChoicesButton" pos="6228,-504,0">
    <Inputs instanceID="-1" buttonId="" containerIndex="0" uiText="Motion Blur" tooltip="" disable="0" sound=""/>
   </Node>
-  <Node Id="2502" Class="UI:Functions:MainMenu:AddChoiceOption" pos="2808,1890,0">
+  <Node Id="2502" Class="UI:Functions:MainMenu:AddChoiceOption" pos="6642,-504,0">
    <Inputs instanceID="-1" choiceId="0" buttonId="" containerIndex="0" uiText="off" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2503" Class="UI:Functions:MainMenu:AddChoiceOption" pos="2808,2124,0">
+  <Node Id="2503" Class="UI:Functions:MainMenu:AddChoiceOption" pos="6642,-270,0">
    <Inputs instanceID="-1" choiceId="1" buttonId="" containerIndex="0" uiText="camera" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2504" Class="UI:Functions:MainMenu:AddChoiceOption" pos="2808,2340,0">
+  <Node Id="2504" Class="UI:Functions:MainMenu:AddChoiceOption" pos="6642,-54,0">
    <Inputs instanceID="-1" choiceId="2" buttonId="" containerIndex="0" uiText="camera+objets" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2512" Class="String:SetString" pos="2106,1962,0">
+  <Node Id="2512" Class="String:SetString" pos="5940,-432,0">
    <Inputs In="r_motionblur"/>
   </Node>
-  <Node Id="2513" Class="Mission:GameTokenGet" pos="3510,1908,0">
+  <Node Id="2513" Class="Mission:GameTokenGet" pos="7344,-486,0">
    <Inputs gametoken_Token="ogp_settings_exists"/>
   </Node>
-  <Node Id="2514" Class="Math:BooleanFrom" pos="3870,1908,0">
+  <Node Id="2514" Class="Math:BooleanFrom" pos="7704,-486,0">
    <Inputs Value="0"/>
   </Node>
-  <Node Id="2515" Class="UI:Functions:MainMenu:SetChoice" pos="4302,1818,0">
+  <Node Id="2515" Class="UI:Functions:MainMenu:SetChoice" pos="8136,-576,0">
    <Inputs instanceID="-1" id="" containerIndex="0" choiceId="0"/>
   </Node>
-  <Node Id="2516" Class="Debug:ConsoleVariable" pos="4068,1836,0">
+  <Node Id="2516" Class="Debug:ConsoleVariable" pos="7902,-558,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2517" Class="UI:Functions:MainMenu:SetChoice" pos="4662,1962,0">
+  <Node Id="2517" Class="UI:Functions:MainMenu:SetChoice" pos="8496,-432,0">
    <Inputs instanceID="-1" id="" containerIndex="0" choiceId="0"/>
   </Node>
-  <Node Id="2518" Class="Xml:GetChild" pos="4266,1962,0">
+  <Node Id="2518" Class="Xml:GetChild" pos="8100,-432,0">
    <Inputs Name="" Create="0"/>
   </Node>
-  <Node Id="2519" Class="Xml:GetValue" pos="4464,1962,0">
+  <Node Id="2519" Class="Xml:GetValue" pos="8298,-432,0">
    <Inputs />
   </Node>
-  <Node Id="2520" Class="Xml:GetRoot" pos="4068,1962,0">
+  <Node Id="2520" Class="Xml:GetRoot" pos="7902,-432,0">
    <Inputs />
   </Node>
-  <Node Id="2522" Class="Debug:ConsoleVariable" pos="4032,2286,0">
+  <Node Id="2522" Class="Debug:ConsoleVariable" pos="6822,2520,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2523" Class="UI:Functions:MainMenu:GetChoice" pos="3546,2358,0">
+  <Node Id="2523" Class="UI:Functions:MainMenu:GetChoice" pos="6318,2592,0">
    <Inputs instanceID="-1" id="" containerIndex="0"/>
   </Node>
-  <Node Id="2524" Class="Math:Less" pos="3870,2304,0">
+  <Node Id="2524" Class="Math:Less" pos="6660,2538,0">
    <Inputs A="0" B="10"/>
   </Node>
-  <Node Id="2525" Class="Debug:ConsoleVariable" pos="4302,2430,0">
+  <Node Id="2525" Class="Debug:ConsoleVariable" pos="7092,2664,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2526" Class="Math:Calculate" pos="3870,2412,0">
+  <Node Id="2526" Class="Math:Calculate" pos="6660,2646,0">
    <Inputs Op="1" A="0" B="10"/>
   </Node>
-  <Node Id="2527" Class="String:Concat" pos="4086,2430,0">
+  <Node Id="2527" Class="String:Concat" pos="6876,2664,0">
    <Inputs String1="" String2="_vanilla"/>
   </Node>
-  <Node Id="2528" Class="Xml:NewChild" pos="3744,2808,0">
+  <Node Id="2528" Class="Xml:NewChild" pos="6354,4518,0">
    <Inputs Name="" Active="1"/>
   </Node>
-  <Node Id="2529" Class="Xml:SetValue" pos="4248,2808,0">
+  <Node Id="2529" Class="Xml:SetValue" pos="6876,4518,0">
    <Inputs />
   </Node>
-  <Node Id="2530" Class="Xml:GetRoot" pos="3546,2808,0">
+  <Node Id="2530" Class="Xml:GetRoot" pos="6138,4518,0">
    <Inputs />
   </Node>
-  <Node Id="2531" Class="UI:Functions:MainMenu:GetChoice" pos="3942,2808,0">
+  <Node Id="2531" Class="UI:Functions:MainMenu:GetChoice" pos="6552,4518,0">
    <Inputs instanceID="-1" id="" containerIndex="0"/>
   </Node>
-  <Node Id="2595" Class="UI:Functions:MainMenu:AddChoicesButton" pos="2394,4320,0">
+  <Node Id="2595" Class="UI:Functions:MainMenu:AddChoicesButton" pos="9972,-414,0">
    <Inputs instanceID="-1" buttonId="" containerIndex="0" uiText="Wind on grass" tooltip="Recommended: off" disable="0" sound=""/>
   </Node>
-  <Node Id="2596" Class="UI:Functions:MainMenu:AddChoiceOption" pos="2808,4320,0">
+  <Node Id="2596" Class="UI:Functions:MainMenu:AddChoiceOption" pos="10386,-414,0">
    <Inputs instanceID="-1" choiceId="0" buttonId="" containerIndex="0" uiText="off" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2597" Class="UI:Functions:MainMenu:AddChoiceOption" pos="2808,4554,0">
+  <Node Id="2597" Class="UI:Functions:MainMenu:AddChoiceOption" pos="10386,-180,0">
    <Inputs instanceID="-1" choiceId="1" buttonId="" containerIndex="0" uiText="on" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2606" Class="String:SetString" pos="1980,4392,0">
+  <Node Id="2606" Class="String:SetString" pos="9558,-342,0">
    <Inputs In="e_MergedMeshesUseSpines"/>
   </Node>
-  <Node Id="2607" Class="Mission:GameTokenGet" pos="3510,4338,0">
+  <Node Id="2607" Class="Mission:GameTokenGet" pos="11088,-396,0">
    <Inputs gametoken_Token="ogp_settings_exists"/>
   </Node>
-  <Node Id="2608" Class="Math:BooleanFrom" pos="3870,4338,0">
+  <Node Id="2608" Class="Math:BooleanFrom" pos="11448,-396,0">
    <Inputs Value="0"/>
   </Node>
-  <Node Id="2609" Class="UI:Functions:MainMenu:SetChoice" pos="4302,4248,0">
+  <Node Id="2609" Class="UI:Functions:MainMenu:SetChoice" pos="11880,-486,0">
    <Inputs instanceID="-1" id="" containerIndex="0" choiceId="0"/>
   </Node>
-  <Node Id="2610" Class="Debug:ConsoleVariable" pos="4068,4266,0">
+  <Node Id="2610" Class="Debug:ConsoleVariable" pos="11646,-468,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2611" Class="UI:Functions:MainMenu:SetChoice" pos="4662,4392,0">
+  <Node Id="2611" Class="UI:Functions:MainMenu:SetChoice" pos="12240,-342,0">
    <Inputs instanceID="-1" id="" containerIndex="0" choiceId="0"/>
   </Node>
-  <Node Id="2612" Class="Xml:GetChild" pos="4266,4392,0">
+  <Node Id="2612" Class="Xml:GetChild" pos="11844,-342,0">
    <Inputs Name="" Create="0"/>
   </Node>
-  <Node Id="2613" Class="Xml:GetValue" pos="4464,4392,0">
+  <Node Id="2613" Class="Xml:GetValue" pos="12042,-342,0">
    <Inputs />
   </Node>
-  <Node Id="2614" Class="Xml:GetRoot" pos="4068,4392,0">
+  <Node Id="2614" Class="Xml:GetRoot" pos="11646,-342,0">
    <Inputs />
   </Node>
-  <Node Id="2616" Class="Debug:ConsoleVariable" pos="4032,4716,0">
+  <Node Id="2616" Class="Debug:ConsoleVariable" pos="10296,2538,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2617" Class="UI:Functions:MainMenu:GetChoice" pos="3546,4788,0">
+  <Node Id="2617" Class="UI:Functions:MainMenu:GetChoice" pos="9792,2610,0">
    <Inputs instanceID="-1" id="" containerIndex="0"/>
   </Node>
-  <Node Id="2618" Class="Math:Less" pos="3870,4734,0">
+  <Node Id="2618" Class="Math:Less" pos="10134,2556,0">
    <Inputs A="0" B="10"/>
   </Node>
-  <Node Id="2619" Class="Debug:ConsoleVariable" pos="4302,4860,0">
+  <Node Id="2619" Class="Debug:ConsoleVariable" pos="10566,2682,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2620" Class="Math:Calculate" pos="3870,4842,0">
+  <Node Id="2620" Class="Math:Calculate" pos="10134,2664,0">
    <Inputs Op="1" A="0" B="10"/>
   </Node>
-  <Node Id="2621" Class="String:Concat" pos="4086,4860,0">
+  <Node Id="2621" Class="String:Concat" pos="10350,2682,0">
    <Inputs String1="" String2="_vanilla"/>
   </Node>
-  <Node Id="2622" Class="Xml:NewChild" pos="3744,5238,0">
+  <Node Id="2622" Class="Xml:NewChild" pos="9828,4536,0">
    <Inputs Name="" Active="1"/>
   </Node>
-  <Node Id="2623" Class="Xml:SetValue" pos="4248,5238,0">
+  <Node Id="2623" Class="Xml:SetValue" pos="10332,4536,0">
    <Inputs />
   </Node>
-  <Node Id="2624" Class="Xml:GetRoot" pos="3546,5238,0">
+  <Node Id="2624" Class="Xml:GetRoot" pos="9630,4536,0">
    <Inputs />
   </Node>
-  <Node Id="2625" Class="UI:Functions:MainMenu:GetChoice" pos="3942,5238,0">
+  <Node Id="2625" Class="UI:Functions:MainMenu:GetChoice" pos="10026,4536,0">
    <Inputs instanceID="-1" id="" containerIndex="0"/>
   </Node>
-  <Node Id="2626" Class="UI:Functions:MainMenu:AddChoicesButton" pos="2430,6804,0">
+  <Node Id="2626" Class="UI:Functions:MainMenu:AddChoicesButton" pos="13320,-288,0">
    <Inputs instanceID="-1" buttonId="" containerIndex="0" uiText="Grass casts shadow" tooltip="" disable="0" sound=""/>
   </Node>
-  <Node Id="2627" Class="UI:Functions:MainMenu:AddChoiceOption" pos="2844,6804,0">
+  <Node Id="2627" Class="UI:Functions:MainMenu:AddChoiceOption" pos="13734,-288,0">
    <Inputs instanceID="-1" choiceId="1" buttonId="" containerIndex="0" uiText="off" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2628" Class="UI:Functions:MainMenu:AddChoiceOption" pos="2844,7038,0">
+  <Node Id="2628" Class="UI:Functions:MainMenu:AddChoiceOption" pos="13734,-54,0">
    <Inputs instanceID="-1" choiceId="3" buttonId="" containerIndex="0" uiText="on" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2637" Class="String:SetString" pos="2106,6876,0">
+  <Node Id="2637" Class="String:SetString" pos="12996,-216,0">
    <Inputs In="e_ObjShadowCastSpec"/>
   </Node>
-  <Node Id="2638" Class="Mission:GameTokenGet" pos="3546,6822,0">
+  <Node Id="2638" Class="Mission:GameTokenGet" pos="14436,-270,0">
    <Inputs gametoken_Token="ogp_settings_exists"/>
   </Node>
-  <Node Id="2639" Class="Math:BooleanFrom" pos="3906,6822,0">
+  <Node Id="2639" Class="Math:BooleanFrom" pos="14796,-270,0">
    <Inputs Value="0"/>
   </Node>
-  <Node Id="2640" Class="UI:Functions:MainMenu:SetChoice" pos="4338,6732,0">
+  <Node Id="2640" Class="UI:Functions:MainMenu:SetChoice" pos="15228,-360,0">
    <Inputs instanceID="-1" id="" containerIndex="0" choiceId="0"/>
   </Node>
-  <Node Id="2641" Class="Debug:ConsoleVariable" pos="4104,6750,0">
+  <Node Id="2641" Class="Debug:ConsoleVariable" pos="14994,-342,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2642" Class="UI:Functions:MainMenu:SetChoice" pos="4698,6876,0">
+  <Node Id="2642" Class="UI:Functions:MainMenu:SetChoice" pos="15588,-216,0">
    <Inputs instanceID="-1" id="" containerIndex="0" choiceId="0"/>
   </Node>
-  <Node Id="2643" Class="Xml:GetChild" pos="4302,6876,0">
+  <Node Id="2643" Class="Xml:GetChild" pos="15192,-216,0">
    <Inputs Name="" Create="0"/>
   </Node>
-  <Node Id="2644" Class="Xml:GetValue" pos="4500,6876,0">
+  <Node Id="2644" Class="Xml:GetValue" pos="15390,-216,0">
    <Inputs />
   </Node>
-  <Node Id="2645" Class="Xml:GetRoot" pos="4104,6876,0">
+  <Node Id="2645" Class="Xml:GetRoot" pos="14994,-216,0">
    <Inputs />
   </Node>
-  <Node Id="2647" Class="Debug:ConsoleVariable" pos="4068,7200,0">
+  <Node Id="2647" Class="Debug:ConsoleVariable" pos="13770,2520,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2648" Class="UI:Functions:MainMenu:GetChoice" pos="3582,7272,0">
+  <Node Id="2648" Class="UI:Functions:MainMenu:GetChoice" pos="13284,2592,0">
    <Inputs instanceID="-1" id="" containerIndex="0"/>
   </Node>
-  <Node Id="2649" Class="Math:Less" pos="3906,7218,0">
+  <Node Id="2649" Class="Math:Less" pos="13608,2538,0">
    <Inputs A="0" B="10"/>
   </Node>
-  <Node Id="2650" Class="Debug:ConsoleVariable" pos="4338,7344,0">
+  <Node Id="2650" Class="Debug:ConsoleVariable" pos="14040,2664,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2651" Class="Math:Calculate" pos="3906,7326,0">
+  <Node Id="2651" Class="Math:Calculate" pos="13608,2646,0">
    <Inputs Op="1" A="0" B="10"/>
   </Node>
-  <Node Id="2652" Class="String:Concat" pos="4122,7344,0">
+  <Node Id="2652" Class="String:Concat" pos="13824,2664,0">
    <Inputs String1="" String2="_vanilla"/>
   </Node>
-  <Node Id="2653" Class="Xml:NewChild" pos="3780,7722,0">
+  <Node Id="2653" Class="Xml:NewChild" pos="13338,4536,0">
    <Inputs Name="" Active="1"/>
   </Node>
-  <Node Id="2654" Class="Xml:SetValue" pos="4284,7722,0">
+  <Node Id="2654" Class="Xml:SetValue" pos="13842,4536,0">
    <Inputs />
   </Node>
-  <Node Id="2655" Class="Xml:GetRoot" pos="3582,7722,0">
+  <Node Id="2655" Class="Xml:GetRoot" pos="13140,4536,0">
    <Inputs />
   </Node>
-  <Node Id="2656" Class="UI:Functions:MainMenu:GetChoice" pos="3978,7722,0">
+  <Node Id="2656" Class="UI:Functions:MainMenu:GetChoice" pos="13536,4536,0">
    <Inputs instanceID="-1" id="" containerIndex="0"/>
   </Node>
-  <Node Id="2688" Class="UI:Functions:MainMenu:AddChoicesButton" pos="6858,-468,0">
+  <Node Id="2688" Class="UI:Functions:MainMenu:AddChoicesButton" pos="20484,-162,0">
    <Inputs instanceID="-1" buttonId="" containerIndex="0" uiText="Global Illumination" tooltip="Light diffusion/boucing" disable="0" sound=""/>
   </Node>
-  <Node Id="2689" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7272,-468,0">
+  <Node Id="2689" Class="UI:Functions:MainMenu:AddChoiceOption" pos="20898,-162,0">
    <Inputs instanceID="-1" choiceId="0" buttonId="" containerIndex="0" uiText="ugly" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2690" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7272,-234,0">
+  <Node Id="2690" Class="UI:Functions:MainMenu:AddChoiceOption" pos="20898,72,0">
    <Inputs instanceID="-1" choiceId="1" buttonId="" containerIndex="0" uiText="low" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2691" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7272,-18,0">
+  <Node Id="2691" Class="UI:Functions:MainMenu:AddChoiceOption" pos="20898,288,0">
    <Inputs instanceID="-1" choiceId="2" buttonId="" containerIndex="0" uiText="medium" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2692" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7272,198,0">
+  <Node Id="2692" Class="UI:Functions:MainMenu:AddChoiceOption" pos="20898,504,0">
    <Inputs instanceID="-1" choiceId="3" buttonId="" containerIndex="0" uiText="high" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2693" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7272,396,0">
+  <Node Id="2693" Class="UI:Functions:MainMenu:AddChoiceOption" pos="20898,702,0">
    <Inputs instanceID="-1" choiceId="4" buttonId="" containerIndex="0" uiText="ultra" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2694" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7272,612,0">
+  <Node Id="2694" Class="UI:Functions:MainMenu:AddChoiceOption" pos="20898,918,0">
    <Inputs instanceID="-1" choiceId="11" buttonId="" containerIndex="0" uiText="vanilla_low" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2695" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7272,828,0">
+  <Node Id="2695" Class="UI:Functions:MainMenu:AddChoiceOption" pos="20898,1134,0">
    <Inputs instanceID="-1" choiceId="12" buttonId="" containerIndex="0" uiText="vanilla_medium" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2696" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7272,1044,0">
+  <Node Id="2696" Class="UI:Functions:MainMenu:AddChoiceOption" pos="20898,1350,0">
    <Inputs instanceID="-1" choiceId="13" buttonId="" containerIndex="0" uiText="vanilla_high" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2697" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7272,1260,0">
+  <Node Id="2697" Class="UI:Functions:MainMenu:AddChoiceOption" pos="20898,1566,0">
    <Inputs instanceID="-1" choiceId="14" buttonId="" containerIndex="0" uiText="vanilla_vhigh" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2698" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7272,1494,0">
+  <Node Id="2698" Class="UI:Functions:MainMenu:AddChoiceOption" pos="20898,1800,0">
    <Inputs instanceID="-1" choiceId="17" buttonId="" containerIndex="0" uiText="vanilla_ultra" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2699" Class="String:SetString" pos="6516,-414,0">
+  <Node Id="2699" Class="String:SetString" pos="20142,-108,0">
    <Inputs In="sys_spec_ogp_gi"/>
   </Node>
-  <Node Id="2700" Class="Mission:GameTokenGet" pos="7974,-450,0">
+  <Node Id="2700" Class="Mission:GameTokenGet" pos="21600,-144,0">
    <Inputs gametoken_Token="ogp_settings_exists"/>
   </Node>
-  <Node Id="2701" Class="Math:BooleanFrom" pos="8334,-450,0">
+  <Node Id="2701" Class="Math:BooleanFrom" pos="21960,-144,0">
    <Inputs Value="0"/>
   </Node>
-  <Node Id="2702" Class="UI:Functions:MainMenu:SetChoice" pos="8766,-540,0">
+  <Node Id="2702" Class="UI:Functions:MainMenu:SetChoice" pos="22392,-234,0">
    <Inputs instanceID="-1" id="" containerIndex="0" choiceId="0"/>
   </Node>
-  <Node Id="2703" Class="Debug:ConsoleVariable" pos="8532,-522,0">
+  <Node Id="2703" Class="Debug:ConsoleVariable" pos="22158,-216,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2704" Class="UI:Functions:MainMenu:SetChoice" pos="9126,-396,0">
+  <Node Id="2704" Class="UI:Functions:MainMenu:SetChoice" pos="22752,-90,0">
    <Inputs instanceID="-1" id="" containerIndex="0" choiceId="0"/>
   </Node>
-  <Node Id="2705" Class="Xml:GetChild" pos="8730,-396,0">
+  <Node Id="2705" Class="Xml:GetChild" pos="22356,-90,0">
    <Inputs Name="" Create="0"/>
   </Node>
-  <Node Id="2706" Class="Xml:GetValue" pos="8928,-396,0">
+  <Node Id="2706" Class="Xml:GetValue" pos="22554,-90,0">
    <Inputs />
   </Node>
-  <Node Id="2707" Class="Xml:GetRoot" pos="8532,-396,0">
+  <Node Id="2707" Class="Xml:GetRoot" pos="22158,-90,0">
    <Inputs />
   </Node>
-  <Node Id="2709" Class="Debug:ConsoleVariable" pos="8496,-72,0">
+  <Node Id="2709" Class="Debug:ConsoleVariable" pos="21132,2556,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2710" Class="UI:Functions:MainMenu:GetChoice" pos="8010,0,0">
+  <Node Id="2710" Class="UI:Functions:MainMenu:GetChoice" pos="20646,2628,0">
    <Inputs instanceID="-1" id="" containerIndex="0"/>
   </Node>
-  <Node Id="2711" Class="Math:Less" pos="8334,-54,0">
+  <Node Id="2711" Class="Math:Less" pos="20970,2574,0">
    <Inputs A="0" B="10"/>
   </Node>
-  <Node Id="2712" Class="Debug:ConsoleVariable" pos="8766,72,0">
+  <Node Id="2712" Class="Debug:ConsoleVariable" pos="21402,2700,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2713" Class="Math:Calculate" pos="8334,54,0">
+  <Node Id="2713" Class="Math:Calculate" pos="20970,2682,0">
    <Inputs Op="1" A="0" B="10"/>
   </Node>
-  <Node Id="2714" Class="String:Concat" pos="8550,72,0">
+  <Node Id="2714" Class="String:Concat" pos="21186,2700,0">
    <Inputs String1="" String2="_vanilla"/>
   </Node>
-  <Node Id="2715" Class="Xml:NewChild" pos="8208,450,0">
+  <Node Id="2715" Class="Xml:NewChild" pos="20664,4608,0">
    <Inputs Name="" Active="1"/>
   </Node>
-  <Node Id="2716" Class="Xml:SetValue" pos="8712,450,0">
+  <Node Id="2716" Class="Xml:SetValue" pos="21168,4608,0">
    <Inputs />
   </Node>
-  <Node Id="2717" Class="Xml:GetRoot" pos="8010,450,0">
+  <Node Id="2717" Class="Xml:GetRoot" pos="20466,4608,0">
    <Inputs />
   </Node>
-  <Node Id="2718" Class="UI:Functions:MainMenu:GetChoice" pos="8406,450,0">
+  <Node Id="2718" Class="UI:Functions:MainMenu:GetChoice" pos="20862,4608,0">
    <Inputs instanceID="-1" id="" containerIndex="0"/>
   </Node>
-  <Node Id="2752" Class="UI:Functions:MainMenu:AddChoicesButton" pos="6858,1926,0">
+  <Node Id="2752" Class="UI:Functions:MainMenu:AddChoicesButton" pos="23976,-126,0">
    <Inputs instanceID="-1" buttonId="" containerIndex="0" uiText="Grass quality/distance" tooltip="" disable="0" sound=""/>
   </Node>
-  <Node Id="2753" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7272,1926,0">
+  <Node Id="2753" Class="UI:Functions:MainMenu:AddChoiceOption" pos="24390,-126,0">
    <Inputs instanceID="-1" choiceId="0" buttonId="" containerIndex="0" uiText="ugly" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2754" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7272,2160,0">
+  <Node Id="2754" Class="UI:Functions:MainMenu:AddChoiceOption" pos="24390,108,0">
    <Inputs instanceID="-1" choiceId="1" buttonId="" containerIndex="0" uiText="low" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2755" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7272,2376,0">
+  <Node Id="2755" Class="UI:Functions:MainMenu:AddChoiceOption" pos="24390,324,0">
    <Inputs instanceID="-1" choiceId="2" buttonId="" containerIndex="0" uiText="medium" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2756" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7272,2592,0">
+  <Node Id="2756" Class="UI:Functions:MainMenu:AddChoiceOption" pos="24390,540,0">
    <Inputs instanceID="-1" choiceId="3" buttonId="" containerIndex="0" uiText="high" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2757" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7272,2790,0">
+  <Node Id="2757" Class="UI:Functions:MainMenu:AddChoiceOption" pos="24390,738,0">
    <Inputs instanceID="-1" choiceId="4" buttonId="" containerIndex="0" uiText="ultra" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2758" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7272,3006,0">
+  <Node Id="2758" Class="UI:Functions:MainMenu:AddChoiceOption" pos="24390,954,0">
    <Inputs instanceID="-1" choiceId="11" buttonId="" containerIndex="0" uiText="vanilla_low" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2759" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7272,3222,0">
+  <Node Id="2759" Class="UI:Functions:MainMenu:AddChoiceOption" pos="24390,1170,0">
    <Inputs instanceID="-1" choiceId="12" buttonId="" containerIndex="0" uiText="vanilla_medium" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2760" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7272,3438,0">
+  <Node Id="2760" Class="UI:Functions:MainMenu:AddChoiceOption" pos="24390,1386,0">
    <Inputs instanceID="-1" choiceId="13" buttonId="" containerIndex="0" uiText="vanilla_high" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2761" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7272,3654,0">
+  <Node Id="2761" Class="UI:Functions:MainMenu:AddChoiceOption" pos="24390,1602,0">
    <Inputs instanceID="-1" choiceId="14" buttonId="" containerIndex="0" uiText="vanilla_vhigh" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2762" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7272,3888,0">
+  <Node Id="2762" Class="UI:Functions:MainMenu:AddChoiceOption" pos="24390,1836,0">
    <Inputs instanceID="-1" choiceId="17" buttonId="" containerIndex="0" uiText="vanilla_ultra" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2763" Class="String:SetString" pos="6498,1980,0">
+  <Node Id="2763" Class="String:SetString" pos="23616,-72,0">
    <Inputs In="sys_spec_ogp_grass"/>
   </Node>
-  <Node Id="2764" Class="Mission:GameTokenGet" pos="7974,1944,0">
+  <Node Id="2764" Class="Mission:GameTokenGet" pos="25092,-108,0">
    <Inputs gametoken_Token="ogp_settings_exists"/>
   </Node>
-  <Node Id="2765" Class="Math:BooleanFrom" pos="8334,1944,0">
+  <Node Id="2765" Class="Math:BooleanFrom" pos="25452,-108,0">
    <Inputs Value="0"/>
   </Node>
-  <Node Id="2766" Class="UI:Functions:MainMenu:SetChoice" pos="8766,1854,0">
+  <Node Id="2766" Class="UI:Functions:MainMenu:SetChoice" pos="25884,-198,0">
    <Inputs instanceID="-1" id="" containerIndex="0" choiceId="0"/>
   </Node>
-  <Node Id="2767" Class="Debug:ConsoleVariable" pos="8532,1872,0">
+  <Node Id="2767" Class="Debug:ConsoleVariable" pos="25650,-180,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2768" Class="UI:Functions:MainMenu:SetChoice" pos="9126,1998,0">
+  <Node Id="2768" Class="UI:Functions:MainMenu:SetChoice" pos="26244,-54,0">
    <Inputs instanceID="-1" id="" containerIndex="0" choiceId="0"/>
   </Node>
-  <Node Id="2769" Class="Xml:GetChild" pos="8730,1998,0">
+  <Node Id="2769" Class="Xml:GetChild" pos="25848,-54,0">
    <Inputs Name="" Create="0"/>
   </Node>
-  <Node Id="2770" Class="Xml:GetValue" pos="8928,1998,0">
+  <Node Id="2770" Class="Xml:GetValue" pos="26046,-54,0">
    <Inputs />
   </Node>
-  <Node Id="2771" Class="Xml:GetRoot" pos="8532,1998,0">
+  <Node Id="2771" Class="Xml:GetRoot" pos="25650,-54,0">
    <Inputs />
   </Node>
-  <Node Id="2772" Class="Debug:ConsoleVariable" pos="8496,2322,0">
+  <Node Id="2772" Class="Debug:ConsoleVariable" pos="24624,2592,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2773" Class="UI:Functions:MainMenu:GetChoice" pos="8010,2394,0">
+  <Node Id="2773" Class="UI:Functions:MainMenu:GetChoice" pos="24138,2664,0">
    <Inputs instanceID="-1" id="" containerIndex="0"/>
   </Node>
-  <Node Id="2774" Class="Math:Less" pos="8334,2340,0">
+  <Node Id="2774" Class="Math:Less" pos="24462,2610,0">
    <Inputs A="0" B="10"/>
   </Node>
-  <Node Id="2775" Class="Debug:ConsoleVariable" pos="8766,2466,0">
+  <Node Id="2775" Class="Debug:ConsoleVariable" pos="24894,2736,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2776" Class="Math:Calculate" pos="8334,2448,0">
+  <Node Id="2776" Class="Math:Calculate" pos="24462,2718,0">
    <Inputs Op="1" A="0" B="10"/>
   </Node>
-  <Node Id="2777" Class="String:Concat" pos="8550,2466,0">
+  <Node Id="2777" Class="String:Concat" pos="24678,2736,0">
    <Inputs String1="" String2="_vanilla"/>
   </Node>
-  <Node Id="2778" Class="Xml:NewChild" pos="8208,2844,0">
+  <Node Id="2778" Class="Xml:NewChild" pos="24156,4644,0">
    <Inputs Name="" Active="1"/>
   </Node>
-  <Node Id="2779" Class="Xml:SetValue" pos="8712,2844,0">
+  <Node Id="2779" Class="Xml:SetValue" pos="24660,4644,0">
    <Inputs />
   </Node>
-  <Node Id="2780" Class="Xml:GetRoot" pos="8010,2844,0">
+  <Node Id="2780" Class="Xml:GetRoot" pos="23958,4644,0">
    <Inputs />
   </Node>
-  <Node Id="2781" Class="UI:Functions:MainMenu:GetChoice" pos="8406,2844,0">
+  <Node Id="2781" Class="UI:Functions:MainMenu:GetChoice" pos="24354,4644,0">
    <Inputs instanceID="-1" id="" containerIndex="0"/>
   </Node>
-  <Node Id="2782" Class="UI:Functions:MainMenu:AddChoicesButton" pos="6480,4464,0">
+  <Node Id="2782" Class="UI:Functions:MainMenu:AddChoicesButton" pos="27468,-108,0">
    <Inputs instanceID="-1" buttonId="" containerIndex="0" uiText="Level of Detail" tooltip="Characters, objects , and vegetation(except grass) rendering quality/distance" disable="0" sound=""/>
   </Node>
-  <Node Id="2783" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7290,4464,0">
+  <Node Id="2783" Class="UI:Functions:MainMenu:AddChoiceOption" pos="28278,-108,0">
    <Inputs instanceID="-1" choiceId="0" buttonId="" containerIndex="0" uiText="ugly" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2784" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7290,4698,0">
+  <Node Id="2784" Class="UI:Functions:MainMenu:AddChoiceOption" pos="28278,126,0">
    <Inputs instanceID="-1" choiceId="1" buttonId="" containerIndex="0" uiText="low" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2785" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7290,4914,0">
+  <Node Id="2785" Class="UI:Functions:MainMenu:AddChoiceOption" pos="28278,342,0">
    <Inputs instanceID="-1" choiceId="2" buttonId="" containerIndex="0" uiText="medium" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2786" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7290,5130,0">
+  <Node Id="2786" Class="UI:Functions:MainMenu:AddChoiceOption" pos="28278,558,0">
    <Inputs instanceID="-1" choiceId="3" buttonId="" containerIndex="0" uiText="high" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2787" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7290,5328,0">
+  <Node Id="2787" Class="UI:Functions:MainMenu:AddChoiceOption" pos="28278,756,0">
    <Inputs instanceID="-1" choiceId="4" buttonId="" containerIndex="0" uiText="ultra" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2788" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7290,5544,0">
+  <Node Id="2788" Class="UI:Functions:MainMenu:AddChoiceOption" pos="28278,972,0">
    <Inputs instanceID="-1" choiceId="11" buttonId="" containerIndex="0" uiText="vanilla_low" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2789" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7290,5760,0">
+  <Node Id="2789" Class="UI:Functions:MainMenu:AddChoiceOption" pos="28278,1188,0">
    <Inputs instanceID="-1" choiceId="12" buttonId="" containerIndex="0" uiText="vanilla_medium" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2790" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7290,5976,0">
+  <Node Id="2790" Class="UI:Functions:MainMenu:AddChoiceOption" pos="28278,1404,0">
    <Inputs instanceID="-1" choiceId="13" buttonId="" containerIndex="0" uiText="vanilla_high" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2791" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7290,6192,0">
+  <Node Id="2791" Class="UI:Functions:MainMenu:AddChoiceOption" pos="28278,1620,0">
    <Inputs instanceID="-1" choiceId="14" buttonId="" containerIndex="0" uiText="vanilla_vhigh" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2792" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7290,6426,0">
+  <Node Id="2792" Class="UI:Functions:MainMenu:AddChoiceOption" pos="28278,1854,0">
    <Inputs instanceID="-1" choiceId="17" buttonId="" containerIndex="0" uiText="vanilla_ultra" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2793" Class="String:SetString" pos="6102,4518,0">
+  <Node Id="2793" Class="String:SetString" pos="27090,-54,0">
    <Inputs In="sys_spec_ogp_lod"/>
   </Node>
-  <Node Id="2794" Class="Mission:GameTokenGet" pos="7992,4482,0">
+  <Node Id="2794" Class="Mission:GameTokenGet" pos="28980,-90,0">
    <Inputs gametoken_Token="ogp_settings_exists"/>
   </Node>
-  <Node Id="2795" Class="Math:BooleanFrom" pos="8352,4482,0">
+  <Node Id="2795" Class="Math:BooleanFrom" pos="29340,-90,0">
    <Inputs Value="0"/>
   </Node>
-  <Node Id="2796" Class="UI:Functions:MainMenu:SetChoice" pos="8784,4392,0">
+  <Node Id="2796" Class="UI:Functions:MainMenu:SetChoice" pos="29772,-180,0">
    <Inputs instanceID="-1" id="" containerIndex="0" choiceId="0"/>
   </Node>
-  <Node Id="2797" Class="Debug:ConsoleVariable" pos="8550,4410,0">
+  <Node Id="2797" Class="Debug:ConsoleVariable" pos="29538,-162,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2798" Class="UI:Functions:MainMenu:SetChoice" pos="9144,4536,0">
+  <Node Id="2798" Class="UI:Functions:MainMenu:SetChoice" pos="30132,-36,0">
    <Inputs instanceID="-1" id="" containerIndex="0" choiceId="0"/>
   </Node>
-  <Node Id="2799" Class="Xml:GetChild" pos="8748,4536,0">
+  <Node Id="2799" Class="Xml:GetChild" pos="29736,-36,0">
    <Inputs Name="" Create="0"/>
   </Node>
-  <Node Id="2800" Class="Xml:GetValue" pos="8946,4536,0">
+  <Node Id="2800" Class="Xml:GetValue" pos="29934,-36,0">
    <Inputs />
   </Node>
-  <Node Id="2801" Class="Xml:GetRoot" pos="8550,4536,0">
+  <Node Id="2801" Class="Xml:GetRoot" pos="29538,-36,0">
    <Inputs />
   </Node>
-  <Node Id="2802" Class="Debug:ConsoleVariable" pos="8514,4860,0">
+  <Node Id="2802" Class="Debug:ConsoleVariable" pos="28512,2610,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2803" Class="UI:Functions:MainMenu:GetChoice" pos="8028,4932,0">
+  <Node Id="2803" Class="UI:Functions:MainMenu:GetChoice" pos="28026,2682,0">
    <Inputs instanceID="-1" id="" containerIndex="0"/>
   </Node>
-  <Node Id="2804" Class="Math:Less" pos="8352,4878,0">
+  <Node Id="2804" Class="Math:Less" pos="28350,2628,0">
    <Inputs A="0" B="10"/>
   </Node>
-  <Node Id="2805" Class="Debug:ConsoleVariable" pos="8784,5004,0">
+  <Node Id="2805" Class="Debug:ConsoleVariable" pos="28782,2754,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2806" Class="Math:Calculate" pos="8352,4986,0">
+  <Node Id="2806" Class="Math:Calculate" pos="28350,2736,0">
    <Inputs Op="1" A="0" B="10"/>
   </Node>
-  <Node Id="2807" Class="String:Concat" pos="8568,5004,0">
+  <Node Id="2807" Class="String:Concat" pos="28566,2754,0">
    <Inputs String1="" String2="_vanilla"/>
   </Node>
-  <Node Id="2808" Class="Xml:NewChild" pos="8226,5382,0">
+  <Node Id="2808" Class="Xml:NewChild" pos="27792,4698,0">
    <Inputs Name="" Active="1"/>
   </Node>
-  <Node Id="2809" Class="Xml:SetValue" pos="8730,5382,0">
+  <Node Id="2809" Class="Xml:SetValue" pos="28296,4698,0">
    <Inputs />
   </Node>
-  <Node Id="2810" Class="Xml:GetRoot" pos="8028,5382,0">
+  <Node Id="2810" Class="Xml:GetRoot" pos="27594,4698,0">
    <Inputs />
   </Node>
-  <Node Id="2811" Class="UI:Functions:MainMenu:GetChoice" pos="8424,5382,0">
+  <Node Id="2811" Class="UI:Functions:MainMenu:GetChoice" pos="27990,4698,0">
    <Inputs instanceID="-1" id="" containerIndex="0"/>
   </Node>
-  <Node Id="2812" Class="UI:Functions:MainMenu:AddChoicesButton" pos="6894,7110,0">
+  <Node Id="2812" Class="UI:Functions:MainMenu:AddChoicesButton" pos="31158,-90,0">
    <Inputs instanceID="-1" buttonId="" containerIndex="0" uiText="Physics" tooltip="" disable="0" sound=""/>
   </Node>
-  <Node Id="2813" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7308,7110,0">
+  <Node Id="2813" Class="UI:Functions:MainMenu:AddChoiceOption" pos="31572,-90,0">
    <Inputs instanceID="-1" choiceId="0" buttonId="" containerIndex="0" uiText="low" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2822" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7308,7344,0">
+  <Node Id="2822" Class="UI:Functions:MainMenu:AddChoiceOption" pos="31572,144,0">
    <Inputs instanceID="-1" choiceId="2" buttonId="" containerIndex="0" uiText="medium" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2823" Class="String:SetString" pos="6480,7164,0">
+  <Node Id="2823" Class="String:SetString" pos="30744,-36,0">
    <Inputs In="sys_spec_ogp_physics"/>
   </Node>
-  <Node Id="2824" Class="Mission:GameTokenGet" pos="8010,7128,0">
+  <Node Id="2824" Class="Mission:GameTokenGet" pos="32274,-72,0">
    <Inputs gametoken_Token="ogp_settings_exists"/>
   </Node>
-  <Node Id="2825" Class="Math:BooleanFrom" pos="8370,7128,0">
+  <Node Id="2825" Class="Math:BooleanFrom" pos="32634,-72,0">
    <Inputs Value="0"/>
   </Node>
-  <Node Id="2826" Class="UI:Functions:MainMenu:SetChoice" pos="8802,7038,0">
+  <Node Id="2826" Class="UI:Functions:MainMenu:SetChoice" pos="33066,-162,0">
    <Inputs instanceID="-1" id="" containerIndex="0" choiceId="0"/>
   </Node>
-  <Node Id="2827" Class="Debug:ConsoleVariable" pos="8568,7056,0">
+  <Node Id="2827" Class="Debug:ConsoleVariable" pos="32832,-144,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2828" Class="UI:Functions:MainMenu:SetChoice" pos="9162,7182,0">
+  <Node Id="2828" Class="UI:Functions:MainMenu:SetChoice" pos="33426,-18,0">
    <Inputs instanceID="-1" id="" containerIndex="0" choiceId="0"/>
   </Node>
-  <Node Id="2829" Class="Xml:GetChild" pos="8766,7182,0">
+  <Node Id="2829" Class="Xml:GetChild" pos="33030,-18,0">
    <Inputs Name="" Create="0"/>
   </Node>
-  <Node Id="2830" Class="Xml:GetValue" pos="8964,7182,0">
+  <Node Id="2830" Class="Xml:GetValue" pos="33228,-18,0">
    <Inputs />
   </Node>
-  <Node Id="2831" Class="Xml:GetRoot" pos="8568,7182,0">
+  <Node Id="2831" Class="Xml:GetRoot" pos="32832,-18,0">
    <Inputs />
   </Node>
-  <Node Id="2832" Class="Debug:ConsoleVariable" pos="8532,7506,0">
+  <Node Id="2832" Class="Debug:ConsoleVariable" pos="31806,2628,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2833" Class="UI:Functions:MainMenu:GetChoice" pos="8046,7578,0">
+  <Node Id="2833" Class="UI:Functions:MainMenu:GetChoice" pos="31320,2700,0">
    <Inputs instanceID="-1" id="" containerIndex="0"/>
   </Node>
-  <Node Id="2834" Class="Math:Less" pos="8370,7524,0">
+  <Node Id="2834" Class="Math:Less" pos="31644,2646,0">
    <Inputs A="0" B="10"/>
   </Node>
-  <Node Id="2835" Class="Debug:ConsoleVariable" pos="8802,7650,0">
+  <Node Id="2835" Class="Debug:ConsoleVariable" pos="32076,2772,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2836" Class="Math:Calculate" pos="8370,7632,0">
+  <Node Id="2836" Class="Math:Calculate" pos="31644,2754,0">
    <Inputs Op="1" A="0" B="10"/>
   </Node>
-  <Node Id="2837" Class="String:Concat" pos="8586,7650,0">
+  <Node Id="2837" Class="String:Concat" pos="31860,2772,0">
    <Inputs String1="" String2="_vanilla"/>
   </Node>
-  <Node Id="2838" Class="Xml:NewChild" pos="8244,8028,0">
+  <Node Id="2838" Class="Xml:NewChild" pos="31338,4680,0">
    <Inputs Name="" Active="1"/>
   </Node>
-  <Node Id="2839" Class="Xml:SetValue" pos="8748,8028,0">
+  <Node Id="2839" Class="Xml:SetValue" pos="31842,4680,0">
    <Inputs />
   </Node>
-  <Node Id="2840" Class="Xml:GetRoot" pos="8046,8028,0">
+  <Node Id="2840" Class="Xml:GetRoot" pos="31140,4680,0">
    <Inputs />
   </Node>
-  <Node Id="2841" Class="UI:Functions:MainMenu:GetChoice" pos="8442,8028,0">
+  <Node Id="2841" Class="UI:Functions:MainMenu:GetChoice" pos="31536,4680,0">
    <Inputs instanceID="-1" id="" containerIndex="0"/>
   </Node>
-  <Node Id="2842" Class="UI:Functions:MainMenu:AddChoicesButton" pos="7092,9792,0">
+  <Node Id="2842" Class="UI:Functions:MainMenu:AddChoicesButton" pos="34326,-36,0">
    <Inputs instanceID="-1" buttonId="" containerIndex="0" uiText="" tooltip="" disable="0" sound=""/>
   </Node>
-  <Node Id="2843" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7506,9792,0">
+  <Node Id="2843" Class="UI:Functions:MainMenu:AddChoiceOption" pos="34740,-36,0">
    <Inputs instanceID="-1" choiceId="0" buttonId="" containerIndex="0" uiText="ugly" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2844" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7506,10026,0">
+  <Node Id="2844" Class="UI:Functions:MainMenu:AddChoiceOption" pos="34740,198,0">
    <Inputs instanceID="-1" choiceId="1" buttonId="" containerIndex="0" uiText="low" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2845" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7506,10242,0">
+  <Node Id="2845" Class="UI:Functions:MainMenu:AddChoiceOption" pos="34740,414,0">
    <Inputs instanceID="-1" choiceId="2" buttonId="" containerIndex="0" uiText="medium" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2846" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7506,10458,0">
+  <Node Id="2846" Class="UI:Functions:MainMenu:AddChoiceOption" pos="34740,630,0">
    <Inputs instanceID="-1" choiceId="3" buttonId="" containerIndex="0" uiText="high" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2847" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7506,10656,0">
+  <Node Id="2847" Class="UI:Functions:MainMenu:AddChoiceOption" pos="34740,828,0">
    <Inputs instanceID="-1" choiceId="4" buttonId="" containerIndex="0" uiText="ultra" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2848" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7506,10872,0">
+  <Node Id="2848" Class="UI:Functions:MainMenu:AddChoiceOption" pos="34740,1044,0">
    <Inputs instanceID="-1" choiceId="11" buttonId="" containerIndex="0" uiText="vanilla_low" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2849" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7506,11088,0">
+  <Node Id="2849" Class="UI:Functions:MainMenu:AddChoiceOption" pos="34740,1260,0">
    <Inputs instanceID="-1" choiceId="12" buttonId="" containerIndex="0" uiText="vanilla_medium" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2850" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7506,11304,0">
+  <Node Id="2850" Class="UI:Functions:MainMenu:AddChoiceOption" pos="34740,1476,0">
    <Inputs instanceID="-1" choiceId="13" buttonId="" containerIndex="0" uiText="vanilla_high" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2851" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7506,11520,0">
+  <Node Id="2851" Class="UI:Functions:MainMenu:AddChoiceOption" pos="34740,1692,0">
    <Inputs instanceID="-1" choiceId="14" buttonId="" containerIndex="0" uiText="vanilla_vhigh" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2852" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7506,11754,0">
+  <Node Id="2852" Class="UI:Functions:MainMenu:AddChoiceOption" pos="34740,1926,0">
    <Inputs instanceID="-1" choiceId="17" buttonId="" containerIndex="0" uiText="vanilla_ultra" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2853" Class="String:SetString" pos="6750,9846,0">
+  <Node Id="2853" Class="String:SetString" pos="33984,18,0">
    <Inputs In="sys_spec_ogp_"/>
   </Node>
-  <Node Id="2854" Class="Mission:GameTokenGet" pos="8208,9810,0">
+  <Node Id="2854" Class="Mission:GameTokenGet" pos="35442,-18,0">
    <Inputs gametoken_Token="ogp_settings_exists"/>
   </Node>
-  <Node Id="2855" Class="Math:BooleanFrom" pos="8568,9810,0">
+  <Node Id="2855" Class="Math:BooleanFrom" pos="35802,-18,0">
    <Inputs Value="0"/>
   </Node>
-  <Node Id="2856" Class="UI:Functions:MainMenu:SetChoice" pos="9000,9720,0">
+  <Node Id="2856" Class="UI:Functions:MainMenu:SetChoice" pos="36234,-108,0">
    <Inputs instanceID="-1" id="" containerIndex="0" choiceId="0"/>
   </Node>
-  <Node Id="2857" Class="Debug:ConsoleVariable" pos="8766,9738,0">
+  <Node Id="2857" Class="Debug:ConsoleVariable" pos="36000,-90,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2858" Class="UI:Functions:MainMenu:SetChoice" pos="9360,9864,0">
+  <Node Id="2858" Class="UI:Functions:MainMenu:SetChoice" pos="36594,36,0">
    <Inputs instanceID="-1" id="" containerIndex="0" choiceId="0"/>
   </Node>
-  <Node Id="2859" Class="Xml:GetChild" pos="8964,9864,0">
+  <Node Id="2859" Class="Xml:GetChild" pos="36198,36,0">
    <Inputs Name="" Create="0"/>
   </Node>
-  <Node Id="2860" Class="Xml:GetValue" pos="9162,9864,0">
+  <Node Id="2860" Class="Xml:GetValue" pos="36396,36,0">
    <Inputs />
   </Node>
-  <Node Id="2861" Class="Xml:GetRoot" pos="8766,9864,0">
+  <Node Id="2861" Class="Xml:GetRoot" pos="36000,36,0">
    <Inputs />
   </Node>
-  <Node Id="2862" Class="Debug:ConsoleVariable" pos="8730,10188,0">
+  <Node Id="2862" Class="Debug:ConsoleVariable" pos="34974,2682,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2863" Class="UI:Functions:MainMenu:GetChoice" pos="8244,10260,0">
+  <Node Id="2863" Class="UI:Functions:MainMenu:GetChoice" pos="34488,2754,0">
    <Inputs instanceID="-1" id="" containerIndex="0"/>
   </Node>
-  <Node Id="2864" Class="Math:Less" pos="8568,10206,0">
+  <Node Id="2864" Class="Math:Less" pos="34812,2700,0">
    <Inputs A="0" B="10"/>
   </Node>
-  <Node Id="2865" Class="Debug:ConsoleVariable" pos="9000,10332,0">
+  <Node Id="2865" Class="Debug:ConsoleVariable" pos="35244,2826,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2866" Class="Math:Calculate" pos="8568,10314,0">
+  <Node Id="2866" Class="Math:Calculate" pos="34812,2808,0">
    <Inputs Op="1" A="0" B="10"/>
   </Node>
-  <Node Id="2867" Class="String:Concat" pos="8784,10332,0">
+  <Node Id="2867" Class="String:Concat" pos="35028,2826,0">
    <Inputs String1="" String2="_vanilla"/>
   </Node>
-  <Node Id="2868" Class="Xml:NewChild" pos="8442,10710,0">
+  <Node Id="2868" Class="Xml:NewChild" pos="34506,4734,0">
    <Inputs Name="" Active="1"/>
   </Node>
-  <Node Id="2869" Class="Xml:SetValue" pos="8946,10710,0">
+  <Node Id="2869" Class="Xml:SetValue" pos="35010,4734,0">
    <Inputs />
   </Node>
-  <Node Id="2870" Class="Xml:GetRoot" pos="8244,10710,0">
+  <Node Id="2870" Class="Xml:GetRoot" pos="34308,4734,0">
    <Inputs />
   </Node>
-  <Node Id="2871" Class="UI:Functions:MainMenu:GetChoice" pos="8640,10710,0">
+  <Node Id="2871" Class="UI:Functions:MainMenu:GetChoice" pos="34704,4734,0">
    <Inputs instanceID="-1" id="" containerIndex="0"/>
   </Node>
-  <Node Id="2872" Class="UI:Functions:MainMenu:AddChoicesButton" pos="7092,12204,0">
+  <Node Id="2872" Class="UI:Functions:MainMenu:AddChoicesButton" pos="37476,36,0">
    <Inputs instanceID="-1" buttonId="" containerIndex="0" uiText="" tooltip="" disable="0" sound=""/>
   </Node>
-  <Node Id="2873" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7506,12204,0">
+  <Node Id="2873" Class="UI:Functions:MainMenu:AddChoiceOption" pos="37890,36,0">
    <Inputs instanceID="-1" choiceId="0" buttonId="" containerIndex="0" uiText="ugly" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2874" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7506,12438,0">
+  <Node Id="2874" Class="UI:Functions:MainMenu:AddChoiceOption" pos="37890,270,0">
    <Inputs instanceID="-1" choiceId="1" buttonId="" containerIndex="0" uiText="low" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2875" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7506,12654,0">
+  <Node Id="2875" Class="UI:Functions:MainMenu:AddChoiceOption" pos="37890,486,0">
    <Inputs instanceID="-1" choiceId="2" buttonId="" containerIndex="0" uiText="medium" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2876" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7506,12870,0">
+  <Node Id="2876" Class="UI:Functions:MainMenu:AddChoiceOption" pos="37890,702,0">
    <Inputs instanceID="-1" choiceId="3" buttonId="" containerIndex="0" uiText="high" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2877" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7506,13068,0">
+  <Node Id="2877" Class="UI:Functions:MainMenu:AddChoiceOption" pos="37890,900,0">
    <Inputs instanceID="-1" choiceId="4" buttonId="" containerIndex="0" uiText="ultra" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2878" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7506,13284,0">
+  <Node Id="2878" Class="UI:Functions:MainMenu:AddChoiceOption" pos="37890,1116,0">
    <Inputs instanceID="-1" choiceId="11" buttonId="" containerIndex="0" uiText="vanilla_low" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2879" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7506,13500,0">
+  <Node Id="2879" Class="UI:Functions:MainMenu:AddChoiceOption" pos="37890,1332,0">
    <Inputs instanceID="-1" choiceId="12" buttonId="" containerIndex="0" uiText="vanilla_medium" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2880" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7506,13716,0">
+  <Node Id="2880" Class="UI:Functions:MainMenu:AddChoiceOption" pos="37890,1548,0">
    <Inputs instanceID="-1" choiceId="13" buttonId="" containerIndex="0" uiText="vanilla_high" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2881" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7506,13932,0">
+  <Node Id="2881" Class="UI:Functions:MainMenu:AddChoiceOption" pos="37890,1764,0">
    <Inputs instanceID="-1" choiceId="14" buttonId="" containerIndex="0" uiText="vanilla_vhigh" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2882" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7506,14166,0">
+  <Node Id="2882" Class="UI:Functions:MainMenu:AddChoiceOption" pos="37890,1998,0">
    <Inputs instanceID="-1" choiceId="17" buttonId="" containerIndex="0" uiText="vanilla_ultra" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2883" Class="String:SetString" pos="6750,12258,0">
+  <Node Id="2883" Class="String:SetString" pos="37134,90,0">
    <Inputs In="sys_spec_ogp_"/>
   </Node>
-  <Node Id="2884" Class="Mission:GameTokenGet" pos="8208,12222,0">
+  <Node Id="2884" Class="Mission:GameTokenGet" pos="38592,54,0">
    <Inputs gametoken_Token="ogp_settings_exists"/>
   </Node>
-  <Node Id="2885" Class="Math:BooleanFrom" pos="8568,12222,0">
+  <Node Id="2885" Class="Math:BooleanFrom" pos="38952,54,0">
    <Inputs Value="0"/>
   </Node>
-  <Node Id="2886" Class="UI:Functions:MainMenu:SetChoice" pos="9000,12132,0">
+  <Node Id="2886" Class="UI:Functions:MainMenu:SetChoice" pos="39384,-36,0">
    <Inputs instanceID="-1" id="" containerIndex="0" choiceId="0"/>
   </Node>
-  <Node Id="2887" Class="Debug:ConsoleVariable" pos="8766,12150,0">
+  <Node Id="2887" Class="Debug:ConsoleVariable" pos="39150,-18,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2888" Class="UI:Functions:MainMenu:SetChoice" pos="9360,12276,0">
+  <Node Id="2888" Class="UI:Functions:MainMenu:SetChoice" pos="39744,108,0">
    <Inputs instanceID="-1" id="" containerIndex="0" choiceId="0"/>
   </Node>
-  <Node Id="2889" Class="Xml:GetChild" pos="8964,12276,0">
+  <Node Id="2889" Class="Xml:GetChild" pos="39348,108,0">
    <Inputs Name="" Create="0"/>
   </Node>
-  <Node Id="2890" Class="Xml:GetValue" pos="9162,12276,0">
+  <Node Id="2890" Class="Xml:GetValue" pos="39546,108,0">
    <Inputs />
   </Node>
-  <Node Id="2891" Class="Xml:GetRoot" pos="8766,12276,0">
+  <Node Id="2891" Class="Xml:GetRoot" pos="39150,108,0">
    <Inputs />
   </Node>
-  <Node Id="2892" Class="Debug:ConsoleVariable" pos="8730,12600,0">
+  <Node Id="2892" Class="Debug:ConsoleVariable" pos="38124,2754,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2893" Class="UI:Functions:MainMenu:GetChoice" pos="8244,12672,0">
+  <Node Id="2893" Class="UI:Functions:MainMenu:GetChoice" pos="37638,2826,0">
    <Inputs instanceID="-1" id="" containerIndex="0"/>
   </Node>
-  <Node Id="2894" Class="Math:Less" pos="8568,12618,0">
+  <Node Id="2894" Class="Math:Less" pos="37962,2772,0">
    <Inputs A="0" B="10"/>
   </Node>
-  <Node Id="2895" Class="Debug:ConsoleVariable" pos="9000,12744,0">
+  <Node Id="2895" Class="Debug:ConsoleVariable" pos="38394,2898,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2896" Class="Math:Calculate" pos="8568,12726,0">
+  <Node Id="2896" Class="Math:Calculate" pos="37962,2880,0">
    <Inputs Op="1" A="0" B="10"/>
   </Node>
-  <Node Id="2897" Class="String:Concat" pos="8784,12744,0">
+  <Node Id="2897" Class="String:Concat" pos="38178,2898,0">
    <Inputs String1="" String2="_vanilla"/>
   </Node>
-  <Node Id="2898" Class="Xml:NewChild" pos="8442,13122,0">
+  <Node Id="2898" Class="Xml:NewChild" pos="37656,4806,0">
    <Inputs Name="" Active="1"/>
   </Node>
-  <Node Id="2899" Class="Xml:SetValue" pos="8946,13122,0">
+  <Node Id="2899" Class="Xml:SetValue" pos="38160,4806,0">
    <Inputs />
   </Node>
-  <Node Id="2900" Class="Xml:GetRoot" pos="8244,13122,0">
+  <Node Id="2900" Class="Xml:GetRoot" pos="37458,4806,0">
    <Inputs />
   </Node>
-  <Node Id="2901" Class="UI:Functions:MainMenu:GetChoice" pos="8640,13122,0">
+  <Node Id="2901" Class="UI:Functions:MainMenu:GetChoice" pos="37854,4806,0">
    <Inputs instanceID="-1" id="" containerIndex="0"/>
   </Node>
-  <Node Id="2902" Class="UI:Functions:MainMenu:AddChoicesButton" pos="7128,14760,0">
+  <Node Id="2902" Class="UI:Functions:MainMenu:AddChoicesButton" pos="40734,108,0">
    <Inputs instanceID="-1" buttonId="" containerIndex="0" uiText="" tooltip="" disable="0" sound=""/>
   </Node>
-  <Node Id="2903" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7542,14760,0">
+  <Node Id="2903" Class="UI:Functions:MainMenu:AddChoiceOption" pos="41148,108,0">
    <Inputs instanceID="-1" choiceId="0" buttonId="" containerIndex="0" uiText="ugly" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2904" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7542,14994,0">
+  <Node Id="2904" Class="UI:Functions:MainMenu:AddChoiceOption" pos="41148,342,0">
    <Inputs instanceID="-1" choiceId="1" buttonId="" containerIndex="0" uiText="low" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2905" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7542,15210,0">
+  <Node Id="2905" Class="UI:Functions:MainMenu:AddChoiceOption" pos="41148,558,0">
    <Inputs instanceID="-1" choiceId="2" buttonId="" containerIndex="0" uiText="medium" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2906" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7542,15426,0">
+  <Node Id="2906" Class="UI:Functions:MainMenu:AddChoiceOption" pos="41148,774,0">
    <Inputs instanceID="-1" choiceId="3" buttonId="" containerIndex="0" uiText="high" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2907" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7542,15624,0">
+  <Node Id="2907" Class="UI:Functions:MainMenu:AddChoiceOption" pos="41148,972,0">
    <Inputs instanceID="-1" choiceId="4" buttonId="" containerIndex="0" uiText="ultra" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2908" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7542,15840,0">
+  <Node Id="2908" Class="UI:Functions:MainMenu:AddChoiceOption" pos="41148,1188,0">
    <Inputs instanceID="-1" choiceId="11" buttonId="" containerIndex="0" uiText="vanilla_low" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2909" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7542,16056,0">
+  <Node Id="2909" Class="UI:Functions:MainMenu:AddChoiceOption" pos="41148,1404,0">
    <Inputs instanceID="-1" choiceId="12" buttonId="" containerIndex="0" uiText="vanilla_medium" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2910" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7542,16272,0">
+  <Node Id="2910" Class="UI:Functions:MainMenu:AddChoiceOption" pos="41148,1620,0">
    <Inputs instanceID="-1" choiceId="13" buttonId="" containerIndex="0" uiText="vanilla_high" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2911" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7542,16488,0">
+  <Node Id="2911" Class="UI:Functions:MainMenu:AddChoiceOption" pos="41148,1836,0">
    <Inputs instanceID="-1" choiceId="14" buttonId="" containerIndex="0" uiText="vanilla_vhigh" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2912" Class="UI:Functions:MainMenu:AddChoiceOption" pos="7542,16722,0">
+  <Node Id="2912" Class="UI:Functions:MainMenu:AddChoiceOption" pos="41148,2070,0">
    <Inputs instanceID="-1" choiceId="17" buttonId="" containerIndex="0" uiText="vanilla_ultra" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2913" Class="String:SetString" pos="6786,14814,0">
+  <Node Id="2913" Class="String:SetString" pos="40392,162,0">
    <Inputs In="sys_spec_ogp_"/>
   </Node>
-  <Node Id="2914" Class="Mission:GameTokenGet" pos="8244,14778,0">
+  <Node Id="2914" Class="Mission:GameTokenGet" pos="41850,126,0">
    <Inputs gametoken_Token="ogp_settings_exists"/>
   </Node>
-  <Node Id="2915" Class="Math:BooleanFrom" pos="8604,14778,0">
+  <Node Id="2915" Class="Math:BooleanFrom" pos="42210,126,0">
    <Inputs Value="0"/>
   </Node>
-  <Node Id="2916" Class="UI:Functions:MainMenu:SetChoice" pos="9036,14688,0">
+  <Node Id="2916" Class="UI:Functions:MainMenu:SetChoice" pos="42642,36,0">
    <Inputs instanceID="-1" id="" containerIndex="0" choiceId="0"/>
   </Node>
-  <Node Id="2917" Class="Debug:ConsoleVariable" pos="8802,14706,0">
+  <Node Id="2917" Class="Debug:ConsoleVariable" pos="42408,54,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2918" Class="UI:Functions:MainMenu:SetChoice" pos="9396,14832,0">
+  <Node Id="2918" Class="UI:Functions:MainMenu:SetChoice" pos="43002,180,0">
    <Inputs instanceID="-1" id="" containerIndex="0" choiceId="0"/>
   </Node>
-  <Node Id="2919" Class="Xml:GetChild" pos="9000,14832,0">
+  <Node Id="2919" Class="Xml:GetChild" pos="42606,180,0">
    <Inputs Name="" Create="0"/>
   </Node>
-  <Node Id="2920" Class="Xml:GetValue" pos="9198,14832,0">
+  <Node Id="2920" Class="Xml:GetValue" pos="42804,180,0">
    <Inputs />
   </Node>
-  <Node Id="2921" Class="Xml:GetRoot" pos="8802,14832,0">
+  <Node Id="2921" Class="Xml:GetRoot" pos="42408,180,0">
    <Inputs />
   </Node>
-  <Node Id="2922" Class="Debug:ConsoleVariable" pos="8766,15156,0">
+  <Node Id="2922" Class="Debug:ConsoleVariable" pos="41382,2826,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2923" Class="UI:Functions:MainMenu:GetChoice" pos="8280,15228,0">
+  <Node Id="2923" Class="UI:Functions:MainMenu:GetChoice" pos="40896,2898,0">
    <Inputs instanceID="-1" id="" containerIndex="0"/>
   </Node>
-  <Node Id="2924" Class="Math:Less" pos="8604,15174,0">
+  <Node Id="2924" Class="Math:Less" pos="41220,2844,0">
    <Inputs A="0" B="10"/>
   </Node>
-  <Node Id="2925" Class="Debug:ConsoleVariable" pos="9036,15300,0">
+  <Node Id="2925" Class="Debug:ConsoleVariable" pos="41652,2970,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2926" Class="Math:Calculate" pos="8604,15282,0">
+  <Node Id="2926" Class="Math:Calculate" pos="41220,2952,0">
    <Inputs Op="1" A="0" B="10"/>
   </Node>
-  <Node Id="2927" Class="String:Concat" pos="8820,15300,0">
+  <Node Id="2927" Class="String:Concat" pos="41436,2970,0">
    <Inputs String1="" String2="_vanilla"/>
   </Node>
-  <Node Id="2928" Class="Xml:NewChild" pos="8478,15678,0">
+  <Node Id="2928" Class="Xml:NewChild" pos="40914,4878,0">
    <Inputs Name="" Active="1"/>
   </Node>
-  <Node Id="2929" Class="Xml:SetValue" pos="8982,15678,0">
+  <Node Id="2929" Class="Xml:SetValue" pos="41418,4878,0">
    <Inputs />
   </Node>
-  <Node Id="2930" Class="Xml:GetRoot" pos="8280,15678,0">
+  <Node Id="2930" Class="Xml:GetRoot" pos="40716,4878,0">
    <Inputs />
   </Node>
-  <Node Id="2931" Class="UI:Functions:MainMenu:GetChoice" pos="8676,15678,0">
+  <Node Id="2931" Class="UI:Functions:MainMenu:GetChoice" pos="41112,4878,0">
    <Inputs instanceID="-1" id="" containerIndex="0"/>
   </Node>
-  <Node Id="2932" Class="UI:Functions:MainMenu:AddChoicesButton" pos="2430,8388,0">
+  <Node Id="2932" Class="UI:Functions:MainMenu:AddChoicesButton" pos="16722,-198,0">
    <Inputs instanceID="-1" buttonId="" containerIndex="0" uiText="Drunk Sharpening" tooltip="Sharpens the screen when drunk" disable="0" sound=""/>
   </Node>
-  <Node Id="2933" Class="UI:Functions:MainMenu:AddChoiceOption" pos="2916,8388,0">
+  <Node Id="2933" Class="UI:Functions:MainMenu:AddChoiceOption" pos="17208,-198,0">
    <Inputs instanceID="-1" choiceId="-10" buttonId="" containerIndex="0" uiText="off" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2934" Class="UI:Functions:MainMenu:AddChoiceOption" pos="2916,8622,0">
+  <Node Id="2934" Class="UI:Functions:MainMenu:AddChoiceOption" pos="17208,36,0">
    <Inputs instanceID="-1" choiceId="0" buttonId="" containerIndex="0" uiText="on" tooltip="" disable="0"/>
   </Node>
-  <Node Id="2935" Class="String:SetString" pos="2178,8460,0">
+  <Node Id="2935" Class="String:SetString" pos="16470,-126,0">
    <Inputs In="r_sharpening"/>
   </Node>
-  <Node Id="2936" Class="Mission:GameTokenGet" pos="3618,8406,0">
+  <Node Id="2936" Class="Mission:GameTokenGet" pos="17910,-180,0">
    <Inputs gametoken_Token="ogp_settings_exists"/>
   </Node>
-  <Node Id="2937" Class="Math:BooleanFrom" pos="3978,8406,0">
+  <Node Id="2937" Class="Math:BooleanFrom" pos="18270,-180,0">
    <Inputs Value="0"/>
   </Node>
-  <Node Id="2938" Class="UI:Functions:MainMenu:SetChoice" pos="4410,8316,0">
+  <Node Id="2938" Class="UI:Functions:MainMenu:SetChoice" pos="18702,-270,0">
    <Inputs instanceID="-1" id="" containerIndex="0" choiceId="0"/>
   </Node>
-  <Node Id="2939" Class="Debug:ConsoleVariable" pos="4176,8334,0">
+  <Node Id="2939" Class="Debug:ConsoleVariable" pos="18468,-252,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2940" Class="UI:Functions:MainMenu:SetChoice" pos="4770,8460,0">
+  <Node Id="2940" Class="UI:Functions:MainMenu:SetChoice" pos="19062,-126,0">
    <Inputs instanceID="-1" id="" containerIndex="0" choiceId="0"/>
   </Node>
-  <Node Id="2941" Class="Xml:GetChild" pos="4374,8460,0">
+  <Node Id="2941" Class="Xml:GetChild" pos="18666,-126,0">
    <Inputs Name="" Create="0"/>
   </Node>
-  <Node Id="2942" Class="Xml:GetValue" pos="4572,8460,0">
+  <Node Id="2942" Class="Xml:GetValue" pos="18864,-126,0">
    <Inputs />
   </Node>
-  <Node Id="2943" Class="Xml:GetRoot" pos="4176,8460,0">
+  <Node Id="2943" Class="Xml:GetRoot" pos="18468,-126,0">
    <Inputs />
   </Node>
-  <Node Id="2944" Class="Debug:ConsoleVariable" pos="4140,8784,0">
+  <Node Id="2944" Class="Debug:ConsoleVariable" pos="17244,2610,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2945" Class="UI:Functions:MainMenu:GetChoice" pos="3654,8856,0">
+  <Node Id="2945" Class="UI:Functions:MainMenu:GetChoice" pos="16758,2682,0">
    <Inputs instanceID="-1" id="" containerIndex="0"/>
   </Node>
-  <Node Id="2946" Class="Math:Less" pos="3978,8802,0">
+  <Node Id="2946" Class="Math:Less" pos="17082,2628,0">
    <Inputs A="0" B="10"/>
   </Node>
-  <Node Id="2947" Class="Debug:ConsoleVariable" pos="4410,8928,0">
+  <Node Id="2947" Class="Debug:ConsoleVariable" pos="17514,2754,0">
    <Inputs CVar="" Value=""/>
   </Node>
-  <Node Id="2948" Class="Math:Calculate" pos="3978,8910,0">
+  <Node Id="2948" Class="Math:Calculate" pos="17082,2736,0">
    <Inputs Op="1" A="0" B="10"/>
   </Node>
-  <Node Id="2949" Class="String:Concat" pos="4194,8928,0">
+  <Node Id="2949" Class="String:Concat" pos="17298,2754,0">
    <Inputs String1="" String2="_vanilla"/>
   </Node>
-  <Node Id="2950" Class="Xml:NewChild" pos="3852,9306,0">
+  <Node Id="2950" Class="Xml:NewChild" pos="16812,4626,0">
    <Inputs Name="" Active="1"/>
   </Node>
-  <Node Id="2951" Class="Xml:SetValue" pos="4356,9306,0">
+  <Node Id="2951" Class="Xml:SetValue" pos="17316,4626,0">
    <Inputs />
   </Node>
-  <Node Id="2952" Class="Xml:GetRoot" pos="3654,9306,0">
+  <Node Id="2952" Class="Xml:GetRoot" pos="16614,4626,0">
    <Inputs />
   </Node>
-  <Node Id="2953" Class="UI:Functions:MainMenu:GetChoice" pos="4050,9306,0">
+  <Node Id="2953" Class="UI:Functions:MainMenu:GetChoice" pos="17010,4626,0">
    <Inputs instanceID="-1" id="" containerIndex="0"/>
+  </Node>
+  <Node Id="2956" Class="Debug:ExecuteString" pos="29016,2754,0">
+   <Inputs String="e_UberlodActivate" NextFrame="0"/>
+  </Node>
+  <Node Id="2960" Class="Debug:ExecuteString" pos="28746,2610,0">
+   <Inputs String="e_UberlodActivate" NextFrame="0"/>
   </Node>
  </Nodes>
  <Edges>
   <Edge nodeIn="555" nodeOut="1" portIn="Call" portOut="StartAction" enabled="1"/>
   <Edge nodeIn="1400" nodeOut="1" portIn="Execute" portOut="StartAction" enabled="1"/>
   <Edge nodeIn="146" nodeOut="145" portIn="Call" portOut="OnCall" enabled="1"/>
-  <Edge nodeIn="2391" nodeOut="229" portIn="in" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2469" nodeOut="229" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="229" nodeOut="555" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="556" nodeOut="555" portIn="Call" portOut="OnCall" enabled="1"/>
@@ -1073,8 +1063,8 @@
   <Edge nodeIn="1401" nodeOut="1400" portIn="Trigger" portOut="Fail" enabled="1"/>
   <Edge nodeIn="1402" nodeOut="1400" portIn="in" portOut="Fail" enabled="1"/>
   <Edge nodeIn="1401" nodeOut="1402" portIn="Value" portOut="out" enabled="1"/>
+  <Edge nodeIn="1944" nodeOut="1943" portIn="EndAction" portOut="Done" enabled="1"/>
   <Edge nodeIn="1945" nodeOut="1943" portIn="input" portOut="Fail" enabled="1"/>
-  <Edge nodeIn="2354" nodeOut="1943" portIn="Trigger" portOut="Done" enabled="1"/>
   <Edge nodeIn="1996" nodeOut="1990" portIn="Call" portOut="onEvent" enabled="1"/>
   <Edge nodeIn="2001" nodeOut="1991" portIn="in1" portOut="onEvent" enabled="1"/>
   <Edge nodeIn="1993" nodeOut="1992" portIn="EndAction" portOut="onEvent" enabled="1"/>
@@ -1082,40 +1072,11 @@
   <Edge nodeIn="1998" nodeOut="1999" portIn="Call" portOut="onEvent" enabled="1"/>
   <Edge nodeIn="2002" nodeOut="2000" portIn="A" portOut="res" enabled="1"/>
   <Edge nodeIn="2491" nodeOut="2001" portIn="Call" portOut="out" enabled="1"/>
-  <Edge nodeIn="2523" nodeOut="2001" portIn="Call" portOut="out" enabled="1"/>
-  <Edge nodeIn="2617" nodeOut="2001" portIn="Call" portOut="out" enabled="1"/>
-  <Edge nodeIn="2648" nodeOut="2001" portIn="Call" portOut="out" enabled="1"/>
-  <Edge nodeIn="2710" nodeOut="2001" portIn="Call" portOut="out" enabled="1"/>
-  <Edge nodeIn="2773" nodeOut="2001" portIn="Call" portOut="out" enabled="1"/>
-  <Edge nodeIn="2803" nodeOut="2001" portIn="Call" portOut="out" enabled="1"/>
-  <Edge nodeIn="2833" nodeOut="2001" portIn="Call" portOut="out" enabled="1"/>
-  <Edge nodeIn="2863" nodeOut="2001" portIn="Call" portOut="out" enabled="1"/>
-  <Edge nodeIn="2893" nodeOut="2001" portIn="Call" portOut="out" enabled="1"/>
-  <Edge nodeIn="2923" nodeOut="2001" portIn="Call" portOut="out" enabled="1"/>
-  <Edge nodeIn="2945" nodeOut="2001" portIn="Call" portOut="out" enabled="1"/>
   <Edge nodeIn="2001" nodeOut="2002" portIn="in2" portOut="true" enabled="1"/>
   <Edge nodeIn="2003" nodeOut="2002" portIn="EndAction" portOut="false" enabled="1"/>
   <Edge nodeIn="2004" nodeOut="2002" portIn="Execute" portOut="true" enabled="1"/>
-  <Edge nodeIn="2353" nodeOut="2002" portIn="Trigger" portOut="true" enabled="1"/>
-  <Edge nodeIn="2353" nodeOut="2002" portIn="Value" portOut="true" enabled="1"/>
   <Edge nodeIn="2005" nodeOut="2004" portIn="input" portOut="Fail" enabled="1"/>
-  <Edge nodeIn="2394" nodeOut="2004" portIn="in" portOut="Success" enabled="1"/>
   <Edge nodeIn="2498" nodeOut="2004" portIn="Execute" portOut="Success" enabled="1"/>
-  <Edge nodeIn="2530" nodeOut="2004" portIn="Execute" portOut="Success" enabled="1"/>
-  <Edge nodeIn="2624" nodeOut="2004" portIn="Execute" portOut="Success" enabled="1"/>
-  <Edge nodeIn="2655" nodeOut="2004" portIn="Execute" portOut="Success" enabled="1"/>
-  <Edge nodeIn="2717" nodeOut="2004" portIn="Execute" portOut="Success" enabled="1"/>
-  <Edge nodeIn="2780" nodeOut="2004" portIn="Execute" portOut="Success" enabled="1"/>
-  <Edge nodeIn="2810" nodeOut="2004" portIn="Execute" portOut="Success" enabled="1"/>
-  <Edge nodeIn="2840" nodeOut="2004" portIn="Execute" portOut="Success" enabled="1"/>
-  <Edge nodeIn="2870" nodeOut="2004" portIn="Execute" portOut="Success" enabled="1"/>
-  <Edge nodeIn="2900" nodeOut="2004" portIn="Execute" portOut="Success" enabled="1"/>
-  <Edge nodeIn="2930" nodeOut="2004" portIn="Execute" portOut="Success" enabled="1"/>
-  <Edge nodeIn="2952" nodeOut="2004" portIn="Execute" portOut="Success" enabled="1"/>
-  <Edge nodeIn="2357" nodeOut="2354" portIn="Value" portOut="OutValue" enabled="1"/>
-  <Edge nodeIn="1944" nodeOut="2357" portIn="EndAction" portOut="True" enabled="1"/>
-  <Edge nodeIn="145" nodeOut="2391" portIn="Call" portOut="out" enabled="1"/>
-  <Edge nodeIn="1943" nodeOut="2394" portIn="Execute" portOut="out" enabled="1"/>
   <Edge nodeIn="2470" nodeOut="2469" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2501" nodeOut="2469" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2471" nodeOut="2470" portIn="Call" portOut="OnCall" enabled="1"/>
@@ -1152,11 +1113,13 @@
   <Edge nodeIn="2490" nodeOut="2491" portIn="Value" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="2492" nodeOut="2491" portIn="A" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="2494" nodeOut="2491" portIn="A" portOut="ReturnVal" enabled="1"/>
+  <Edge nodeIn="2523" nodeOut="2491" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2490" nodeOut="2492" portIn="Set" portOut="true" enabled="1"/>
   <Edge nodeIn="2493" nodeOut="2492" portIn="Set" portOut="false" enabled="1"/>
   <Edge nodeIn="2493" nodeOut="2494" portIn="Value" portOut="out" enabled="1"/>
   <Edge nodeIn="2493" nodeOut="2495" portIn="CVar" portOut="Out" enabled="1"/>
   <Edge nodeIn="2499" nodeOut="2496" portIn="Call" portOut="Success" enabled="1"/>
+  <Edge nodeIn="2530" nodeOut="2497" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="2496" nodeOut="2498" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="2497" nodeOut="2499" portIn="Execute" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2497" nodeOut="2499" portIn="Value" portOut="ReturnVal" enabled="1"/>
@@ -1190,11 +1153,13 @@
   <Edge nodeIn="2522" nodeOut="2523" portIn="Value" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="2524" nodeOut="2523" portIn="A" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="2526" nodeOut="2523" portIn="A" portOut="ReturnVal" enabled="1"/>
+  <Edge nodeIn="2617" nodeOut="2523" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2522" nodeOut="2524" portIn="Set" portOut="true" enabled="1"/>
   <Edge nodeIn="2525" nodeOut="2524" portIn="Set" portOut="false" enabled="1"/>
   <Edge nodeIn="2525" nodeOut="2526" portIn="Value" portOut="out" enabled="1"/>
   <Edge nodeIn="2525" nodeOut="2527" portIn="CVar" portOut="Out" enabled="1"/>
   <Edge nodeIn="2531" nodeOut="2528" portIn="Call" portOut="Success" enabled="1"/>
+  <Edge nodeIn="2624" nodeOut="2529" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="2528" nodeOut="2530" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="2529" nodeOut="2531" portIn="Execute" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2529" nodeOut="2531" portIn="Value" portOut="ReturnVal" enabled="1"/>
@@ -1227,11 +1192,13 @@
   <Edge nodeIn="2616" nodeOut="2617" portIn="Value" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="2618" nodeOut="2617" portIn="A" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="2620" nodeOut="2617" portIn="A" portOut="ReturnVal" enabled="1"/>
+  <Edge nodeIn="2648" nodeOut="2617" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2616" nodeOut="2618" portIn="Set" portOut="true" enabled="1"/>
   <Edge nodeIn="2619" nodeOut="2618" portIn="Set" portOut="false" enabled="1"/>
   <Edge nodeIn="2619" nodeOut="2620" portIn="Value" portOut="out" enabled="1"/>
   <Edge nodeIn="2619" nodeOut="2621" portIn="CVar" portOut="Out" enabled="1"/>
   <Edge nodeIn="2625" nodeOut="2622" portIn="Call" portOut="Success" enabled="1"/>
+  <Edge nodeIn="2655" nodeOut="2623" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="2622" nodeOut="2624" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="2623" nodeOut="2625" portIn="Execute" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2623" nodeOut="2625" portIn="Value" portOut="ReturnVal" enabled="1"/>
@@ -1262,11 +1229,13 @@
   <Edge nodeIn="2647" nodeOut="2648" portIn="Value" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="2649" nodeOut="2648" portIn="A" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="2651" nodeOut="2648" portIn="A" portOut="ReturnVal" enabled="1"/>
+  <Edge nodeIn="2945" nodeOut="2648" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2647" nodeOut="2649" portIn="Set" portOut="true" enabled="1"/>
   <Edge nodeIn="2650" nodeOut="2649" portIn="Set" portOut="false" enabled="1"/>
   <Edge nodeIn="2650" nodeOut="2651" portIn="Value" portOut="out" enabled="1"/>
   <Edge nodeIn="2650" nodeOut="2652" portIn="CVar" portOut="Out" enabled="1"/>
   <Edge nodeIn="2656" nodeOut="2653" portIn="Call" portOut="Success" enabled="1"/>
+  <Edge nodeIn="2952" nodeOut="2654" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="2653" nodeOut="2655" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="2654" nodeOut="2656" portIn="Execute" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2654" nodeOut="2656" portIn="Value" portOut="ReturnVal" enabled="1"/>
@@ -1314,11 +1283,13 @@
   <Edge nodeIn="2709" nodeOut="2710" portIn="Value" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="2711" nodeOut="2710" portIn="A" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="2713" nodeOut="2710" portIn="A" portOut="ReturnVal" enabled="1"/>
+  <Edge nodeIn="2773" nodeOut="2710" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2709" nodeOut="2711" portIn="Set" portOut="true" enabled="1"/>
   <Edge nodeIn="2712" nodeOut="2711" portIn="Set" portOut="false" enabled="1"/>
   <Edge nodeIn="2712" nodeOut="2713" portIn="Value" portOut="out" enabled="1"/>
   <Edge nodeIn="2712" nodeOut="2714" portIn="CVar" portOut="Out" enabled="1"/>
   <Edge nodeIn="2718" nodeOut="2715" portIn="Call" portOut="Success" enabled="1"/>
+  <Edge nodeIn="2780" nodeOut="2716" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="2715" nodeOut="2717" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="2716" nodeOut="2718" portIn="Execute" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2716" nodeOut="2718" portIn="Value" portOut="ReturnVal" enabled="1"/>
@@ -1366,11 +1337,13 @@
   <Edge nodeIn="2772" nodeOut="2773" portIn="Value" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="2774" nodeOut="2773" portIn="A" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="2776" nodeOut="2773" portIn="A" portOut="ReturnVal" enabled="1"/>
+  <Edge nodeIn="2803" nodeOut="2773" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2772" nodeOut="2774" portIn="Set" portOut="true" enabled="1"/>
   <Edge nodeIn="2775" nodeOut="2774" portIn="Set" portOut="false" enabled="1"/>
   <Edge nodeIn="2775" nodeOut="2776" portIn="Value" portOut="out" enabled="1"/>
   <Edge nodeIn="2775" nodeOut="2777" portIn="CVar" portOut="Out" enabled="1"/>
   <Edge nodeIn="2781" nodeOut="2778" portIn="Call" portOut="Success" enabled="1"/>
+  <Edge nodeIn="2810" nodeOut="2779" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="2778" nodeOut="2780" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="2779" nodeOut="2781" portIn="Execute" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2779" nodeOut="2781" portIn="Value" portOut="ReturnVal" enabled="1"/>
@@ -1415,18 +1388,23 @@
   <Edge nodeIn="2798" nodeOut="2800" portIn="Call" portOut="Success" enabled="1"/>
   <Edge nodeIn="2798" nodeOut="2800" portIn="choiceId" portOut="Value" enabled="1"/>
   <Edge nodeIn="2799" nodeOut="2801" portIn="Execute" portOut="Success" enabled="1"/>
+  <Edge nodeIn="2960" nodeOut="2802" portIn="Set" portOut="CurValue" enabled="1"/>
   <Edge nodeIn="2802" nodeOut="2803" portIn="Value" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="2804" nodeOut="2803" portIn="A" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="2806" nodeOut="2803" portIn="A" portOut="ReturnVal" enabled="1"/>
+  <Edge nodeIn="2833" nodeOut="2803" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2802" nodeOut="2804" portIn="Set" portOut="true" enabled="1"/>
   <Edge nodeIn="2805" nodeOut="2804" portIn="Set" portOut="false" enabled="1"/>
+  <Edge nodeIn="2956" nodeOut="2805" portIn="Set" portOut="CurValue" enabled="1"/>
   <Edge nodeIn="2805" nodeOut="2806" portIn="Value" portOut="out" enabled="1"/>
   <Edge nodeIn="2805" nodeOut="2807" portIn="CVar" portOut="Out" enabled="1"/>
   <Edge nodeIn="2811" nodeOut="2808" portIn="Call" portOut="Success" enabled="1"/>
+  <Edge nodeIn="2840" nodeOut="2809" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="2808" nodeOut="2810" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="2809" nodeOut="2811" portIn="Execute" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2809" nodeOut="2811" portIn="Value" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="2813" nodeOut="2812" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="2842" nodeOut="2812" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2824" nodeOut="2822" portIn="Trigger" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2812" nodeOut="2823" portIn="buttonId" portOut="Out" enabled="1"/>
   <Edge nodeIn="2813" nodeOut="2823" portIn="buttonId" portOut="Out" enabled="1"/>
@@ -1452,15 +1430,18 @@
   <Edge nodeIn="2832" nodeOut="2833" portIn="Value" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="2834" nodeOut="2833" portIn="A" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="2836" nodeOut="2833" portIn="A" portOut="ReturnVal" enabled="1"/>
+  <Edge nodeIn="2863" nodeOut="2833" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2832" nodeOut="2834" portIn="Set" portOut="true" enabled="1"/>
   <Edge nodeIn="2835" nodeOut="2834" portIn="Set" portOut="false" enabled="1"/>
   <Edge nodeIn="2835" nodeOut="2836" portIn="Value" portOut="out" enabled="1"/>
   <Edge nodeIn="2835" nodeOut="2837" portIn="CVar" portOut="Out" enabled="1"/>
   <Edge nodeIn="2841" nodeOut="2838" portIn="Call" portOut="Success" enabled="1"/>
+  <Edge nodeIn="2870" nodeOut="2839" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="2838" nodeOut="2840" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="2839" nodeOut="2841" portIn="Execute" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2839" nodeOut="2841" portIn="Value" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="2843" nodeOut="2842" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="2872" nodeOut="2842" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2844" nodeOut="2843" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2845" nodeOut="2844" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2846" nodeOut="2845" portIn="Call" portOut="OnCall" enabled="1"/>
@@ -1503,16 +1484,19 @@
   <Edge nodeIn="2862" nodeOut="2863" portIn="Value" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="2864" nodeOut="2863" portIn="A" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="2866" nodeOut="2863" portIn="A" portOut="ReturnVal" enabled="1"/>
+  <Edge nodeIn="2893" nodeOut="2863" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2862" nodeOut="2864" portIn="Set" portOut="true" enabled="1"/>
   <Edge nodeIn="2865" nodeOut="2864" portIn="Set" portOut="false" enabled="1"/>
   <Edge nodeIn="2865" nodeOut="2866" portIn="Value" portOut="out" enabled="1"/>
   <Edge nodeIn="2865" nodeOut="2867" portIn="CVar" portOut="Out" enabled="1"/>
   <Edge nodeIn="2871" nodeOut="2868" portIn="Call" portOut="Success" enabled="1"/>
+  <Edge nodeIn="2900" nodeOut="2869" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="2868" nodeOut="2870" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="2869" nodeOut="2871" portIn="Execute" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2869" nodeOut="2871" portIn="Value" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="2873" nodeOut="2872" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2874" nodeOut="2873" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="2902" nodeOut="2873" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2875" nodeOut="2874" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2876" nodeOut="2875" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2877" nodeOut="2876" portIn="Call" portOut="OnCall" enabled="1"/>
@@ -1554,14 +1538,17 @@
   <Edge nodeIn="2892" nodeOut="2893" portIn="Value" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="2894" nodeOut="2893" portIn="A" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="2896" nodeOut="2893" portIn="A" portOut="ReturnVal" enabled="1"/>
+  <Edge nodeIn="2923" nodeOut="2893" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2892" nodeOut="2894" portIn="Set" portOut="true" enabled="1"/>
   <Edge nodeIn="2895" nodeOut="2894" portIn="Set" portOut="false" enabled="1"/>
   <Edge nodeIn="2895" nodeOut="2896" portIn="Value" portOut="out" enabled="1"/>
   <Edge nodeIn="2895" nodeOut="2897" portIn="CVar" portOut="Out" enabled="1"/>
   <Edge nodeIn="2901" nodeOut="2898" portIn="Call" portOut="Success" enabled="1"/>
+  <Edge nodeIn="2930" nodeOut="2899" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="2898" nodeOut="2900" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="2899" nodeOut="2901" portIn="Execute" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2899" nodeOut="2901" portIn="Value" portOut="ReturnVal" enabled="1"/>
+  <Edge nodeIn="145" nodeOut="2902" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2903" nodeOut="2902" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2904" nodeOut="2903" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2905" nodeOut="2904" portIn="Call" portOut="OnCall" enabled="1"/>
@@ -1610,10 +1597,12 @@
   <Edge nodeIn="2925" nodeOut="2926" portIn="Value" portOut="out" enabled="1"/>
   <Edge nodeIn="2925" nodeOut="2927" portIn="CVar" portOut="Out" enabled="1"/>
   <Edge nodeIn="2931" nodeOut="2928" portIn="Call" portOut="Success" enabled="1"/>
+  <Edge nodeIn="1943" nodeOut="2929" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="2928" nodeOut="2930" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="2929" nodeOut="2931" portIn="Execute" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2929" nodeOut="2931" portIn="Value" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="2933" nodeOut="2932" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="2688" nodeOut="2933" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2934" nodeOut="2933" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2936" nodeOut="2934" portIn="Trigger" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2932" nodeOut="2935" portIn="buttonId" portOut="Out" enabled="1"/>
@@ -1637,6 +1626,7 @@
   <Edge nodeIn="2940" nodeOut="2942" portIn="Call" portOut="Success" enabled="1"/>
   <Edge nodeIn="2940" nodeOut="2942" portIn="choiceId" portOut="Value" enabled="1"/>
   <Edge nodeIn="2941" nodeOut="2943" portIn="Execute" portOut="Success" enabled="1"/>
+  <Edge nodeIn="2710" nodeOut="2945" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2944" nodeOut="2945" portIn="Value" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="2946" nodeOut="2945" portIn="A" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="2948" nodeOut="2945" portIn="A" portOut="ReturnVal" enabled="1"/>
@@ -1645,12 +1635,12 @@
   <Edge nodeIn="2947" nodeOut="2948" portIn="Value" portOut="out" enabled="1"/>
   <Edge nodeIn="2947" nodeOut="2949" portIn="CVar" portOut="Out" enabled="1"/>
   <Edge nodeIn="2953" nodeOut="2950" portIn="Call" portOut="Success" enabled="1"/>
+  <Edge nodeIn="2717" nodeOut="2951" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="2950" nodeOut="2952" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="2951" nodeOut="2953" portIn="Execute" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2951" nodeOut="2953" portIn="Value" portOut="ReturnVal" enabled="1"/>
  </Edges>
  <GraphTokens>
-  <Token Name="leave_after_apply" Type="6"/>
   <Token Name="ogp_settings_exists" Type="6"/>
  </GraphTokens>
 </Graph>
