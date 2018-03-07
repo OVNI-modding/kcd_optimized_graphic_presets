@@ -1,147 +1,92 @@
 <Graph Description="" Group="ogp" enabled="1" MultiPlayer="ClientServer">
  <Nodes>
-  <Node Id="1" Class="Xml:GetChildCount" pos="954,1152,0">
-   <Inputs />
-  </Node>
-  <Node Id="2" Class="Xml:GetChildAt" pos="1746,1422,0">
+  <Node Id="2" Class="Xml:GetChildAt" pos="1206,702,0">
    <Inputs Name="setting" Index="1"/>
   </Node>
-  <Node Id="3" Class="Xml:GetRoot" pos="864,558,0">
+  <Node Id="3" Class="Xml:GetRoot" pos="972,702,0">
    <Inputs />
   </Node>
-  <Node Id="4" Class="Xml:GetValue" pos="2034,1476,0">
+  <Node Id="4" Class="Xml:GetValue" pos="1764,738,0">
    <Inputs />
   </Node>
-  <Node Id="6" Class="Debug:ExecuteString" pos="2970,1476,0">
+  <Node Id="6" Class="Debug:ExecuteString" pos="2250,756,0">
    <Inputs String="" NextFrame="0"/>
   </Node>
-  <Node Id="7" Class="String:Concat" pos="2286,1386,0">
+  <Node Id="7" Class="String:Concat" pos="1764,630,0">
    <Inputs String1="" String2="="/>
   </Node>
-  <Node Id="8" Class="Xml:GetAttribute" pos="2016,1350,0">
+  <Node Id="8" Class="Xml:GetAttribute" pos="1494,612,0">
    <Inputs Name="var"/>
   </Node>
-  <Node Id="9" Class="Xml:OpenDocument" pos="360,144,0">
+  <Node Id="9" Class="Xml:OpenDocument" pos="396,342,0">
    <Inputs File="ogp_settings.xml" Location="3"/>
   </Node>
-  <Node Id="15" Class="Logic:Any" pos="666,558,0" InHideMask="1023" OutHideMask="1">
-   <Inputs />
-  </Node>
-  <Node Id="19" Class="Math:Add" pos="2016,1728,0">
-   <Inputs A="0" B="1"/>
-  </Node>
-  <Node Id="22" Class="Mission:GameTokenSet" pos="774,378,0">
-   <Inputs gametoken_Token="cursor" Value="1"/>
-  </Node>
-  <Node Id="23" Class="Mission:GameTokenGet" pos="1746,1728,0">
-   <Inputs gametoken_Token="cursor"/>
-  </Node>
-  <Node Id="24" Class="Mission:GameTokenSet" pos="2178,1710,0">
-   <Inputs gametoken_Token="cursor" Value=""/>
-  </Node>
-  <Node Id="27" Class="Mission:GameTokenGet" pos="1170,1080,0">
-   <Inputs gametoken_Token="cursor"/>
-  </Node>
-  <Node Id="30" Name="If_token_&lt;=_childcount" Class="_comment" pos="702,1152,0"/>
-  <Node Id="31" Name="token++" Class="_comment" pos="1548,1746,0"/>
-  <Node Id="33" Name="exec(_getAttr()_+_&apos;=&apos;_+_getVal()_)" Class="_comment" pos="1350,1458,0"/>
-  <Node Id="34" Class="String:Concat" pos="2520,1476,0">
+  <Node Id="34" Class="String:Concat" pos="2016,702,0">
    <Inputs String1="" String2=""/>
   </Node>
-  <Node Id="35" Name="else" Class="_comment" pos="828,1944,0"/>
-  <Node Id="36" Class="UI:Action:End" pos="1026,1944,0">
-   <Inputs UseAsState="0" Args=""/>
-  </Node>
-  <Node Id="37" Class="Debug:Log" pos="2970,1386,0">
+  <Node Id="37" Class="Debug:Log" pos="2250,666,0">
    <Inputs message=""/>
   </Node>
-  <Node Id="38" Class="Debug:Log" pos="324,-288,0">
+  <Node Id="38" Class="Debug:Log" pos="396,252,0">
    <Inputs message="[OGP] Info: Loading settings"/>
   </Node>
-  <Node Id="792" Class="UI:Action:Start" pos="-216,-72,0">
+  <Node Id="792" Class="UI:Action:Start" pos="72,342,0">
    <Inputs UseAsState="1"/>
   </Node>
-  <Node Id="793" Class="Debug:Log" pos="792,90,0">
+  <Node Id="793" Class="Debug:Log" pos="828,324,0">
    <Inputs message="[OGP] Info: Did not found ogp_settings.xml"/>
   </Node>
-  <Node Id="794" Class="UI:Action:End" pos="792,180,0">
+  <Node Id="794" Class="UI:Action:End" pos="828,414,0">
    <Inputs UseAsState="0" Args=""/>
   </Node>
-  <Node Id="2132" Class="Math:LessCheck" pos="1512,1116,0">
-   <Inputs A="0" B="0"/>
+  <Node Id="2158" Class="UI:Action:End" pos="1584,1098,0">
+   <Inputs UseAsState="0" Args=""/>
   </Node>
-  <Node Id="2133" Class="Math:Add" pos="1206,1224,0">
-   <Inputs A="0" B="1"/>
+  <Node Id="2163" Class="Logic:Any" pos="774,702,0" InHideMask="1023" OutHideMask="1">
+   <Inputs />
   </Node>
-  <Node Id="2135" Class="Debug:Log" pos="1980,900,0">
-   <Inputs message="[OGP] Debug: token_&lt;=_childcount"/>
+  <Node Id="2171" Class="Xml:DeleteChildAt" pos="2178,1026,0">
+   <Inputs Name="setting" Index="1"/>
   </Node>
-  <Node Id="2139" Class="Debug:Log" pos="1980,972,0">
-   <Inputs message="[OGP] Debug: token_&gt;_childcount"/>
+  <Node Id="2176" Class="UI:Action:End" pos="2484,1116,0">
+   <Inputs UseAsState="0" Args=""/>
   </Node>
-  <Node Id="2141" Class="Debug:Log" pos="1620,1530,0">
-   <Inputs message="[OGP] ERROR: failed to get child"/>
+  <Node Id="2178" Class="Debug:ExecuteString" pos="1584,990,0">
+   <Inputs String="getchildat failed" NextFrame="0"/>
   </Node>
-  <Node Id="2142" Class="Logic:Blocker" pos="1818,900,0">
-   <Inputs Block="0"/>
+  <Node Id="2179" Class="Debug:ExecuteString" pos="2466,1008,0">
+   <Inputs String="deletechildat failed" NextFrame="0"/>
   </Node>
-  <Node Id="2143" Class="Logic:Blocker" pos="1818,972,0">
-   <Inputs Block="0"/>
-  </Node>
-  <Node Id="2148" Class="Debug:Log" pos="2160,774,0">
-   <Inputs message="[OGP] Debug: token_&gt;_childcount"/>
-  </Node>
-  <Node Id="2149" Class="Logic:Blocker" pos="1620,774,0">
-   <Inputs Block="0"/>
-  </Node>
-  <Node Id="2150" Class="String:Concat" pos="1800,774,0">
-   <Inputs String1="[OGP] Debug: cursor=" String2=""/>
+  <Node Id="2180" Class="Xml:GetRoot" pos="1962,1026,0">
+   <Inputs />
   </Node>
  </Nodes>
  <Edges>
-  <Edge nodeIn="27" nodeOut="1" portIn="Trigger" portOut="Success" enabled="1"/>
-  <Edge nodeIn="2132" nodeOut="1" portIn="Check" portOut="Success" enabled="1"/>
-  <Edge nodeIn="2133" nodeOut="1" portIn="A" portOut="Count" enabled="1"/>
   <Edge nodeIn="8" nodeOut="2" portIn="Execute" portOut="Success" enabled="1"/>
-  <Edge nodeIn="2141" nodeOut="2" portIn="input" portOut="Fail" enabled="1"/>
-  <Edge nodeIn="1" nodeOut="3" portIn="Execute" portOut="Success" enabled="1"/>
+  <Edge nodeIn="2158" nodeOut="2" portIn="EndAction" portOut="Fail" enabled="1"/>
+  <Edge nodeIn="2178" nodeOut="2" portIn="Set" portOut="Fail" enabled="1"/>
+  <Edge nodeIn="2" nodeOut="3" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="34" nodeOut="4" portIn="Set" portOut="Success" enabled="1"/>
   <Edge nodeIn="34" nodeOut="4" portIn="String2" portOut="Value" enabled="1"/>
+  <Edge nodeIn="2180" nodeOut="4" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="34" nodeOut="7" portIn="String1" portOut="Out" enabled="1"/>
   <Edge nodeIn="4" nodeOut="8" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="7" nodeOut="8" portIn="Set" portOut="Success" enabled="1"/>
   <Edge nodeIn="7" nodeOut="8" portIn="String1" portOut="Value" enabled="1"/>
-  <Edge nodeIn="15" nodeOut="9" portIn="in1" portOut="Success" enabled="1"/>
-  <Edge nodeIn="22" nodeOut="9" portIn="Trigger" portOut="Success" enabled="1"/>
   <Edge nodeIn="793" nodeOut="9" portIn="input" portOut="Fail" enabled="1"/>
   <Edge nodeIn="794" nodeOut="9" portIn="EndAction" portOut="Fail" enabled="1"/>
-  <Edge nodeIn="3" nodeOut="15" portIn="Execute" portOut="out" enabled="1"/>
-  <Edge nodeIn="24" nodeOut="19" portIn="Trigger" portOut="out" enabled="1"/>
-  <Edge nodeIn="24" nodeOut="19" portIn="Value" portOut="out" enabled="1"/>
-  <Edge nodeIn="19" nodeOut="23" portIn="A" portOut="OutValue" enabled="1"/>
-  <Edge nodeIn="15" nodeOut="24" portIn="in2" portOut="OutValue" enabled="1"/>
-  <Edge nodeIn="2" nodeOut="27" portIn="Index" portOut="OutValue" enabled="1"/>
-  <Edge nodeIn="2132" nodeOut="27" portIn="A" portOut="OutValue" enabled="1"/>
-  <Edge nodeIn="2149" nodeOut="27" portIn="In" portOut="OutValue" enabled="1"/>
-  <Edge nodeIn="2150" nodeOut="27" portIn="String2" portOut="OutValue" enabled="1"/>
+  <Edge nodeIn="2163" nodeOut="9" portIn="in1" portOut="Success" enabled="1"/>
   <Edge nodeIn="6" nodeOut="34" portIn="Set" portOut="Out" enabled="1"/>
   <Edge nodeIn="6" nodeOut="34" portIn="String" portOut="Out" enabled="1"/>
-  <Edge nodeIn="23" nodeOut="34" portIn="Trigger" portOut="Out" enabled="1"/>
   <Edge nodeIn="37" nodeOut="34" portIn="input" portOut="Out" enabled="1"/>
   <Edge nodeIn="37" nodeOut="34" portIn="message" portOut="Out" enabled="1"/>
   <Edge nodeIn="9" nodeOut="792" portIn="Execute" portOut="StartAction" enabled="1"/>
   <Edge nodeIn="38" nodeOut="792" portIn="input" portOut="StartAction" enabled="1"/>
-  <Edge nodeIn="2" nodeOut="2132" portIn="Execute" portOut="true" enabled="1"/>
-  <Edge nodeIn="36" nodeOut="2132" portIn="EndAction" portOut="false" enabled="1"/>
-  <Edge nodeIn="2142" nodeOut="2132" portIn="In" portOut="true" enabled="1"/>
-  <Edge nodeIn="2143" nodeOut="2132" portIn="In" portOut="false" enabled="1"/>
-  <Edge nodeIn="2132" nodeOut="2133" portIn="B" portOut="out" enabled="1"/>
-  <Edge nodeIn="2135" nodeOut="2142" portIn="input" portOut="Out" enabled="1"/>
-  <Edge nodeIn="2139" nodeOut="2143" portIn="input" portOut="Out" enabled="1"/>
-  <Edge nodeIn="2150" nodeOut="2149" portIn="Set" portOut="Out" enabled="1"/>
-  <Edge nodeIn="2148" nodeOut="2150" portIn="input" portOut="Out" enabled="1"/>
+  <Edge nodeIn="3" nodeOut="2163" portIn="Execute" portOut="out" enabled="1"/>
+  <Edge nodeIn="2163" nodeOut="2171" portIn="in2" portOut="Success" enabled="1"/>
+  <Edge nodeIn="2176" nodeOut="2171" portIn="EndAction" portOut="Fail" enabled="1"/>
+  <Edge nodeIn="2179" nodeOut="2171" portIn="Set" portOut="Fail" enabled="1"/>
+  <Edge nodeIn="2171" nodeOut="2180" portIn="Execute" portOut="Success" enabled="1"/>
  </Edges>
- <GraphTokens>
-  <Token Name="cursor" Type="1"/>
- </GraphTokens>
+ <GraphTokens />
 </Graph>
