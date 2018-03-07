@@ -52,6 +52,8 @@ for file in os.listdir(directory):
 	filename = os.fsdecode(file)
 	zout.write( join(directory, filename) )
 
+zout.write( 'README.md', join(name, 'README.md') )
+
 zout.write(
 	join('dep', 'zzzzzz_kcd_flowgraph_hook.pak'),
 	join('Data', 'zzzzzz_kcd_flowgraph_hook.pak')
