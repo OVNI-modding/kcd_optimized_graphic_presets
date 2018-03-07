@@ -2,46 +2,61 @@
 
 version='3.0.0'
 name='optimized_graphic_presets'
+packagePrefix='zzz_'
+outputDir='builds'
+
+#######################################
+
+zipFilename=f'{name}_{version}.zip'
+gamePackageName=f'{packagePrefix}{name}.pak'
 
 import os
 import io
 import zipfile
+join=os.path.join
 
+#######
+# PAK #
+#######
 
 gamePackage = io.BytesIO()
 zout = zipfile.ZipFile( gamePackage, 'w', compression=zipfile.ZIP_STORED )
 
-directory = os.path.join('Config', 'CVarGroups')
+directory = join('Config', 'CVarGroups')
 for file in os.listdir(directory):
 	filename = os.fsdecode(file)
-	zout.write( os.path.join(directory, filename) )
+	zout.write( join(directory, filename) )
 
-fullFilename = os.path.join('Libs', 'UI', 'UIActions', 'MM_AdvancedGraphics.xml')
-zout.write(fullFilename)
+zout.write( join('Libs', 'UI', 'UIActions', 'MM_AdvancedGraphics.xml') )
 
-fullFilename = os.path.join('Libs', 'UI', 'UIActions', 'MM_IngameMenu.xml')
-zout.write(fullFilename)
+zout.write( join('Libs', 'UI', 'UIActions', 'MM_IngameMenu.xml') )
 
 zout.close()
 
+#######
+# ZIP #
+#######
 
-zipFilename=f'kcd_{name}_{version}.zip'
-zout = zipfile.ZipFile( os.path.join('builds', zipFilename), 'w', compression=zipfile.ZIP_DEFLATED )
+zout = zipfile.ZipFile( join(outputDir, zipFilename), 'w', compression=zipfile.ZIP_DEFLATED )
 
 zout.write('ogp_hotkeys.cfg')
 
 directory = 'Config'
 for file in os.listdir(directory):
 	filename = os.fsdecode(file)
-	if os.path.isfile(os.path.join(directory, filename) ):
-		zout.write( os.path.join(directory, filename) )
+	if os.path.isfile(join(directory, filename) ):
+		zout.write( join(directory, filename) )
 
 directory = 'optimized_graphic_presets'
 for file in os.listdir(directory):
 	filename = os.fsdecode(file)
-	zout.write( os.path.join(directory, filename) )
+	zout.write( join(directory, filename) )
 
-gamePackageName=f'zzz_{name}.pak'
-zout.writestr( os.path.join('Data', gamePackageName), gamePackage.getvalue() )
+zout.write(
+	join('dep', 'zzzzzz_kcd_flowgraph_hook.pak'),
+	join('Data', 'zzzzzz_kcd_flowgraph_hook.pak')
+)
+
+zout.writestr( join('Data', gamePackageName), gamePackage.getvalue() )
 
 zout.close()
