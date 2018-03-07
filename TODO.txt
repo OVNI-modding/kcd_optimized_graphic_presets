@@ -3,7 +3,6 @@
 TODO r_DetailDistance
 TODO e_LightVolumes
 TODO e_DynamicLightsMaxEntityLights
-TODO r_DepthOfField (cannot mod directly)
 
 
 [X] No more confirmation for Apply button
@@ -31,6 +30,7 @@ TODO r_DepthOfField (cannot mod directly)
 [X] lod
 [X] physics
 [X] shading
+[ ] DoF
 [ ] shadows
 [ ] ssdo off/modded/vanilla
 [ ] particles
