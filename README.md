@@ -1,6 +1,6 @@
 
-Optimized Graphic Presets for Kingdom Come Deliverance by OVNI v2.3
-===================================================================
+Optimized Graphic Presets for Kingdom Come Deliverance by OVNI
+==============================================================
 
 - performance boost ; mainly due to disabling grass wind animations, grass-terrain color bending, reducing shadow cascades in lower presets, increasing gi cascades.
 - Better resolution for Global illumination, avoids flickering (Especially in Ratty's church and forests).
