@@ -28,8 +28,8 @@ for file in os.listdir(directory):
 	zout.write( join(directory, filename) )
 
 zout.write( join('Libs', 'UI', 'UIActions', 'MM_AdvancedGraphics.xml') )
-
 zout.write( join('Libs', 'UI', 'UIActions', 'MM_IngameMenu.xml') )
+zout.write( join('Libs', 'UI', 'UIActions', 'SYS_Main_1.xml') )
 
 zout.close()
 
