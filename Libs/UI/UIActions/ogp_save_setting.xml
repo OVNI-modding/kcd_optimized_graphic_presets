@@ -1,0 +1,43 @@
+<Graph isModule="1" moduleName="ogp_save_setting" Description="" Group="" enabled="1" MultiPlayer="ClientServer">
+ <ModuleInputsOutputs>
+  <Port Name="var" Type="5" Input="1"/>
+ </ModuleInputsOutputs>
+ <Nodes>
+  <Node Id="1" Class="Module:Start_ogp_save_setting" pos="198,270,0"/>
+  <Node Id="2" Class="Module:End_ogp_save_setting" pos="2052,342,0">
+   <Inputs />
+  </Node>
+  <Node Id="2992" Class="Xml:NewChild" pos="990,216,0">
+   <Inputs Name="setting" Active="1"/>
+  </Node>
+  <Node Id="2993" Class="Xml:SetValue" pos="1800,216,0">
+   <Inputs />
+  </Node>
+  <Node Id="2994" Class="Xml:GetRoot" pos="792,216,0">
+   <Inputs />
+  </Node>
+  <Node Id="2995" Class="UI:Functions:MainMenu:GetChoice" pos="1476,216,0">
+   <Inputs instanceID="-1" id="" containerIndex="0"/>
+  </Node>
+  <Node Id="2996" Class="Xml:SetAttribute" pos="1242,216,0">
+   <Inputs Name="var"/>
+  </Node>
+  <Node Id="2999" Class="Logic:Condition" pos="504,360,0">
+   <Inputs Condition="0"/>
+  </Node>
+ </Nodes>
+ <Edges>
+  <Edge nodeIn="2995" nodeOut="1" portIn="id" portOut="var" enabled="1"/>
+  <Edge nodeIn="2996" nodeOut="1" portIn="Value" portOut="var" enabled="1"/>
+  <Edge nodeIn="2999" nodeOut="1" portIn="Condition" portOut="var" enabled="1"/>
+  <Edge nodeIn="2996" nodeOut="2992" portIn="Execute" portOut="Success" enabled="1"/>
+  <Edge nodeIn="2" nodeOut="2993" portIn="Success" portOut="Success" enabled="1"/>
+  <Edge nodeIn="2992" nodeOut="2994" portIn="Execute" portOut="Success" enabled="1"/>
+  <Edge nodeIn="2993" nodeOut="2995" portIn="Execute" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="2993" nodeOut="2995" portIn="Value" portOut="ReturnVal" enabled="1"/>
+  <Edge nodeIn="2995" nodeOut="2996" portIn="Call" portOut="Success" enabled="1"/>
+  <Edge nodeIn="2" nodeOut="2999" portIn="Cancel" portOut="OnFalse" enabled="1"/>
+  <Edge nodeIn="2994" nodeOut="2999" portIn="Execute" portOut="OnTrue" enabled="1"/>
+ </Edges>
+ <GraphTokens />
+</Graph>

@@ -1,0 +1,77 @@
+<Graph isModule="1" moduleName="ogp_apply_setting" Description="" Group="" enabled="1" MultiPlayer="ClientServer">
+ <ModuleInputsOutputs>
+  <Port Name="var" Type="5" Input="1"/>
+ </ModuleInputsOutputs>
+ <Nodes>
+  <Node Id="1" Class="Module:Start_ogp_apply_setting" pos="180,270,0"/>
+  <Node Id="2" Class="Module:End_ogp_apply_setting" pos="1404,306,0">
+   <Inputs />
+  </Node>
+  <Node Id="2524" Class="Math:Less" pos="864,288,0">
+   <Inputs A="0" B="10"/>
+  </Node>
+  <Node Id="2526" Class="Math:Calculate" pos="1116,576,0">
+   <Inputs Op="1" A="0" B="10"/>
+  </Node>
+  <Node Id="2527" Class="String:Concat" pos="1116,486,0">
+   <Inputs String1="" String2="_vanilla="/>
+  </Node>
+  <Node Id="2538" Class="UI:Functions:MainMenu:GetChoice" pos="504,270,0">
+   <Inputs instanceID="-1" id="" containerIndex="0"/>
+  </Node>
+  <Node Id="2539" Class="Logic:Any" pos="1170,306,0" InHideMask="1023" OutHideMask="1">
+   <Inputs />
+  </Node>
+  <Node Id="3000" Class="Debug:Log" pos="1512,18,0">
+   <Inputs message=""/>
+  </Node>
+  <Node Id="3001" Class="String:Concat" pos="1314,18,0">
+   <Inputs String1="" String2=""/>
+  </Node>
+  <Node Id="3002" Class="String:Concat" pos="1116,18,0">
+   <Inputs String1="" String2="="/>
+  </Node>
+  <Node Id="3003" Class="Debug:Log" pos="1620,486,0">
+   <Inputs message=""/>
+  </Node>
+  <Node Id="3006" Class="Debug:ExecuteString" pos="1512,90,0">
+   <Inputs String="" NextFrame="0"/>
+  </Node>
+  <Node Id="3009" Class="Debug:ExecuteString" pos="1620,558,0">
+   <Inputs String="" NextFrame="0"/>
+  </Node>
+  <Node Id="3010" Class="String:Concat" pos="1404,486,0">
+   <Inputs String1="" String2=""/>
+  </Node>
+ </Nodes>
+ <Edges>
+  <Edge nodeIn="2" nodeOut="1" portIn="Cancel" portOut="Cancel" enabled="1"/>
+  <Edge nodeIn="2527" nodeOut="1" portIn="String1" portOut="var" enabled="1"/>
+  <Edge nodeIn="2538" nodeOut="1" portIn="Call" portOut="Start" enabled="1"/>
+  <Edge nodeIn="2538" nodeOut="1" portIn="id" portOut="var" enabled="1"/>
+  <Edge nodeIn="3002" nodeOut="1" portIn="String1" portOut="var" enabled="1"/>
+  <Edge nodeIn="2526" nodeOut="2524" portIn="DoCalc" portOut="false" enabled="1"/>
+  <Edge nodeIn="2527" nodeOut="2524" portIn="Set" portOut="false" enabled="1"/>
+  <Edge nodeIn="2539" nodeOut="2524" portIn="in2" portOut="false" enabled="1"/>
+  <Edge nodeIn="2539" nodeOut="2524" portIn="in1" portOut="true" enabled="1"/>
+  <Edge nodeIn="3001" nodeOut="2524" portIn="Set" portOut="true" enabled="1"/>
+  <Edge nodeIn="3002" nodeOut="2524" portIn="Set" portOut="true" enabled="1"/>
+  <Edge nodeIn="3010" nodeOut="2526" portIn="Set" portOut="out" enabled="1"/>
+  <Edge nodeIn="3010" nodeOut="2526" portIn="String2" portOut="out" enabled="1"/>
+  <Edge nodeIn="3010" nodeOut="2527" portIn="String1" portOut="Out" enabled="1"/>
+  <Edge nodeIn="2524" nodeOut="2538" portIn="A" portOut="ReturnVal" enabled="1"/>
+  <Edge nodeIn="2526" nodeOut="2538" portIn="A" portOut="ReturnVal" enabled="1"/>
+  <Edge nodeIn="3001" nodeOut="2538" portIn="String2" portOut="ReturnVal" enabled="1"/>
+  <Edge nodeIn="2" nodeOut="2539" portIn="Success" portOut="out" enabled="1"/>
+  <Edge nodeIn="3000" nodeOut="3001" portIn="input" portOut="Out" enabled="1"/>
+  <Edge nodeIn="3000" nodeOut="3001" portIn="message" portOut="Out" enabled="1"/>
+  <Edge nodeIn="3006" nodeOut="3001" portIn="Set" portOut="Out" enabled="1"/>
+  <Edge nodeIn="3006" nodeOut="3001" portIn="String" portOut="Out" enabled="1"/>
+  <Edge nodeIn="3001" nodeOut="3002" portIn="String1" portOut="Out" enabled="1"/>
+  <Edge nodeIn="3003" nodeOut="3010" portIn="input" portOut="Out" enabled="1"/>
+  <Edge nodeIn="3003" nodeOut="3010" portIn="message" portOut="Out" enabled="1"/>
+  <Edge nodeIn="3009" nodeOut="3010" portIn="Set" portOut="Out" enabled="1"/>
+  <Edge nodeIn="3009" nodeOut="3010" portIn="String" portOut="Out" enabled="1"/>
+ </Edges>
+ <GraphTokens />
+</Graph>
