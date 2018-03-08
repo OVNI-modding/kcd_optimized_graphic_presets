@@ -41,7 +41,7 @@ zout.close()
 # ZIP #
 #######
 
-zout = zipfile.ZipFile( joinPath(outputDir, zipFilename), 'w', compression=zipfile.ZIP_DEFLATED )
+zout = zipfile.ZipFile( Path(outputDir, zipFilename), 'w', compression=zipfile.ZIP_DEFLATED )
 
 # hotkeys config
 zout.write('ogp_hotkeys.cfg')
