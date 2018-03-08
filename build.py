@@ -13,8 +13,7 @@ gamePackageName=f'{packagePrefix}{name}.pak'
 import os
 import io
 import zipfile
-joinPath=os.path.joinPath
-normPath=os.path.normpath
+from pathlib import Path
 
 #######
 # PAK #
@@ -50,21 +49,18 @@ zout.write('ogp_hotkeys.cfg')
 directory = 'Config'
 for file in os.listdir(directory):
 	filename = os.fsdecode(file)
-	if os.path.isfile(joinPath(directory, filename) ):
-		zout.write( joinPath(directory, filename) )
+	if os.path.isfile( Path(directory, filename) ):
+		zout.write( Path(directory, filename) )
 # user.cfg TODO deprecate
 directory = 'optimized_graphic_presets'
 for file in os.listdir(directory):
 	filename = os.fsdecode(file)
-	zout.write( joinPath(directory, filename) )
+	zout.write( Path(directory, filename) )
 # README
-zout.write( 'README.md', normPath(f'{name}/README.md') )
+zout.write( 'README.md', Path(f'{name}/README.md') )
 # Package dependencies
-zout.write(
-	normPath('dep/zzzzzz_kcd_flowgraph_hook.pak'),
-	normPath('Data/zzzzzz_kcd_flowgraph_hook.pak')
-)
+zout.write( Path('dep/zzzzzz_kcd_flowgraph_hook.pak'), Path('Data/zzzzzz_kcd_flowgraph_hook.pak') )
 # New package
-zout.writestr( normPath(f'Data/{gamePackageName}'), gamePackage.getvalue() )
+zout.writestr( str(Path('Data', gamePackageName)), gamePackage.getvalue() )
 
 zout.close()
