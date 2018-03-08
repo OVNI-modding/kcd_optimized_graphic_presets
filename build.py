@@ -10,7 +10,6 @@ outputDir='builds'
 zipFilename=f'{name}_{version}.zip'
 gamePackageName=f'{packagePrefix}{name}.pak'
 
-import os
 import io
 import zipfile
 from pathlib import Path
@@ -21,11 +20,9 @@ from pathlib import Path
 
 gamePackage = io.BytesIO()
 zout = zipfile.ZipFile( gamePackage, 'w', compression=zipfile.ZIP_STORED )
-# add everythin in pak folder
-for root, dirs, files in os.walk('pak'):
-	zipRoot = Path( *Path(root).parts[2:] )
-	for file in files:
-		zout.write( Path(root,file), zipRoot/file )
+# add all files in pak folder
+for file in Path('pak').glob('**/*.*'):
+	zout.write( file, file.relative_to('pak') )
 zout.close()
 
 #######
@@ -37,11 +34,8 @@ zout = zipfile.ZipFile( Path(outputDir, zipFilename), 'w', compression=zipfile.Z
 # hotkeys config
 zout.write('ogp_hotkeys.cfg')
 # presets
-directory = 'Config'
-for file in os.listdir(directory):
-	filename = os.fsdecode(file)
-	if os.path.isfile( Path(directory, filename) ):
-		zout.write( Path(directory, filename) )
+for file in Path('Config').glob('*.cfg'):
+	zout.write(file)
 # add {name} folder
 for file in Path(name).glob('**/*'):
 	zout.write( file, Path(name, file.name) )
