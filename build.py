@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.6
+/#!/usr/bin/env python3.6
 
 version='3.0.0'
 name='optimized_graphic_presets'
@@ -14,6 +14,7 @@ import os
 import io
 import zipfile
 joinPath=os.path.joinPath
+normPath=os.path.normpath
 
 #######
 # PAK #
@@ -22,15 +23,15 @@ joinPath=os.path.joinPath
 gamePackage = io.BytesIO()
 zout = zipfile.ZipFile( gamePackage, 'w', compression=zipfile.ZIP_STORED )
 
-directory = joinPath('Config', 'CVarGroups')
+directory = normPath('Config/CVarGroups')
 for file in os.listdir(directory):
 	filename = os.fsdecode(file)
 	zout.write( joinPath(directory, filename) )
 
-zout.write( joinPath('Libs', 'UI', 'UIActions', 'MM_AdvancedGraphics.xml') )
-zout.write( joinPath('Libs', 'UI', 'UIActions', 'MM_IngameMenu.xml') )
-zout.write( joinPath('Libs', 'UI', 'UIActions', 'SYS_Main_1.xml') )
-zout.write( joinPath('Libs', 'FlowgraphModules', 'SYS_Main_1.xml') )
+zout.write( normPath('Libs/UI/UIActions/MM_AdvancedGraphics.xml') )
+zout.write( normPath('Libs/UI/UIActions/MM_IngameMenu.xml') )
+zout.write( normPath('Libs/UI/UIActions/SYS_Main_1.xml') )
+zout.write( normPath('Libs/FlowgraphModules/SYS_Main_1.xml') )
 
 zout.close()
 
@@ -53,13 +54,13 @@ for file in os.listdir(directory):
 	filename = os.fsdecode(file)
 	zout.write( joinPath(directory, filename) )
 
-zout.write( 'README.md', joinPath(name, 'README.md') )
+zout.write( 'README.md', normPath(f'{name}/README.md') )
 
 zout.write(
-	joinPath('dep', 'zzzzzz_kcd_flowgraph_hook.pak'),
-	joinPath('Data', 'zzzzzz_kcd_flowgraph_hook.pak')
+	normPath('dep/zzzzzz_kcd_flowgraph_hook.pak'),
+	normPath('Data/zzzzzz_kcd_flowgraph_hook.pak')
 )
 
-zout.writestr( joinPath('Data', gamePackageName), gamePackage.getvalue() )
+zout.writestr( normPath(f'Data/{gamePackageName}'), gamePackage.getvalue() )
 
 zout.close()
