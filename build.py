@@ -50,7 +50,8 @@ for file in os.listdir(directory):
 # README
 zout.write( 'README.md', Path(f'{name}/README.md') )
 # Package dependencies
-zout.write( Path('dep/zzzzzz_kcd_flowgraph_hook.pak'), Path('Data/zzzzzz_kcd_flowgraph_hook.pak') )
+for file in Path('dep').glob('*.pak'):
+	zout.write( file, Path('Data',file.name) )
 # New package
 zout.writestr( str(Path('Data', gamePackageName)), gamePackage.getvalue() )
 
