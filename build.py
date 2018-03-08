@@ -23,14 +23,17 @@ normPath=os.path.normpath
 gamePackage = io.BytesIO()
 zout = zipfile.ZipFile( gamePackage, 'w', compression=zipfile.ZIP_STORED )
 
+# cvargroups
 directory = normPath('Config/CVarGroups')
 for file in os.listdir(directory):
 	filename = os.fsdecode(file)
 	zout.write( joinPath(directory, filename) )
-
+# flowgraphs
 zout.write( normPath('Libs/UI/UIActions/MM_AdvancedGraphics.xml') )
 zout.write( normPath('Libs/UI/UIActions/MM_IngameMenu.xml') )
 zout.write( normPath('Libs/UI/UIActions/SYS_Main_1.xml') )
+zout.write( normPath('Libs/FlowgraphModules/MM_IngameMenu.xml') )
+zout.write( normPath('Libs/FlowgraphModules/MM_IngameMenu.xml') )
 zout.write( normPath('Libs/FlowgraphModules/SYS_Main_1.xml') )
 
 zout.close()
@@ -41,26 +44,27 @@ zout.close()
 
 zout = zipfile.ZipFile( joinPath(outputDir, zipFilename), 'w', compression=zipfile.ZIP_DEFLATED )
 
+# hotkeys config
 zout.write('ogp_hotkeys.cfg')
-
+# presets
 directory = 'Config'
 for file in os.listdir(directory):
 	filename = os.fsdecode(file)
 	if os.path.isfile(joinPath(directory, filename) ):
 		zout.write( joinPath(directory, filename) )
-
+# user.cfg TODO deprecate
 directory = 'optimized_graphic_presets'
 for file in os.listdir(directory):
 	filename = os.fsdecode(file)
 	zout.write( joinPath(directory, filename) )
-
+# README
 zout.write( 'README.md', normPath(f'{name}/README.md') )
-
+# Package dependencies
 zout.write(
 	normPath('dep/zzzzzz_kcd_flowgraph_hook.pak'),
 	normPath('Data/zzzzzz_kcd_flowgraph_hook.pak')
 )
-
+# New package
 zout.writestr( normPath(f'Data/{gamePackageName}'), gamePackage.getvalue() )
 
 zout.close()
