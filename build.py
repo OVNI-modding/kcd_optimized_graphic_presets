@@ -1,4 +1,4 @@
-/#!/usr/bin/env python3.6
+#!/usr/bin/env python3.6
 
 version='3.0.0'
 name='optimized_graphic_presets'
