@@ -42,11 +42,9 @@ for file in os.listdir(directory):
 	filename = os.fsdecode(file)
 	if os.path.isfile( Path(directory, filename) ):
 		zout.write( Path(directory, filename) )
-# user.cfg TODO deprecate
-directory = 'optimized_graphic_presets'
-for file in os.listdir(directory):
-	filename = os.fsdecode(file)
-	zout.write( Path(directory, filename) )
+# add {name} folder
+for file in Path(name).glob('**/*'):
+	zout.write( file, Path(name, file.name) )
 # README
 zout.write( 'README.md', Path(f'{name}/README.md') )
 # Package dependencies
