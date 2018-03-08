@@ -1,10 +1,10 @@
-<Graph isModule="1" moduleName="ogp_apply_setting" Description="" Group="" enabled="1" MultiPlayer="ClientServer">
+<Graph isModule="1" moduleName="ogp_ApplySetting" Description="" Group="" enabled="1" MultiPlayer="ClientServer">
  <ModuleInputsOutputs>
   <Port Name="var" Type="5" Input="1"/>
  </ModuleInputsOutputs>
  <Nodes>
-  <Node Id="1" Class="Module:Start_ogp_apply_setting" pos="180,270,0"/>
-  <Node Id="2" Class="Module:End_ogp_apply_setting" pos="1404,306,0">
+  <Node Id="1" Class="Module:Start_ogp_ApplySetting" pos="180,252,0"/>
+  <Node Id="2" Class="Module:End_ogp_ApplySetting" pos="1404,306,0">
    <Inputs />
   </Node>
   <Node Id="2524" Class="Math:Less" pos="864,288,0">
