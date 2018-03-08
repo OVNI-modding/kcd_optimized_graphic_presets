@@ -21,20 +21,11 @@ from pathlib import Path
 
 gamePackage = io.BytesIO()
 zout = zipfile.ZipFile( gamePackage, 'w', compression=zipfile.ZIP_STORED )
-
-# cvargroups
-directory = normPath('Config/CVarGroups')
-for file in os.listdir(directory):
-	filename = os.fsdecode(file)
-	zout.write( joinPath(directory, filename) )
-# flowgraphs
-zout.write( normPath('Libs/UI/UIActions/MM_AdvancedGraphics.xml') )
-zout.write( normPath('Libs/UI/UIActions/MM_IngameMenu.xml') )
-zout.write( normPath('Libs/UI/UIActions/SYS_Main_1.xml') )
-zout.write( normPath('Libs/FlowgraphModules/MM_IngameMenu.xml') )
-zout.write( normPath('Libs/FlowgraphModules/MM_IngameMenu.xml') )
-zout.write( normPath('Libs/FlowgraphModules/SYS_Main_1.xml') )
-
+# add everythin in pak folder
+for root, dirs, files in os.walk('pak'):
+	zipRoot = Path( *Path(root).parts[2:] )
+	for file in files:
+		zout.write( Path(root,file), zipRoot/file )
 zout.close()
 
 #######
