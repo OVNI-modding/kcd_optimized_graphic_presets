@@ -1,11 +1,11 @@
 <Graph isModule="1" moduleName="ogp_CreateSetting" Description="" Group="" enabled="1" MultiPlayer="ClientServer">
  <ModuleInputsOutputs>
-  <Port Name="xmlFile" Type="5" Input="1"/>
   <Port Name="xmlTag" Type="5" Input="1"/>
+  <Port Name="xmlFile" Type="5" Input="1"/>
  </ModuleInputsOutputs>
  <Nodes>
-  <Node Id="1" Class="Module:Start_ogp_CreateSetting" pos="36,-288,0"/>
-  <Node Id="2" Class="Module:End_ogp_CreateSetting" pos="3708,1494,0">
+  <Node Id="1" Class="Module:Start_ogp_CreateSetting" pos="-108,-18,0"/>
+  <Node Id="2" Class="Module:End_ogp_CreateSetting" pos="3582,1296,0">
    <Inputs />
   </Node>
   <Node Id="2483" Class="UI:Functions:MainMenu:SetChoice" pos="3240,864,0">
@@ -16,9 +16,6 @@
   </Node>
   <Node Id="3129" Class="UI:Functions:MainMenu:AddChoiceOption" pos="3438,324,0">
    <Inputs instanceID="-1" choiceId="0" buttonId="" containerIndex="0" uiText="" tooltip="" disable="0"/>
-  </Node>
-  <Node Id="3145" Class="Xml:OpenDocument" pos="414,18,0">
-   <Inputs File="" Location="2"/>
   </Node>
   <Node Id="3146" Class="Xml:GetRoot" pos="666,18,0">
    <Inputs />
@@ -35,13 +32,10 @@
   <Node Id="3152" Class="Logic:All" pos="1404,18,0" InHideMask="63" OutHideMask="1">
    <Inputs />
   </Node>
-  <Node Id="3439" Class="Debug:Log" pos="738,162,0">
-   <Inputs message="failed to load xml"/>
-  </Node>
-  <Node Id="3460" Name="Create_button" Class="_commentbox" pos="1098,-222.23325,0">
+  <Node Id="3460" Name="Create_button" Class="_commentbox" pos="1098,-96.523285,0">
    <Inputs TextSize="1" Color="0.27451,0.352941,0.705882" DisplayFilled="1" DisplayBox="1" SortPriority="16"/>
    <ResizeBorder X="0" Y="0" Width="882" Height="450"/>
-   <NodeSize Width="882.79456" Height="633.01172"/>
+   <NodeSize Width="882" Height="507.30273"/>
   </Node>
   <Node Id="3462" Class="Math:Counter" pos="2214,252,0">
    <Inputs max="0"/>
@@ -55,10 +49,10 @@
   <Node Id="3465" Class="Logic:Any" pos="2070,252,0" InHideMask="1021">
    <Inputs />
   </Node>
-  <Node Id="3466" Name="For_each_choice_element" Class="_commentbox" pos="2034,15.014145,0">
+  <Node Id="3466" Name="For_each_choice_element" Class="_commentbox" pos="2034,140.72339,0">
    <Inputs TextSize="1" Color="0.27451,0.352941,0.705882" DisplayFilled="1" DisplayBox="1" SortPriority="16"/>
    <ResizeBorder X="0" Y="0" Width="828" Height="234"/>
-   <NodeSize Width="1525.9586" Height="417.01175"/>
+   <NodeSize Width="828" Height="291.30273"/>
   </Node>
   <Node Id="3469" Class="Xml:GetAttribute" pos="2952,504,0">
    <Inputs Name="tooltip"/>
@@ -72,10 +66,10 @@
   <Node Id="3473" Class="Xml:GetAttribute" pos="2952,378,0">
    <Inputs Name="label"/>
   </Node>
-  <Node Id="3474" Name="Create_choice" Class="_commentbox" pos="2916,-6.3344803,0">
+  <Node Id="3474" Name="Create_choice" Class="_commentbox" pos="2916,119.37521,0">
    <Inputs TextSize="1" Color="0.27451,0.352941,0.705882" DisplayFilled="1" DisplayBox="1" SortPriority="16"/>
    <ResizeBorder X="0" Y="0" Width="1134" Height="468"/>
-   <NodeSize Width="1134" Height="651.01172"/>
+   <NodeSize Width="1134" Height="525.30273"/>
   </Node>
   <Node Id="3481" Class="Xml:GetParent" pos="3834,324,0">
    <Inputs />
@@ -83,28 +77,31 @@
   <Node Id="3492" Class="Xml:GetChild" pos="882,18,0">
    <Inputs Name="" Create="0"/>
   </Node>
-  <Node Id="3494" Name="Init_choice" Class="_commentbox" pos="2934,622.02667,0">
+  <Node Id="3494" Name="Init_choice" Class="_commentbox" pos="2934,747.73578,0">
    <Inputs TextSize="1" Color="0.27451,0.352941,0.705882" DisplayFilled="1" DisplayBox="1" SortPriority="16"/>
    <ResizeBorder X="0" Y="0" Width="702" Height="252"/>
-   <NodeSize Width="702" Height="435.01175"/>
+   <NodeSize Width="702" Height="309.30273"/>
+  </Node>
+  <Node Id="3554" Class="Debug:Log" pos="666,144,0">
+   <Inputs message="[OGP] Error: failed to open xml file"/>
+  </Node>
+  <Node Id="3562" Class="Xml:OpenDocument" pos="360,18,0">
+   <Inputs File="" Location="2"/>
   </Node>
  </Nodes>
  <Edges>
-  <Edge nodeIn="2" nodeOut="1" portIn="Cancel" portOut="Cancel" enabled="1"/>
   <Edge nodeIn="2483" nodeOut="1" portIn="id" portOut="xmlTag" enabled="1"/>
   <Edge nodeIn="2484" nodeOut="1" portIn="CVar" portOut="xmlTag" enabled="1"/>
   <Edge nodeIn="3129" nodeOut="1" portIn="buttonId" portOut="xmlTag" enabled="1"/>
-  <Edge nodeIn="3145" nodeOut="1" portIn="Execute" portOut="Start" enabled="1"/>
-  <Edge nodeIn="3145" nodeOut="1" portIn="File" portOut="xmlFile" enabled="1"/>
   <Edge nodeIn="3151" nodeOut="1" portIn="buttonId" portOut="xmlTag" enabled="1"/>
   <Edge nodeIn="3492" nodeOut="1" portIn="Name" portOut="xmlTag" enabled="1"/>
+  <Edge nodeIn="3562" nodeOut="1" portIn="Execute" portOut="Start" enabled="1"/>
+  <Edge nodeIn="3562" nodeOut="1" portIn="File" portOut="xmlFile" enabled="1"/>
   <Edge nodeIn="2" nodeOut="2483" portIn="Success" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="2483" nodeOut="2484" portIn="Call" portOut="CurValue" enabled="1"/>
   <Edge nodeIn="2483" nodeOut="2484" portIn="choiceId" portOut="CurValue" enabled="1"/>
   <Edge nodeIn="3472" nodeOut="3129" portIn="Reset" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="3481" nodeOut="3129" portIn="Execute" portOut="OnCall" enabled="1"/>
-  <Edge nodeIn="3146" nodeOut="3145" portIn="Execute" portOut="Success" enabled="1"/>
-  <Edge nodeIn="3439" nodeOut="3145" portIn="input" portOut="Fail" enabled="1"/>
   <Edge nodeIn="3492" nodeOut="3146" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="3151" nodeOut="3149" portIn="uiText" portOut="Value" enabled="1"/>
   <Edge nodeIn="3152" nodeOut="3149" portIn="in2" portOut="Done" enabled="1"/>
@@ -131,6 +128,9 @@
   <Edge nodeIn="3465" nodeOut="3481" portIn="in2" portOut="Done" enabled="1"/>
   <Edge nodeIn="3149" nodeOut="3492" portIn="Execute" portOut="Success" enabled="1"/>
   <Edge nodeIn="3150" nodeOut="3492" portIn="Execute" portOut="Success" enabled="1"/>
+  <Edge nodeIn="2" nodeOut="3562" portIn="Cancel" portOut="Fail" enabled="1"/>
+  <Edge nodeIn="3146" nodeOut="3562" portIn="Execute" portOut="Success" enabled="1"/>
+  <Edge nodeIn="3554" nodeOut="3562" portIn="input" portOut="Fail" enabled="1"/>
  </Edges>
  <GraphTokens />
 </Graph>

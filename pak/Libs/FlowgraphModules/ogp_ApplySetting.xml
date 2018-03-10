@@ -3,7 +3,7 @@
   <Port Name="var" Type="5" Input="1"/>
  </ModuleInputsOutputs>
  <Nodes>
-  <Node Id="1" Class="Module:Start_ogp_ApplySetting" pos="180,252,0"/>
+  <Node Id="1" Class="Module:Start_ogp_ApplySetting" pos="90,252,0"/>
   <Node Id="2" Class="Module:End_ogp_ApplySetting" pos="1404,306,0">
    <Inputs />
   </Node>

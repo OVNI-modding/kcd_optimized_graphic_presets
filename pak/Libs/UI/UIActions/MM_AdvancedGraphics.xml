@@ -1,231 +1,37 @@
 <Graph Description="" Group="ogp" enabled="1" MultiPlayer="ClientServer">
  <Nodes>
-  <Node Id="1" Class="UI:Action:Start" pos="-4968,-630,0">
-   <Inputs UseAsState="1"/>
-  </Node>
-  <Node Id="9" Class="Xml:OpenDocument" pos="-3564,-630,0">
-   <Inputs File="ogp_advancedSettingsMenu.xml" Location="2"/>
-  </Node>
-  <Node Id="127" Class="UI:Functions:MainMenu:SetContainer" pos="-3924,-828,0">
-   <Inputs instanceID="-1" containerIndex="0" ButtonXPos="1500" ButtonYPos="250" MaxButtons="13"/>
-  </Node>
-  <Node Id="128" Class="UI:Functions:MainMenu:SetTitleBox" pos="-4338,-756,0">
-   <Inputs instanceID="-1" header="controls"/>
-  </Node>
-  <Node Id="229" Class="UI:Functions:MainMenu:SetContainer" pos="-3924,-630,0">
-   <Inputs instanceID="-1" containerIndex="0" ButtonXPos="1500" ButtonYPos="400" MaxButtons="10"/>
-  </Node>
-  <Node Id="555" Class="UI:Functions:MainMenu:ClearAll" pos="-4662,-630,0">
+  <Node Id="555" Class="UI:Functions:MainMenu:ClearAll" pos="-4878,-2142,0">
    <Inputs instanceID="-1" useLastSelect="0"/>
   </Node>
-  <Node Id="556" Class="UI:Functions:MainMenu:SetTitleBox" pos="-4356,-630,0">
-   <Inputs instanceID="-1" header="@ui_AdvancedGraphicTitle"/>
+  <Node Id="3597" Class="UI:Functions:MainMenu:SetContainer" pos="-4554,-2142,0">
+   <Inputs instanceID="-1" containerIndex="0" ButtonXPos="1500" ButtonYPos="250" MaxButtons="13"/>
   </Node>
-  <Node Id="793" Class="Debug:Log" pos="-3042,-900,0">
-   <Inputs message="[OGP] Info: Did not found ogp_advSettingsMenu.xml"/>
+  <Node Id="3598" Class="UI:Functions:MainMenu:SetTitleBox" pos="-4554,-2250,0">
+   <Inputs instanceID="-1" header="controls"/>
   </Node>
-  <Node Id="794" Class="UI:Action:End" pos="-3042,-828,0">
-   <Inputs UseAsState="0" Args=""/>
+  <Node Id="3658" Class="UI:Action:Start" pos="-5220,-2142,0">
+   <Inputs UseAsState="1"/>
   </Node>
-  <Node Id="1947" Name="Note:_I_tryed_2_nested_loops_to_define_the_menu_in_one_XML_file._But_apparently_flowSHARTs_have_a_max_time_budget_and_die_silently_like_shit_if_they_take_too_long&gt;\nSo_now_tag_name_is_the_id_of_the_button_and_of_the_var_to_modify,_since_that&apos;s_the_only_way_to_get_a_specific_xml_element_without_iterating" Class="_comment" pos="-3294,-1008,0"/>
-  <Node Id="1992" Class="UI:Events:MainMenu:OnButton" pos="-5652,108,0">
-   <Inputs instanceID="-1" Port="0" Idx="IDD_Back"/>
-  </Node>
-  <Node Id="1993" Class="UI:Action:End" pos="-5364,108,0">
+  <Node Id="3697" Class="UI:Action:End" pos="-3546,-2214,0">
    <Inputs UseAsState="1" Args=""/>
   </Node>
-  <Node Id="1998" Class="UI:Functions:MainMenu:AddConfirmation" pos="-5148,0,0">
-   <Inputs instanceID="-1" confirmationId="APPLY_ADVANCED_GRAPHICS_BACK" uiQuestion="@ui_ApplyChanges" uiAnswer0="@ui_Yes" uiAnswer1="@ui_No" defaultSelect0="0" tooltip0="" tooltip1="" actionBackOnAnswer="-1" sound0="" sound1=""/>
+  <Node Id="3723" Class="Module:Call_ogp_PopulateSettingsMenu" pos="-4158,-2160,0">
+   <Inputs entityId="0" GlobalController="0" InstanceID="-1" ContinuousInput="0" ContinuousOutput="0" xmlFile="ogp_advancedSettingsMenu.xml"/>
   </Node>
-  <Node Id="1999" Class="UI:Events:MainMenu:OnButton" pos="-5508,0,0">
-   <Inputs instanceID="-1" Port="0" Idx="IDD_Back_Confirm"/>
-  </Node>
-  <Node Id="2000" Class="UI:Events:MainMenu:OnConfirm" pos="-4572,0,0">
-   <Inputs instanceID="-1" Port="0" Idx="APPLY_ADVANCED_GRAPHICS_BACK"/>
-  </Node>
-  <Node Id="2001" Class="Logic:Any" pos="-3744,-306,0" InHideMask="1020">
-   <Inputs />
-  </Node>
-  <Node Id="2002" Class="Math:Equal" pos="-4050,0,0">
-   <Inputs A="0" B="0"/>
-  </Node>
-  <Node Id="2003" Class="UI:Action:End" pos="-3834,126,0">
+  <Node Id="3724" Class="UI:Action:End" pos="-3546,-2070,0">
    <Inputs UseAsState="1" Args=""/>
-  </Node>
-  <Node Id="2004" Class="Xml:NewDocument" pos="-3564,18,0">
-   <Inputs Root="Root"/>
-  </Node>
-  <Node Id="2005" Class="Debug:Log" pos="-3348,126,0">
-   <Inputs message="[OGP]Error: Failed to create xml document"/>
-  </Node>
-  <Node Id="2961" Class="UI:Events:MainMenu:OnButton" pos="-4266,-306,0">
-   <Inputs instanceID="-1" Port="0" Idx="ID_APPLY_ADVANCED_GRAPHICS"/>
-  </Node>
-  <Node Id="3003" Class="Debug:Log" pos="-2646,-216,0">
-   <Inputs message="e_UberlodActivate"/>
-  </Node>
-  <Node Id="3009" Class="Debug:ExecuteString" pos="-2646,-144,0">
-   <Inputs String="e_UberlodActivate" NextFrame="0"/>
-  </Node>
-  <Node Id="3391" Class="String:SetString" pos="-2484,-306,0">
-   <Inputs In=""/>
-  </Node>
-  <Node Id="3392" Class="Xml:GetRoot" pos="-3114,-306,0">
-   <Inputs />
-  </Node>
-  <Node Id="3393" Class="Xml:GetChildAt" pos="-2916,-306,0">
-   <Inputs Name="setting" Index="1"/>
-  </Node>
-  <Node Id="3394" Class="Xml:GetValue" pos="-2664,-306,0" InHideMask="1" OutHideMask="15">
-   <Inputs />
-  </Node>
-  <Node Id="3395" Class="Math:Counter" pos="-3438,-306,0">
-   <Inputs max="0"/>
-  </Node>
-  <Node Id="3402" Class="UI:Functions:MainMenu:AddButton" pos="-1746,-432,0">
-   <Inputs instanceID="-1" id="ID_APPLY_ADVANCED_GRAPHICS" containerIndex="1" uiText="Apply (without leaving)" actionType="apply" tooltip="" disable="0" sound=""/>
-  </Node>
-  <Node Id="3403" Class="UI:Functions:MainMenu:AddButton" pos="-1278,-432,0">
-   <Inputs instanceID="-1" id="IDD_Back" containerIndex="1" uiText="@ui_back" actionType="back" tooltip="" disable="0" sound=""/>
-  </Node>
-  <Node Id="3404" Class="Xml:SaveDocument" pos="-2088,234,0">
-   <Inputs File="ogp_settings.xml" Location="3" Overwrite="1"/>
-  </Node>
-  <Node Id="3405" Class="UI:Action:End" pos="-1746,306,0">
-   <Inputs UseAsState="1" Args=""/>
-  </Node>
-  <Node Id="3406" Class="Debug:Log" pos="-1746,234,0">
-   <Inputs message="[OGP]Error: Failed to create ogp_settings.xml"/>
-  </Node>
-  <Node Id="3410" Class="Logic:Any" pos="-3564,-306,0" InHideMask="1023" OutHideMask="1">
-   <Inputs />
-  </Node>
-  <Node Id="3424" Class="Math:Equal" pos="-3258,-306,0">
-   <Inputs A="0" B="0"/>
-  </Node>
-  <Node Id="3426" Class="String:SetString" pos="-2268,18,0">
-   <Inputs In=""/>
-  </Node>
-  <Node Id="3427" Class="Xml:GetRoot" pos="-2898,18,0">
-   <Inputs />
-  </Node>
-  <Node Id="3428" Class="Xml:GetChildAt" pos="-2700,18,0">
-   <Inputs Name="setting" Index="1"/>
-  </Node>
-  <Node Id="3429" Class="Xml:GetValue" pos="-2448,18,0" InHideMask="1" OutHideMask="15">
-   <Inputs />
-  </Node>
-  <Node Id="3430" Class="Math:Counter" pos="-3222,18,0">
-   <Inputs max="0"/>
-  </Node>
-  <Node Id="3431" Class="Logic:Any" pos="-3348,18,0" InHideMask="1023" OutHideMask="1">
-   <Inputs />
-  </Node>
-  <Node Id="3432" Class="Math:Equal" pos="-3042,18,0">
-   <Inputs A="0" B="0"/>
-  </Node>
-  <Node Id="3434" Class="Xml:GetRoot" pos="-2826,-630,0">
-   <Inputs />
-  </Node>
-  <Node Id="3435" Class="Xml:GetChildAt" pos="-2394,-630,0">
-   <Inputs Name="setting" Index="1"/>
-  </Node>
-  <Node Id="3436" Class="Xml:GetValue" pos="-2142,-630,0" InHideMask="1" OutHideMask="15">
-   <Inputs />
-  </Node>
-  <Node Id="3437" Class="Math:Counter" pos="-2988,-630,0" InHideMask="7" OutHideMask="1">
-   <Inputs max="0"/>
-  </Node>
-  <Node Id="3438" Class="Logic:Any" pos="-3132,-630,0" InHideMask="1023" OutHideMask="1">
-   <Inputs />
-  </Node>
-  <Node Id="3451" Name="Apply_Settings" Class="_commentbox" pos="-3582,-458.185,0">
-   <Inputs TextSize="1" Color="0.27451,0.352941,0.705882" DisplayFilled="1" DisplayBox="1" SortPriority="16"/>
-   <ResizeBorder X="0" Y="0" Width="1584" Height="234"/>
-   <NodeSize Width="1584" Height="348.5816"/>
-  </Node>
-  <Node Id="3452" Name="Save_Settings" Class="_commentbox" pos="-3582,-116.28065,0">
-   <Inputs TextSize="1" Color="0.27451,0.352941,0.705882" DisplayFilled="1" DisplayBox="1" SortPriority="16"/>
-   <ResizeBorder X="0" Y="0" Width="2322" Height="396"/>
-   <NodeSize Width="2322" Height="510.5816"/>
-  </Node>
-  <Node Id="3453" Name="Create_Settings_UI_Elmenets" Class="_commentbox" pos="-3582,-1139.2517,0">
-   <Inputs TextSize="1" Color="0.27451,0.352941,0.705882" DisplayFilled="1" DisplayBox="1" SortPriority="16"/>
-   <ResizeBorder X="0" Y="0" Width="2106" Height="540"/>
-   <NodeSize Width="2106" Height="654.5816"/>
-  </Node>
-  <Node Id="3454" Class="Xml:GetChild" pos="-2628,-630,0">
-   <Inputs Name="order" Create="0"/>
-  </Node>
-  <Node Id="3455" Class="Module:Call_ogp_ApplySetting" pos="-2304,-324,0">
-   <Inputs entityId="0" GlobalController="0" InstanceID="-1" ContinuousInput="0" ContinuousOutput="0" var=""/>
-  </Node>
-  <Node Id="3456" Class="Module:Call_ogp_CreateSetting" pos="-1944,-756,0">
-   <Inputs entityId="0" GlobalController="0" InstanceID="-1" ContinuousInput="0" ContinuousOutput="0" xmlFile="ogp_advancedSettingsMenu.xml" xmlTag=""/>
-  </Node>
-  <Node Id="3457" Class="Module:Call_ogp_SaveSetting" pos="-2088,18,0">
-   <Inputs entityId="0" GlobalController="0" InstanceID="-1" ContinuousInput="0" ContinuousOutput="0" var=""/>
   </Node>
  </Nodes>
  <Edges>
-  <Edge nodeIn="555" nodeOut="1" portIn="Call" portOut="StartAction" enabled="1"/>
-  <Edge nodeIn="793" nodeOut="9" portIn="input" portOut="Fail" enabled="1"/>
-  <Edge nodeIn="794" nodeOut="9" portIn="EndAction" portOut="Fail" enabled="1"/>
-  <Edge nodeIn="3438" nodeOut="9" portIn="in1" portOut="Success" enabled="1"/>
-  <Edge nodeIn="9" nodeOut="127" portIn="Execute" portOut="OnCall" enabled="1"/>
-  <Edge nodeIn="127" nodeOut="128" portIn="Call" portOut="OnCall" enabled="1"/>
-  <Edge nodeIn="128" nodeOut="555" portIn="Call" portOut="OnCall" enabled="1"/>
-  <Edge nodeIn="556" nodeOut="555" portIn="Call" portOut="OnCall" enabled="1"/>
-  <Edge nodeIn="1993" nodeOut="1992" portIn="EndAction" portOut="onEvent" enabled="1"/>
-  <Edge nodeIn="1998" nodeOut="1999" portIn="instanceID" portOut="instanceID" enabled="1"/>
-  <Edge nodeIn="1998" nodeOut="1999" portIn="Call" portOut="onEvent" enabled="1"/>
-  <Edge nodeIn="2002" nodeOut="2000" portIn="A" portOut="res" enabled="1"/>
-  <Edge nodeIn="3410" nodeOut="2001" portIn="in1" portOut="out" enabled="1"/>
-  <Edge nodeIn="2001" nodeOut="2002" portIn="in2" portOut="true" enabled="1"/>
-  <Edge nodeIn="2003" nodeOut="2002" portIn="EndAction" portOut="false" enabled="1"/>
-  <Edge nodeIn="2004" nodeOut="2002" portIn="Execute" portOut="true" enabled="1"/>
-  <Edge nodeIn="2005" nodeOut="2004" portIn="input" portOut="Fail" enabled="1"/>
-  <Edge nodeIn="3431" nodeOut="2004" portIn="in1" portOut="Success" enabled="1"/>
-  <Edge nodeIn="2001" nodeOut="2961" portIn="in1" portOut="onEvent" enabled="1"/>
-  <Edge nodeIn="3455" nodeOut="3391" portIn="Call" portOut="Out" enabled="1"/>
-  <Edge nodeIn="3455" nodeOut="3391" portIn="var" portOut="Out" enabled="1"/>
-  <Edge nodeIn="3393" nodeOut="3392" portIn="Execute" portOut="Success" enabled="1"/>
-  <Edge nodeIn="3003" nodeOut="3393" portIn="input" portOut="Fail" enabled="1"/>
-  <Edge nodeIn="3009" nodeOut="3393" portIn="Set" portOut="Fail" enabled="1"/>
-  <Edge nodeIn="3394" nodeOut="3393" portIn="Execute" portOut="Success" enabled="1"/>
-  <Edge nodeIn="3395" nodeOut="3393" portIn="reset" portOut="Fail" enabled="1"/>
-  <Edge nodeIn="3391" nodeOut="3394" portIn="In" portOut="Value" enabled="1"/>
-  <Edge nodeIn="3391" nodeOut="3394" portIn="Set" portOut="Value" enabled="1"/>
-  <Edge nodeIn="3393" nodeOut="3395" portIn="Index" portOut="count" enabled="1"/>
-  <Edge nodeIn="3424" nodeOut="3395" portIn="A" portOut="count" enabled="1"/>
-  <Edge nodeIn="3403" nodeOut="3402" portIn="Call" portOut="OnCall" enabled="1"/>
-  <Edge nodeIn="3405" nodeOut="3404" portIn="EndAction" portOut="Done" enabled="1"/>
-  <Edge nodeIn="3406" nodeOut="3404" portIn="input" portOut="Fail" enabled="1"/>
-  <Edge nodeIn="3395" nodeOut="3410" portIn="in" portOut="out" enabled="1"/>
-  <Edge nodeIn="3392" nodeOut="3424" portIn="Execute" portOut="false" enabled="1"/>
-  <Edge nodeIn="3457" nodeOut="3426" portIn="Call" portOut="Out" enabled="1"/>
-  <Edge nodeIn="3457" nodeOut="3426" portIn="var" portOut="Out" enabled="1"/>
-  <Edge nodeIn="3428" nodeOut="3427" portIn="Execute" portOut="Success" enabled="1"/>
-  <Edge nodeIn="3429" nodeOut="3428" portIn="Execute" portOut="Success" enabled="1"/>
-  <Edge nodeIn="3430" nodeOut="3428" portIn="reset" portOut="Fail" enabled="1"/>
-  <Edge nodeIn="3426" nodeOut="3429" portIn="In" portOut="Value" enabled="1"/>
-  <Edge nodeIn="3426" nodeOut="3429" portIn="Set" portOut="Value" enabled="1"/>
-  <Edge nodeIn="3428" nodeOut="3430" portIn="Index" portOut="count" enabled="1"/>
-  <Edge nodeIn="3432" nodeOut="3430" portIn="A" portOut="count" enabled="1"/>
-  <Edge nodeIn="3430" nodeOut="3431" portIn="in" portOut="out" enabled="1"/>
-  <Edge nodeIn="3404" nodeOut="3432" portIn="Execute" portOut="true" enabled="1"/>
-  <Edge nodeIn="3427" nodeOut="3432" portIn="Execute" portOut="false" enabled="1"/>
-  <Edge nodeIn="3454" nodeOut="3434" portIn="Execute" portOut="Success" enabled="1"/>
-  <Edge nodeIn="3402" nodeOut="3435" portIn="Call" portOut="Fail" enabled="1"/>
-  <Edge nodeIn="3436" nodeOut="3435" portIn="Execute" portOut="Success" enabled="1"/>
-  <Edge nodeIn="3456" nodeOut="3436" portIn="Call" portOut="Value" enabled="1"/>
-  <Edge nodeIn="3456" nodeOut="3436" portIn="xmlTag" portOut="Value" enabled="1"/>
-  <Edge nodeIn="3434" nodeOut="3437" portIn="Execute" portOut="count" enabled="1"/>
-  <Edge nodeIn="3435" nodeOut="3437" portIn="Index" portOut="count" enabled="1"/>
-  <Edge nodeIn="3437" nodeOut="3438" portIn="in" portOut="out" enabled="1"/>
-  <Edge nodeIn="3435" nodeOut="3454" portIn="Execute" portOut="Success" enabled="1"/>
-  <Edge nodeIn="3438" nodeOut="3456" portIn="in2" portOut="Done" enabled="1"/>
-  <Edge nodeIn="3431" nodeOut="3457" portIn="in2" portOut="Done" enabled="1"/>
+  <Edge nodeIn="3597" nodeOut="555" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="3598" nodeOut="555" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="3723" nodeOut="3597" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="555" nodeOut="3658" portIn="Call" portOut="StartAction" enabled="1"/>
+  <Edge nodeIn="3697" nodeOut="3723" portIn="EndAction" portOut="Done" enabled="1"/>
+  <Edge nodeIn="3724" nodeOut="3723" portIn="EndAction" portOut="Canceled" enabled="1"/>
  </Edges>
- <GraphTokens />
+ <GraphTokens>
+  <Token Name="SettingNames" Type="5"/>
+  <Token Name="SettingNamesLength" Type="1"/>
+ </GraphTokens>
 </Graph>
