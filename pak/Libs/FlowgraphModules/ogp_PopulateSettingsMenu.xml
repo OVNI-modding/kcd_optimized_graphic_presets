@@ -7,6 +7,9 @@
   <Node Id="2" Class="Module:End_ogp_PopulateSettingsMenu" pos="4608,1368,0">
    <Inputs />
   </Node>
+  <Node Id="2538" Class="UI:Functions:MainMenu:GetChoice" pos="3708,180,0">
+   <Inputs instanceID="-1" id="" containerIndex="0"/>
+  </Node>
   <Node Id="2992" Class="Xml:NewChild" pos="3924,702,0">
    <Inputs Name="" Active="1"/>
   </Node>
@@ -31,10 +34,10 @@
   <Node Id="3648" Class="Logic:Any" pos="3132,-74.092285,0" InHideMask="1023" OutHideMask="1">
    <Inputs />
   </Node>
-  <Node Id="3655" Name="Iterate_SettingNames" Class="_commentbox" pos="2592,-348.86642,0">
+  <Node Id="3655" Name="Iterate_SettingNames" Class="_commentbox" pos="2592,-451.75317,0">
    <Inputs TextSize="1" Color="0.27451,0.352941,0.705882" DisplayFilled="1" DisplayBox="1" SortPriority="16"/>
    <ResizeBorder X="0" Y="0" Width="1062" Height="252"/>
-   <NodeSize Width="1062" Height="366.54843"/>
+   <NodeSize Width="1590.3787" Height="469.43518"/>
   </Node>
   <Node Id="3657" Name="false=end" Class="_comment" pos="3420,-56.092285,0"/>
   <Node Id="3661" Class="UI:Util:FromArrayByIndex" pos="3438,195.90771,0">
@@ -49,14 +52,14 @@
   <Node Id="3664" Class="Logic:Any" pos="3132,339.90771,0" InHideMask="1023" OutHideMask="1">
    <Inputs />
   </Node>
-  <Node Id="3667" Name="Iterate_SettingNames" Class="_commentbox" pos="2592,66.7976,0">
+  <Node Id="3667" Name="Iterate_SettingNames" Class="_commentbox" pos="2592,-36.089035,0">
    <Inputs TextSize="1" Color="0.27451,0.352941,0.705882" DisplayFilled="1" DisplayBox="1" SortPriority="16"/>
    <ResizeBorder X="0" Y="0" Width="1062" Height="252"/>
-   <NodeSize Width="1062" Height="366.54843"/>
+   <NodeSize Width="1590.3787" Height="469.43518"/>
   </Node>
   <Node Id="3669" Name="false=end" Class="_comment" pos="3420,357.90771,0"/>
-  <Node Id="3671" Class="Module:Call_ogp_ApplySetting" pos="3708,195.90771,0">
-   <Inputs entityId="0" GlobalController="0" InstanceID="-1" ContinuousInput="0" ContinuousOutput="0" var=""/>
+  <Node Id="3671" Class="Module:Call_ogp_ApplySetting" pos="4050,180,0">
+   <Inputs entityId="0" GlobalController="0" InstanceID="-1" ContinuousInput="0" ContinuousOutput="0" var="" value="0"/>
   </Node>
   <Node Id="3673" Class="UI:Util:FromArrayByIndex" pos="3438,612,0">
    <Inputs Array="" Index="0"/>
@@ -70,10 +73,10 @@
   <Node Id="3676" Class="Logic:Any" pos="3132,756,0" InHideMask="1021" OutHideMask="1">
    <Inputs />
   </Node>
-  <Node Id="3679" Name="Iterate_SettingNames" Class="_commentbox" pos="2592,467.40482,0">
+  <Node Id="3679" Name="Iterate_SettingNames" Class="_commentbox" pos="2592,364.51825,0">
    <Inputs TextSize="1" Color="0.27451,0.352941,0.705882" DisplayFilled="1" DisplayBox="1" SortPriority="16"/>
    <ResizeBorder X="0" Y="0" Width="1062" Height="252"/>
-   <NodeSize Width="1062" Height="366.54843"/>
+   <NodeSize Width="1590.3787" Height="469.43518"/>
   </Node>
   <Node Id="3681" Name="false=end" Class="_comment" pos="3420,771.90771,0"/>
   <Node Id="3684" Class="Xml:SaveDocument" pos="3510,882,0">
@@ -82,10 +85,10 @@
   <Node Id="3686" Class="Debug:Log" pos="3960,900,0">
    <Inputs message="[OGP]Error: Failed to create ogp_settings.xml"/>
   </Node>
-  <Node Id="3687" Class="Debug:Log" pos="4068,411.90771,0">
+  <Node Id="3687" Class="Debug:Log" pos="3744,396,0">
    <Inputs message="e_UberlodActivate"/>
   </Node>
-  <Node Id="3688" Class="Debug:ExecuteString" pos="4068,483.90771,0">
+  <Node Id="3688" Class="Debug:ExecuteString" pos="3744,468,0">
    <Inputs String="e_UberlodActivate" NextFrame="0"/>
   </Node>
   <Node Id="3689" Class="Logic:Any" pos="2160,306,0" InHideMask="1020">
@@ -94,11 +97,8 @@
   <Node Id="3690" Class="UI:Events:MainMenu:OnButton" pos="1620,306,0">
    <Inputs instanceID="-1" Port="0" Idx="ID_APPLY_ADVANCED_GRAPHICS"/>
   </Node>
-  <Node Id="3691" Class="UI:Events:MainMenu:OnButton" pos="324,825.90771,0">
+  <Node Id="3691" Class="UI:Events:MainMenu:OnButton" pos="504,1440,0">
    <Inputs instanceID="-1" Port="0" Idx="IDD_Back"/>
-  </Node>
-  <Node Id="3692" Class="UI:Action:End" pos="612,825.90771,0">
-   <Inputs UseAsState="1" Args=""/>
   </Node>
   <Node Id="3693" Class="UI:Functions:MainMenu:AddConfirmation" pos="828,717.90771,0">
    <Inputs instanceID="-1" confirmationId="APPLY_ADVANCED_GRAPHICS_BACK" uiQuestion="@ui_ApplyChanges" uiAnswer0="@ui_Yes" uiAnswer1="@ui_No" defaultSelect0="0" tooltip0="" tooltip1="" actionBackOnAnswer="-1" sound0="" sound1=""/>
@@ -130,17 +130,22 @@
   <Node Id="3715" Class="Module:Call_ogp_GetSettingNames" pos="1548,-146.09229,0">
    <Inputs entityId="0" GlobalController="0" InstanceID="-1" ContinuousInput="0" ContinuousOutput="0" xmlFile=""/>
   </Node>
-  <Node Id="3719" Class="Logic:Any" pos="4374,1368,0" InHideMask="1021" OutHideMask="1">
+  <Node Id="3719" Class="Logic:Any" pos="4374,1368,0" InHideMask="1017" OutHideMask="1">
    <Inputs />
   </Node>
   <Node Id="3733" Class="Logic:All" pos="4050,1044,0" InHideMask="125" OutHideMask="1">
    <Inputs />
   </Node>
+  <Node Id="3734" Name="Connect_Counter:reset_and_Any:in2_to_start" Class="_comment" pos="2682,720,0"/>
+  <Node Id="3735" Name="Connect_Counter:reset_and_Any:in2_to_start" Class="_comment" pos="2700,288,0"/>
+  <Node Id="3736" Name="Connect_Counter:reset_and_Any:in2_to_start" Class="_comment" pos="2700,-126,0"/>
  </Nodes>
  <Edges>
   <Edge nodeIn="3704" nodeOut="1" portIn="xmlFile" portOut="xmlFile" enabled="1"/>
   <Edge nodeIn="3715" nodeOut="1" portIn="Call" portOut="Start" enabled="1"/>
   <Edge nodeIn="3715" nodeOut="1" portIn="xmlFile" portOut="xmlFile" enabled="1"/>
+  <Edge nodeIn="3671" nodeOut="2538" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="3671" nodeOut="2538" portIn="value" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="2995" nodeOut="2992" portIn="Call" portOut="Success" enabled="1"/>
   <Edge nodeIn="3674" nodeOut="2993" portIn="in" portOut="Success" enabled="1"/>
   <Edge nodeIn="2992" nodeOut="2994" portIn="Execute" portOut="Success" enabled="1"/>
@@ -154,7 +159,8 @@
   <Edge nodeIn="3608" nodeOut="3628" portIn="Get" portOut="true" enabled="1"/>
   <Edge nodeIn="3700" nodeOut="3628" portIn="Call" portOut="false" enabled="1"/>
   <Edge nodeIn="3628" nodeOut="3648" portIn="Check" portOut="out" enabled="1"/>
-  <Edge nodeIn="3671" nodeOut="3661" portIn="Call" portOut="Value" enabled="1"/>
+  <Edge nodeIn="2538" nodeOut="3661" portIn="Call" portOut="Value" enabled="1"/>
+  <Edge nodeIn="2538" nodeOut="3661" portIn="id" portOut="Value" enabled="1"/>
   <Edge nodeIn="3671" nodeOut="3661" portIn="var" portOut="Value" enabled="1"/>
   <Edge nodeIn="3661" nodeOut="3662" portIn="Index" portOut="count" enabled="1"/>
   <Edge nodeIn="3663" nodeOut="3662" portIn="A" portOut="count" enabled="1"/>
@@ -179,7 +185,7 @@
   <Edge nodeIn="3662" nodeOut="3689" portIn="reset" portOut="out" enabled="1"/>
   <Edge nodeIn="3664" nodeOut="3689" portIn="in2" portOut="out" enabled="1"/>
   <Edge nodeIn="3689" nodeOut="3690" portIn="in1" portOut="onEvent" enabled="1"/>
-  <Edge nodeIn="3692" nodeOut="3691" portIn="EndAction" portOut="onEvent" enabled="1"/>
+  <Edge nodeIn="3719" nodeOut="3691" portIn="in3" portOut="onEvent" enabled="1"/>
   <Edge nodeIn="3693" nodeOut="3694" portIn="instanceID" portOut="instanceID" enabled="1"/>
   <Edge nodeIn="3693" nodeOut="3694" portIn="Call" portOut="onEvent" enabled="1"/>
   <Edge nodeIn="3696" nodeOut="3695" portIn="A" portOut="res" enabled="1"/>
