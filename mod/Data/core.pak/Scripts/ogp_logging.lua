@@ -1,6 +1,5 @@
 
-
-local function ogp._Log(msg)
+function ogp._Log(msg)
 	System.LogAlways( "[OGP] " .. msg )
 end
 
