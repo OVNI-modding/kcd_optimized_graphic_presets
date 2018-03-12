@@ -64,7 +64,7 @@
    <Inputs String="ogp_save_settings" NextFrame="0"/>
   </Node>
   <Node Id="3828" Class="Time:Delay" pos="-3978,-5220,0">
-   <Inputs delay="1" resetOnInput="0"/>
+   <Inputs delay="0.1" resetOnInput="1"/>
   </Node>
   <Node Id="3829" Class="UI:Functions:MainMenu:SetMenuColor" pos="-5346,-6696,0">
    <Inputs instanceID="-1" isInGameMenu="0"/>
@@ -79,7 +79,7 @@
   <Edge nodeIn="3689" nodeOut="3696" portIn="in2" portOut="true" enabled="1"/>
   <Edge nodeIn="3825" nodeOut="3696" portIn="in2" portOut="false" enabled="1"/>
   <Edge nodeIn="3826" nodeOut="3696" portIn="Set" portOut="true" enabled="1"/>
-  <Edge nodeIn="3828" nodeOut="3696" portIn="delay" portOut="true" enabled="1"/>
+  <Edge nodeIn="3828" nodeOut="3696" portIn="in" portOut="true" enabled="1"/>
   <Edge nodeIn="3804" nodeOut="3801" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="3805" nodeOut="3801" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="3802" nodeOut="3803" portIn="entityId" portOut="entityId" enabled="1"/>
