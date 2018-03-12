@@ -10,7 +10,7 @@ ogp.strings = {}
 --- Note: It's rather memory-innefficient to load every languages, but there's not that much text.
 --- Ideally, language change should be observed (if possible/convenient).
 ---
-function ogp:InitLocalization()
+local function ogp:InitLocalization()
 	local languages = {"english", "french", "german", "spanish", "italian", "polish", "czech", "russian", "chineses", "turkish"}
 	for _,language in ipairs(languages) do
 		Script.ReloadScript( "ogp_" .. language .. ".lua" )
@@ -27,3 +27,5 @@ function ogp:localize( string )
 	end
 	return ogp.strings[language][string] or ogp.strings["english"][string] or string
 end
+
+ogp.InitLocalization()
