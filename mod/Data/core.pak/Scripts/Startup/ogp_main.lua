@@ -8,6 +8,7 @@ System.LogAlways( "[OGP] initializing..." )
 ---
 ---
 function ogp.Init()
+	Script.ReloadScript( "Scripts/ogp_logging.lua" )
 	Script.ReloadScript( "Scripts/ogp_menu_util.lua" )
 	Script.ReloadScript( "Scripts/ogp_localization.lua" )
 	ogp.LoadLocalizations()
