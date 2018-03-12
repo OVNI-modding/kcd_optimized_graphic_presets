@@ -1,97 +1,112 @@
-<?xml version="1.0" encoding="us-ascii"?>
-<Root>
-	<order>
-		<setting>sys_spec_ogp_antialiasing</setting>
-		<setting>r_motionblur</setting>
-		<setting>e_MergedMeshesUseSpines</setting>
-		<setting>e_ObjShadowCastSpec</setting>
-		<setting>r_sharpening</setting>
-		<setting>sys_spec_ogp_gi</setting>
-		<setting>sys_spec_ogp_grass</setting>
-		<setting>sys_spec_ogp_lod</setting>
-		<setting>sys_spec_ogp_physics</setting>
-		<setting>sys_spec_ogp_shading</setting>
-		<setting>sys_spec_ogp_shadows</setting>
-	</order>
-	<sys_spec_ogp_antialiasing label="Anti-Aliasing" tooltip="">
-		<choice label="Ugly" tooltip="@ui_off" value="0" />
-		<choice label="Low" tooltip="SMAA" value="1" />
-		<choice label="Medium" tooltip="SMAA + TAA 1x" value="2" />
-		<choice label="High" tooltip="SMAA + TAA 2x" value="3" />
-		<choice label="Ultra" tooltip="SMAA + TAA 4x" value="4" />
-		<choice label="Insane" tooltip="SSAA 2x" value="5" />
-	</sys_spec_ogp_antialiasing>
-	<r_motionblur label="@ui_MotionBlur" tooltip="Recommended: off">
-		<choice label="@ui_off" tooltip="" value="0" />
-		<choice label="@ui_Camera" tooltip="" value="1" />
-		<choice label="@ui_CameraObject" tooltip="" value="2" />
-	</r_motionblur>
-	<e_MergedMeshesUseSpines label="Wind on Grass" tooltip="Recommended: off">
-		<choice label="@ui_off" tooltip="" value="0" />
-		<choice label="@ui_on" tooltip="" value="1" />
-	</e_MergedMeshesUseSpines>
-	<e_ObjShadowCastSpec label="Grass shadows" tooltip="">
-		<choice label="@ui_off" tooltip="" value="1" />
-		<choice label="@ui_on" tooltip="" value="3" />
-	</e_ObjShadowCastSpec>
-	<r_sharpening label="Drunk Sharpening" tooltip="Sharpens the screen heavily when drunk">
-		<choice label="@ui_off" tooltip="" value="-10" />
-		<choice label="@ui_on" tooltip="" value="0" />
-	</r_sharpening>
-	<sys_spec_ogp_gi label="Global Illumination" tooltip="Light diffusion/boucing">
-		<choice label="Ugly" tooltip="" value="0" />
-		<choice label="Low" tooltip="" value="1" />
-		<choice label="Medium" tooltip="" value="2" />
-		<choice label="High" tooltip="" value="3" />
-		<choice label="Ultra" tooltip="" value="4" />
-		<choice label="Low (vanilla)" tooltip="" value="11" />
-		<choice label="Medium (vanilla)" tooltip="" value="12" />
-		<choice label="High (vanilla)" tooltip="" value="13" />
-		<choice label="VeryHigh (vanilla)" tooltip="" value="14" />
-		<choice label="Ultra (vanilla)" tooltip="" value="17" />
-	</sys_spec_ogp_gi>
-	<sys_spec_ogp_grass label="Grass" tooltip="Grass quality and distance">
-		<choice label="Ugly" tooltip="" value="0" />
-		<choice label="Low" tooltip="" value="1" />
-		<choice label="Medium" tooltip="" value="2" />
-		<choice label="High" tooltip="" value="3" />
-		<choice label="Ultra" tooltip="" value="4" />
-		<choice label="Low (vanilla)" tooltip="" value="11" />
-		<choice label="Medium (vanilla)" tooltip="" value="12" />
-		<choice label="High (vanilla)" tooltip="" value="13" />
-		<choice label="VeryHigh (vanilla)" tooltip="" value="14" />
-		<choice label="Ultra (vanilla)" tooltip="" value="17" />
-	</sys_spec_ogp_grass>
-	<sys_spec_ogp_lod label="Level of Detail" tooltip="Characters, objects, and vegetation(except grass) rendering quality/distance">
-		<choice label="Ugly" tooltip="" value="0" />
-		<choice label="Low" tooltip="" value="1" />
-		<choice label="Medium" tooltip="" value="2" />
-		<choice label="High" tooltip="" value="3" />
-		<choice label="Ultra" tooltip="" value="4" />
-		<choice label="Low (vanilla)" tooltip="" value="11" />
-		<choice label="Medium (vanilla)" tooltip="" value="12" />
-		<choice label="High (vanilla)" tooltip="" value="13" />
-		<choice label="VeryHigh (vanilla)" tooltip="" value="14" />
-		<choice label="Ultra (vanilla)" tooltip="" value="17" />
-	</sys_spec_ogp_lod>
-	<sys_spec_ogp_physics label="Physics" tooltip="">
-		<choice label="ugly" tooltip="off" value="0" />
-		<choice label="low" tooltip="SMAA" value="1" />
-	</sys_spec_ogp_physics>
-	<sys_spec_ogp_shading label="Shading" tooltip="">
-		<choice label="ugly" tooltip="off" value="0" />
-		<choice label="low" tooltip="SMAA" value="1" />
-	</sys_spec_ogp_shading>
-	<sys_spec_ogp_shadows label="Shadows" tooltip="">
-		<choice label="Ugly" tooltip="" value="0" />
-		<choice label="Low" tooltip="" value="1" />
-		<choice label="Medium" tooltip="" value="2" />
-		<choice label="High" tooltip="" value="3" />
-		<choice label="Ultra" tooltip="" value="4" />
-		<choice label="Low (vanilla)" tooltip="" value="11" />
-		<choice label="Medium (vanilla)" tooltip="" value="12" />
-		<choice label="High (vanilla)" tooltip="" value="13" />
-		<choice label="VeryHigh (vanilla)" tooltip="" value="14" />
-		<choice label="Ultra (vanilla)" tooltip="" value="17" />
-	</sys_spec_ogp_shadows>
-</Root>
+<root>
+	<buttons>
+		<button cvar="r_vsync" label="VSync" tooltip="Recommended:off (use GPU driver's control panel to enable adaptive/dynamic vsync instead)">
+			<choices>
+				<choice label="@ui_off" tooltip="" value="0" />
+				<choice label="@ui_on" tooltip="" value="1" />
+			</choices>
+		</button>
+		<button cvar="sys_spec_ogp_antialiasing" label="Anti-Aliasing" tooltip="">
+			<choices>
+				<choice label="Ugly" tooltip="@ui_off" value="0" />
+				<choice label="FXAA" tooltip="Fast but blurry" value="-10" />
+				<choice label="SMAA" tooltip="Less blurry but leaves lot of aliasing." value="-20" />
+				<choice label="SMAA 2Tx" tooltip="Temporal AA, removes most aliasing." value="-41" />
+				<choice label="SSAA 2x" tooltip="VERY expensive, best quality tho..." value="-50" />
+			</choices>
+		</button>
+		<button cvar="r_motionblur" label="@ui_MotionBlur" tooltip="Recommended: off">
+			<choices>
+				<choice label="@ui_off" tooltip="" value="0" />
+				<choice label="@ui_Camera" tooltip="" value="1" />
+				<choice label="@ui_CameraObject" tooltip="" value="2" />
+			</choices>
+		</button>
+		<button cvar="e_MergedMeshesUseSpines" label="Wind on Grass" tooltip="Recommended: off">
+			<choices>
+				<choice label="@ui_off" tooltip="" value="0" />
+				<choice label="@ui_on" tooltip="" value="1" />
+			</choices>
+		</button>
+		<button cvar="e_ObjShadowCastSpec" label="Grass shadows" tooltip="">
+			<choices>
+				<choice label="@ui_off" tooltip="" value="1" />
+				<choice label="@ui_on" tooltip="" value="3" />
+			</choices>
+		</button>
+		<button cvar="r_sharpening" label="Drunk Sharpening" tooltip="Sharpens the screen heavily when drunk">
+			<choices>
+				<choice label="@ui_off" tooltip="" value="-10" />
+				<choice label="@ui_on" tooltip="" value="0" />
+			</choices>
+		</button>
+		<button cvar="sys_spec_ogp_gi" label="Global Illumination" tooltip="Light diffusion/boucing">
+			<choices>
+				<choice label="Ugly" tooltip="" value="0" />
+				<choice label="Low" tooltip="" value="1" />
+				<choice label="Medium" tooltip="" value="2" />
+				<choice label="High" tooltip="" value="3" />
+				<choice label="Ultra" tooltip="" value="4" />
+				<choice label="vanilla_Low" tooltip="" value="11" />
+				<choice label="vanilla_Med" tooltip="" value="12" />
+				<choice label="vanilla_High" tooltip="" value="13" />
+				<choice label="vanilla_VHigh" tooltip="" value="14" />
+				<choice label="vanilla_Ultra" tooltip="" value="17" />
+			</choices>
+		</button>
+		<button cvar="sys_spec_ogp_grass" label="Grass" tooltip="Grass quality and distance">
+			<choices>
+				<choice label="Ugly" tooltip="" value="0" />
+				<choice label="Low" tooltip="" value="1" />
+				<choice label="Medium" tooltip="" value="2" />
+				<choice label="High" tooltip="" value="3" />
+				<choice label="Ultra" tooltip="" value="4" />
+				<choice label="vanilla_Low" tooltip="" value="11" />
+				<choice label="vanilla_Med" tooltip="" value="12" />
+				<choice label="vanilla_High" tooltip="" value="13" />
+				<choice label="vanilla_VHigh" tooltip="" value="14" />
+				<choice label="vanilla_Ultra" tooltip="" value="17" />
+			</choices>
+		</button>
+		<button cvar="sys_spec_ogp_lod" label="Level of Detail" tooltip="Characters, objects, and vegetation(except grass) rendering quality/distance">
+			<choices>
+				<choice label="Ugly" tooltip="" value="0" />
+				<choice label="Low" tooltip="" value="1" />
+				<choice label="Medium" tooltip="" value="2" />
+				<choice label="High" tooltip="" value="3" />
+				<choice label="Ultra" tooltip="" value="4" />
+				<choice label="vanilla_Low" tooltip="" value="11" />
+				<choice label="vanilla_Med" tooltip="" value="12" />
+				<choice label="vanilla_High" tooltip="" value="13" />
+				<choice label="vanilla_VHigh" tooltip="" value="14" />
+				<choice label="vanilla_Ultra" tooltip="" value="17" />
+			</choices>
+		</button>
+		<button cvar="sys_spec_ogp_physics" label="Physics" tooltip="">
+			<choices>
+				<choice label="ugly" tooltip="" value="0" />
+				<choice label="low" tooltip="" value="1" />
+			</choices>
+		</button>
+		<button cvar="sys_spec_ogp_shading" label="Shading" tooltip="">
+			<choices>
+				<choice label="ugly" tooltip="" value="0" />
+				<choice label="low" tooltip="" value="1" />
+			</choices>
+		</button>
+		<button cvar="sys_spec_ogp_shadows" label="Shadows" tooltip="">
+			<choices>
+				<choice label="Ugly" tooltip="" value="0" />
+				<choice label="Low" tooltip="" value="1" />
+				<choice label="Medium" tooltip="" value="2" />
+				<choice label="High" tooltip="" value="3" />
+				<choice label="Ultra" tooltip="" value="4" />
+				<choice label="vanilla_Low" tooltip="" value="11" />
+				<choice label="vanilla_Med" tooltip="" value="12" />
+				<choice label="vanilla_High" tooltip="" value="13" />
+				<choice label="vanilla_VHigh" tooltip="" value="14" />
+				<choice label="vanilla_Ultra" tooltip="" value="17" />
+			</choices>
+		</button>
+	</buttons>
+</root>

@@ -1,0 +1,12 @@
+<Definition root="root">
+	<Array name="buttons" elementName="button">
+		<Property name="cvar" type="string"/>
+		<Property name="label" type="string"/>
+		<Property name="tooltip" type="string"/>
+		<Array name="choices" elementName="choice">
+			<Property name="label" type="string"/>
+			<Property name="tooltip" type="string"/>
+			<Property name="value" type="int"/>
+		</Array>
+	</Array>
+</Definition>
