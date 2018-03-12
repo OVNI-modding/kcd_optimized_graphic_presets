@@ -39,13 +39,6 @@ end
 ---
 ---
 ---
-function ogp.CreateAdvancedSettingsMenu()
-	ogp.menu_util.ClearAll()
-	ogp.menu_util.SetTitleBox( "controls" )
-	ogp.menu_util.SetContainer( 1500, 250, 13 )
-	ogp.CreateAdvancedSettingsButtons()
-	ogp.menu_util.AddButton( "apply", "@ui_Apply", "", ogp.menu_util.actionTypes.apply, 1 )
-	ogp.menu_util.AddButton( "back", "@ui_back", "", ogp.menu_util.actionTypes.back, 1 )
 end
 
 ---
