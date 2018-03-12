@@ -52,7 +52,6 @@ function ogp.menu_util.AddChoiceButton( buttonId, label, tooltip )
 	local containerIndex = 0
 	local disabled = false
 	local sound = ""
-	System.LogAlways( "ogp.menu_util.AddChoiceButton" )
 	UIAction.CallFunction( "MainMenu", -1, "AddChoicesButton", buttonId, containerIndex, label, tooltip, disabled, sound )
 end
 
