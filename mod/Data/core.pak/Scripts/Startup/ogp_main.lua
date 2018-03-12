@@ -1,9 +1,6 @@
 ogp = {}
 System.LogAlways( "[OGP] initializing..." )
 
-ogp.strings = {}
-
-
 -- Action.SaveXML(const char * definitionFile, const char * dataFile, SmartScriptTable dataTable)
 -- Action.PauseGame( pause )
 

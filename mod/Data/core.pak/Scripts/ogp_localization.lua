@@ -1,6 +1,9 @@
 -- I rather not overwrite xxx_ui.xml files since replacing everything would make this mod less future-proof
 
 
+ogp.strings = {}
+
+
 ---
 --- Loads localization files.
 ---
