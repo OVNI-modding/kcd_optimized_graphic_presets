@@ -1,0 +1,6 @@
+<Definition root="root">
+	<Array name="settings" elementName="setting">
+		<Property name="cvar" type="string" />
+		<Property name="value" type="int" />
+	</Array>
+</Definition>
