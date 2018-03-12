@@ -80,3 +80,10 @@ function ogp.menu_util.SetChoice( buttonId, value )
 	local containerIndex = 0
 	UIAction.CallFunction( "MainMenu", -1, "SetChoice", buttonId, containerIndex, value )
 end
+
+---
+---
+---
+function ogp.menu_util.AddEventListener( eventName, callbackObject, callbackFunctionName )
+	UIAction.RegisterElementListener(callbackObject, "MainMenu", -1, eventName, callbackFunctionName)
+end
