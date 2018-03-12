@@ -98,6 +98,7 @@ function ogp.ApplySettings()
 		end
 		System.SetCVar(cvar, value)
 	end
+	System.ExecuteCommand( "e_UberlodActivate" )
 end
 
 
