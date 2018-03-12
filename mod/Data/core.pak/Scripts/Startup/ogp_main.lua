@@ -25,7 +25,7 @@ end
 ---
 ---
 function ogp.LoadLocalizations()
-	local languages = ["english", "french", "german", "spanish", "italian", "polish", "czech", "russian", "chineses", "turkish"]
+	local languages = {"english", "french", "german", "spanish", "italian", "polish", "czech", "russian", "chineses", "turkish"}
 	for _,language in ipairs(languages) do
 		Script.ReloadScript( "ogp_" .. language .. ".lua" )
 	end
