@@ -12,7 +12,7 @@ function ogp.LogWarning(msg)
 end
 
 function ogp.LogError(msg)
-	ogp._Log( "Warning: " .. msg )
+	ogp._Log( "Error: " .. msg )
 end
 
 -- from https://gist.github.com/hashmal/874792
