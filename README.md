@@ -2,6 +2,19 @@
 Optimized Graphic Presets for Kingdom Come Deliverance by OVNI
 ==============================================================
 
+
+
+- Moves vsync option from normal to advanced graphic menu (so you won't loose all your settings if you just want to change vsync state)
+- Adds more options in advanced settings menu (it uses the movieclip from controls menu, hence the wrong "Controls" title).
+- The adv settings menu now show 13 rows instead of only 7.
+- Disables Depth of Field from menu (so you can see better the effect of each setting)
+- Applying settings is much faster and does not require confirmation (again, easier to compare. But keep in mind some changes impact the FPS temporarily, you should give it a chance to stabilize if you want to compare performances).
+
+
+
+
+
+
 - performance boost ; mainly due to disabling grass wind animations, grass-terrain color bending, reducing shadow cascades in lower presets, increasing gi cascades.
 - Better resolution for Global illumination, avoids flickering (Especially in Ratty's church and forests).
 - Enhanced anti-aliasing (temporal SMAA with jittering)

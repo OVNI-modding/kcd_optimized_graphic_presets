@@ -1,9 +1,8 @@
 ogp = {}
 System.LogAlways( "[OGP] initializing..." )
 
-ogp.locals = {}
-ogp.locals.english = {}
-ogp.locals.english["Apply (without leaving)"] = "Apply (without leaving)"
+ogp.strings = {}
+
 
 -- Action.SaveXML(const char * definitionFile, const char * dataFile, SmartScriptTable dataTable)
 -- Action.PauseGame( pause )
@@ -13,6 +12,7 @@ ogp.locals.english["Apply (without leaving)"] = "Apply (without leaving)"
 ---
 function ogp.Init()
 	Script.ReloadScript( "Scripts/ogp_menu_util.lua" )
+	ogp.LoadLocalizations()
 	local root = CryAction.LoadXML( "ogp_advancedSettingsMenu_def.xml", "ogp_advancedSettingsMenu.xml" )
 	ogp.buttons = root.buttons;
 	System.AddCCommand( "ogp_load_settings", "ogp.LoadSettings(%line)", "" )
@@ -22,12 +22,24 @@ function ogp.Init()
 end
 
 ---
---- Localizes given sting using ogp.locals[g_language] or ogp.locals.english
+---
+---
+function ogp.LoadLocalizations()
+	local languages = ["english", "french", "german", "spanish", "italian", "polish", "czech", "russian", "chineses", "turkish"]
+	for _,language in ipairs(languages) do
+		Script.ReloadScript( "ogp_" .. language .. ".lua" )
+	end
+end
+
+---
+--- Localizes given sting using ogp.strings[g_language] or ogp.strings.english
 ---
 function ogp.localize( string )
 	local language = System.GetCVar("g_language")
-	if ogp.locals[language] == nil then language="english" end
-	return ogp.locals[language][string] or ogp.locals.english[string]
+	if ogp.strings[language] == nil then
+		language = "english"
+	end
+	return ogp.strings[language][string] or ogp.strings["english"][string] or string
 end
 
 ---
@@ -52,7 +64,7 @@ function ogp.CreateAdvancedSettingsMenu()
 	ogp.menu_util.SetTitleBox( "controls" )
 	ogp.menu_util.SetContainer( 1500, 250, 13 )
 	ogp.CreateAdvancedSettingsButtons()
-	ogp.menu_util.AddButton( "apply", ogp.localize("Apply (without leaving)"), "", ogp.menu_util.actionTypes.apply, 1 )
+	ogp.menu_util.AddButton( "apply", "@ui_Apply", "", ogp.menu_util.actionTypes.apply, 1 )
 	ogp.menu_util.AddButton( "back", "@ui_back", "", ogp.menu_util.actionTypes.back, 1 )
 end
 
