@@ -12,7 +12,14 @@ function ogp.Init()
 	Script.ReloadScript( "Scripts/ogp_logging.lua" )
 	Script.ReloadScript( "Scripts/ogp_string_util.lua" )
 	Script.ReloadScript( "Scripts/ogp_menu_util.lua" )
-	Script.ReloadScript( "Scripts/ogp_localization.lua" )
+
+	-- load localization for current language
+	local language = System.GetCVar("g_language")
+	local error = pcall( System.LoadLocalizationXml, "ogp_" .. language .. ".xml" )
+	if error then
+		System.LoadLocalizationXml("ogp_english.xml")
+	end
+
 	ogp.LoadMenuDefinition()
 	ogp.AddConsoleCommands()
 	ogp.LogInfo("initialized")
