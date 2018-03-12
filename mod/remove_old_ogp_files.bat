@@ -10,7 +10,7 @@ echo Press a key to continue...
 echo.
 pause
 
-if exist "system.cfg" (
+if exist "..\system.cfg" (
 	del "ugly.cfg"
 	del "low.cfg"
 	del "med.cfg"
