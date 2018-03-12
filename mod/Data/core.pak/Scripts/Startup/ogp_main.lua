@@ -12,6 +12,7 @@ ogp.strings = {}
 ---
 function ogp.Init()
 	Script.ReloadScript( "Scripts/ogp_menu_util.lua" )
+	Script.ReloadScript( "Scripts/ogp_localization.lua" )
 	ogp.LoadLocalizations()
 	local root = CryAction.LoadXML( "ogp_advancedSettingsMenu_def.xml", "ogp_advancedSettingsMenu.xml" )
 	ogp.buttons = root.buttons;
@@ -19,27 +20,6 @@ function ogp.Init()
 	System.AddCCommand( "ogp_create_advanced_settings_menu", "ogp.CreateAdvancedSettingsMenu()", "" )
 	System.AddCCommand( "ogp_create_advanced_settings_buttons", "ogp.CreateAdvancedSettingsButtons()", "" )
 	System.LogAlways( "[OGP] initialized" )
-end
-
----
----
----
-function ogp.LoadLocalizations()
-	local languages = {"english", "french", "german", "spanish", "italian", "polish", "czech", "russian", "chineses", "turkish"}
-	for _,language in ipairs(languages) do
-		Script.ReloadScript( "ogp_" .. language .. ".lua" )
-	end
-end
-
----
---- Localizes given sting using ogp.strings[g_language] or ogp.strings.english
----
-function ogp.localize( string )
-	local language = System.GetCVar("g_language")
-	if ogp.strings[language] == nil then
-		language = "english"
-	end
-	return ogp.strings[language][string] or ogp.strings["english"][string] or string
 end
 
 ---
