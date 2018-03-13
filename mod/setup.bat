@@ -28,6 +28,7 @@ goto :EOF
 :INSTALL
 	cls
 	mklink /D "..\..\Data\profile" "%USERPROFILE%\Saved Games\kingdomcome"
+	move "Data\optimized_graphic_presets.pak" "..\..\Data\"
 	echo.
 	pause
 goto :MENU
