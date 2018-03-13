@@ -24,7 +24,7 @@ function ogp:LogTable(tbl, indent)
     formatting = string.rep("  ", indent) .. k .. ": "
     if type(v) == "table" then
       System.LogAlways(formatting)
-      tprint(v, indent+1)
+      ogp.LogTable(v, indent+1)
     elseif type(v) == 'boolean' then
       System.LogAlways(formatting .. tostring(v))
     else
