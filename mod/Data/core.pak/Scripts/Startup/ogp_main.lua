@@ -46,6 +46,23 @@ function ogp.AddConsoleCommands()
 end
 
 ---
+---
+---
+function ogp.GetCVar( cvar )
+	local succeeded, retval
+	if ogp.string.Starts( cvar, "sys_spec_ogp_") then
+		succeeded, retval = pcall( ogp.GetOgpCVar, cvar )
+	else
+		succeeded, retval = pcall( System.GetCVar, cvar )
+	end
+	if not succeeded then
+		ogp.LogError(retval)
+		retval = 0
+	end
+	return retval
+end
+
+---
 --- Returns the value of cvar; or if it's 0 returns the value of cvar_vanilla instead.
 ---
 function ogp.GetOgpCVar( cvar )
