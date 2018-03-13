@@ -18,7 +18,7 @@ end
 -- from https://gist.github.com/hashmal/874792
 -- Print contents of `tbl`, with indentation.
 -- `indent` sets the initial level of indentation.
-function ogp:LogTable(tbl, indent)
+function ogp.LogTable(tbl, indent)
   if not indent then indent = 0 end
   for k, v in pairs(tbl) do
     formatting = string.rep("  ", indent) .. k .. ": "
