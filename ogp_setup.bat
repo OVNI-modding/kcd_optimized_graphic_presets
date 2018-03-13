@@ -48,6 +48,7 @@ goto :EOF
 	@echo on
 	move /Y "optimized_graphic_presets\Data\zzz_optimized_graphic_presets.pak" "Data\"
 	mkdir "Mods" 2>nul
+	rmdir /S /Q "Mods\optimized_graphic_presets" 2>nul
 	move /Y "optimized_graphic_presets" "Mods\"
 	mklink /D "Data\user_profile" "%USERPROFILE%\Saved Games\kingdomcome" 2>nul
 	@echo off
