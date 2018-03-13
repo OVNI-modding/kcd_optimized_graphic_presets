@@ -76,6 +76,20 @@ end
 ---
 --- if value is <= 0 assigns value to cvar, otherwise assigns it to cvar_vanilla.
 ---
+---
+function ogp.SetCVar( cvar, value )
+	local succeeded, errorMessage;
+	if ogp.string.Starts( cvar, "sys_spec_ogp_") then
+		succeeded, errorMessage = pcall( ogp.SetOgpCVar, cvar, value )
+	else
+		ogp.LogInfo( cvar .. " = " .. value )
+		succeeded, errorMessage = pcall( System.SetCVar, cvar, value )
+	end
+	if not succeeded then
+		ogp.LogError(errorMessage)
+	end
+end
+---
 function ogp.SetOgpCVar( cvar, value )
 	if value > 0 then
 		cvar = cvar .. "_vanilla"
