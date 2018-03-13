@@ -26,7 +26,6 @@ for file in Path('mod').glob('*.*'):
 	if file.is_file():
 		zout.write( str(file), Path(f'{projectName}/{file.name}') )
 
-
 # Create in-memory package for each folder with .pak folder in mod/Data
 for pak in Path('mod/Data').glob('**/*.pak'):
 	if pak.is_dir():
@@ -36,5 +35,10 @@ for pak in Path('mod/Data').glob('**/*.pak'):
 			pakage.write( file, file.relative_to(pak) )
 		pakage.close()
 		zout.writestr( str(Path(projectName, 'Data', packagePrefix+pak.name)), gamePackage.getvalue() )
+
+# And .pak (dependencies) files
+for pak in Path('mod/Data').glob('*.pak'):
+	if pak.is_file():
+		zout.write( str(pak), str(Path(projectName, 'Data', pak.name)) )
 
 zout.close()
