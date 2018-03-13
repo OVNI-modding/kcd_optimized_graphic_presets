@@ -2,9 +2,9 @@
 
 :MENU
 	cls
-	echo ==========================================================================
-	echo Setup for Optimized Graphic Presets (OGP) mod for Kingdom Come Deliverance
-	echo ==========================================================================
+	echo ================================================================
+	echo Optimized Graphic Presets (OGP) mod for Kingdom Come Deliverance
+	echo ================================================================
 	echo.
 
 	if NOT exist "system.cfg" goto :ERROR_WRONG_STARTING_PATH
