@@ -33,74 +33,7 @@ function ogp.AddConsoleCommands()
 	-- System.AddCCommand( "ogp_load_settings", "ogp.LoadSettings()", "" )
 	System.AddCCommand( "ogp_apply_settings", "ogp.ApplySettings()", "" )
 	System.AddCCommand( "ogp_save_settings", "ogp.SaveSettings()", "" )
-	System.AddCCommand( "ogp_set_cvar", "ogp.SetCVar(%1, %2)", "" )
-end
-
----
---- Returns the value of given vanilla cvar, or given sys_spec_ogp cvargoups
---- (either sys_spec_ogp_x or sys_spec_ogp_x_vanilla depending on its value)
----
-function ogp.GetCVar( cvar )
-	local succeeded, retval
-	if ogp.string.Starts( cvar, "sys_spec_ogp_") then
-		succeeded, retval = pcall( ogp.GetOgpCVar, cvar )
-	else
-		succeeded, retval = pcall( System.GetCVar, cvar )
-	end
-	if not succeeded then
-		ogp.LogError(retval)
-		retval = 0
-	end
-	return retval
-end
-
----
---- Returns the value of cvar; or if it's 0 returns the value of cvar_vanilla instead.
----
-function ogp.GetOgpCVar( cvar )
-	local value = System.GetCVar(cvar)
-	local succeeded
-	if value == 0 then
-		succeeded, value = pcall( System.GetCVar, cvar.."_vanilla" )
-		if not succeeded then
-			ogp.LogError(value)
-			return 0
-		end
-	end
-	return value
-end
-
----
---- Sets value to vanilla cvar, or sys_spec_ogp cvargoups
---- (either sys_spec_ogp_x or sys_spec_ogp_x_vanilla depending on the value)
----
-function ogp.SetCVar( cvar, value )
-	local succeeded, errorMessage
-	if ogp.string.Starts( cvar, "sys_spec_ogp_") then
-		succeeded, errorMessage = pcall( ogp.SetOgpCVar, cvar, value )
-	else
-		ogp.LogInfo( cvar .. " = " .. value )
-		succeeded, errorMessage = pcall( System.SetCVar, cvar, value )
-	end
-	if not succeeded then
-		ogp.LogError(errorMessage)
-	end
-end
-
----
---- If value is <= 0 assigns value to cvar, otherwise assigns it to cvar_vanilla.
---- Should not be used directly, use SetCVar instead.
----
-function ogp.SetOgpCVar( cvar, value )
-	value = tonumber(value)
-	if value > 0 then
-		cvar = cvar .. "_vanilla"
-	end
-	ogp.LogInfo( cvar .. " = " .. value )
-	succeeded, errorMessage = pcall( System.SetCVar, cvar, value )
-	if not succeeded then
-		ogp.LogError(errorMessage)
-	end
+	--TODO System.AddCCommand( "ogp_set_cvar", "System.SetCVar(%1, %2)", "" )
 end
 
 ---
@@ -121,7 +54,7 @@ function ogp.CreateAdvancedSettingsButtons()
 				choice.value
 			)
 		end
-		local value = ogp.GetCVar(button.cvar)
+		local value = System.GetCVar(button.cvar)
 		ogp.menu_util.SetChoice( button.cvar, value )
 	end
 end
@@ -132,7 +65,7 @@ end
 function ogp.ApplySettings()
 	for _,button in ipairs(ogp.buttons) do
 		local value = ogp.menu_util.GetChoice(button.cvar)
-		ogp.SetCVar( button.cvar, value )
+		System.SetCVar( button.cvar, value )
 	end
 	System.ExecuteCommand( "e_UberlodActivate" )
 end
@@ -146,7 +79,7 @@ function ogp.LoadSettings()
 	-- LoadXML seems not to fail if xml doesn't exist, just returns empty root...
 	if succeeded then
 		for _,setting in ipairs(root.settings) do
-			ogp.SetCVar( setting.cvar, setting.value )
+			System.SetCVar( setting.cvar, setting.value )
 		end
 	else
 		ogp.LogInfo("Settings cannot be loaded: "..root)
