@@ -42,11 +42,16 @@ goto :EOF
 
 :INSTALL
 	cls
+
 	if NOT exist "optimized_graphic_presets" goto :ERROR_OGP_FOLDER_ABSENT
+
+	@echo on
 	move /Y "optimized_graphic_presets\Data\zzz_optimized_graphic_presets.pak" "Data\"
-	mkdir "Mods" 2>nul	
+	mkdir "Mods" 2>nul
 	move /Y "optimized_graphic_presets" "Mods\"
 	mklink /D "Data\user_profile" "%USERPROFILE%\Saved Games\kingdomcome" 2>nul
+	@echo off
+
 	echo.
 	echo Done.
 	echo.
@@ -56,6 +61,7 @@ goto :EOF
 
 :REMOVE_OLD_VERSIONS
 	cls
+	@echo on
 	del "ogp_hotkeys.cfg" 2>nul
 	del "ugly.cfg" 2>nul
 	del "low.cfg" 2>nul
@@ -83,6 +89,7 @@ goto :EOF
 	del "Config\verylow.cfg" 2>nul
 	rmdir "optimized_graphic_presets" 2>nul
 	rmdir "Config" 2>nul
+	@echo off
 	echo.
 	echo Done.
 	echo.
@@ -92,9 +99,11 @@ goto :MENU
 
 :UNINSTALL
 	cls
+	@echo on
 	rmdir "Data\user_profile" 2>nul
 	del "Data\zzz_optimized_graphic_presets.pak" 2>nul
 	rmdir /S /Q "Mods\optimized_graphic_presets" 2>nul
+	@echo off
 	echo.
 	echo This program must now exit to self-destruct. So long cruel world :'(
 	echo.
