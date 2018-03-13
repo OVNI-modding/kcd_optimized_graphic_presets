@@ -46,7 +46,7 @@ goto :EOF
 	if NOT exist "optimized_graphic_presets" goto :ERROR_OGP_FOLDER_ABSENT
 
 	@echo on
-	move /Y "optimized_graphic_presets\Data\zzz_optimized_graphic_presets.pak" "Data\"
+	move /Y "optimized_graphic_presets\Data\optimized_graphic_presets.pak" "Data\zzz_optimized_graphic_presets.pak"
 	mkdir "Mods" 2>nul
 	rmdir /S /Q "Mods\optimized_graphic_presets" 2>nul
 	move /Y "optimized_graphic_presets" "Mods\"

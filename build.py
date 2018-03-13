@@ -2,7 +2,6 @@
 
 version='3.0.0'
 projectName='optimized_graphic_presets'
-packagePrefix='zzz_'
 outputDir='builds'
 
 #######################################
@@ -34,7 +33,7 @@ for pak in Path('mod/Data').glob('**/*.pak'):
 		for file in pak.glob('**/*.*'):
 			pakage.write( file, file.relative_to(pak) )
 		pakage.close()
-		zout.writestr( str(Path(projectName, 'Data', packagePrefix+pak.name)), gamePackage.getvalue() )
+		zout.writestr( str(Path(projectName, 'Data', pak.name)), gamePackage.getvalue() )
 
 # And .pak (dependencies) files
 for pak in Path('mod/Data').glob('*.pak'):
