@@ -22,7 +22,7 @@ function ogp.Init()
 
 	ogp.LoadMenuDefinition()
 	ogp.AddConsoleCommands()
-	ogp.LoadSettings()
+	-- ogp.LoadSettings()
 	ogp.LogInfo("initialized")
 end
 
