@@ -92,7 +92,7 @@ goto :MENU
 
 :UNINSTALL
 	cls
-	rmdir "Data\profile" 2>nul
+	rmdir "Data\user_profile" 2>nul
 	del "Data\zzz_optimized_graphic_presets.pak" 2>nul
 	rmdir /S /Q "Mods\optimized_graphic_presets" 2>nul
 	echo.
