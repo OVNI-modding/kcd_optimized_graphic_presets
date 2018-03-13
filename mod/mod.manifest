@@ -10,9 +10,8 @@
     </dependencies>
   </info>
   <supports>
-		<kcd_version>1.2</kcd_version>
-    <kcd_version>1.2.5</kcd_version>
-    <kcd_version>1.3</kcd_version>
-		<kcd_version>1.3.1</kcd_version>
+		<!--
+		/!\ Do not fill, or the game will eventually *disable* this mod...
+		-->
   </supports>
 </kcd_mod>
