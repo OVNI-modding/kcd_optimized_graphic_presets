@@ -2,13 +2,13 @@
 	<buttons>
 		<button cvar="r_vsync" label="VSync" tooltip="Recommended:off (use GPU driver's control panel to enable adaptive/dynamic vsync instead)">
 			<choices>
-				<choice label="@ui_off" tooltip="" value="0" />
+				<choice label="@ogp_test" tooltip="" value="0" />
 				<choice label="@ui_on" tooltip="" value="1" />
 			</choices>
 		</button>
 		<button cvar="sys_spec_ogp_antialiasing" label="Anti-Aliasing" tooltip="">
 			<choices>
-				<choice label="Ugly" tooltip="@ui_off" value="0" />
+				<choice label="Ugly" tooltip="@ui_off" value="-1" />
 				<choice label="FXAA" tooltip="Fast but blurry" value="-10" />
 				<choice label="SMAA" tooltip="Less blurry but leaves lot of aliasing." value="-20" />
 				<choice label="SMAA 2Tx" tooltip="Temporal AA, removes most aliasing." value="-41" />
@@ -42,44 +42,44 @@
 		</button>
 		<button cvar="sys_spec_ogp_gi" label="Global Illumination" tooltip="Light diffusion/boucing">
 			<choices>
-				<choice label="Ugly" tooltip="" value="0" />
-				<choice label="Low" tooltip="" value="1" />
-				<choice label="Medium" tooltip="" value="2" />
-				<choice label="High" tooltip="" value="3" />
-				<choice label="Ultra" tooltip="" value="4" />
-				<choice label="vanilla_Low" tooltip="" value="11" />
-				<choice label="vanilla_Med" tooltip="" value="12" />
-				<choice label="vanilla_High" tooltip="" value="13" />
-				<choice label="vanilla_VHigh" tooltip="" value="14" />
-				<choice label="vanilla_Ultra" tooltip="" value="17" />
+				<choice label="Ugly" tooltip="" value="-1" />
+				<choice label="Low" tooltip="" value="-2" />
+				<choice label="Medium" tooltip="" value="-3" />
+				<choice label="High" tooltip="" value="-4" />
+				<choice label="Ultra" tooltip="" value="-5" />
+				<choice label="vanilla_Low" tooltip="" value="1" />
+				<choice label="vanilla_Med" tooltip="" value="2" />
+				<choice label="vanilla_High" tooltip="" value="3" />
+				<choice label="vanilla_VHigh" tooltip="" value="4" />
+				<choice label="vanilla_Ultra" tooltip="" value="7" />
 			</choices>
 		</button>
 		<button cvar="sys_spec_ogp_grass" label="Grass" tooltip="Grass quality and distance">
 			<choices>
-				<choice label="Ugly" tooltip="" value="0" />
-				<choice label="Low" tooltip="" value="1" />
-				<choice label="Medium" tooltip="" value="2" />
-				<choice label="High" tooltip="" value="3" />
-				<choice label="Ultra" tooltip="" value="4" />
-				<choice label="vanilla_Low" tooltip="" value="11" />
-				<choice label="vanilla_Med" tooltip="" value="12" />
-				<choice label="vanilla_High" tooltip="" value="13" />
-				<choice label="vanilla_VHigh" tooltip="" value="14" />
-				<choice label="vanilla_Ultra" tooltip="" value="17" />
+				<choice label="Ugly" tooltip="" value="-1" />
+				<choice label="Low" tooltip="" value="-2" />
+				<choice label="Medium" tooltip="" value="-3" />
+				<choice label="High" tooltip="" value="-4" />
+				<choice label="Ultra" tooltip="" value="-5" />
+				<choice label="vanilla_Low" tooltip="" value="1" />
+				<choice label="vanilla_Med" tooltip="" value="2" />
+				<choice label="vanilla_High" tooltip="" value="3" />
+				<choice label="vanilla_VHigh" tooltip="" value="4" />
+				<choice label="vanilla_Ultra" tooltip="" value="7" />
 			</choices>
 		</button>
 		<button cvar="sys_spec_ogp_lod" label="Level of Detail" tooltip="Characters, objects, and vegetation(except grass) rendering quality/distance">
 			<choices>
-				<choice label="Ugly" tooltip="" value="0" />
-				<choice label="Low" tooltip="" value="1" />
-				<choice label="Medium" tooltip="" value="2" />
-				<choice label="High" tooltip="" value="3" />
-				<choice label="Ultra" tooltip="" value="4" />
-				<choice label="vanilla_Low" tooltip="" value="11" />
-				<choice label="vanilla_Med" tooltip="" value="12" />
-				<choice label="vanilla_High" tooltip="" value="13" />
-				<choice label="vanilla_VHigh" tooltip="" value="14" />
-				<choice label="vanilla_Ultra" tooltip="" value="17" />
+				<choice label="Ugly" tooltip="" value="-1" />
+				<choice label="Low" tooltip="" value="-2" />
+				<choice label="Medium" tooltip="" value="-3" />
+				<choice label="High" tooltip="" value="-4" />
+				<choice label="Ultra" tooltip="" value="-5" />
+				<choice label="vanilla_Low" tooltip="" value="1" />
+				<choice label="vanilla_Med" tooltip="" value="2" />
+				<choice label="vanilla_High" tooltip="" value="3" />
+				<choice label="vanilla_VHigh" tooltip="" value="4" />
+				<choice label="vanilla_Ultra" tooltip="" value="7" />
 			</choices>
 		</button>
 		<button cvar="sys_spec_ogp_physics" label="Physics" tooltip="">
@@ -90,22 +90,23 @@
 		</button>
 		<button cvar="sys_spec_ogp_shading" label="Shading" tooltip="">
 			<choices>
-				<choice label="ugly" tooltip="" value="0" />
-				<choice label="low" tooltip="" value="1" />
+				<choice label="Ugly" tooltip="" value="-1" />
+				<choice label="Low" tooltip="" value="-2" />
+				<choice label="Medium" tooltip="" value="-3" />
 			</choices>
 		</button>
 		<button cvar="sys_spec_ogp_shadows" label="Shadows" tooltip="">
 			<choices>
-				<choice label="Ugly" tooltip="" value="0" />
-				<choice label="Low" tooltip="" value="1" />
-				<choice label="Medium" tooltip="" value="2" />
-				<choice label="High" tooltip="" value="3" />
-				<choice label="Ultra" tooltip="" value="4" />
-				<choice label="vanilla_Low" tooltip="" value="11" />
-				<choice label="vanilla_Med" tooltip="" value="12" />
-				<choice label="vanilla_High" tooltip="" value="13" />
-				<choice label="vanilla_VHigh" tooltip="" value="14" />
-				<choice label="vanilla_Ultra" tooltip="" value="17" />
+				<choice label="Ugly" tooltip="" value="-1" />
+				<choice label="Low" tooltip="" value="-2" />
+				<choice label="Medium" tooltip="" value="-3" />
+				<choice label="High" tooltip="" value="-4" />
+				<choice label="Ultra" tooltip="" value="-5" />
+				<choice label="vanilla_Low" tooltip="" value="1" />
+				<choice label="vanilla_Med" tooltip="" value="2" />
+				<choice label="vanilla_High" tooltip="" value="3" />
+				<choice label="vanilla_VHigh" tooltip="" value="4" />
+				<choice label="vanilla_Ultra" tooltip="" value="7" />
 			</choices>
 		</button>
 	</buttons>
