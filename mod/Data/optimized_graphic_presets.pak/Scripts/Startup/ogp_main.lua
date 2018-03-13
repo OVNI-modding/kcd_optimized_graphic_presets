@@ -12,13 +12,7 @@ function ogp.Init()
 	Script.ReloadScript( "Scripts/ogp_logging.lua" )
 	Script.ReloadScript( "Scripts/ogp_string_util.lua" )
 	Script.ReloadScript( "Scripts/ogp_menu_util.lua" )
-
-	-- load localization for current language
-	local language = System.GetCVar("g_language")
-	local succeeded, retval = pcall( System.LoadLocalizationXml, "ogp_" .. language .. ".xml" )
-	if not succeeded then
-		System.LoadLocalizationXml("ogp_english.xml")
-	end
+	Script.ReloadScript( "Scripts/ogp_localization.lua" )
 
 	ogp.LoadMenuDefinition()
 	ogp.AddConsoleCommands()
@@ -117,9 +111,18 @@ end
 ---
 function ogp.CreateAdvancedSettingsButtons()
 	for _,button in ipairs(ogp.buttons) do
-		ogp.menu_util.AddChoiceButton( button.cvar, button.label, button.tooltip )
+		ogp.menu_util.AddChoiceButton(
+			button.cvar,
+			ogp.Localize( button.label ),
+			ogp.Localize( button.tooltip )
+		)
 		for _,choice in ipairs(button.choices) do
-			ogp.menu_util.AddChoiceOption( button.cvar, choice.label, choice.tooltip, choice.value )
+			ogp.menu_util.AddChoiceOption(
+				button.cvar,
+				ogp.Localize( choice.label ),
+				ogp.Localize( choice.tooltip ),
+				choice.value
+			)
 		end
 		local value = ogp.GetCVar(button.cvar)
 		ogp.menu_util.SetChoice( button.cvar, value )
