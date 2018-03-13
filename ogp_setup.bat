@@ -11,9 +11,9 @@
 
 	echo Please enter a number to select your choice:
 	echo.
-	echo 1 - Install OGP
-	echo 2 - Remove obsolete files from older OGP versions.
-	echo 3 - Uninstall OGP
+	echo 1 - Install or Update
+	echo 2 - Remove obsolete files from older versions.
+	echo 3 - Uninstall
 	echo 9 - EXIT
 	echo.
 
