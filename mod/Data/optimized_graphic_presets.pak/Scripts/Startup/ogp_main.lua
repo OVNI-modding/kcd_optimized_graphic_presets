@@ -24,13 +24,6 @@ function ogp.Init()
 	ogp.AddConsoleCommands()
 	ogp.LoadSettings()
 	ogp.LogInfo("initialized")
-
-	local s = "Some text.";
-	local path="C:\\Lorry_Settings.txt";
-	local file = io.open(path,"w");
-	if (file ~= nil) then
-		file:write(s);  file:close();
-	end
 end
 
 ---
