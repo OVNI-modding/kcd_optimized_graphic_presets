@@ -1,31 +1,30 @@
--- I rather not overwrite xxx_ui.xml files since replacing everything would make this mod less future-proof
-
+--
+-- There are issues with vanilla localization system :
+-- 1) overriding xxx_ui.xml file is out of question since we want to add strings, not replace the whole thing
+--    (ie: new pathes may add new string, we dont want to remove them by overriding localization file...)
+-- 2) System.LoadLocalizationXml does not fail when given file does not exists, making impossible to detect dynamically
+--    if a localization file was added.
+-- 3) System.LoadLocalizationXml does not allow to override (so we cannot load english first as a failsafe, then g_language afterward)
+--
 
 ogp.strings = {}
-
 
 ---
 --- Loads localization files.
 ---
---- Note: It's rather memory-innefficient to load every languages, but there's not that much text.
---- Ideally, language change should be observed (if possible/convenient).
----
 function ogp.InitLocalization()
-	local languages = {"english", "french", "german", "spanish", "italian", "polish", "czech", "russian", "chineses", "turkish"}
-	for _,language in ipairs(languages) do
-		Script.ReloadScript( "ogp_" .. language .. ".lua" )
-	end
+	Script.ReloadScript( 'ogp_english.lua' ) -- failsafe
+	Script.ReloadScript( 'ogp_' .. System.GetCVar('g_language') .. '.lua' )
 end
 
 ---
---- Localizes given sting using ogp.strings[g_language] or ogp.strings.english
+--- Localizes given string if it starts by '@'
 ---
-function ogp.Localize( string )
-	local language = System.GetCVar("g_language")
-	if ogp.strings[language] == nil then
-		language = "english"
+function ogp.Localize( str )
+	if string.sub(str,1,1) ~= '@' then
+		return str
 	end
-	return ogp.strings[language][string] or ogp.strings["english"][string] or string
+	return ogp.strings[ string.sub(str,2) ] or str
 end
 
 
