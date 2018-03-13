@@ -104,7 +104,10 @@ function ogp.SetOgpCVar( cvar, value )
 		cvar = cvar .. "_vanilla"
 	end
 	ogp.LogInfo( cvar .. " = " .. value )
-	System.SetCVar( cvar, value )
+	succeeded, errorMessage = pcall( System.SetCVar, cvar, value )
+	if not succeeded then
+		ogp.LogError(errorMessage)
+	end
 end
 
 ---
