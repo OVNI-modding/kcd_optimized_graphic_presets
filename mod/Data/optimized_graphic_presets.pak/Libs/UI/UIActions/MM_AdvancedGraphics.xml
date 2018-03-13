@@ -63,11 +63,11 @@
   <Node Id="3826" Class="Debug:ExecuteString" pos="-3978,-5310,0">
    <Inputs String="ogp_save_settings" NextFrame="0"/>
   </Node>
-  <Node Id="3828" Class="Time:Delay" pos="-3978,-5220,0">
-   <Inputs delay="0.1" resetOnInput="0"/>
-  </Node>
   <Node Id="3829" Class="UI:Functions:MainMenu:SetMenuColor" pos="-5346,-6696,0">
    <Inputs instanceID="-1" isInGameMenu="0"/>
+  </Node>
+  <Node Id="3830" Class="Time:FrameDelay" pos="-3924,-5184,0">
+   <Inputs />
   </Node>
  </Nodes>
  <Edges>
@@ -79,7 +79,7 @@
   <Edge nodeIn="3689" nodeOut="3696" portIn="in2" portOut="true" enabled="1"/>
   <Edge nodeIn="3825" nodeOut="3696" portIn="in2" portOut="false" enabled="1"/>
   <Edge nodeIn="3826" nodeOut="3696" portIn="Set" portOut="true" enabled="1"/>
-  <Edge nodeIn="3828" nodeOut="3696" portIn="in" portOut="true" enabled="1"/>
+  <Edge nodeIn="3830" nodeOut="3696" portIn="in" portOut="true" enabled="1"/>
   <Edge nodeIn="3804" nodeOut="3801" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="3805" nodeOut="3801" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="3802" nodeOut="3803" portIn="entityId" portOut="entityId" enabled="1"/>
@@ -92,7 +92,7 @@
   <Edge nodeIn="3808" nodeOut="3812" portIn="Call" portOut="out" enabled="1"/>
   <Edge nodeIn="3825" nodeOut="3817" portIn="in3" portOut="onEvent" enabled="1"/>
   <Edge nodeIn="3820" nodeOut="3825" portIn="EndAction" portOut="out" enabled="1"/>
-  <Edge nodeIn="3825" nodeOut="3828" portIn="in1" portOut="out" enabled="1"/>
+  <Edge nodeIn="3825" nodeOut="3830" portIn="in1" portOut="out" enabled="1"/>
  </Edges>
  <GraphTokens>
   <Token Name="SettingNames" Type="5"/>
