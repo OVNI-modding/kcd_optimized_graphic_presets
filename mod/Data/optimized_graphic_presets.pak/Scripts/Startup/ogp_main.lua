@@ -6,7 +6,7 @@ ogp.settingsPath = "user_profile/ogp_settings.xml"
 -- Action.PauseGame( pause )
 
 ---
----
+--- Inits ogp.
 ---
 function ogp.Init()
 	Script.ReloadScript( "Scripts/ogp_logging.lua" )
@@ -27,7 +27,7 @@ function ogp.Init()
 end
 
 ---
----
+--- Load advanced menu's structure.
 ---
 function ogp.LoadMenuDefinition()
 	local root = CryAction.LoadXML( "ogp_advancedSettingsMenu_def.xml", "ogp_advancedSettingsMenu.xml" )
@@ -35,7 +35,7 @@ function ogp.LoadMenuDefinition()
 end
 
 ---
----
+--- Create console/flowgraph interface
 ---
 function ogp.AddConsoleCommands()
 	System.AddCCommand( "ogp_create_advanced_settings_buttons", "ogp.CreateAdvancedSettingsButtons()", "" )
@@ -46,7 +46,8 @@ function ogp.AddConsoleCommands()
 end
 
 ---
----
+--- Returns the value of given vanilla cvar, or given sys_spec_ogp cvargoups
+--- (either sys_spec_ogp_x or sys_spec_ogp_x_vanilla depending on its value)
 ---
 function ogp.GetCVar( cvar )
 	local succeeded, retval
@@ -79,7 +80,8 @@ function ogp.GetOgpCVar( cvar )
 end
 
 ---
----
+--- Sets value to vanilla cvar, or sys_spec_ogp cvargoups
+--- (either sys_spec_ogp_x or sys_spec_ogp_x_vanilla depending on the value)
 ---
 function ogp.SetCVar( cvar, value )
 	local succeeded, errorMessage
@@ -111,7 +113,7 @@ function ogp.SetOgpCVar( cvar, value )
 end
 
 ---
----
+--- Create settings Buttons.
 ---
 function ogp.CreateAdvancedSettingsButtons()
 	for _,button in ipairs(ogp.buttons) do
@@ -125,7 +127,7 @@ function ogp.CreateAdvancedSettingsButtons()
 end
 
 ---
----
+--- Applies settings using button values.
 ---
 function ogp.ApplySettings()
 	for _,button in ipairs(ogp.buttons) do
@@ -141,6 +143,7 @@ end
 ---
 function ogp.LoadSettings()
 	local succeeded, root = pcall( CryAction.LoadXML, "ogp_settings_def.xml", ogp.settingsPath )
+	-- LoadXML seems not to fail if xml doesn't exist, just returns empty root...
 	if succeeded then
 		for _,setting in ipairs(root.settings) do
 			ogp.SetCVar( setting.cvar, setting.value )
@@ -151,7 +154,7 @@ function ogp.LoadSettings()
 end
 
 ---
----
+--- Saves settings to ogp.settingsPath.
 ---
 function ogp.SaveSettings()
 	local root = {}
