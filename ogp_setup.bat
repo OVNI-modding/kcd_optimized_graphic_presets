@@ -44,6 +44,7 @@ goto :EOF
 :INSTALL
 	cls
 	mkdir "Mods" 2>nul
+	move /Y "optimized_graphic_presets" "Mods\"
 	mklink /D "Data\user_profile" "%USERPROFILE%\Saved Games\kingdomcome" 2>nul
 	move /Y "optimized_graphic_presets\Data\zzz_optimized_graphic_presets.pak" "Data\"
 	echo.
