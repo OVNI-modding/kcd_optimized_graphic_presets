@@ -1,6 +1,6 @@
 
 function ogp.Log(msg)
-	System.LogAlways( "[OGP] " .. msg )
+	System.LogAlways( "[OGP] " .. tostring(msg) )
 end
 
 function ogp.LogInfo(msg)
@@ -8,11 +8,11 @@ function ogp.LogInfo(msg)
 end
 
 function ogp.LogWarning(msg)
-	ogp.Log( "Warning: " .. msg )
+	ogp.Log( "Warning: " .. tostring(msg) )
 end
 
 function ogp.LogError(msg)
-	ogp.Log( "Error: " .. msg )
+	ogp.Log( "Error: " .. tostring(msg) )
 end
 
 -- from https://gist.github.com/hashmal/874792
