@@ -83,7 +83,7 @@ end
 ---
 ---
 function ogp.SetCVar( cvar, value )
-	local succeeded, errorMessage;
+	local succeeded, errorMessage
 	if ogp.string.Starts( cvar, "sys_spec_ogp_") then
 		succeeded, errorMessage = pcall( ogp.SetOgpCVar, cvar, value )
 	else
