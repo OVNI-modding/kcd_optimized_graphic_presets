@@ -8,7 +8,6 @@
 	echo.
 
 	if NOT exist "system.cfg" goto :ERROR_WRONG_STARTING_PATH
-	if NOT exist "optimized_graphic_presets" goto :ERROR_OGP_FOLDER_ABSENT
 
 	echo Please enter a number to select your choice:
 	echo.
@@ -43,6 +42,7 @@ goto :EOF
 
 :INSTALL
 	cls
+	if NOT exist "optimized_graphic_presets" goto :ERROR_OGP_FOLDER_ABSENT
 	move /Y "optimized_graphic_presets\Data\zzz_optimized_graphic_presets.pak" "Data\"
 	mkdir "Mods" 2>nul	
 	move /Y "optimized_graphic_presets" "Mods\"
