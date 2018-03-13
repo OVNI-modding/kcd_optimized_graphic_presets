@@ -18,6 +18,9 @@ zout = zipfile.ZipFile( Path(outputDir, zipFilename), 'w', compression=zipfile.Z
 # README
 zout.write( 'README.md', Path(f'{projectName}/README.md') )
 
+# setup
+zout.write( 'ogp_setup.bat', Path(f'{projectName}/ogp_setup.bat') )
+
 # Files in mod (not in sub dirs)
 for file in Path('mod').glob('*.*'):
 	if file.is_file():
