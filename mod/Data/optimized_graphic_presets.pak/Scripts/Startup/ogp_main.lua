@@ -39,7 +39,7 @@ end
 ---
 function ogp.AddConsoleCommands()
 	System.AddCCommand( "ogp_create_advanced_settings_buttons", "ogp.CreateAdvancedSettingsButtons()", "" )
-	System.AddCCommand( "ogp_load_settings", "ogp.LoadSettings()", "" )
+	-- System.AddCCommand( "ogp_load_settings", "ogp.LoadSettings()", "" )
 	System.AddCCommand( "ogp_apply_settings", "ogp.ApplySettings()", "" )
 	System.AddCCommand( "ogp_save_settings", "ogp.SaveSettings()", "" )
 	System.LogAlways( "[OGP] initialized" )
@@ -136,24 +136,14 @@ function ogp.ApplySettings()
 end
 
 ---
----
+--- This function does not work because LUA can only read files that are within pak files...
+--- (Left there for documentation purpose)
 ---
 function ogp.LoadSettings()
 	ogp.LogInfo("Loading settings...")
-
 	local succeeded, root = pcall( CryAction.LoadXML, "ogp_settings_def.xml", ogp.settingsPath )
 	if succeeded then
-		ogp.LogInfo("A")
-		ogp.LogInfo(root)
-		ogp.LogInfo(root.settings)
-		ogp.LogInfo(#root.settings)
-		ogp.LogTable(root)
-		ogp.LogInfo("B")
-
 		for _,setting in ipairs(root.settings) do
-			ogp.LogInfo("C")
-			ogp.LogInfo(setting.cvar)
-
 			ogp.SetCVar( setting.cvar, setting.value )
 		end
 		ogp.LogInfo("Settings loaded")
