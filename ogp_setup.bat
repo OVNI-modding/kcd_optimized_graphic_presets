@@ -52,9 +52,12 @@ goto :EOF
 	move /Y "optimized_graphic_presets" "Mods\"
 	mklink /D "Data\user_profile" "%USERPROFILE%\Saved Games\kingdomcome" 2>nul
 	@echo off
-
 	echo.
-	echo Done.
+	echo ================================================================
+	echo.
+	echo                            Done.
+	echo.
+	echo ================================================================
 	echo.
 	pause
 goto :EOF
@@ -92,7 +95,11 @@ goto :EOF
 	rmdir "Config" 2>nul
 	@echo off
 	echo.
-	echo Done.
+	echo ================================================================
+	echo.
+	echo                            Done.
+	echo.
+	echo ================================================================
 	echo.
 	pause
 goto :MENU
@@ -106,7 +113,13 @@ goto :MENU
 	rmdir /S /Q "Mods\optimized_graphic_presets" 2>nul
 	@echo off
 	echo.
+	echo ====================================================================
+	echo.
+	echo                            Done.
+	echo.
 	echo This program must now exit to self-destruct. So long cruel world :'(
+	echo.
+	echo =====================================================================
 	echo.
 	pause
 	REM .bat self-destruction must be the last line
