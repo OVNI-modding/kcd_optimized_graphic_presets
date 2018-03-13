@@ -6,10 +6,10 @@
   <Node Id="3690" Class="UI:Events:MainMenu:OnButton" pos="-5742,-5490,0">
    <Inputs instanceID="-1" Port="0" Idx="ID_APPLY_ADVANCED_GRAPHICS"/>
   </Node>
-  <Node Id="3693" Class="UI:Functions:MainMenu:AddConfirmation" pos="-5166,-5832,0">
+  <Node Id="3693" Class="UI:Functions:MainMenu:AddConfirmation" pos="-5346,-4824,0">
    <Inputs instanceID="-1" confirmationId="APPLY_ADVANCED_GRAPHICS_BACK" uiQuestion="@ui_ApplyChanges" uiAnswer0="@ui_Yes" uiAnswer1="@ui_No" defaultSelect0="0" tooltip0="" tooltip1="" actionBackOnAnswer="-1" sound0="" sound1=""/>
   </Node>
-  <Node Id="3694" Class="UI:Events:MainMenu:OnButton" pos="-5742,-5688,0">
+  <Node Id="3694" Class="UI:Events:MainMenu:OnButton" pos="-5724,-4824,0">
    <Inputs instanceID="-1" Port="0" Idx="IDD_Back_Confirm"/>
   </Node>
   <Node Id="3695" Class="UI:Events:MainMenu:OnConfirm" pos="-5742,-5364,0">
@@ -64,46 +64,10 @@
    <Inputs String="ogp_save_settings" NextFrame="0"/>
   </Node>
   <Node Id="3828" Class="Time:Delay" pos="-3978,-5220,0">
-   <Inputs delay="0.1" resetOnInput="1"/>
+   <Inputs delay="0.1" resetOnInput="0"/>
   </Node>
   <Node Id="3829" Class="UI:Functions:MainMenu:SetMenuColor" pos="-5346,-6696,0">
    <Inputs instanceID="-1" isInGameMenu="0"/>
-  </Node>
-  <Node Id="3830" Class="Xml:OpenDocument" pos="-3888,-7200,0">
-   <Inputs File="ogp_settings.xml" Location="2"/>
-  </Node>
-  <Node Id="3831" Class="Xml:GetRoot" pos="-3564,-7200,0">
-   <Inputs />
-  </Node>
-  <Node Id="3833" Class="Xml:GetChild" pos="-3366,-7200,0">
-   <Inputs Name="settings" Create="0"/>
-  </Node>
-  <Node Id="3834" Class="Xml:GetChild" pos="-3114,-7092,0">
-   <Inputs Name="setting" Create="0"/>
-  </Node>
-  <Node Id="3835" Class="Xml:DeleteChild" pos="-3114,-6552,0">
-   <Inputs Name="setting"/>
-  </Node>
-  <Node Id="3836" Class="Xml:GetParent" pos="-3114,-6678,0">
-   <Inputs />
-  </Node>
-  <Node Id="3837" Class="Logic:Any" pos="-3096,-7200,0" InHideMask="1023" OutHideMask="1">
-   <Inputs />
-  </Node>
-  <Node Id="3841" Class="Xml:GetAttribute" pos="-3114,-6822,0">
-   <Inputs Name="value"/>
-  </Node>
-  <Node Id="3842" Class="Xml:GetAttribute" pos="-3114,-6966,0">
-   <Inputs Name="cvar"/>
-  </Node>
-  <Node Id="3843" Class="Debug:Log" pos="-2790,-6912,0">
-   <Inputs message=""/>
-  </Node>
-  <Node Id="3844" Class="Debug:Log" pos="-2790,-6786,0">
-   <Inputs message=""/>
-  </Node>
-  <Node Id="3845" Class="Debug:Log" pos="-2808,-7074,0">
-   <Inputs message="done"/>
   </Node>
  </Nodes>
  <Edges>
@@ -124,26 +88,11 @@
   <Edge nodeIn="3801" nodeOut="3806" portIn="Call" portOut="StartAction" enabled="1"/>
   <Edge nodeIn="3802" nodeOut="3806" portIn="Disabled" portOut="StartAction" enabled="1"/>
   <Edge nodeIn="3829" nodeOut="3806" portIn="Call" portOut="StartAction" enabled="1"/>
-  <Edge nodeIn="3830" nodeOut="3806" portIn="Execute" portOut="StartAction" enabled="1"/>
   <Edge nodeIn="3809" nodeOut="3808" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="3808" nodeOut="3812" portIn="Call" portOut="out" enabled="1"/>
   <Edge nodeIn="3825" nodeOut="3817" portIn="in3" portOut="onEvent" enabled="1"/>
   <Edge nodeIn="3820" nodeOut="3825" portIn="EndAction" portOut="out" enabled="1"/>
   <Edge nodeIn="3825" nodeOut="3828" portIn="in1" portOut="out" enabled="1"/>
-  <Edge nodeIn="3831" nodeOut="3830" portIn="Execute" portOut="Success" enabled="1"/>
-  <Edge nodeIn="3833" nodeOut="3831" portIn="Execute" portOut="Success" enabled="1"/>
-  <Edge nodeIn="3837" nodeOut="3833" portIn="in1" portOut="Success" enabled="1"/>
-  <Edge nodeIn="3842" nodeOut="3834" portIn="Execute" portOut="Success" enabled="1"/>
-  <Edge nodeIn="3845" nodeOut="3834" portIn="input" portOut="Fail" enabled="1"/>
-  <Edge nodeIn="3837" nodeOut="3835" portIn="in2" portOut="Success" enabled="1"/>
-  <Edge nodeIn="3835" nodeOut="3836" portIn="Execute" portOut="Success" enabled="1"/>
-  <Edge nodeIn="3834" nodeOut="3837" portIn="Execute" portOut="out" enabled="1"/>
-  <Edge nodeIn="3836" nodeOut="3841" portIn="Execute" portOut="Success" enabled="1"/>
-  <Edge nodeIn="3844" nodeOut="3841" portIn="input" portOut="Value" enabled="1"/>
-  <Edge nodeIn="3844" nodeOut="3841" portIn="message" portOut="Value" enabled="1"/>
-  <Edge nodeIn="3841" nodeOut="3842" portIn="Execute" portOut="Success" enabled="1"/>
-  <Edge nodeIn="3843" nodeOut="3842" portIn="input" portOut="Value" enabled="1"/>
-  <Edge nodeIn="3843" nodeOut="3842" portIn="message" portOut="Value" enabled="1"/>
  </Edges>
  <GraphTokens>
   <Token Name="SettingNames" Type="5"/>
