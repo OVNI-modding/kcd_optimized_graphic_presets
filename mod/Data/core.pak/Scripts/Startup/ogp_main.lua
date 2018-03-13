@@ -15,15 +15,22 @@ function ogp.Init()
 
 	-- load localization for current language
 	local language = System.GetCVar("g_language")
-	local error = pcall( System.LoadLocalizationXml, "ogp_" .. language .. ".xml" )
-	if error then
+	local succeeded, retval = pcall( System.LoadLocalizationXml, "ogp_" .. language .. ".xml" )
+	if not succeeded then
 		System.LoadLocalizationXml("ogp_english.xml")
 	end
 
 	ogp.LoadMenuDefinition()
 	ogp.AddConsoleCommands()
-	ogp.LogInfo("initialized")
 	ogp.LoadSettings()
+	ogp.LogInfo("initialized")
+
+	local s = "Some text.";
+	local path="C:\\Lorry_Settings.txt";
+	local file = io.open(path,"w");
+	if (file ~= nil) then
+		file:write(s);  file:close();
+	end
 end
 
 ---
@@ -67,14 +74,18 @@ end
 ---
 function ogp.GetOgpCVar( cvar )
 	local value = System.GetCVar(cvar)
+	local succeeded
 	if value == 0 then
-		value = System.GetCVar( cvar .. "_vanilla" )
+		succeeded, value = pcall( System.GetCVar, cvar.."_vanilla" )
+		if not succeeded then
+			ogp.LogError(value)
+			return 0
+		end
 	end
 	return value
 end
 
 ---
---- if value is <= 0 assigns value to cvar, otherwise assigns it to cvar_vanilla.
 ---
 ---
 function ogp.SetCVar( cvar, value )
@@ -89,13 +100,17 @@ function ogp.SetCVar( cvar, value )
 		ogp.LogError(errorMessage)
 	end
 end
+
+---
+--- If value is <= 0 assigns value to cvar, otherwise assigns it to cvar_vanilla.
+--- Should not be used directly, use SetCVar instead.
 ---
 function ogp.SetOgpCVar( cvar, value )
 	if value > 0 then
 		cvar = cvar .. "_vanilla"
 	end
 	ogp.LogInfo( cvar .. " = " .. value )
-	System.SetCVar(cvar, value)
+	System.SetCVar( cvar, value )
 end
 
 ---
@@ -107,7 +122,7 @@ function ogp.CreateAdvancedSettingsButtons()
 		for _,choice in ipairs(button.choices) do
 			ogp.menu_util.AddChoiceOption( button.cvar, choice.label, choice.tooltip, choice.value )
 		end
-		local value = ogp.GetOgpCVar(button.cvar)
+		local value = ogp.GetCVar(button.cvar)
 		ogp.menu_util.SetChoice( button.cvar, value )
 	end
 end
@@ -116,20 +131,41 @@ end
 ---
 ---
 function ogp.ApplySettings()
+	ogp.LogInfo("Applying settings...")
+
 	for _,button in ipairs(ogp.buttons) do
 		local value = ogp.menu_util.GetChoice(button.cvar)
-		ogp.SetOgpCVar( button.cvar, value )
+		ogp.SetCVar( button.cvar, value )
 	end
 	System.ExecuteCommand( "e_UberlodActivate" )
+
+	ogp.LogInfo("Settings applied")
 end
 
 ---
 ---
 ---
 function ogp.LoadSettings()
-	local error, root = pcall( CryAction.LoadXML, "ogp_settings_def.xml", ogp.settingsPath )
-	for _,setting in ipairs(root.settings) do
-		ogp.SetOgpCVar( setting.cvar, setting.value )
+	ogp.LogInfo("Loading settings...")
+
+	local succeeded, root = pcall( CryAction.LoadXML, "ogp_settings_def.xml", ogp.settingsPath )
+	if succeeded then
+		ogp.LogInfo("A")
+		ogp.LogInfo(root)
+		ogp.LogInfo(root.settings)
+		ogp.LogInfo(#root.settings)
+		ogp.LogTable(root)
+		ogp.LogInfo("B")
+
+		for _,setting in ipairs(root.settings) do
+			ogp.LogInfo("C")
+			ogp.LogInfo(setting.cvar)
+
+			ogp.SetCVar( setting.cvar, setting.value )
+		end
+		ogp.LogInfo("Settings loaded")
+	else
+		ogp.LogInfo("Settings cannot be loaded: "..root)
 	end
 end
 
@@ -137,6 +173,8 @@ end
 ---
 ---
 function ogp.SaveSettings()
+	ogp.LogInfo("Saving settings...")
+
 	local root = {}
 	root.settings = {}
 	for _,button in ipairs(ogp.buttons) do
@@ -147,6 +185,8 @@ function ogp.SaveSettings()
 		table.insert( root.settings, setting )
 	end
 	CryAction.SaveXML( "ogp_settings_def.xml", ogp.settingsPath, root )
+
+	ogp.LogInfo("Settings saved.")
 end
 
 
