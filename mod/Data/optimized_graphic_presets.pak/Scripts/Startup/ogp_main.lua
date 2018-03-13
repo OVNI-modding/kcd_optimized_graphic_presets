@@ -43,7 +43,6 @@ function ogp.AddConsoleCommands()
 	System.AddCCommand( "ogp_apply_settings", "ogp.ApplySettings()", "" )
 	System.AddCCommand( "ogp_save_settings", "ogp.SaveSettings()", "" )
 	System.AddCCommand( "ogp_set_cvar", "ogp.SetCVar(%1, %2)", "" )
-	System.LogAlways( "[OGP] initialized" )
 end
 
 ---
@@ -126,15 +125,11 @@ end
 ---
 ---
 function ogp.ApplySettings()
-	ogp.LogInfo("Applying settings...")
-
 	for _,button in ipairs(ogp.buttons) do
 		local value = ogp.menu_util.GetChoice(button.cvar)
 		ogp.SetCVar( button.cvar, value )
 	end
 	System.ExecuteCommand( "e_UberlodActivate" )
-
-	ogp.LogInfo("Settings applied")
 end
 
 ---
@@ -142,13 +137,11 @@ end
 --- (Left there for documentation purpose)
 ---
 function ogp.LoadSettings()
-	ogp.LogInfo("Loading settings...")
 	local succeeded, root = pcall( CryAction.LoadXML, "ogp_settings_def.xml", ogp.settingsPath )
 	if succeeded then
 		for _,setting in ipairs(root.settings) do
 			ogp.SetCVar( setting.cvar, setting.value )
 		end
-		ogp.LogInfo("Settings loaded")
 	else
 		ogp.LogInfo("Settings cannot be loaded: "..root)
 	end
@@ -158,8 +151,6 @@ end
 ---
 ---
 function ogp.SaveSettings()
-	ogp.LogInfo("Saving settings...")
-
 	local root = {}
 	root.settings = {}
 	for _,button in ipairs(ogp.buttons) do
@@ -170,8 +161,6 @@ function ogp.SaveSettings()
 		table.insert( root.settings, setting )
 	end
 	CryAction.SaveXML( "ogp_settings_def.xml", ogp.settingsPath, root )
-
-	ogp.LogInfo("Settings saved.")
 end
 
 
