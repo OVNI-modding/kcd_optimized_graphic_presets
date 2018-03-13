@@ -2,9 +2,6 @@ ogp = {}
 
 ogp.settingsPath = "user_profile/ogp_settings.xml"
 
--- Action.SaveXML(const char * definitionFile, const char * dataFile, SmartScriptTable dataTable)
--- Action.PauseGame( pause )
-
 ---
 --- Inits ogp.
 ---
