@@ -2,81 +2,60 @@
 Optimized Graphic Presets for Kingdom Come Deliverance by OVNI
 ==============================================================
 
+- Better performances and/or quality.
+- More options in advanced settings menu.
 
 
-- Moves vsync option from normal to advanced graphic menu (so you won't loose all your settings if you just want to change vsync state)
-- Adds more options in advanced settings menu (it uses the movieclip from controls menu, hence the wrong "Controls" title).
-- The adv settings menu now show 13 rows instead of only 7.
-- Disables Depth of Field from menu (so you can see better the effect of each setting)
-- Applying settings is much faster and does not require confirmation (again, easier to compare. But keep in mind some changes impact the FPS temporarily, you should give it a chance to stabilize if you want to compare performances).
+Installation / Update
+=====================
+
+1. Go to game's root folder
+eg: "C:\Program Files (x86)\Steam\steamapps\common\KingdomComeDeliverance"
+
+2. Extract zip content there, overwrite files if asked (it will only overwrite files from older OGP version, not games files).
+"ogp_setup.bat" and "optimized_graphic_presets" should be in game root folder.
+
+3. Launch ogp_setup.bat and select "Install"
 
 
+Removal
+=======
 
-
-
-
-- performance boost ; mainly due to disabling grass wind animations, grass-terrain color bending, reducing shadow cascades in lower presets, increasing gi cascades.
-- Better resolution for Global illumination, avoids flickering (Especially in Ratty's church and forests).
-- Enhanced anti-aliasing (temporal SMAA with jittering)
-- Enhanced shadows : higher res + grass projects shadows.
-- Disabled rim lights (it caused NPC to glow at dusk)
-- Disabled motion blur
-- D key ensures native fullscreen "automatically" (when you go right). The game switches to borderless window on alt-tab, causing huge performance penalty on some hardware.
-
-
-Installation **AND** Update from an older version
-=================================================
-
-Note: game root folder = the game's root folder, eg: "C:\Program Files (x86)\Steam\steamapps\common\KingdomComeDeliverance"
-
-1. Unzip in game root folder. eg: with 7zip drag the zip file using *Right* mouse button, drop it in root folder by releasing button, then select 7zip->extract here. Override all files if asked (this will not override any vanilla files, only files from previous versions of this mod).
-
-2. Copy/move the file "root\optimized_graphic_presets\user.cfg" to "root\user.cfg"
-Alternatively, if you already have your own user.cfg, copy the content of "root\optimized_graphic_presets\user.cfg" at the end of your user.cfg.
-
-3.  Add "+exec user.cfg" (without quotes) as game's launch options. cf https://support.steampowered.com/kb_article.php?ref=1040-JWMT-2947
-If you are using non-steam version, create a shortcut for KingdomCome.exe, and add "+exec user.cfg" (without quotes) to its target property.
-eg: "C:\Games\KCD\Bin\Win64\KingdomCome.exe" +exec user.cfg
+Launch ogp_setup.bat (from game's root folder) and select uninstall
 
 
 Hotkeys
 =======
 
+d = ensure game runs in native fullscreen
 F1 to F5 = mod's presets: ugly, low, medium, high, ultra
 F6 to F10 = vanilla's presets: low, medium, high, very high, ultra
-6 to 9 = global illumination quality levels (from ugly to high)
-Numpad 0, 1, 4, 7 = shadows quality levels (from ugly to high)
-Numpad 2, 5, 8, / = grass quality levels (from ugly to high)
-Numpad 3, 6, 9, * = lod quality levels (from ugly to high)
 
 
 FAQ / TROUBLESHOOTING
 =====================
 
-**Q: How to start the game directly with another preset ?**
-Edit user.cfg and modify line "loadconfig medium" (the comment above it explains it all).
-
 **Q: How to fix blocky faces ?**
-Set an higher global illumination resolution using hotkeys and/or change sys_spec_ogp_gi value (0/1/2/3/4).
-
-**Q: How to re-enable motion blur ?**
-Edit user.cfg and add r_motionblur=1 (camera motion blur) or r_motionblur=2 (per-object motion blur) at the end.
-
-**Q: How to re-enable rim light ?**
-Edit user.cfg and add r_DeferredShading3PL=2 at the end.
+Set an higher global illumination setting, or turn it off.
 
 **Q: How to disable native fullscreen auto-switch ?**
-Edit user.cfg and delete the line : bind d "r_fullscreen 1", then restart the game.
+Delete Mods\optimized_graphic_presets\Data\force_native_fullscreen.pak
 
-**Q: How to XYZ ?**
-Probably by creating your own profile.
-- make a copy of Config/template.cfg and rename it as you please eg: my_profile.cfg
-- make the changes you wish in that copy (documentation is within the file).
-- edit user.cfg to replace "loadconfig medium" by "loadconfig my_profile" (or whatever you named it).
+**Q: How to disable F1-F10 hotkeys ?**
+Delete Mods\optimized_graphic_presets\Data\hotkeys.pak
+
+**Q: Why advanced settings menu has "Controls" title ?**
+It's the only way to display more buttons in the menu.
 
 
 ChangeLog
 =========
+
+3.0.0
+- GUI integration
+- settings load/saving
+- added texture setting with fixed anisotropic values.
+- Removed some settings (AA, motionblur, grass wind, grass shadows) so they can be set independently.
 
 2.3
 - BUGFIX commented vsync off in user.cfg
