@@ -65,3 +65,6 @@ ogp.strings.ogp_texture_ultra = "Requires 6GB VRAM"
 
 ogp.strings.ogp_water_label = "Water"
 ogp.strings.ogp_water_tooltip = ""
+
+ogp.strings.ogp_weather_label = "Weather Effects"
+ogp.strings.ogp_weather_tooltip = ""

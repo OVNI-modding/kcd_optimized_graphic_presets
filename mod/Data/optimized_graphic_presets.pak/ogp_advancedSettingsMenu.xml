@@ -135,4 +135,9 @@
 			<choice label="@ogp_ultra" tooltip="" value="-5" />
 		</choices>
 	</button>
+	<button cvar="sys_spec_ogp_weather" label="@ogp_weather_label" tooltip="@ogp_weather_tooltip">
+		<choices>
+			<choice label="@ogp_medium" tooltip="" value="-3" />
+		</choices>
+	</button>
 </root>
