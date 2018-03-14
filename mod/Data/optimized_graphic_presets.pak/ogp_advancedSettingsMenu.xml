@@ -84,8 +84,8 @@
 		</button>
 		<button cvar="sys_spec_ogp_physics" label="@ogp_physics_label" tooltip="@ogp_physics_tooltip">
 			<choices>
-				<choice label="@ogp_ugly" tooltip="" value="0" />
-				<choice label="@ogp_low" tooltip="" value="1" />
+				<choice label="@ogp_low" tooltip="" value="-2" />
+				<choice label="@ogp_medium" tooltip="" value="-3" />
 			</choices>
 		</button>
 		<button cvar="sys_spec_ogp_shading" label="@ogp_shading_label" tooltip="@ogp_shading_tooltip">
