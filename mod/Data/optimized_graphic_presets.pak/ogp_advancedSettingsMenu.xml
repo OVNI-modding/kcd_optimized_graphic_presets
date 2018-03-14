@@ -42,7 +42,7 @@
 		</button>
 		<button cvar="sys_spec_ogp_gi" label="@ogp_gi_label" tooltip="@ogp_gi_tooltip">
 			<choices>
-				<choice label="@ogp_gi_baked" tooltip="ogp_gi_baked_tooltip" value="-1" />
+				<choice label="@ogp_gi_baked" tooltip="@ogp_gi_baked_tooltip" value="-1" />
 				<choice label="@ogp_low" tooltip="" value="-2" />
 				<choice label="@ogp_medium" tooltip="" value="-3" />
 				<choice label="@ogp_high" tooltip="" value="-4" />
