@@ -1,0 +1,445 @@
+<Graph Description="" Group="ogp" enabled="1" MultiPlayer="ClientServer">
+ <Nodes>
+  <Node Id="1" Class="UI:Action:Start" pos="-1026,-1440,0">
+   <Inputs UseAsState="1"/>
+  </Node>
+  <Node Id="2" Class="UI:Action:End" pos="2610,3672,0">
+   <Inputs UseAsState="1" Args=""/>
+  </Node>
+  <Node Id="7" Class="UI:Functions:Settings:GetResolutionList" pos="1962,-18,0" flags="0">
+   <Inputs />
+  </Node>
+  <Node Id="29" Name="Setup_page" Class="_commentbox" pos="-1674,-2160.2178,0">
+   <Inputs TextSize="1" Color="0.27451,0.352941,0.705882" DisplayFilled="1" DisplayBox="1" SortPriority="16"/>
+   <ResizeBorder X="0" Y="0" Width="7218" Height="2052"/>
+   <NodeSize Width="7218" Height="2510.3516"/>
+  </Node>
+  <Node Id="39" Name="Handle_events" Class="_commentbox" pos="-1680,-69.505157,0">
+   <Inputs TextSize="1" Color="0.27451,0.352941,0.705882" DisplayFilled="1" DisplayBox="1" SortPriority="16"/>
+   <ResizeBorder X="0" Y="0" Width="4698" Height="4266"/>
+   <NodeSize Width="4698" Height="4724.3516"/>
+  </Node>
+  <Node Id="42" Class="UI:Functions:Settings:SetGraphics" pos="972,3510,0" flags="0">
+   <Inputs Resolution="0" Quality="1" FullScreen="0" VSync="0" FPS="0" Gamma="0" FOV="0"/>
+  </Node>
+  <Node Id="52" Class="UI:Functions:Settings:GetCurrGraphics" pos="1962,54,0" flags="0">
+   <Inputs />
+  </Node>
+  <Node Id="61" Class="UI:Events:Settings:OnGraphicChanged" pos="-1656,774,0" flags="0">
+   <Inputs Port="-1" Idx=""/>
+  </Node>
+  <Node Id="67" Class="UI:Events:MainMenu:OnButton" pos="-1480,1290,0">
+   <Inputs instanceID="-1" Port="0" Idx="ID_RESET_GRAPHIC"/>
+  </Node>
+  <Node Id="73" Class="UI:Events:MainMenu:OnButton" pos="-1490,1700,0">
+   <Inputs instanceID="-1" Port="0" Idx="ID_APPLY_GRAPHICS"/>
+  </Node>
+  <Node Id="81" Class="UI:Events:Settings:OnResolutionItem" pos="-1440,-990,0" flags="0">
+   <Inputs Port="-1" Idx=""/>
+  </Node>
+  <Node Id="87" Name="Setup_resolutions" Class="_comment" pos="-1440,-1026,0"/>
+  <Node Id="88" Name="Update_Data" Class="_comment" pos="-1530,738,0"/>
+  <Node Id="89" Name="Reset_to_current_state" Class="_comment" pos="-1440,1250,0"/>
+  <Node Id="90" Name="Apply_Graphic_Changes" Class="_comment" pos="-1460,1660,0"/>
+  <Node Id="102" Class="UI:Events:MainMenu:OnButton" pos="-1566,4500,0">
+   <Inputs instanceID="-1" Port="0" Idx="IDD_Back"/>
+  </Node>
+  <Node Id="106" Class="UI:Action:End" pos="-1260,4500,0">
+   <Inputs UseAsState="1" Args=""/>
+  </Node>
+  <Node Id="107" Class="Debug:ConsoleVariable" pos="-702,792,0">
+   <Inputs CVar="sys_spec" Value=""/>
+  </Node>
+  <Node Id="126" Class="UI:Events:MainMenu:OnButton" pos="-1440,-1278,0">
+   <Inputs instanceID="-1" Port="0" Idx="MM_AdvancedGraphics"/>
+  </Node>
+  <Node Id="128" Class="UI:Action:Control" pos="-1008,-1296,0">
+   <Inputs uiActions_UIAction="" Strict="0" Args=""/>
+  </Node>
+  <Node Id="129" Class="Logic:Any" pos="-666,-1440,0" InHideMask="1023" OutHideMask="1">
+   <Inputs />
+  </Node>
+  <Node Id="135" Class="UI:Functions:MainMenu:SetContainer" pos="0,-1512,0">
+   <Inputs instanceID="-1" containerIndex="0" ButtonXPos="1500" ButtonYPos="430" MaxButtons="7"/>
+  </Node>
+  <Node Id="136" Class="UI:Functions:MainMenu:AddChoicesButton" pos="486,-1476,0">
+   <Inputs instanceID="-1" buttonId="SW_RES" containerIndex="0" uiText="@ui_Resolution" tooltip="" disable="0" sound=""/>
+  </Node>
+  <Node Id="137" Class="UI:Functions:MainMenu:AddChoicesButton" pos="972,-1476,0">
+   <Inputs instanceID="-1" buttonId="SW_FS" containerIndex="0" uiText="@ui_WindowMode" tooltip="" disable="0" sound=""/>
+  </Node>
+  <Node Id="138" Class="UI:Functions:MainMenu:AddChoiceOption" pos="1728,-1476,0">
+   <Inputs instanceID="-1" choiceId="0" buttonId="SW_FS" containerIndex="0" uiText="@ui_FullscreenWindow" tooltip="" disable="0"/>
+  </Node>
+  <Node Id="139" Class="UI:Functions:MainMenu:AddChoiceOption" pos="1350,-1476,0">
+   <Inputs instanceID="-1" choiceId="1" buttonId="SW_FS" containerIndex="0" uiText="@ui_Fullscreen" tooltip="" disable="0"/>
+  </Node>
+  <Node Id="140" Class="UI:Functions:MainMenu:AddChoiceOption" pos="2142,-1476,0">
+   <Inputs instanceID="-1" choiceId="2" buttonId="SW_FS" containerIndex="0" uiText="@ui_BorderlessWindow" tooltip="" disable="0"/>
+  </Node>
+  <Node Id="141" Class="UI:Functions:MainMenu:AddChoicesButton" pos="486,-1206,0">
+   <Inputs instanceID="-1" buttonId="SW_QUALITY" containerIndex="0" uiText="@ui_Details" tooltip="@ui_DetailsTT" disable="0" sound=""/>
+  </Node>
+  <Node Id="142" Class="UI:Functions:MainMenu:AddChoiceOption" pos="972,-1206,0">
+   <Inputs instanceID="-1" choiceId="0" buttonId="SW_QUALITY" containerIndex="0" uiText="@ui_Custom" tooltip="" disable="0"/>
+  </Node>
+  <Node Id="143" Class="UI:Functions:MainMenu:AddChoiceOption" pos="3474,-1206,0">
+   <Inputs instanceID="-1" choiceId="1" buttonId="SW_QUALITY" containerIndex="0" uiText="@ogp_vanilla_low" tooltip="" disable="0"/>
+  </Node>
+  <Node Id="144" Class="UI:Functions:MainMenu:AddChoiceOption" pos="3852,-1206,0">
+   <Inputs instanceID="-1" choiceId="2" buttonId="SW_QUALITY" containerIndex="0" uiText="@ogp_vanilla_medium" tooltip="" disable="0"/>
+  </Node>
+  <Node Id="145" Class="UI:Functions:MainMenu:AddChoiceOption" pos="4230,-1206,0">
+   <Inputs instanceID="-1" choiceId="3" buttonId="SW_QUALITY" containerIndex="0" uiText="@ogp_vanilla_high" tooltip="" disable="0"/>
+  </Node>
+  <Node Id="146" Class="UI:Functions:MainMenu:AddChoiceOption" pos="4608,-1206,0">
+   <Inputs instanceID="-1" choiceId="4" buttonId="SW_QUALITY" containerIndex="0" uiText="@ogp_vanilla_veryhigh" tooltip="" disable="0"/>
+  </Node>
+  <Node Id="147" Class="UI:Functions:MainMenu:AddChoicesButton" pos="486,-954,0">
+   <Inputs instanceID="-1" buttonId="SW_FPS" containerIndex="0" uiText="@ui_FPS" tooltip="@ui_FPSTT" disable="0" sound=""/>
+  </Node>
+  <Node Id="148" Class="UI:Functions:MainMenu:AddChoiceOption" pos="972,-954,0">
+   <Inputs instanceID="-1" choiceId="0" buttonId="SW_FPS" containerIndex="0" uiText="@ui_off" tooltip="" disable="0"/>
+  </Node>
+  <Node Id="149" Class="UI:Functions:MainMenu:AddChoiceOption" pos="1350,-954,0">
+   <Inputs instanceID="-1" choiceId="1" buttonId="SW_FPS" containerIndex="0" uiText="@ui_on" tooltip="" disable="0"/>
+  </Node>
+  <Node Id="150" Class="UI:Functions:MainMenu:AddButton" pos="864,-18,0">
+   <Inputs instanceID="-1" id="ID_RESET_GRAPHIC" containerIndex="1" uiText="@ui_reset" actionType="reset" tooltip="" disable="0" sound=""/>
+  </Node>
+  <Node Id="151" Class="UI:Functions:MainMenu:AddButton" pos="1206,-18,0">
+   <Inputs instanceID="-1" id="ID_APPLY_GRAPHICS" containerIndex="1" uiText="@ui_Apply" actionType="apply" tooltip="" disable="0" sound=""/>
+  </Node>
+  <Node Id="152" Class="UI:Functions:MainMenu:AddButton" pos="1566,-18,0">
+   <Inputs instanceID="-1" id="IDD_Back" containerIndex="1" uiText="@ui_back" actionType="back" tooltip="" disable="0" sound=""/>
+  </Node>
+  <Node Id="153" Class="UI:Functions:MainMenu:AddChoiceOption" pos="-990,-1026,0">
+   <Inputs instanceID="-1" choiceId="0" buttonId="SW_RES" containerIndex="0" uiText="" tooltip="" disable="0"/>
+  </Node>
+  <Node Id="544" Class="UI:Functions:MainMenu:AddConfirmation" pos="648,2358,0">
+   <Inputs instanceID="-1" confirmationId="APPLY_GRAPHICSSETTINGS_BACK" uiQuestion="@ui_ApplyWarningUltraSettings" uiAnswer0="@ui_Yes" uiAnswer1="@ui_No" defaultSelect0="0" tooltip0="" tooltip1="" actionBackOnAnswer="-1" sound0="" sound1=""/>
+  </Node>
+  <Node Id="545" Class="UI:Events:MainMenu:OnConfirm" pos="-1548,3690,0">
+   <Inputs instanceID="-1" Port="0" Idx="APPLY_GRAPHICSSETTINGS"/>
+  </Node>
+  <Node Id="546" Class="UI:Functions:MainMenu:SetChoice" pos="-380,690,0">
+   <Inputs instanceID="-1" id="SW_QUALITY" containerIndex="0" choiceId="0"/>
+  </Node>
+  <Node Id="547" Class="UI:Functions:MainMenu:SetChoice" pos="-1090,870,0">
+   <Inputs instanceID="-1" id="SW_FPS" containerIndex="0" choiceId="0"/>
+  </Node>
+  <Node Id="548" Class="UI:Functions:MainMenu:GetChoice" pos="54,3618,0">
+   <Inputs instanceID="-1" id="SW_FPS" containerIndex="0"/>
+  </Node>
+  <Node Id="549" Class="UI:Functions:MainMenu:GetChoice" pos="54,3348,0">
+   <Inputs instanceID="-1" id="SW_FS" containerIndex="0"/>
+  </Node>
+  <Node Id="550" Class="UI:Functions:MainMenu:GetChoice" pos="1620,3492,0">
+   <Inputs instanceID="-1" id="SW_QUALITY" containerIndex="0"/>
+  </Node>
+  <Node Id="552" Class="UI:Functions:MainMenu:GetChoice" pos="54,3204,0">
+   <Inputs instanceID="-1" id="SW_RES" containerIndex="0"/>
+  </Node>
+  <Node Id="553" Class="UI:Functions:MainMenu:SetChoice" pos="-1080,558,0">
+   <Inputs instanceID="-1" id="SW_FS" containerIndex="0" choiceId="0"/>
+  </Node>
+  <Node Id="554" Class="UI:Functions:MainMenu:SetChoice" pos="-1080,414,0">
+   <Inputs instanceID="-1" id="SW_RES" containerIndex="0" choiceId="0"/>
+  </Node>
+  <Node Id="555" Class="UI:Functions:MainMenu:ClearAll" pos="-486,-1440,0">
+   <Inputs instanceID="-1" useLastSelect="0"/>
+  </Node>
+  <Node Id="556" Class="UI:Functions:MainMenu:SetTitleBox" pos="18,-1314,0">
+   <Inputs instanceID="-1" header="@ui_GraphicSettings"/>
+  </Node>
+  <Node Id="557" Name="Confirm_Apply_Graphic_Changes" Class="_comment" pos="-1548,3636,0"/>
+  <Node Id="558" Name="Back_Button" Class="_comment" pos="-1566,4482,0"/>
+  <Node Id="628" Class="UI:Functions:MainMenu:SetValue" pos="-1080,1008,0">
+   <Inputs instanceID="-1" id="SW_GAMA" containerIndex="0" value="0.5"/>
+  </Node>
+  <Node Id="632" Class="UI:Functions:MainMenu:GetValue" pos="54,3744,0">
+   <Inputs instanceID="-1" id="SW_GAMA" containerIndex="0"/>
+  </Node>
+  <Node Id="731" Class="UI:Functions:MainMenu:AddConfirmation" pos="-918,1296,0">
+   <Inputs instanceID="-1" confirmationId="RESET_GRAPHICSSETTINGS" uiQuestion="@ui_ResetDefault" uiAnswer0="@ui_Yes" uiAnswer1="@ui_No" defaultSelect0="0" tooltip0="" tooltip1="" actionBackOnAnswer="1" sound0="" sound1=""/>
+  </Node>
+  <Node Id="732" Class="UI:Events:MainMenu:OnConfirm" pos="144,1296,0">
+   <Inputs instanceID="-1" Port="0" Idx="RESET_GRAPHICSSETTINGS"/>
+  </Node>
+  <Node Id="734" Class="UI:Events:MainMenu:OnButton" pos="-1500,2180,0">
+   <Inputs instanceID="-1" Port="0" Idx="IDD_Back_Confirm"/>
+  </Node>
+  <Node Id="780" Class="UI:Functions:MainMenu:AddConfirmation" pos="648,1980,0">
+   <Inputs instanceID="-1" confirmationId="APPLY_GRAPHICSSETTINGS" uiQuestion="@ui_ApplyChanges" uiAnswer0="@ui_Yes" uiAnswer1="@ui_No" defaultSelect0="1" tooltip0="" tooltip1="" actionBackOnAnswer="1" sound0="" sound1=""/>
+  </Node>
+  <Node Id="781" Class="UI:Events:MainMenu:OnConfirm" pos="-1548,3834,0">
+   <Inputs instanceID="-1" Port="0" Idx="APPLY_GRAPHICSSETTINGS_BACK"/>
+  </Node>
+  <Node Id="785" Class="Logic:Any" pos="-756,3690,0" InHideMask="1021" OutHideMask="1">
+   <Inputs />
+  </Node>
+  <Node Id="786" Class="UI:Action:End" pos="-126,4194,0">
+   <Inputs UseAsState="1" Args=""/>
+  </Node>
+  <Node Id="787" Class="Math:Equal" pos="-1008,3906,0">
+   <Inputs A="0" B="0"/>
+  </Node>
+  <Node Id="788" Class="UI:Functions:Settings:ResetGraphicSettings" pos="738,1296,0" flags="0">
+   <Inputs />
+  </Node>
+  <Node Id="789" Class="UI:Functions:MainMenu:AddValueButton" pos="486,-18,0">
+   <Inputs instanceID="-1" buttonId="SW_GAMA" containerIndex="0" uiText="@ui_Gama" value="0" min="-0.9" max="0.9" tooltip="@ui_GamaTT" disable="0" sound=""/>
+  </Node>
+  <Node Id="843" Class="UI:Events:MainMenu:OnInteractiveValue" pos="-342,1008,0">
+   <Inputs instanceID="-1" Port="0" Idx="SW_GAMA"/>
+  </Node>
+  <Node Id="848" Class="Engine:Gamma" pos="90,1026,0" flags="0">
+   <Inputs Value="0"/>
+  </Node>
+  <Node Id="849" Class="Variables:LocalVariable" pos="-702,990,0" flags="0">
+   <Inputs ContextId="0" Name="savedGama" Value="0"/>
+  </Node>
+  <Node Id="850" Class="Variables:LocalVariable" pos="-540,4104,0" flags="0">
+   <Inputs ContextId="0" Name="savedGama" Value="0"/>
+  </Node>
+  <Node Id="851" Class="Engine:Gamma" pos="-144,4104,0" flags="0">
+   <Inputs Value="0"/>
+  </Node>
+  <Node Id="852" Class="UI:Functions:MainMenu:AddChoicesButton" pos="486,-432,0">
+   <Inputs instanceID="-1" buttonId="SW_FOV" containerIndex="0" uiText="@ui_FOV" tooltip="@ui_FOVTT" disable="0" sound=""/>
+  </Node>
+  <Node Id="853" Class="UI:Functions:MainMenu:AddChoiceOption" pos="2556,-432,0">
+   <Inputs instanceID="-1" choiceId="70" buttonId="SW_FOV" containerIndex="0" uiText="70" tooltip="" disable="0"/>
+  </Node>
+  <Node Id="854" Class="UI:Functions:MainMenu:AddChoiceOption" pos="2934,-432,0">
+   <Inputs instanceID="-1" choiceId="80" buttonId="SW_FOV" containerIndex="0" uiText="80" tooltip="" disable="0"/>
+  </Node>
+  <Node Id="855" Class="UI:Functions:MainMenu:AddChoiceOption" pos="3312,-432,0">
+   <Inputs instanceID="-1" choiceId="85" buttonId="SW_FOV" containerIndex="0" uiText="85" tooltip="" disable="0"/>
+  </Node>
+  <Node Id="858" Class="UI:Functions:MainMenu:AddChoiceOption" pos="4500,-432,0">
+   <Inputs instanceID="-1" choiceId="90" buttonId="SW_FOV" containerIndex="0" uiText="90" tooltip="" disable="0"/>
+  </Node>
+  <Node Id="859" Class="UI:Functions:MainMenu:SetChoice" pos="-1080,1152,0">
+   <Inputs instanceID="-1" id="SW_FOV" containerIndex="0" choiceId="0"/>
+  </Node>
+  <Node Id="863" Class="UI:Functions:MainMenu:GetChoice" pos="54,3870,0">
+   <Inputs instanceID="-1" id="SW_FOV" containerIndex="0"/>
+  </Node>
+  <Node Id="864" Class="UI:Functions:MainMenu:AddChoiceOption" pos="5022,-1206,0">
+   <Inputs instanceID="-1" choiceId="7" buttonId="SW_QUALITY" containerIndex="0" uiText="@ogp_vanilla_ultra" tooltip="" disable="0"/>
+  </Node>
+  <Node Id="865" Class="UI:Functions:MainMenu:GetChoice" pos="54,3474,0">
+   <Inputs instanceID="-1" id="SW_VSYNC" containerIndex="0"/>
+  </Node>
+  <Node Id="866" Class="UI:Functions:MainMenu:AddChoicesButton" pos="486,-702,0">
+   <Inputs instanceID="-1" buttonId="SW_VSYNC" containerIndex="0" uiText="@ui_VSync" tooltip="@ui_VSyncTT" disable="0" sound=""/>
+  </Node>
+  <Node Id="867" Class="UI:Functions:MainMenu:AddChoiceOption" pos="972,-702,0">
+   <Inputs instanceID="-1" choiceId="0" buttonId="SW_VSYNC" containerIndex="0" uiText="@ui_off" tooltip="" disable="0"/>
+  </Node>
+  <Node Id="868" Class="UI:Functions:MainMenu:AddChoiceOption" pos="1728,-702,0">
+   <Inputs instanceID="-1" choiceId="2" buttonId="SW_VSYNC" containerIndex="0" uiText="30 Hz" tooltip="" disable="0"/>
+  </Node>
+  <Node Id="869" Class="UI:Functions:MainMenu:SetChoice" pos="-1080,720,0">
+   <Inputs instanceID="-1" id="SW_VSYNC" containerIndex="0" choiceId="0"/>
+  </Node>
+  <Node Id="870" Class="Logic:Any" pos="-684,4122,0" InHideMask="1020">
+   <Inputs />
+  </Node>
+  <Node Id="933" Class="Logic:Signal" pos="-1548,4140,0" flags="0">
+   <Inputs Id="ChangeProfile"/>
+  </Node>
+  <Node Id="934" Class="UI:Functions:MainMenu:GetChoice" pos="-648,1710,0">
+   <Inputs instanceID="-1" id="SW_QUALITY" containerIndex="0"/>
+  </Node>
+  <Node Id="936" Class="UI:Functions:MainMenu:AddConfirmation" pos="666,1620,0">
+   <Inputs instanceID="-1" confirmationId="APPLY_GRAPHICSSETTINGS" uiQuestion="@ui_ApplyWarningUltraSettings" uiAnswer0="@ui_Yes" uiAnswer1="@ui_No" defaultSelect0="1" tooltip0="" tooltip1="" actionBackOnAnswer="1" sound0="" sound1=""/>
+  </Node>
+  <Node Id="937" Class="UI:Functions:MainMenu:AddConfirmation" pos="648,2700,0">
+   <Inputs instanceID="-1" confirmationId="APPLY_GRAPHICSSETTINGS_BACK" uiQuestion="@ui_ApplyChanges" uiAnswer0="@ui_Yes" uiAnswer1="@ui_No" defaultSelect0="0" tooltip0="" tooltip1="" actionBackOnAnswer="-1" sound0="" sound1=""/>
+  </Node>
+  <Node Id="938" Class="UI:Functions:MainMenu:GetChoice" pos="-648,2196,0">
+   <Inputs instanceID="-1" id="SW_QUALITY" containerIndex="0"/>
+  </Node>
+  <Node Id="944" Class="Math:Equal" pos="-126,2214,0">
+   <Inputs A="0" B="7"/>
+  </Node>
+  <Node Id="945" Class="Math:Equal" pos="-198,1728,0">
+   <Inputs A="0" B="7"/>
+  </Node>
+  <Node Id="946" Class="UI:Functions:MainMenu:AddChoiceOption" pos="2124,-702,0">
+   <Inputs instanceID="-1" choiceId="3" buttonId="SW_VSYNC" containerIndex="0" uiText="60 Hz" tooltip="" disable="0"/>
+  </Node>
+  <Node Id="948" Class="UI:Functions:MainMenu:AddChoiceOption" pos="1350,-702,0">
+   <Inputs instanceID="-1" choiceId="1" buttonId="SW_VSYNC" containerIndex="0" uiText="@ui_on" tooltip="" disable="0"/>
+  </Node>
+  <Node Id="949" Class="UI:Functions:MainMenu:AddChoiceOption" pos="1422,-1206,0">
+   <Inputs instanceID="-1" choiceId="-1" buttonId="SW_QUALITY" containerIndex="0" uiText="@ogp_ugly" tooltip="" disable="0"/>
+  </Node>
+  <Node Id="950" Class="UI:Functions:MainMenu:AddChoiceOption" pos="1800,-1206,0">
+   <Inputs instanceID="-1" choiceId="-2" buttonId="SW_QUALITY" containerIndex="0" uiText=" @ogp_low" tooltip="" disable="0"/>
+  </Node>
+  <Node Id="951" Class="UI:Functions:MainMenu:AddChoiceOption" pos="2178,-1206,0">
+   <Inputs instanceID="-1" choiceId="-3" buttonId="SW_QUALITY" containerIndex="0" uiText=" @ogp_medium" tooltip="" disable="0"/>
+  </Node>
+  <Node Id="952" Class="UI:Functions:MainMenu:AddChoiceOption" pos="2556,-1206,0">
+   <Inputs instanceID="-1" choiceId="-4" buttonId="SW_QUALITY" containerIndex="0" uiText=" @ogp_high" tooltip="" disable="0"/>
+  </Node>
+  <Node Id="953" Class="UI:Functions:MainMenu:AddChoiceOption" pos="2934,-1206,0">
+   <Inputs instanceID="-1" choiceId="-5" buttonId="SW_QUALITY" containerIndex="0" uiText=" @ogp_ultra" tooltip="" disable="0"/>
+  </Node>
+  <Node Id="954" Class="Debug:ExecuteString" pos="2592,3528,0">
+   <Inputs String="" NextFrame="0"/>
+  </Node>
+  <Node Id="955" Class="Time:FrameDelay" pos="2394,3672,0">
+   <Inputs />
+  </Node>
+  <Node Id="956" Class="String:Concat" pos="2016,3492,0">
+   <Inputs String1="ogp_set_profile " String2=""/>
+  </Node>
+  <Node Id="957" Class="Debug:Log" pos="2592,3456,0">
+   <Inputs message=""/>
+  </Node>
+  <Node Id="960" Class="UI:Functions:MainMenu:AddChoiceOption" pos="972,-432,0">
+   <Inputs instanceID="-1" choiceId="50" buttonId="SW_FOV" containerIndex="0" uiText="50" tooltip="" disable="0"/>
+  </Node>
+  <Node Id="961" Class="UI:Functions:MainMenu:AddChoiceOption" pos="1350,-432,0">
+   <Inputs instanceID="-1" choiceId="55" buttonId="SW_FOV" containerIndex="0" uiText="55" tooltip="" disable="0"/>
+  </Node>
+  <Node Id="962" Class="UI:Functions:MainMenu:AddChoiceOption" pos="1728,-432,0">
+   <Inputs instanceID="-1" choiceId="60" buttonId="SW_FOV" containerIndex="0" uiText="60" tooltip="" disable="0"/>
+  </Node>
+  <Node Id="963" Class="UI:Functions:MainMenu:AddChoiceOption" pos="2124,-432,0">
+   <Inputs instanceID="-1" choiceId="65" buttonId="SW_FOV" containerIndex="0" uiText="65" tooltip="" disable="0"/>
+  </Node>
+  <Node Id="964" Class="UI:Functions:MainMenu:AddChoiceOption" pos="3708,-432,0">
+   <Inputs instanceID="-1" choiceId="80" buttonId="SW_FOV" containerIndex="0" uiText="80" tooltip="" disable="0"/>
+  </Node>
+  <Node Id="965" Class="UI:Functions:MainMenu:AddChoiceOption" pos="4104,-432,0">
+   <Inputs instanceID="-1" choiceId="85" buttonId="SW_FOV" containerIndex="0" uiText="85" tooltip="" disable="0"/>
+  </Node>
+ </Nodes>
+ <Edges>
+  <Edge nodeIn="129" nodeOut="1" portIn="in1" portOut="StartAction" enabled="1"/>
+  <Edge nodeIn="52" nodeOut="7" portIn="send" portOut="OnEvent" enabled="1"/>
+  <Edge nodeIn="550" nodeOut="42" portIn="Call" portOut="onEvent" enabled="1"/>
+  <Edge nodeIn="107" nodeOut="61" portIn="Get" portOut="onEvent" enabled="1"/>
+  <Edge nodeIn="547" nodeOut="61" portIn="choiceId" portOut="FPS" enabled="1"/>
+  <Edge nodeIn="547" nodeOut="61" portIn="Call" portOut="onEvent" enabled="1"/>
+  <Edge nodeIn="553" nodeOut="61" portIn="choiceId" portOut="FullScreen" enabled="1"/>
+  <Edge nodeIn="553" nodeOut="61" portIn="Call" portOut="onEvent" enabled="1"/>
+  <Edge nodeIn="554" nodeOut="61" portIn="choiceId" portOut="Resolution" enabled="1"/>
+  <Edge nodeIn="554" nodeOut="61" portIn="Call" portOut="onEvent" enabled="1"/>
+  <Edge nodeIn="628" nodeOut="61" portIn="value" portOut="Gamma" enabled="1"/>
+  <Edge nodeIn="628" nodeOut="61" portIn="Call" portOut="onEvent" enabled="1"/>
+  <Edge nodeIn="849" nodeOut="61" portIn="Value" portOut="Gamma" enabled="1"/>
+  <Edge nodeIn="849" nodeOut="61" portIn="Set" portOut="onEvent" enabled="1"/>
+  <Edge nodeIn="859" nodeOut="61" portIn="choiceId" portOut="FOV" enabled="1"/>
+  <Edge nodeIn="859" nodeOut="61" portIn="Call" portOut="onEvent" enabled="1"/>
+  <Edge nodeIn="869" nodeOut="61" portIn="choiceId" portOut="VSync" enabled="1"/>
+  <Edge nodeIn="869" nodeOut="61" portIn="Call" portOut="onEvent" enabled="1"/>
+  <Edge nodeIn="731" nodeOut="67" portIn="instanceID" portOut="instanceID" enabled="1"/>
+  <Edge nodeIn="731" nodeOut="67" portIn="Call" portOut="onEvent" enabled="1"/>
+  <Edge nodeIn="780" nodeOut="73" portIn="instanceID" portOut="instanceID" enabled="1"/>
+  <Edge nodeIn="934" nodeOut="73" portIn="instanceID" portOut="instanceID" enabled="1"/>
+  <Edge nodeIn="934" nodeOut="73" portIn="Call" portOut="onEvent" enabled="1"/>
+  <Edge nodeIn="936" nodeOut="73" portIn="instanceID" portOut="instanceID" enabled="1"/>
+  <Edge nodeIn="153" nodeOut="81" portIn="choiceId" portOut="ID" enabled="1"/>
+  <Edge nodeIn="153" nodeOut="81" portIn="uiText" portOut="ResString" enabled="1"/>
+  <Edge nodeIn="153" nodeOut="81" portIn="Call" portOut="onEvent" enabled="1"/>
+  <Edge nodeIn="106" nodeOut="102" portIn="EndAction" portOut="onEvent" enabled="1"/>
+  <Edge nodeIn="546" nodeOut="107" portIn="Call" portOut="CurValue" enabled="1"/>
+  <Edge nodeIn="128" nodeOut="126" portIn="uiActions_UIAction" portOut="Id" enabled="1"/>
+  <Edge nodeIn="128" nodeOut="126" portIn="Start" portOut="onEvent" enabled="1"/>
+  <Edge nodeIn="129" nodeOut="128" portIn="in2" portOut="OnEnd" enabled="1"/>
+  <Edge nodeIn="555" nodeOut="129" portIn="Call" portOut="out" enabled="1"/>
+  <Edge nodeIn="136" nodeOut="135" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="137" nodeOut="136" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="139" nodeOut="137" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="140" nodeOut="138" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="138" nodeOut="139" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="141" nodeOut="140" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="142" nodeOut="141" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="949" nodeOut="142" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="144" nodeOut="143" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="145" nodeOut="144" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="146" nodeOut="145" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="864" nodeOut="146" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="148" nodeOut="147" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="149" nodeOut="148" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="866" nodeOut="149" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="151" nodeOut="150" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="152" nodeOut="151" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="7" nodeOut="152" portIn="send" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="785" nodeOut="545" portIn="in1" portOut="onEvent" enabled="1"/>
+  <Edge nodeIn="42" nodeOut="548" portIn="FPS" portOut="ReturnVal" enabled="1"/>
+  <Edge nodeIn="42" nodeOut="549" portIn="FullScreen" portOut="ReturnVal" enabled="1"/>
+  <Edge nodeIn="956" nodeOut="550" portIn="Set" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="956" nodeOut="550" portIn="String2" portOut="ReturnVal" enabled="1"/>
+  <Edge nodeIn="42" nodeOut="552" portIn="send" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="42" nodeOut="552" portIn="Resolution" portOut="ReturnVal" enabled="1"/>
+  <Edge nodeIn="135" nodeOut="555" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="556" nodeOut="555" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="42" nodeOut="632" portIn="Gamma" portOut="ReturnVal" enabled="1"/>
+  <Edge nodeIn="788" nodeOut="732" portIn="send" portOut="onEvent" enabled="1"/>
+  <Edge nodeIn="544" nodeOut="734" portIn="instanceID" portOut="instanceID" enabled="1"/>
+  <Edge nodeIn="937" nodeOut="734" portIn="instanceID" portOut="instanceID" enabled="1"/>
+  <Edge nodeIn="938" nodeOut="734" portIn="instanceID" portOut="instanceID" enabled="1"/>
+  <Edge nodeIn="938" nodeOut="734" portIn="Call" portOut="onEvent" enabled="1"/>
+  <Edge nodeIn="787" nodeOut="781" portIn="A" portOut="res" enabled="1"/>
+  <Edge nodeIn="548" nodeOut="785" portIn="Call" portOut="out" enabled="1"/>
+  <Edge nodeIn="549" nodeOut="785" portIn="Call" portOut="out" enabled="1"/>
+  <Edge nodeIn="552" nodeOut="785" portIn="Call" portOut="out" enabled="1"/>
+  <Edge nodeIn="632" nodeOut="785" portIn="Call" portOut="out" enabled="1"/>
+  <Edge nodeIn="863" nodeOut="785" portIn="Call" portOut="out" enabled="1"/>
+  <Edge nodeIn="865" nodeOut="785" portIn="Call" portOut="out" enabled="1"/>
+  <Edge nodeIn="785" nodeOut="787" portIn="in2" portOut="true" enabled="1"/>
+  <Edge nodeIn="870" nodeOut="787" portIn="in1" portOut="false" enabled="1"/>
+  <Edge nodeIn="150" nodeOut="789" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="848" nodeOut="843" portIn="Set" portOut="onEvent" enabled="1"/>
+  <Edge nodeIn="848" nodeOut="843" portIn="Value" portOut="value" enabled="1"/>
+  <Edge nodeIn="786" nodeOut="850" portIn="EndAction" portOut="CurValue" enabled="1"/>
+  <Edge nodeIn="851" nodeOut="850" portIn="Set" portOut="CurValue" enabled="1"/>
+  <Edge nodeIn="851" nodeOut="850" portIn="Value" portOut="CurValue" enabled="1"/>
+  <Edge nodeIn="960" nodeOut="852" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="854" nodeOut="853" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="855" nodeOut="854" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="964" nodeOut="855" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="789" nodeOut="858" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="42" nodeOut="863" portIn="FOV" portOut="ReturnVal" enabled="1"/>
+  <Edge nodeIn="147" nodeOut="864" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="42" nodeOut="865" portIn="VSync" portOut="ReturnVal" enabled="1"/>
+  <Edge nodeIn="867" nodeOut="866" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="948" nodeOut="867" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="946" nodeOut="868" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="850" nodeOut="870" portIn="Get" portOut="out" enabled="1"/>
+  <Edge nodeIn="870" nodeOut="933" portIn="in2" portOut="Out" enabled="1"/>
+  <Edge nodeIn="945" nodeOut="934" portIn="A" portOut="ReturnVal" enabled="1"/>
+  <Edge nodeIn="944" nodeOut="938" portIn="A" portOut="ReturnVal" enabled="1"/>
+  <Edge nodeIn="544" nodeOut="944" portIn="Call" portOut="true" enabled="1"/>
+  <Edge nodeIn="937" nodeOut="944" portIn="Call" portOut="false" enabled="1"/>
+  <Edge nodeIn="780" nodeOut="945" portIn="Call" portOut="false" enabled="1"/>
+  <Edge nodeIn="936" nodeOut="945" portIn="Call" portOut="true" enabled="1"/>
+  <Edge nodeIn="852" nodeOut="946" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="868" nodeOut="948" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="950" nodeOut="949" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="951" nodeOut="950" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="952" nodeOut="951" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="953" nodeOut="952" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="143" nodeOut="953" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="2" nodeOut="955" portIn="EndAction" portOut="out" enabled="1"/>
+  <Edge nodeIn="954" nodeOut="956" portIn="Set" portOut="Out" enabled="1"/>
+  <Edge nodeIn="954" nodeOut="956" portIn="String" portOut="Out" enabled="1"/>
+  <Edge nodeIn="955" nodeOut="956" portIn="in" portOut="Out" enabled="1"/>
+  <Edge nodeIn="957" nodeOut="956" portIn="input" portOut="Out" enabled="1"/>
+  <Edge nodeIn="957" nodeOut="956" portIn="message" portOut="Out" enabled="1"/>
+  <Edge nodeIn="961" nodeOut="960" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="962" nodeOut="961" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="963" nodeOut="962" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="853" nodeOut="963" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="965" nodeOut="964" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="858" nodeOut="965" portIn="Call" portOut="OnCall" enabled="1"/>
+ </Edges>
+ <GraphTokens />
+</Graph>
