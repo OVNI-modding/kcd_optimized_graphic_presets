@@ -1,4 +1,6 @@
 
+-- General
+
 ogp.strings.ogp_ugly = "Ugly"
 ogp.strings.ogp_low = "Low"
 ogp.strings.ogp_medium = "Medium"
@@ -10,6 +12,13 @@ ogp.strings.ogp_vanilla_medium = "vanilla Med"
 ogp.strings.ogp_vanilla_high = "vanilla High"
 ogp.strings.ogp_vanilla_veryhigh = "vanilla VHigh"
 ogp.strings.ogp_vanilla_ultra = "vanilla Ultra"
+
+ogp.strings.ogp_light = "Light"
+ogp.strings.ogp_strong = "Strong"
+ogp.strings.ogp_very_strong = "Very Strong"
+ogp.strings.ogp_vanilla = "Vanilla"
+
+-- Specific
 
 ogp.strings.ogp_vsync_label = "VSync"
 ogp.strings.ogp_vsync_tooltip = "Recommended:off (use GPU driver's control panel to enable adaptive/dynamic vsync instead)"
@@ -53,9 +62,7 @@ ogp.strings.ogp_shadows_label = "Shadows"
 ogp.strings.ogp_shadows_tooltip = ""
 
 ogp.strings.ogp_drunk_ssdo_label = "Ambiant occlusion"
-ogp.strings.ogp_drunk_ssdo_tooltip = ""
-ogp.strings.ogp_light = "Light"
-ogp.strings.ogp_strong = "Strong"
+ogp.strings.ogp_drunk_ssdo_tooltip = "If on, the strength of the effect has no impact on performances."
 
 ogp.strings.ogp_texture_label = "Textures"
 ogp.strings.ogp_texture_tooltip = ""
