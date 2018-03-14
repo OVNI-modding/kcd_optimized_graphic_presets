@@ -67,8 +67,14 @@ end
 --- Should not be used directly, use SetCVar instead.
 ---
 function ogp.SetOgpCVar( cvar, value )
+	local succeeded, errorMessage
 	value = tonumber(value)
 	if value > 0 then
+		-- reset sys_spec_ogp_xxx
+		ogp.LogInfo( cvar .. " = -999" )
+		succeeded, errorMessage = pcall( System.SetCVar, cvar, -999 )
+		if not succeeded then ogp.LogError(errorMessage) end
+		-- will set value to sys_spec_ogp_xxx_vanilla
 		cvar = cvar .. "_vanilla"
 	end
 	ogp.LogInfo( cvar .. " = " .. value )
