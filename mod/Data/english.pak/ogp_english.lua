@@ -34,6 +34,8 @@ ogp.strings.ogp_drunk_sharpening_tooltip = "Sharpens  screen heavily when drunk"
 
 ogp.strings.ogp_gi_label = "Global Illumination"
 ogp.strings.ogp_gi_tooltip = "Light diffusion/boucing"
+ogp.strings.ogp_gi_baked = "Baked"
+ogp.strings.ogp_gi_baked_tooltip = "Use baked lighning instead of cone tracing. Recommanded, unless you absolutly want darken interiors."
 
 ogp.strings.ogp_grass_label = "Grass"
 ogp.strings.ogp_grass_tooltip = "Grass quality and distance (requires to unpause the game to fully apply)"
