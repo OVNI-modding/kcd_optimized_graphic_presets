@@ -32,6 +32,7 @@ end
 --- Sets all-in-on graphic profile : -1 to -5 for ogp, 1,2,3,4,7 for vanilla
 ---
 function ogp.SetProfile( value )
+	value = tonumber(value)
 	if value == -1 then
 		System.ExecuteCommand( "loadconfig ogp_ugly" )
 	elseif value == -2 then
