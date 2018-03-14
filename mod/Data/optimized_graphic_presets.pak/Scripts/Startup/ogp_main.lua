@@ -8,6 +8,7 @@ function ogp.Init()
 	Script.ReloadScript( "Scripts/ogp_logging.lua" )
 	Script.ReloadScript( "Scripts/ogp_string_util.lua" )
 	Script.ReloadScript( "Scripts/ogp_menu_util.lua" )
+	Script.ReloadScript( "Scripts/ogp_cvar_util.lua" )
 	Script.ReloadScript( "Scripts/ogp_localization.lua" )
 	Script.ReloadScript( "Scripts/ogp_advanced_menu.lua" )
 

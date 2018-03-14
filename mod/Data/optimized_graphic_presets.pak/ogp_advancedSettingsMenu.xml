@@ -109,5 +109,12 @@
 				<choice label="@ogp_vanilla_ultra" tooltip="" value="7" />
 			</choices>
 		</button>
+		<button cvar="sys_spec_ogp_ssdo" label="@ogp_drunk_ssdo_label" tooltip="@ogp_drunk_ssdo_tooltip">
+			<choices>
+				<choice label="@ui_off" tooltip="" value="0" />
+				<choice label="@ogp_light" tooltip="" value="-1" />
+				<choice label="@ogp_strong" tooltip="" value="-2" />
+			</choices>
+		</button>
 	</buttons>
 </root>

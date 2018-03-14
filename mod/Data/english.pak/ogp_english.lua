@@ -49,3 +49,8 @@ ogp.strings.ogp_shading_tooltip = ""
 
 ogp.strings.ogp_shadows_label = "Shadows"
 ogp.strings.ogp_shadows_tooltip = ""
+
+ogp.strings.ogp_drunk_ssdo_label = "Ambiant occlusion"
+ogp.strings.ogp_drunk_ssdo_tooltip = ""
+ogp.strings.ogp_light = "Light"
+ogp.strings.ogp_strong = "Strong"
