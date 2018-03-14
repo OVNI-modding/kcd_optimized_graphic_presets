@@ -1,11 +1,13 @@
 <root>
 	<buttons>
+		
 		<button cvar="r_vsync" label="@ogp_vsync_label" tooltip="@ogp_vsync_tooltip">
 			<choices>
 				<choice label="@ui_off" tooltip="" value="0" />
 				<choice label="@ui_on" tooltip="" value="1" />
 			</choices>
 		</button>
+
 		<button cvar="sys_spec_ogp_antialiasing" label="@ogp_antialiasing_label" tooltip="@ogp_antialiasing_tooltip">
 			<choices>
 				<choice label="@ui_off" tooltip="@ui_off" value="0" />
@@ -15,6 +17,7 @@
 				<choice label="SSAA 2x" tooltip="@ogp_ssaa2x_tooltip" value="-50" />
 			</choices>
 		</button>
+
 		<button cvar="r_motionblur" label="@ui_MotionBlur" tooltip="@ogp_motionblur_tooltip">
 			<choices>
 				<choice label="@ui_off" tooltip="" value="0" />
@@ -22,30 +25,35 @@
 				<choice label="@ui_CameraObject" tooltip="" value="2" />
 			</choices>
 		</button>
+
 		<button cvar="e_MergedMeshesUseSpines" label="@ogp_grass_wind_label" tooltip="@ogp_grass_wind_tooltip">
 			<choices>
 				<choice label="@ui_off" tooltip="" value="0" />
 				<choice label="@ui_on" tooltip="" value="1" />
 			</choices>
 		</button>
+
 		<button cvar="e_ObjShadowCastSpec" label="@ogp_grass_shadow_label" tooltip="@ogp_grass_shadow_tooltip">
 			<choices>
 				<choice label="@ui_off" tooltip="" value="1" />
 				<choice label="@ui_on" tooltip="" value="3" />
 			</choices>
 		</button>
+
 		<button cvar="r_sharpening" label="@ogp_drunk_sharpening_label" tooltip="@ogp_drunk_sharpening_tooltip">
 			<choices>
 				<choice label="@ui_off" tooltip="" value="-10" />
 				<choice label="@ui_on" tooltip="" value="0" />
 			</choices>
 		</button>
+
 		<button cvar="sys_spec_ogp_dof_state" label="@ogp_dof_label" tooltip="@ogp_dof_tooltip">
 			<choices>
 				<choice label="@ui_off" tooltip="" value="0" />
 				<choice label="@ui_on" tooltip="" value="2" />
 			</choices>
 		</button>
+
 		<button cvar="sys_spec_ogp_gi" label="@ogp_gi_label" tooltip="@ogp_gi_tooltip">
 			<choices>
 				<choice label="@ogp_gi_baked" tooltip="@ogp_gi_baked_tooltip" value="-1" />
@@ -60,6 +68,7 @@
 				<choice label="@ogp_vanilla_ultra" tooltip="" value="7" />
 			</choices>
 		</button>
+
 		<button cvar="sys_spec_ogp_grass" label="@ogp_grass_label" tooltip="@ogp_grass_tooltip">
 			<choices>
 				<choice label="@ogp_ugly" tooltip="" value="-1" />
@@ -74,6 +83,7 @@
 				<choice label="@ogp_vanilla_ultra" tooltip="" value="7" />
 			</choices>
 		</button>
+
 		<button cvar="sys_spec_ogp_lod" label="@ogp_lod_label" tooltip="@ogp_lod_tooltip">
 			<choices>
 				<choice label="@ogp_ugly" tooltip="" value="-1" />
@@ -88,12 +98,14 @@
 				<choice label="@ogp_vanilla_ultra" tooltip="" value="7" />
 			</choices>
 		</button>
+
 		<button cvar="sys_spec_ogp_physics" label="@ogp_physics_label" tooltip="@ogp_physics_tooltip">
 			<choices>
 				<choice label="@ogp_low" tooltip="" value="-2" />
 				<choice label="@ogp_medium" tooltip="" value="-3" />
 			</choices>
 		</button>
+
 		<button cvar="sys_spec_ogp_shading" label="@ogp_shading_label" tooltip="@ogp_shading_tooltip">
 			<choices>
 				<choice label="@ogp_ugly" tooltip="" value="-1" />
@@ -101,6 +113,7 @@
 				<choice label="@ogp_medium" tooltip="" value="-3" />
 			</choices>
 		</button>
+
 		<button cvar="sys_spec_ogp_shadows" label="@ogp_shadows_label" tooltip="@ogp_shadows_tooltip">
 			<choices>
 				<choice label="@ogp_ugly" tooltip="" value="-1" />
@@ -115,6 +128,7 @@
 				<choice label="@ogp_vanilla_ultra" tooltip="" value="7" />
 			</choices>
 		</button>
+
 		<button cvar="sys_spec_ogp_ssdo" label="@ogp_drunk_ssdo_label" tooltip="@ogp_drunk_ssdo_tooltip">
 			<choices>
 				<choice label="@ui_off" tooltip="" value="0" />
@@ -125,28 +139,32 @@
 				<choice label="@ogp_vanilla" tooltip="" value="1" />
 			</choices>
 		</button>
+
+		<button cvar="sys_spec_ogp_texture" label="@ogp_texture_label" tooltip="@ogp_texture_tooltip">
+			<choices>
+				<choice label="@ogp_ugly" tooltip="@ogp_texture_ugly_tooltip" value="-1" />
+				<choice label="@ogp_low" tooltip="@ogp_texture_low_tooltip" value="-2" />
+				<choice label="@ogp_medium" tooltip="@ogp_texture_medium_tooltip" value="-3" />
+				<choice label="@ogp_high" tooltip="@ogp_texture_high_tooltip" value="-4" />
+				<choice label="@ogp_ultra" tooltip="@ogp_texture_ultra_tooltip" value="-5" />
+			</choices>
+		</button>
+
+		<button cvar="sys_spec_ogp_water" label="@ogp_water_label" tooltip="@ogp_water_tooltip">
+			<choices>
+				<choice label="@ogp_ugly" tooltip="" value="-1" />
+				<choice label="@ogp_low" tooltip="" value="-2" />
+				<choice label="@ogp_medium" tooltip="" value="-3" />
+				<choice label="@ogp_high" tooltip="" value="-4" />
+				<choice label="@ogp_ultra" tooltip="" value="-5" />
+			</choices>
+		</button>
+
+		<button cvar="sys_spec_ogp_weather" label="@ogp_weather_label" tooltip="@ogp_weather_tooltip">
+			<choices>
+				<choice label="@ogp_medium" tooltip="" value="-3" />
+			</choices>
+		</button>
+
 	</buttons>
-	<button cvar="sys_spec_ogp_texture" label="@ogp_texture_label" tooltip="@ogp_texture_tooltip">
-		<choices>
-			<choice label="@ogp_ugly" tooltip="@ogp_texture_ugly_tooltip" value="-1" />
-			<choice label="@ogp_low" tooltip="@ogp_texture_low_tooltip" value="-2" />
-			<choice label="@ogp_medium" tooltip="@ogp_texture_medium_tooltip" value="-3" />
-			<choice label="@ogp_high" tooltip="@ogp_texture_high_tooltip" value="-4" />
-			<choice label="@ogp_ultra" tooltip="@ogp_texture_ultra_tooltip" value="-5" />
-		</choices>
-	</button>
-	<button cvar="sys_spec_ogp_water" label="@ogp_water_label" tooltip="@ogp_water_tooltip">
-		<choices>
-			<choice label="@ogp_ugly" tooltip="" value="-1" />
-			<choice label="@ogp_low" tooltip="" value="-2" />
-			<choice label="@ogp_medium" tooltip="" value="-3" />
-			<choice label="@ogp_high" tooltip="" value="-4" />
-			<choice label="@ogp_ultra" tooltip="" value="-5" />
-		</choices>
-	</button>
-	<button cvar="sys_spec_ogp_weather" label="@ogp_weather_label" tooltip="@ogp_weather_tooltip">
-		<choices>
-			<choice label="@ogp_medium" tooltip="" value="-3" />
-		</choices>
-	</button>
 </root>
