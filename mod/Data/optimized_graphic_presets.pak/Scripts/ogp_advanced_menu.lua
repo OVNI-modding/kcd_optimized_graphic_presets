@@ -14,18 +14,9 @@ end
 ---
 function ogp.CreateAdvancedSettingsButtons()
 	for _,button in ipairs(ogp.buttons) do
-		ogp.menu_util.AddChoiceButton(
-			button.cvar,
-			ogp.Localize( button.label ),
-			ogp.Localize( button.tooltip )
-		)
+		ogp.menu_util.AddChoiceButton( button.cvar, button.label, button.tooltip )
 		for _,choice in ipairs(button.choices) do
-			ogp.menu_util.AddChoiceOption(
-				button.cvar,
-				ogp.Localize( choice.label ),
-				ogp.Localize( choice.tooltip ),
-				choice.value
-			)
+			ogp.menu_util.AddChoiceOption( button.cvar, choice.label, choice.tooltip, choice.value )
 		end
 		local value = ogp.GetCVar(button.cvar)
 		ogp.menu_util.SetChoice( button.cvar, value )
