@@ -34,25 +34,25 @@ end
 function ogp.SetProfile( value )
 	value = tonumber(value)
 	if value == -1 then
-		System.ExecuteCommand( "loadconfig ogp_ugly" )
+		System.ExecuteCommand( "ogp_low Config/ogp_ugly" )
 	elseif value == -2 then
-		System.ExecuteCommand( "loadconfig ogp_low" )
+		System.ExecuteCommand( "ogp_low Config/ogp_low" )
 	elseif value == -3 then
-		System.ExecuteCommand( "loadconfig ogp_medium" )
+		System.ExecuteCommand( "ogp_low Config/ogp_medium" )
 	elseif value == -4 then
-		System.ExecuteCommand( "loadconfig ogp_high" )
+		System.ExecuteCommand( "ogp_low Config/ogp_high" )
 	elseif value == -5 then
-		System.ExecuteCommand( "loadconfig ogp_ultra" )
+		System.ExecuteCommand( "ogp_low Config/ogp_ultra" )
 	elseif value == 1 then
-		System.ExecuteCommand( "loadconfig ogp_vanilla_low" )
+		System.ExecuteCommand( "ogp_low Config/ogp_vanilla_low" )
 	elseif value == 2 then
-		System.ExecuteCommand( "loadconfig ogp_vanilla_medium" )
+		System.ExecuteCommand( "ogp_low Config/ogp_vanilla_medium" )
 	elseif value == 3 then
-		System.ExecuteCommand( "loadconfig ogp_vanilla_high" )
+		System.ExecuteCommand( "ogp_low Config/ogp_vanilla_high" )
 	elseif value == 4 then
-		System.ExecuteCommand( "loadconfig ogp_vanilla_veryhigh" )
+		System.ExecuteCommand( "ogp_low Config/ogp_vanilla_veryhigh" )
 	elseif value == 7 then
-		System.ExecuteCommand( "loadconfig ogp_vanilla_ultra" )
+		System.ExecuteCommand( "ogp_low Config/ogp_vanilla_ultra" )
 	else
 		ogp.LogError("in SetProfile, unknown value:" .. value)
 	end
