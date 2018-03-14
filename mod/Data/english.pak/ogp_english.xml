@@ -1,0 +1,81 @@
+<Table>
+
+	<Row><Cell>ogp_ugly</Cell><Cell/><Cell>Ugly</Cell></Row>
+	<Row><Cell>ogp_low</Cell><Cell/><Cell>Low</Cell></Row>
+	<Row><Cell>ogp_medium</Cell><Cell/><Cell>Medium</Cell></Row>
+	<Row><Cell>ogp_high</Cell><Cell/><Cell>High</Cell></Row>
+	<Row><Cell>ogp_ultra</Cell><Cell/><Cell>Ultra</Cell></Row>
+	<Row><Cell>ogp_insane</Cell><Cell/><Cell>Insane</Cell></Row>
+
+	<Row><Cell>ogp_vanilla_low</Cell><Cell/><Cell>vanilla Low</Cell></Row>
+	<Row><Cell>ogp_vanilla_medium</Cell><Cell/><Cell>vanilla Med</Cell></Row>
+	<Row><Cell>ogp_vanilla_high</Cell><Cell/><Cell>vanilla High</Cell></Row>
+	<Row><Cell>ogp_vanilla_veryhigh</Cell><Cell/><Cell>vanilla V-high</Cell></Row>
+	<Row><Cell>ogp_vanilla_ultra</Cell><Cell/><Cell>vanilla Ultra</Cell></Row>
+
+	<Row><Cell>ogp_light</Cell><Cell/><Cell>Light</Cell></Row>
+	<Row><Cell>ogp_strong</Cell><Cell/><Cell>Strong</Cell></Row>
+	<Row><Cell>ogp_very_strong</Cell><Cell/><Cell>Very Strong</Cell></Row>
+	<Row><Cell>ogp_vanilla</Cell><Cell/><Cell>Vanilla</Cell></Row>
+
+	<Row><Cell>ogp_vsync_label</Cell><Cell/><Cell>VSync</Cell></Row>
+	<Row><Cell>ogp_vsync_tooltip</Cell><Cell/><Cell>Recommended:off (use GPU driver's control panel to enable adaptive/dynamic vsync instead)</Cell></Row>
+
+	<Row><Cell>ogp_antialiasing_label</Cell><Cell/><Cell>Anti-Aliasing</Cell></Row>
+	<Row><Cell>ogp_antialiasing_tooltip</Cell><Cell/><Cell></Cell></Row>
+	<Row><Cell>ogp_fxaa_tooltip</Cell><Cell/><Cell>Fast but blurry</Cell></Row>
+	<Row><Cell>ogp_smaa_tooltip</Cell><Cell/><Cell>Less blurry but leaves lot of aliasing.</Cell></Row>
+	<Row><Cell>ogp_smaa2tx_tooltip</Cell><Cell/><Cell>Temporal AA, removes most aliasing.</Cell></Row>
+	<Row><Cell>ogp_ssaa2x_tooltip</Cell><Cell/><Cell>VERY expensive, best quality tho...</Cell></Row>
+
+	<Row><Cell>ogp_motionblur_tooltip</Cell><Cell/><Cell>Recommended: off</Cell></Row>
+
+	<Row><Cell>ogp_grass_wind_label</Cell><Cell/><Cell>Wind on Grass</Cell></Row>
+	<Row><Cell>ogp_grass_wind_tooltip</Cell><Cell/><Cell>Recommended: off</Cell></Row>
+
+	<Row><Cell>ogp_grass_shadow_label</Cell><Cell/><Cell>Grass shadows</Cell></Row>
+	<Row><Cell>ogp_grass_shadow_tooltip</Cell><Cell/><Cell></Cell></Row>
+
+	<Row><Cell>ogp_drunk_sharpening_label</Cell><Cell/><Cell>Drunk Sharpening</Cell></Row>
+	<Row><Cell>ogp_drunk_sharpening_tooltip</Cell><Cell/><Cell>Sharpens screen heavily when drunk</Cell></Row>
+
+	<Row><Cell>ogp_dof_label</Cell><Cell/><Cell>Depth of Field</Cell></Row>
+	<Row><Cell>ogp_dof_tooltip</Cell><Cell/><Cell>Blurs background during dialogues.</Cell></Row>
+
+	<Row><Cell>ogp_gi_label</Cell><Cell/><Cell>Global Illumination</Cell></Row>
+	<Row><Cell>ogp_gi_tooltip</Cell><Cell/><Cell>Light diffusion/boucing</Cell></Row>
+	<Row><Cell>ogp_gi_baked</Cell><Cell/><Cell>Baked</Cell></Row>
+	<Row><Cell>ogp_gi_baked_tooltip</Cell><Cell/><Cell>Use baked lighning instead of real-time cone tracing.</Cell></Row>
+
+	<Row><Cell>ogp_grass_label</Cell><Cell/><Cell>Grass</Cell></Row>
+	<Row><Cell>ogp_grass_tooltip</Cell><Cell/><Cell>Grass quality and distance (requires to unpause the game to fully apply)</Cell></Row>
+
+	<Row><Cell>ogp_lod_label</Cell><Cell/><Cell>Level of Detail</Cell></Row>
+	<Row><Cell>ogp_lod_tooltip</Cell><Cell/><Cell>Characters, objects, and vegetation(except grass) rendering quality/distance</Cell></Row>
+
+	<Row><Cell>ogp_physics_label</Cell><Cell/><Cell>Physics</Cell></Row>
+	<Row><Cell>ogp_physics_tooltip</Cell><Cell/><Cell></Cell></Row>
+
+	<Row><Cell>ogp_shading_label</Cell><Cell/><Cell>Shading</Cell></Row>
+	<Row><Cell>ogp_shading_tooltip</Cell><Cell/><Cell></Cell></Row>
+
+	<Row><Cell>ogp_shadows_label</Cell><Cell/><Cell>Shadows</Cell></Row>
+	<Row><Cell>ogp_shadows_tooltip</Cell><Cell/><Cell></Cell></Row>
+
+	<Row><Cell>ogp_drunk_ssdo_label</Cell><Cell/><Cell>Ambiant occlusion</Cell></Row>
+	<Row><Cell>ogp_drunk_ssdo_tooltip</Cell><Cell/><Cell>If on, the strength of the effect has no impact on performances.</Cell></Row>
+
+	<Row><Cell>ogp_texture_label</Cell><Cell/><Cell>Textures</Cell></Row>
+	<Row><Cell>ogp_texture_tooltip</Cell><Cell/><Cell></Cell></Row>
+	<Row><Cell>ogp_texture_ugly_tooltip</Cell><Cell/><Cell>Requires 1GB VRAM</Cell></Row>
+	<Row><Cell>ogp_texture_low_tooltip</Cell><Cell/><Cell>Requires 1.5GB VRAM</Cell></Row>
+	<Row><Cell>ogp_texture_medium_tooltip</Cell><Cell/><Cell>Requires 2GB VRAM</Cell></Row>
+	<Row><Cell>ogp_texture_high_tooltip</Cell><Cell/><Cell>Requires 3GB VRAM</Cell></Row>
+	<Row><Cell>ogp_texture_ultra_tooltip</Cell><Cell/><Cell>Requires 6GB VRAM</Cell></Row>
+
+	<Row><Cell>ogp_water_label</Cell><Cell/><Cell>Water</Cell></Row>
+	<Row><Cell>ogp_water_tooltip</Cell><Cell/><Cell></Cell></Row>
+
+	<Row><Cell>ogp_weather_label</Cell><Cell/><Cell>Weather Effects</Cell></Row>
+	<Row><Cell>ogp_weather_tooltip</Cell><Cell/><Cell></Cell></Row>
+</Table>

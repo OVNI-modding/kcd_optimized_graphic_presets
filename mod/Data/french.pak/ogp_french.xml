@@ -1,0 +1,16 @@
+<Table>
+
+	<Row><Cell>ogp_ugly</Cell><Cell/><Cell>Moche</Cell></Row>
+	<Row><Cell>ogp_low</Cell><Cell/><Cell>Bas</Cell></Row>
+	<Row><Cell>ogp_medium</Cell><Cell/><Cell>Moyen</Cell></Row>
+	<Row><Cell>ogp_high</Cell><Cell/><Cell>Haut</Cell></Row>
+	<Row><Cell>ogp_ultra</Cell><Cell/><Cell>Ultra</Cell></Row>
+	<Row><Cell>ogp_insane</Cell><Cell/><Cell>Insane</Cell></Row>
+
+	<Row><Cell>ogp_vanilla_low</Cell><Cell/><Cell>vanilla Bas</Cell></Row>
+	<Row><Cell>ogp_vanilla_medium</Cell><Cell/><Cell>vanilla Moyen</Cell></Row>
+	<Row><Cell>ogp_vanilla_high</Cell><Cell/><Cell>vanilla Haut</Cell></Row>
+	<Row><Cell>ogp_vanilla_veryhigh</Cell><Cell/><Cell>vanilla T-haut</Cell></Row>
+	<Row><Cell>ogp_vanilla_ultra</Cell><Cell/><Cell>vanilla Ultra</Cell></Row>
+
+</Table>
