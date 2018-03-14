@@ -60,7 +60,7 @@ function ogp.__LoadSettings()
 end
 
 ---
---- Saves settings to ogp.settingsPath.
+--- Saves settings to ogp.settingsPath using button's value.
 ---
 function ogp.SaveSettings()
 	local root = {}
