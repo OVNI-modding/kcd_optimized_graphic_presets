@@ -1,6 +1,6 @@
 <root>
 	<buttons>
-		
+
 		<button cvar="r_vsync" label="@ogp_vsync_label" tooltip="@ogp_vsync_tooltip">
 			<choices>
 				<choice label="@ui_off" tooltip="" value="0" />
@@ -116,6 +116,7 @@
 
 		<button cvar="sys_spec_ogp_shadows" label="@ogp_shadows_label" tooltip="@ogp_shadows_tooltip">
 			<choices>
+				<choice label="@ui_off" tooltip="" value="0" />
 				<choice label="@ogp_ugly" tooltip="" value="-1" />
 				<choice label="@ogp_low" tooltip="" value="-2" />
 				<choice label="@ogp_medium" tooltip="" value="-3" />
