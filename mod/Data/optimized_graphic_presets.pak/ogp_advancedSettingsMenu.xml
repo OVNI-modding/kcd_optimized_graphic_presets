@@ -40,6 +40,12 @@
 				<choice label="@ui_on" tooltip="" value="0" />
 			</choices>
 		</button>
+		<button cvar="sys_spec_ogp_dof_state" label="@ogp_dof_label" tooltip="@ogp_dof_tooltip">
+			<choices>
+				<choice label="@ui_off" tooltip="" value="0" />
+				<choice label="@ui_on" tooltip="" value="2" />
+			</choices>
+		</button>
 		<button cvar="sys_spec_ogp_gi" label="@ogp_gi_label" tooltip="@ogp_gi_tooltip">
 			<choices>
 				<choice label="@ogp_gi_baked" tooltip="@ogp_gi_baked_tooltip" value="-1" />

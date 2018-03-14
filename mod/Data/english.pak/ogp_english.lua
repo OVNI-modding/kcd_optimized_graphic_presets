@@ -39,7 +39,10 @@ ogp.strings.ogp_grass_shadow_label = "Grass shadows"
 ogp.strings.ogp_grass_shadow_tooltip = ""
 
 ogp.strings.ogp_drunk_sharpening_label = "Drunk Sharpening"
-ogp.strings.ogp_drunk_sharpening_tooltip = "Sharpens  screen heavily when drunk"
+ogp.strings.ogp_drunk_sharpening_tooltip = "Sharpens screen heavily when drunk"
+
+ogp.strings.ogp_dof_label = "Depth of Field"
+ogp.strings.ogp_dof_tooltip = "Blurs background during dialogues."
 
 ogp.strings.ogp_gi_label = "Global Illumination"
 ogp.strings.ogp_gi_tooltip = "Light diffusion/boucing"
