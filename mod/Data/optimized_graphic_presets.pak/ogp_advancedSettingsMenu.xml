@@ -117,4 +117,13 @@
 			</choices>
 		</button>
 	</buttons>
+	<button cvar="sys_spec_ogp_texture" label="@ogp_texture_label" tooltip="@ogp_texture_tooltip">
+		<choices>
+			<choice label="@ogp_ugly" tooltip="@ogp_texture_ugly" value="-1" />
+			<choice label="@ogp_low" tooltip="@ogp_texture_low" value="-2" />
+			<choice label="@ogp_medium" tooltip="@ogp_texture_medium" value="-3" />
+			<choice label="@ogp_high" tooltip="@ogp_texture_high" value="-4" />
+			<choice label="@ogp_ultra" tooltip="@ogp_texture_ultra" value="-5" />
+		</choices>
+	</button>
 </root>
