@@ -62,3 +62,6 @@ ogp.strings.ogp_texture_low = "Requires 1.5GB VRAM"
 ogp.strings.ogp_texture_medium = "Requires 2GB VRAM"
 ogp.strings.ogp_texture_high = "Requires 3GB VRAM"
 ogp.strings.ogp_texture_ultra = "Requires 6GB VRAM"
+
+ogp.strings.ogp_water_label = "Water"
+ogp.strings.ogp_water_tooltip = ""
