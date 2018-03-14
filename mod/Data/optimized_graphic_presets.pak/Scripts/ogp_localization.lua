@@ -1,30 +1,38 @@
---
--- There are issues with vanilla localization system :
--- 1) overriding xxx_ui.xml file is out of question since we want to add strings, not replace the whole thing
---    (ie: new pathes may add new string, we dont want to remove them by overriding localization file...)
--- 2) System.LoadLocalizationXml does not fail when given file does not exists, making impossible to detect dynamically
---    if a localization file was added.
--- 3) System.LoadLocalizationXml does not allow to override (so we cannot load english first as a failsafe, then g_language afterward)
---
 
 ogp.strings = {}
 
 ---
---- Loads localization files.
+--- Init lua and xml localization.
 ---
 function ogp.InitLocalization()
-	Script.ReloadScript( 'ogp_english.lua' ) -- failsafe
+	ogp.LoadLuaLocalization()
+	ogp.LoadXmlLocalization()
+end
+
+---
+--- Loads Lua localization files.
+---
+function ogp.LoadLuaLocalization()
+	Script.ReloadScript( 'ogp_english.lua' ) -- fallback
 	Script.ReloadScript( 'ogp_' .. System.GetCVar('g_language') .. '.lua' )
 end
 
 ---
---- Localizes given string if it starts by '@'
+--- Loads XML localization files.
+---
+function ogp.LoadXmlLocalization()
+	System.LoadLocalizationXml( 'ogp_' .. System.GetCVar('g_language') .. '.xml' )
+
+	-- LoadLocalizationXml does not override previously loaded strings.
+	-- this allows to load english localization as a fallback.
+	System.LoadLocalizationXml( 'ogp_english.xml' )
+end
+
+---
+--- Localizes given string.
 ---
 function ogp.Localize( str )
-	if string.sub(str,1,1) ~= '@' then
-		return str
-	end
-	return ogp.strings[ string.sub(str,2) ] or str
+	return ogp.strings[str] or str
 end
 
 
