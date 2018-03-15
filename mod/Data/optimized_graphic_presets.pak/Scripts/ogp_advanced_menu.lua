@@ -47,7 +47,7 @@ function ogp.LoadSettings()
 			for _,setting in ipairs(root.settings) do
 				ogp.SetCVar( setting.cvar, setting.value )
 			end
-			ogp.LogInfo("Settings loaded for ".. ogp.settingsPath )
+			ogp.LogInfo("Loaded "..tostring(#root.settings).." settings from ".. ogp.settingsPath )
 		else
 			ogp.LogInfo("Could not load " .. ogp.settingsPath )
 		end
