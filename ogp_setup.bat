@@ -87,7 +87,7 @@ goto :EOF
 	echo.
 	echo ================================================================
 	echo.
-	echo                            Done.
+	echo              Done. (look above for possible errors)
 	echo.
 	echo ================================================================
 	echo.
