@@ -72,7 +72,7 @@ function ogp.SaveSettings()
 	end
 	local succeeded, error = pcall( CryAction.SaveXML, "ogp_settings_def.xml", ogp.settingsPath, root )
 	if succeeded then
-		ogp.LogInfo("Settings loaded.")
+		ogp.LogInfo("Settings saved.")
 	else
 		ogp.LogError( "Failed to save settings: " .. error )
 	end
