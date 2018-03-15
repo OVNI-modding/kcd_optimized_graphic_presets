@@ -48,7 +48,7 @@ function ogp.LoadSettings()
 		end
 		ogp.LogInfo("Settings loaded.")
 	else
-		ogp.LogInfo("Settings cannot be loaded: "..root)
+		ogp.LogError("Settings cannot be loaded: "..root)
 	end
 end
 
