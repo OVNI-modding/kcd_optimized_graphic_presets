@@ -59,6 +59,11 @@ It's the only way to display more buttons in the menu.
 ChangeLog
 =========
 
+3.1.0
+	FIX: "Settings aren't saved" issue on Windows10
+	FIX: ogp_set_3pl console command now works (to apply 3po)
+	MOD: Settings are now loaded from lua instead of flowgraph
+
 3.0.2
 - FIX: 75, 95, 100 fov settings
 
