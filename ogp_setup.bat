@@ -85,7 +85,6 @@ goto :EOF
 
 	REM Install new version
 	mkdir "Mods" 2>nul
-	mklink /D "Data\user_profile" "%USERPROFILE%\Saved Games\kingdomcome" 2>nul
 	@echo on
 	move /Y "optimized_graphic_presets\Data\optimized_graphic_presets.pak" "Data\zzz_optimized_graphic_presets.pak"
 	move /Y "optimized_graphic_presets" "Mods\"
