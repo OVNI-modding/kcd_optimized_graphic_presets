@@ -61,6 +61,9 @@ ChangeLog
 - NEW: Can set all-in-one profile in (standard) graphic menu.
 - NEW: Can change sub-profiles in advanced graphic menu
 - NEW: Settings load/saving from user profile
+- NEW: In adv Graphic Menu, disabled DoF and vignette effect to see applied changes.
+- NEW: Adv Graphic Menu contains 13 options instead of 7
+	NEW: in Adv Graphic Menu, Apply does not require confirmation.
 - NEW: more SSDO presets (old one is "strong").
 - NEW: Unlimited range for rainy/wet terrain shader (practically free, and the seam looked weird).
 - NEW: Added baked GI setting, replaces GI off (which made barns and interiors pitch black).
