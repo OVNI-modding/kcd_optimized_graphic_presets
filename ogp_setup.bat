@@ -78,10 +78,14 @@ goto :EOF
 	rmdir "obsolete\Config" 2>nul
 	rmdir "obsolete" 2>nul
 
+	REM old 3.0.0 and up files
+	rmdir "Data\user_profile" 2>nul
+	rmdir /S /Q "Mods\optimized_graphic_presets" 2>nul
+	del "Data\zzz_optimized_graphic_presets.pak" 2>nul
+
 	REM Install new version
 	mkdir "Mods" 2>nul
 	mklink /D "Data\user_profile" "%USERPROFILE%\Saved Games\kingdomcome" 2>nul
-	rmdir /S /Q "Mods\optimized_graphic_presets" 2>nul
 	@echo on
 	move /Y "optimized_graphic_presets\Data\optimized_graphic_presets.pak" "Data\zzz_optimized_graphic_presets.pak"
 	move /Y "optimized_graphic_presets" "Mods\"
