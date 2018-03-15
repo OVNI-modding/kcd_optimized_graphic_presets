@@ -1,6 +1,6 @@
 <Graph Description="" Group="ogp" enabled="1" MultiPlayer="ClientServer">
  <Nodes>
-  <Node Id="1" Class="UI:Action:Start" pos="-1026,-1440,0">
+  <Node Id="1" Class="UI:Action:Start" pos="-1188,-2754,0">
    <Inputs UseAsState="1"/>
   </Node>
   <Node Id="2" Class="UI:Action:End" pos="2610,3672,0">
@@ -9,15 +9,15 @@
   <Node Id="7" Class="UI:Functions:Settings:GetResolutionList" pos="1962,-18,0" flags="0">
    <Inputs />
   </Node>
-  <Node Id="29" Name="Setup_page" Class="_commentbox" pos="-1674,-2160.2178,0">
+  <Node Id="29" Name="Setup_page" Class="_commentbox" pos="-1674,-3045.3679,0">
    <Inputs TextSize="1" Color="0.27451,0.352941,0.705882" DisplayFilled="1" DisplayBox="1" SortPriority="16"/>
-   <ResizeBorder X="0" Y="0" Width="7218" Height="2052"/>
-   <NodeSize Width="7218" Height="2510.3516"/>
+   <ResizeBorder X="0" Y="0" Width="7218" Height="3294"/>
+   <NodeSize Width="7218" Height="3385.5168"/>
   </Node>
-  <Node Id="39" Name="Handle_events" Class="_commentbox" pos="-1680,-69.505157,0">
+  <Node Id="39" Name="Handle_events" Class="_commentbox" pos="-1680,297.32831,0">
    <Inputs TextSize="1" Color="0.27451,0.352941,0.705882" DisplayFilled="1" DisplayBox="1" SortPriority="16"/>
    <ResizeBorder X="0" Y="0" Width="4698" Height="4266"/>
-   <NodeSize Width="4698" Height="4724.3516"/>
+   <NodeSize Width="4698" Height="4357.5171"/>
   </Node>
   <Node Id="42" Class="UI:Functions:Settings:SetGraphics" pos="972,3510,0" flags="0">
    <Inputs Resolution="0" Quality="1" FullScreen="0" VSync="0" FPS="0" Gamma="0" FOV="0"/>
@@ -34,10 +34,10 @@
   <Node Id="73" Class="UI:Events:MainMenu:OnButton" pos="-1490,1700,0">
    <Inputs instanceID="-1" Port="0" Idx="ID_APPLY_GRAPHICS"/>
   </Node>
-  <Node Id="81" Class="UI:Events:Settings:OnResolutionItem" pos="-1440,-990,0" flags="0">
+  <Node Id="81" Class="UI:Events:Settings:OnResolutionItem" pos="-1602,-2304,0" flags="0">
    <Inputs Port="-1" Idx=""/>
   </Node>
-  <Node Id="87" Name="Setup_resolutions" Class="_comment" pos="-1440,-1026,0"/>
+  <Node Id="87" Name="Setup_resolutions" Class="_comment" pos="-1602,-2340,0"/>
   <Node Id="88" Name="Update_Data" Class="_comment" pos="-1530,738,0"/>
   <Node Id="89" Name="Reset_to_current_state" Class="_comment" pos="-1440,1250,0"/>
   <Node Id="90" Name="Apply_Graphic_Changes" Class="_comment" pos="-1460,1660,0"/>
@@ -50,49 +50,49 @@
   <Node Id="107" Class="Debug:ConsoleVariable" pos="-702,792,0">
    <Inputs CVar="sys_spec" Value=""/>
   </Node>
-  <Node Id="126" Class="UI:Events:MainMenu:OnButton" pos="-1440,-1278,0">
+  <Node Id="126" Class="UI:Events:MainMenu:OnButton" pos="-1602,-2592,0">
    <Inputs instanceID="-1" Port="0" Idx="MM_AdvancedGraphics"/>
   </Node>
-  <Node Id="128" Class="UI:Action:Control" pos="-1008,-1296,0">
+  <Node Id="128" Class="UI:Action:Control" pos="-1170,-2610,0">
    <Inputs uiActions_UIAction="" Strict="0" Args=""/>
   </Node>
-  <Node Id="129" Class="Logic:Any" pos="-666,-1440,0" InHideMask="1023" OutHideMask="1">
+  <Node Id="129" Class="Logic:Any" pos="-828,-2754,0" InHideMask="1023" OutHideMask="1">
    <Inputs />
   </Node>
-  <Node Id="135" Class="UI:Functions:MainMenu:SetContainer" pos="0,-1512,0">
+  <Node Id="135" Class="UI:Functions:MainMenu:SetContainer" pos="-162,-2826,0">
    <Inputs instanceID="-1" containerIndex="0" ButtonXPos="1500" ButtonYPos="430" MaxButtons="7"/>
   </Node>
-  <Node Id="136" Class="UI:Functions:MainMenu:AddChoicesButton" pos="486,-1476,0">
+  <Node Id="136" Class="UI:Functions:MainMenu:AddChoicesButton" pos="396,-2826,0">
    <Inputs instanceID="-1" buttonId="SW_RES" containerIndex="0" uiText="@ui_Resolution" tooltip="" disable="0" sound=""/>
   </Node>
-  <Node Id="137" Class="UI:Functions:MainMenu:AddChoicesButton" pos="972,-1476,0">
+  <Node Id="137" Class="UI:Functions:MainMenu:AddChoicesButton" pos="882,-2826,0">
    <Inputs instanceID="-1" buttonId="SW_FS" containerIndex="0" uiText="@ui_WindowMode" tooltip="" disable="0" sound=""/>
   </Node>
-  <Node Id="138" Class="UI:Functions:MainMenu:AddChoiceOption" pos="1728,-1476,0">
+  <Node Id="138" Class="UI:Functions:MainMenu:AddChoiceOption" pos="1638,-2826,0">
    <Inputs instanceID="-1" choiceId="0" buttonId="SW_FS" containerIndex="0" uiText="@ui_FullscreenWindow" tooltip="" disable="0"/>
   </Node>
-  <Node Id="139" Class="UI:Functions:MainMenu:AddChoiceOption" pos="1350,-1476,0">
+  <Node Id="139" Class="UI:Functions:MainMenu:AddChoiceOption" pos="1260,-2826,0">
    <Inputs instanceID="-1" choiceId="1" buttonId="SW_FS" containerIndex="0" uiText="@ui_Fullscreen" tooltip="" disable="0"/>
   </Node>
-  <Node Id="140" Class="UI:Functions:MainMenu:AddChoiceOption" pos="2142,-1476,0">
+  <Node Id="140" Class="UI:Functions:MainMenu:AddChoiceOption" pos="2052,-2826,0">
    <Inputs instanceID="-1" choiceId="2" buttonId="SW_FS" containerIndex="0" uiText="@ui_BorderlessWindow" tooltip="" disable="0"/>
   </Node>
-  <Node Id="141" Class="UI:Functions:MainMenu:AddChoicesButton" pos="486,-1206,0">
+  <Node Id="141" Class="UI:Functions:MainMenu:AddChoicesButton" pos="432,-2142,0">
    <Inputs instanceID="-1" buttonId="SW_QUALITY" containerIndex="0" uiText="@ui_Details" tooltip="@ui_DetailsTT" disable="0" sound=""/>
   </Node>
-  <Node Id="142" Class="UI:Functions:MainMenu:AddChoiceOption" pos="972,-1206,0">
+  <Node Id="142" Class="UI:Functions:MainMenu:AddChoiceOption" pos="918,-2142,0">
    <Inputs instanceID="-1" choiceId="0" buttonId="SW_QUALITY" containerIndex="0" uiText="@ui_Custom" tooltip="" disable="0"/>
   </Node>
-  <Node Id="143" Class="UI:Functions:MainMenu:AddChoiceOption" pos="3474,-1206,0">
+  <Node Id="143" Class="UI:Functions:MainMenu:AddChoiceOption" pos="3420,-2142,0">
    <Inputs instanceID="-1" choiceId="1" buttonId="SW_QUALITY" containerIndex="0" uiText="@ogp_vanilla_low" tooltip="" disable="0"/>
   </Node>
-  <Node Id="144" Class="UI:Functions:MainMenu:AddChoiceOption" pos="3852,-1206,0">
+  <Node Id="144" Class="UI:Functions:MainMenu:AddChoiceOption" pos="3798,-2142,0">
    <Inputs instanceID="-1" choiceId="2" buttonId="SW_QUALITY" containerIndex="0" uiText="@ogp_vanilla_medium" tooltip="" disable="0"/>
   </Node>
-  <Node Id="145" Class="UI:Functions:MainMenu:AddChoiceOption" pos="4230,-1206,0">
+  <Node Id="145" Class="UI:Functions:MainMenu:AddChoiceOption" pos="4176,-2142,0">
    <Inputs instanceID="-1" choiceId="3" buttonId="SW_QUALITY" containerIndex="0" uiText="@ogp_vanilla_high" tooltip="" disable="0"/>
   </Node>
-  <Node Id="146" Class="UI:Functions:MainMenu:AddChoiceOption" pos="4608,-1206,0">
+  <Node Id="146" Class="UI:Functions:MainMenu:AddChoiceOption" pos="4554,-2142,0">
    <Inputs instanceID="-1" choiceId="4" buttonId="SW_QUALITY" containerIndex="0" uiText="@ogp_vanilla_veryhigh" tooltip="" disable="0"/>
   </Node>
   <Node Id="147" Class="UI:Functions:MainMenu:AddChoicesButton" pos="486,-954,0">
@@ -113,7 +113,7 @@
   <Node Id="152" Class="UI:Functions:MainMenu:AddButton" pos="1566,-18,0">
    <Inputs instanceID="-1" id="IDD_Back" containerIndex="1" uiText="@ui_back" actionType="back" tooltip="" disable="0" sound=""/>
   </Node>
-  <Node Id="153" Class="UI:Functions:MainMenu:AddChoiceOption" pos="-990,-1026,0">
+  <Node Id="153" Class="UI:Functions:MainMenu:AddChoiceOption" pos="-1152,-2340,0">
    <Inputs instanceID="-1" choiceId="0" buttonId="SW_RES" containerIndex="0" uiText="" tooltip="" disable="0"/>
   </Node>
   <Node Id="544" Class="UI:Functions:MainMenu:AddConfirmation" pos="648,2358,0">
@@ -146,10 +146,10 @@
   <Node Id="554" Class="UI:Functions:MainMenu:SetChoice" pos="-1080,414,0">
    <Inputs instanceID="-1" id="SW_RES" containerIndex="0" choiceId="0"/>
   </Node>
-  <Node Id="555" Class="UI:Functions:MainMenu:ClearAll" pos="-486,-1440,0">
+  <Node Id="555" Class="UI:Functions:MainMenu:ClearAll" pos="-648,-2754,0">
    <Inputs instanceID="-1" useLastSelect="0"/>
   </Node>
-  <Node Id="556" Class="UI:Functions:MainMenu:SetTitleBox" pos="18,-1314,0">
+  <Node Id="556" Class="UI:Functions:MainMenu:SetTitleBox" pos="-144,-2628,0">
    <Inputs instanceID="-1" header="@ui_GraphicSettings"/>
   </Node>
   <Node Id="557" Name="Confirm_Apply_Graphic_Changes" Class="_comment" pos="-1548,3636,0"/>
@@ -211,14 +211,14 @@
   <Node Id="853" Class="UI:Functions:MainMenu:AddChoiceOption" pos="2556,-432,0">
    <Inputs instanceID="-1" choiceId="70" buttonId="SW_FOV" containerIndex="0" uiText="70" tooltip="" disable="0"/>
   </Node>
-  <Node Id="854" Class="UI:Functions:MainMenu:AddChoiceOption" pos="2934,-432,0">
+  <Node Id="854" Class="UI:Functions:MainMenu:AddChoiceOption" pos="3348,-432,0">
    <Inputs instanceID="-1" choiceId="80" buttonId="SW_FOV" containerIndex="0" uiText="80" tooltip="" disable="0"/>
   </Node>
-  <Node Id="855" Class="UI:Functions:MainMenu:AddChoiceOption" pos="3312,-432,0">
+  <Node Id="855" Class="UI:Functions:MainMenu:AddChoiceOption" pos="3726,-432,0">
    <Inputs instanceID="-1" choiceId="85" buttonId="SW_FOV" containerIndex="0" uiText="85" tooltip="" disable="0"/>
   </Node>
-  <Node Id="858" Class="UI:Functions:MainMenu:AddChoiceOption" pos="4500,-432,0">
-   <Inputs instanceID="-1" choiceId="90" buttonId="SW_FOV" containerIndex="0" uiText="90" tooltip="" disable="0"/>
+  <Node Id="858" Class="UI:Functions:MainMenu:AddChoiceOption" pos="4914,-432,0">
+   <Inputs instanceID="-1" choiceId="100" buttonId="SW_FOV" containerIndex="0" uiText="100" tooltip="" disable="0"/>
   </Node>
   <Node Id="859" Class="UI:Functions:MainMenu:SetChoice" pos="-1080,1152,0">
    <Inputs instanceID="-1" id="SW_FOV" containerIndex="0" choiceId="0"/>
@@ -226,7 +226,7 @@
   <Node Id="863" Class="UI:Functions:MainMenu:GetChoice" pos="54,3870,0">
    <Inputs instanceID="-1" id="SW_FOV" containerIndex="0"/>
   </Node>
-  <Node Id="864" Class="UI:Functions:MainMenu:AddChoiceOption" pos="5022,-1206,0">
+  <Node Id="864" Class="UI:Functions:MainMenu:AddChoiceOption" pos="4968,-2142,0">
    <Inputs instanceID="-1" choiceId="7" buttonId="SW_QUALITY" containerIndex="0" uiText="@ogp_vanilla_ultra" tooltip="" disable="0"/>
   </Node>
   <Node Id="865" Class="UI:Functions:MainMenu:GetChoice" pos="54,3474,0">
@@ -274,19 +274,19 @@
   <Node Id="948" Class="UI:Functions:MainMenu:AddChoiceOption" pos="1350,-702,0">
    <Inputs instanceID="-1" choiceId="1" buttonId="SW_VSYNC" containerIndex="0" uiText="@ui_on" tooltip="" disable="0"/>
   </Node>
-  <Node Id="949" Class="UI:Functions:MainMenu:AddChoiceOption" pos="1422,-1206,0">
+  <Node Id="949" Class="UI:Functions:MainMenu:AddChoiceOption" pos="1368,-2142,0">
    <Inputs instanceID="-1" choiceId="-1" buttonId="SW_QUALITY" containerIndex="0" uiText="@ogp_ugly" tooltip="" disable="0"/>
   </Node>
-  <Node Id="950" Class="UI:Functions:MainMenu:AddChoiceOption" pos="1800,-1206,0">
+  <Node Id="950" Class="UI:Functions:MainMenu:AddChoiceOption" pos="1746,-2142,0">
    <Inputs instanceID="-1" choiceId="-2" buttonId="SW_QUALITY" containerIndex="0" uiText=" @ogp_low" tooltip="" disable="0"/>
   </Node>
-  <Node Id="951" Class="UI:Functions:MainMenu:AddChoiceOption" pos="2178,-1206,0">
+  <Node Id="951" Class="UI:Functions:MainMenu:AddChoiceOption" pos="2124,-2142,0">
    <Inputs instanceID="-1" choiceId="-3" buttonId="SW_QUALITY" containerIndex="0" uiText=" @ogp_medium" tooltip="" disable="0"/>
   </Node>
-  <Node Id="952" Class="UI:Functions:MainMenu:AddChoiceOption" pos="2556,-1206,0">
+  <Node Id="952" Class="UI:Functions:MainMenu:AddChoiceOption" pos="2502,-2142,0">
    <Inputs instanceID="-1" choiceId="-4" buttonId="SW_QUALITY" containerIndex="0" uiText=" @ogp_high" tooltip="" disable="0"/>
   </Node>
-  <Node Id="953" Class="UI:Functions:MainMenu:AddChoiceOption" pos="2934,-1206,0">
+  <Node Id="953" Class="UI:Functions:MainMenu:AddChoiceOption" pos="2880,-2142,0">
    <Inputs instanceID="-1" choiceId="-5" buttonId="SW_QUALITY" containerIndex="0" uiText=" @ogp_ultra" tooltip="" disable="0"/>
   </Node>
   <Node Id="954" Class="Debug:ExecuteString" pos="2592,3528,0">
@@ -313,11 +313,14 @@
   <Node Id="963" Class="UI:Functions:MainMenu:AddChoiceOption" pos="2124,-432,0">
    <Inputs instanceID="-1" choiceId="65" buttonId="SW_FOV" containerIndex="0" uiText="65" tooltip="" disable="0"/>
   </Node>
-  <Node Id="964" Class="UI:Functions:MainMenu:AddChoiceOption" pos="3708,-432,0">
-   <Inputs instanceID="-1" choiceId="80" buttonId="SW_FOV" containerIndex="0" uiText="80" tooltip="" disable="0"/>
+  <Node Id="964" Class="UI:Functions:MainMenu:AddChoiceOption" pos="4122,-432,0">
+   <Inputs instanceID="-1" choiceId="90" buttonId="SW_FOV" containerIndex="0" uiText="90" tooltip="" disable="0"/>
   </Node>
-  <Node Id="965" Class="UI:Functions:MainMenu:AddChoiceOption" pos="4104,-432,0">
-   <Inputs instanceID="-1" choiceId="85" buttonId="SW_FOV" containerIndex="0" uiText="85" tooltip="" disable="0"/>
+  <Node Id="965" Class="UI:Functions:MainMenu:AddChoiceOption" pos="4518,-432,0">
+   <Inputs instanceID="-1" choiceId="95" buttonId="SW_FOV" containerIndex="0" uiText="95" tooltip="" disable="0"/>
+  </Node>
+  <Node Id="966" Class="UI:Functions:MainMenu:AddChoiceOption" pos="2952,-432,0">
+   <Inputs instanceID="-1" choiceId="75" buttonId="SW_FOV" containerIndex="0" uiText="75" tooltip="" disable="0"/>
   </Node>
  </Nodes>
  <Edges>
@@ -403,7 +406,7 @@
   <Edge nodeIn="851" nodeOut="850" portIn="Set" portOut="CurValue" enabled="1"/>
   <Edge nodeIn="851" nodeOut="850" portIn="Value" portOut="CurValue" enabled="1"/>
   <Edge nodeIn="960" nodeOut="852" portIn="Call" portOut="OnCall" enabled="1"/>
-  <Edge nodeIn="854" nodeOut="853" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="966" nodeOut="853" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="855" nodeOut="854" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="964" nodeOut="855" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="789" nodeOut="858" portIn="Call" portOut="OnCall" enabled="1"/>
@@ -440,6 +443,7 @@
   <Edge nodeIn="853" nodeOut="963" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="965" nodeOut="964" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="858" nodeOut="965" portIn="Call" portOut="OnCall" enabled="1"/>
+  <Edge nodeIn="854" nodeOut="966" portIn="Call" portOut="OnCall" enabled="1"/>
  </Edges>
  <GraphTokens />
 </Graph>
