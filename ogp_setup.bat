@@ -45,33 +45,38 @@ goto :EOF
 	if NOT exist "optimized_graphic_presets" goto :ERROR_OGP_FOLDER_ABSENT
 
 	REM Remove files from old versions
-	del "ogp_hotkeys.cfg" 2>nul
-	del "ugly.cfg" 2>nul
-	del "low.cfg" 2>nul
-	del "med.cfg" 2>nul
-	del "high.cfg" 2>nul
-	del "ultra.cfg" 2>nul
-	del "vanilla_low.cfg" 2>nul
-	del "vanilla_med.cfg" 2>nul
-	del "vanilla_high.cfg" 2>nul
-	del "vanilla_vhigh.cfg" 2>nul
-	del "vanilla_ultra.cfg" 2>nul
-	del "texture.cfg" 2>nul
-	del "reset.cfg" 2>nul
-	del "optimized_graphic_presets\readme.txt" 2>nul
-	del "optimized_graphic_presets\README.md" 2>nul
-	del "optimized_graphic_presets\user.cfg" 2>nul
-	REM del "Data\zzz_optimized_graphic_presets.pak" 2>nul
-	del "Config\high.cfg" 2>nul
-	del "Config\low.cfg" 2>nul
-	del "Config\medium.cfg" 2>nul
-	del "Config\ovni.cfg" 2>nul
-	del "Config\template.cfg" 2>nul
-	del "Config\ugly.cfg" 2>nul
-	del "Config\ultra.cfg" 2>nul
-	del "Config\verylow.cfg" 2>nul
+	mkdir "obsolete" 2>nul
+	move /Y "ogp_hotkeys.cfg" "obsolete" 2>nul
+	move /Y "ugly.cfg" "obsolete" 2>nul
+	move /Y "low.cfg" "obsolete" 2>nul
+	move /Y "med.cfg" "obsolete" 2>nul
+	move /Y "high.cfg" "obsolete" 2>nul
+	move /Y "ultra.cfg" "obsolete" 2>nul
+	move /Y "vanilla_low.cfg" "obsolete" 2>nul
+	move /Y "vanilla_med.cfg" "obsolete" 2>nul
+	move /Y "vanilla_high.cfg" "obsolete" 2>nul
+	move /Y "vanilla_vhigh.cfg" "obsolete" 2>nul
+	move /Y "vanilla_ultra.cfg" "obsolete" 2>nul
+	move /Y "texture.cfg" "obsolete" 2>nul
+	move /Y "reset.cfg" "obsolete" 2>nul
+	move /Y "optimized_graphic_presets\readme.txt" "obsolete" 2>nul
+	REM move /Y "optimized_graphic_presets\README.md" "obsolete" 2>nul
+	move /Y "optimized_graphic_presets\user.cfg" "obsolete" 2>nul
 	rmdir "optimized_graphic_presets" 2>nul
+	REM move /Y "Data\zzz_optimized_graphic_presets.pak" "obsolete" 2>nul
+	mkdir "obsolete\Config" 2>nul
+	move /Y "ogp_hotkeys.cfg" "obsolete\Config" 2>nul
+	move /Y "Config\high.cfg" "obsolete\Config" 2>nul
+	move /Y "Config\low.cfg" "obsolete\Config" 2>nul
+	move /Y "Config\medium.cfg" "obsolete\Config" 2>nul
+	move /Y "Config\ovni.cfg" "obsolete\Config" 2>nul
+	move /Y "Config\template.cfg" "obsolete\Config" 2>nul
+	move /Y "Config\ugly.cfg" "obsolete\Config" 2>nul
+	move /Y "Config\ultra.cfg" "obsolete\Config" 2>nul
+	move /Y "Config\verylow.cfg" "obsolete\Config" 2>nul
 	rmdir "Config" 2>nul
+	rmdir "obsolete\Config" 2>nul
+	rmdir "obsolete" 2>nul
 
 	REM Install new version
 	mkdir "Mods" 2>nul
@@ -85,11 +90,17 @@ goto :EOF
 	REM IF %errorlevel% NEQ 0 echo ERROR
 
 	echo.
-	echo ================================================================
+	echo =============================================================================
 	echo.
-	echo              Done. (look above for possible errors)
+	echo                                   Done.
+	echo                     (look above for possible errors)
 	echo.
-	echo ================================================================
+	echo.
+	echo. If found, user.cfg and obsolete files from older verisons of OGP were moved
+	echo.                          Within 'obsolete' foler
+	echo.  It is safe to delete it (unless you did some changes you'd like to keep)
+	echo.
+	echo =============================================================================
 	echo.
 	pause
 goto :EOF
