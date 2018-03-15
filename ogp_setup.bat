@@ -25,8 +25,8 @@ goto :EOF
 
 
 :ERROR_WRONG_STARTING_PATH
-	echo /!\ ERROR: This tool must be started from game's Mods\optimized_graphic_presets folder.
-	echo eg: C:\Program Files ^(x86^)\Steam\steamapps\common\KingdomComeDeliverance\Mods\optimized_graphic_presets
+	echo /!\ ERROR: This tool must be started from game's root folder.
+	echo eg: C:\Program Files ^(x86^)\Steam\steamapps\common\KingdomComeDeliverance
 	echo.
 	pause
 goto :EOF
