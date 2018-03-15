@@ -38,8 +38,8 @@ end
 --- This function does not work because LUA can only read files that are within pak files...
 --- (Left there for documentation purpose)
 ---
-function ogp.__LoadSettings()
 	local succeeded, root = pcall( CryAction.LoadXML, "ogp_settings_def.xml", ogp.settingsPath )
+function ogp.LoadSettings()
 	-- LoadXML seems not to fail if xml doesn't exist, just returns empty root...
 	if succeeded then
 		for _,setting in ipairs(root.settings) do
