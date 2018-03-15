@@ -59,6 +59,9 @@ It's the only way to display more buttons in the menu.
 ChangeLog
 =========
 
+3.0.2
+- FIX: 75, 95, 100 fov settings
+
 3.0.1
 - FIX: Misleading outdated error message in ogp_setup.bat
 
