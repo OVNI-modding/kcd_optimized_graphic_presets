@@ -33,12 +33,14 @@
 			</choices>
 		</button>
 
+		<!--
 		<button cvar="e_ObjShadowCastSpec" label="@ogp_grass_shadow_label" tooltip="@ogp_grass_shadow_tooltip">
 			<choices>
 				<choice label="@ui_off" tooltip="" value="1" />
 				<choice label="@ui_on" tooltip="" value="3" />
 			</choices>
 		</button>
+		-->
 
 		<button cvar="r_sharpening" label="@ogp_drunk_sharpening_label" tooltip="@ogp_drunk_sharpening_tooltip">
 			<choices>
@@ -71,11 +73,11 @@
 
 		<button cvar="sys_spec_ogp_grass" label="@ogp_grass_label" tooltip="@ogp_grass_tooltip">
 			<choices>
-				<choice label="@ogp_ugly" tooltip="" value="-1" />
-				<choice label="@ogp_low" tooltip="" value="-2" />
-				<choice label="@ogp_medium" tooltip="" value="-3" />
-				<choice label="@ogp_high" tooltip="" value="-4" />
-				<choice label="@ogp_ultra" tooltip="" value="-5" />
+				<choice label="@ogp_ugly" tooltip="@ogp_ugly_grass_tooltip" value="-1" />
+				<choice label="@ogp_low" tooltip="@ogp_low_grass_tooltip" value="-2" />
+				<choice label="@ogp_medium" tooltip="@ogp_medium_grass_tooltip" value="-3" />
+				<choice label="@ogp_high" tooltip="@ogp_high_grass_tooltip" value="-4" />
+				<choice label="@ogp_ultra" tooltip="@ogp_ultra_grass_tooltip" value="-5" />
 				<choice label="@ogp_vanilla_low" tooltip="" value="1" />
 				<choice label="@ogp_vanilla_medium" tooltip="" value="2" />
 				<choice label="@ogp_vanilla_high" tooltip="" value="3" />
