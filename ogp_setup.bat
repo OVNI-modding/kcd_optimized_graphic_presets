@@ -12,15 +12,14 @@
 	echo Please enter a number to select your choice:
 	echo.
 	echo 1 - Install or Update
-	echo 2 - Remove obsolete files from older versions.
-	echo 3 - Uninstall
+	echo 2 - Uninstall
 	echo 9 - EXIT
 	echo.
 
 	set /P C=Type a number then press ENTER:
 	if %C%==1 goto :INSTALL
-	if %C%==2 goto :REMOVE_OLD_VERSIONS
-	if %C%==3 goto :UNINSTALL
+	if %C%==2 goto :UNINSTALL
+	if %C%==3 goto :REMOVE_OLD_VERSIONS
 
 goto :EOF
 
@@ -45,27 +44,7 @@ goto :EOF
 
 	if NOT exist "optimized_graphic_presets" goto :ERROR_OGP_FOLDER_ABSENT
 
-	@echo on
-	move /Y "optimized_graphic_presets\Data\optimized_graphic_presets.pak" "Data\zzz_optimized_graphic_presets.pak"
-	mkdir "Mods" 2>nul
-	rmdir /S /Q "Mods\optimized_graphic_presets" 2>nul
-	move /Y "optimized_graphic_presets" "Mods\"
-	mklink /D "Data\user_profile" "%USERPROFILE%\Saved Games\kingdomcome" 2>nul
-	@echo off
-	echo.
-	echo ================================================================
-	echo.
-	echo                            Done.
-	echo.
-	echo ================================================================
-	echo.
-	pause
-goto :EOF
-
-
-:REMOVE_OLD_VERSIONS
-	cls
-	@echo on
+	REM Remove files from old versions
 	del "ogp_hotkeys.cfg" 2>nul
 	del "ugly.cfg" 2>nul
 	del "low.cfg" 2>nul
@@ -93,7 +72,18 @@ goto :EOF
 	del "Config\verylow.cfg" 2>nul
 	rmdir "optimized_graphic_presets" 2>nul
 	rmdir "Config" 2>nul
+
+	REM Install new version
+	mkdir "Mods" 2>nul
+	mklink /D "Data\user_profile" "%USERPROFILE%\Saved Games\kingdomcome" 2>nul
+	rmdir /S /Q "Mods\optimized_graphic_presets" 2>nul
+	@echo on
+	move /Y "optimized_graphic_presets\Data\optimized_graphic_presets.pak" "Data\zzz_optimized_graphic_presets.pak"
+	move /Y "optimized_graphic_presets" "Mods\"
 	@echo off
+
+	REM IF %errorlevel% NEQ 0 echo ERROR
+
 	echo.
 	echo ================================================================
 	echo.
@@ -102,7 +92,7 @@ goto :EOF
 	echo ================================================================
 	echo.
 	pause
-goto :MENU
+goto :EOF
 
 
 :UNINSTALL
