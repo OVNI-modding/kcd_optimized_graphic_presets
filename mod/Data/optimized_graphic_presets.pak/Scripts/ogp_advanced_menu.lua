@@ -1,5 +1,5 @@
 
-ogp.settingsPath = "user_profile/ogp_settings.xml"
+ogp.settingsPath = "%USER%/ogp_settings.xml"
 
 ---
 --- Load menu's structure.
@@ -40,7 +40,7 @@ end
 ---
 function ogp.LoadSettings()
 	ogp.LogInfo("Loading settings...")
-	local succeeded, root = pcall( CryAction.LoadXML, "ogp_settings_def.xml", "%USER%/ogp_settings.xml" )
+	local succeeded, root = pcall( CryAction.LoadXML, "ogp_settings_def.xml", ogp.settingsPath )
 	-- LoadXML seems not to fail if xml doesn't exist, just returns empty root...
 	if succeeded then
 		for _,setting in ipairs(root.settings) do
