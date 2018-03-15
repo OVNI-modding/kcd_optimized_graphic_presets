@@ -13,4 +13,77 @@
 	<Row><Cell>ogp_vanilla_veryhigh</Cell><Cell/><Cell>vanilla T-haut</Cell></Row>
 	<Row><Cell>ogp_vanilla_ultra</Cell><Cell/><Cell>vanilla Ultra</Cell></Row>
 
+	<Row><Cell>ogp_light</Cell><Cell/><Cell>Léger</Cell></Row>
+	<Row><Cell>ogp_strong</Cell><Cell/><Cell>Fort</Cell></Row>
+	<Row><Cell>ogp_very_strong</Cell><Cell/><Cell>Très fort</Cell></Row>
+	<Row><Cell>ogp_vanilla</Cell><Cell/><Cell>Vanilla</Cell></Row>
+
+	<Row><Cell>ogp_vsync_label</Cell><Cell/><Cell>VSync</Cell></Row>
+	<Row><Cell>ogp_vsync_tooltip</Cell><Cell/><Cell>Recommandé: off (Activer adaptative/dynamic vsync dans les pilots graphiques à la place)</Cell></Row>
+
+	<Row><Cell>ogp_antialiasing_label</Cell><Cell/><Cell>Anticrénelage</Cell></Row>
+	<Row><Cell>ogp_antialiasing_tooltip</Cell><Cell/><Cell></Cell></Row>
+	<Row><Cell>ogp_fxaa_tooltip</Cell><Cell/><Cell>Rapide mais flou</Cell></Row>
+	<Row><Cell>ogp_smaa_tooltip</Cell><Cell/><Cell>Moins flou, mais laisse beaucoup de crénelage.</Cell></Row>
+	<Row><Cell>ogp_smaa2tx_tooltip</Cell><Cell/><Cell>Anticrénelage temporel, enlève la pluspart du crénelage.</Cell></Row>
+	<Row><Cell>ogp_ssaa2x_tooltip</Cell><Cell/><Cell>TRES coûteux, mais bon rendu...</Cell></Row>
+
+	<Row><Cell>ogp_motionblur_tooltip</Cell><Cell/><Cell>Recommandé: off</Cell></Row>
+
+	<Row><Cell>ogp_grass_wind_label</Cell><Cell/><Cell>Vent sur l'herbe</Cell></Row>
+	<Row><Cell>ogp_grass_wind_tooltip</Cell><Cell/><Cell>Recommandé: off</Cell></Row>
+
+	<Row><Cell>ogp_grass_shadow_label</Cell><Cell/><Cell>Ombre de l'herbe</Cell></Row>
+	<Row><Cell>ogp_grass_shadow_tooltip</Cell><Cell/><Cell></Cell></Row>
+
+	<Row><Cell>ogp_drunk_sharpening_label</Cell><Cell/><Cell>Neteté quand ivre</Cell></Row>
+	<Row><Cell>ogp_drunk_sharpening_tooltip</Cell><Cell/><Cell>Très fort éffet de neteté quand ivre.</Cell></Row>
+
+	<Row><Cell>ogp_dof_label</Cell><Cell/><Cell>Profondeur de champ</Cell></Row>
+	<Row><Cell>ogp_dof_tooltip</Cell><Cell/><Cell>Floute l'arrère-plan durant les dialogues.</Cell></Row>
+
+	<Row><Cell>ogp_gi_label</Cell><Cell/><Cell>Illumination Globale</Cell></Row>
+	<Row><Cell>ogp_gi_tooltip</Cell><Cell/><Cell>Diffusion/rebond de la lumière.</Cell></Row>
+	<Row><Cell>ogp_gi_baked</Cell><Cell/><Cell>Précalculé</Cell></Row>
+	<Row><Cell>ogp_gi_baked_tooltip</Cell><Cell/><Cell>Lumière précalculée au lieu de calcul en temps-réel.</Cell></Row>
+
+	<Row><Cell>ogp_grass_label</Cell><Cell/><Cell>Herbe</Cell></Row>
+	<Row><Cell>ogp_grass_tooltip</Cell><Cell/><Cell>Qualité de l'herbe et distance (nécessite de quitter le menu pour appliquer totalement)</Cell></Row>
+	<Row><Cell>ogp_ugly_grass_tooltip</Cell><Cell/><Cell>Distance courte, beaucoup de "pop-in", ombres d'herbe désactivé</Cell></Row>
+	<Row><Cell>ogp_low_grass_tooltip</Cell><Cell/><Cell>Distance moyenne, "pop-in" moyen, ombres d'herbe désactivé</Cell></Row>
+	<Row><Cell>ogp_medium_grass_tooltip</Cell><Cell/><Cell>Distance longue, peu de "pop-in", ombres d'herbe désactivé</Cell></Row>
+	<Row><Cell>ogp_high_grass_tooltip</Cell><Cell/><Cell>Distance longue, "pop-in" moyen, ombres d'herbe activé</Cell></Row>
+	<Row><Cell>ogp_ultra_grass_tooltip</Cell><Cell/><Cell>Distance longue, peu de "pop-in", ombres d'herbe activé</Cell></Row>
+
+	<Row><Cell>ogp_lod_label</Cell><Cell/><Cell>Niveau de détail</Cell></Row>
+	<Row><Cell>ogp_lod_tooltip</Cell><Cell/><Cell>Distance/qualité de rendu des personnages, objets, et végétation (sauf herbe)</Cell></Row>
+
+	<Row><Cell>ogp_particles_label</Cell><Cell/><Cell>Particules</Cell></Row>
+	<Row><Cell>ogp_particles_tooltip</Cell><Cell/><Cell></Cell></Row>
+
+	<Row><Cell>ogp_physics_label</Cell><Cell/><Cell>Physique</Cell></Row>
+	<Row><Cell>ogp_physics_tooltip</Cell><Cell/><Cell></Cell></Row>
+
+	<Row><Cell>ogp_shading_label</Cell><Cell/><Cell>Ombrage</Cell></Row>
+	<Row><Cell>ogp_shading_tooltip</Cell><Cell/><Cell></Cell></Row>
+
+	<Row><Cell>ogp_shadows_label</Cell><Cell/><Cell>Ombres</Cell></Row>
+	<Row><Cell>ogp_shadows_tooltip</Cell><Cell/><Cell></Cell></Row>
+
+	<Row><Cell>ogp_drunk_ssdo_label</Cell><Cell/><Cell>Occlusion Ambiante</Cell></Row>
+	<Row><Cell>ogp_drunk_ssdo_tooltip</Cell><Cell/><Cell>Si activé, la force de l'éffet n'influe pas sur les performances.</Cell></Row>
+
+	<Row><Cell>ogp_texture_label</Cell><Cell/><Cell>Textures</Cell></Row>
+	<Row><Cell>ogp_texture_tooltip</Cell><Cell/><Cell></Cell></Row>
+	<Row><Cell>ogp_texture_ugly_tooltip</Cell><Cell/><Cell>Necessite 1Go VRAM</Cell></Row>
+	<Row><Cell>ogp_texture_low_tooltip</Cell><Cell/><Cell>Necessite 1.5Go VRAM</Cell></Row>
+	<Row><Cell>ogp_texture_medium_tooltip</Cell><Cell/><Cell>Necessite 2Go VRAM</Cell></Row>
+	<Row><Cell>ogp_texture_high_tooltip</Cell><Cell/><Cell>Necessite 3Go VRAM</Cell></Row>
+	<Row><Cell>ogp_texture_ultra_tooltip</Cell><Cell/><Cell>Necessite 6Go VRAM</Cell></Row>
+
+	<Row><Cell>ogp_water_label</Cell><Cell/><Cell>Eau</Cell></Row>
+	<Row><Cell>ogp_water_tooltip</Cell><Cell/><Cell></Cell></Row>
+
+	<Row><Cell>ogp_weather_label</Cell><Cell/><Cell>Effets météo</Cell></Row>
+	<Row><Cell>ogp_weather_tooltip</Cell><Cell/><Cell></Cell></Row>
 </Table>
