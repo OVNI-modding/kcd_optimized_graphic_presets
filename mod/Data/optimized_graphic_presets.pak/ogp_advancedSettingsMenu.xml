@@ -21,8 +21,7 @@
 		<button cvar="sys_spec_ogp_3pl" label="@ogp_3pl_label" tooltip="@ogp_3pl_tooltip">
 			<choices>
 				<choice label="@ui_off" tooltip="" value="0" />
-				<choice label="@ui_on" tooltip="" value="-2" />
-				<choice label="@ogp_vanilla" tooltip="" value="2" />
+				<choice label="@ui_on" tooltip="" value="2" />
 			</choices>
 		</button>
 
