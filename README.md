@@ -23,6 +23,8 @@ eg: "C:\Program Files (x86)\Steam\steamapps\common\KingdomComeDeliverance"
 
 3. Launch ogp_setup.bat and select "Install or Update"
 
+4. Launch the game and enable the new presets/options using in-game menus, or hotkeys.
+
 
 Removal
 =======
@@ -41,7 +43,7 @@ F6 to F10 = vanilla's presets: low, medium, high, very high, ultra
 FAQ / TROUBLESHOOTING
 =====================
 
-**Q: How to fix blocky faces ?**
+**Q: How to fix "blocky pixels" ?**
 Set an higher global illumination setting, or choose "baked".
 
 **Q: How to disable native fullscreen auto-switch ?**
