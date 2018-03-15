@@ -45,15 +45,15 @@
 	<Row><Cell>ogp_gi_label</Cell><Cell/><Cell>Global Illumination</Cell></Row>
 	<Row><Cell>ogp_gi_tooltip</Cell><Cell/><Cell>Light diffusion/boucing</Cell></Row>
 	<Row><Cell>ogp_gi_baked</Cell><Cell/><Cell>Baked</Cell></Row>
-	<Row><Cell>ogp_gi_baked_tooltip</Cell><Cell/><Cell>Use baked lighning instead of real-time cone tracing.</Cell></Row>
+	<Row><Cell>ogp_gi_baked_tooltip</Cell><Cell/><Cell>Baked lighning instead of real-time computation.</Cell></Row>
 
 	<Row><Cell>ogp_grass_label</Cell><Cell/><Cell>Grass</Cell></Row>
 	<Row><Cell>ogp_grass_tooltip</Cell><Cell/><Cell>Grass quality and distance (requires to unpause the game to fully apply)</Cell></Row>
-	<Row><Cell>ogp_ugly_grass_tooltip</Cell><Cell/><Cell>Short distance, high pop-in, no grass shadow</Cell></Row>
-	<Row><Cell>ogp_low_grass_tooltip</Cell><Cell/><Cell>Medium distance, medium pop-in, no grass shadow</Cell></Row>
-	<Row><Cell>ogp_medium_grass_tooltip</Cell><Cell/><Cell>Long distance, low pop-in, no grass shadow</Cell></Row>
-	<Row><Cell>ogp_high_grass_tooltip</Cell><Cell/><Cell>Long distance, medium pop-in, grass shadow</Cell></Row>
-	<Row><Cell>ogp_ultra_grass_tooltip</Cell><Cell/><Cell>Long distance, low pop-in, grass shadow</Cell></Row>
+	<Row><Cell>ogp_ugly_grass_tooltip</Cell><Cell/><Cell>Short distance, high pop-in, grass shadows disabled</Cell></Row>
+	<Row><Cell>ogp_low_grass_tooltip</Cell><Cell/><Cell>Medium distance, medium pop-in, grass shadows disabled</Cell></Row>
+	<Row><Cell>ogp_medium_grass_tooltip</Cell><Cell/><Cell>Long distance, low pop-in, grass shadows disabled</Cell></Row>
+	<Row><Cell>ogp_high_grass_tooltip</Cell><Cell/><Cell>Long distance, medium pop-in, grass shadows enabled</Cell></Row>
+	<Row><Cell>ogp_ultra_grass_tooltip</Cell><Cell/><Cell>Long distance, low pop-in, grass shadows enabled</Cell></Row>
 
 	<Row><Cell>ogp_lod_label</Cell><Cell/><Cell>Level of Detail</Cell></Row>
 	<Row><Cell>ogp_lod_tooltip</Cell><Cell/><Cell>Characters, objects, and vegetation(except grass) rendering quality/distance</Cell></Row>
