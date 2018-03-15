@@ -101,6 +101,16 @@
 			</choices>
 		</button>
 
+		<button cvar="sys_spec_ogp_particles" label="@ogp_particles_label" tooltip="@ogp_particles_tooltip">
+			<choices>
+				<choice label="@ogp_ugly" tooltip="" value="-1" />
+				<choice label="@ogp_low" tooltip="" value="-2" />
+				<choice label="@ogp_medium" tooltip="" value="-3" />
+				<choice label="@ogp_high" tooltip="" value="-4" />
+				<choice label="@ogp_ultra" tooltip="" value="-5" />
+			</choices>
+		</button>
+
 		<button cvar="sys_spec_ogp_physics" label="@ogp_physics_label" tooltip="@ogp_physics_tooltip">
 			<choices>
 				<choice label="@ogp_low" tooltip="" value="-2" />

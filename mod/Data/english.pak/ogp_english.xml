@@ -58,6 +58,9 @@
 	<Row><Cell>ogp_lod_label</Cell><Cell/><Cell>Level of Detail</Cell></Row>
 	<Row><Cell>ogp_lod_tooltip</Cell><Cell/><Cell>Characters, objects, and vegetation(except grass) rendering quality/distance</Cell></Row>
 
+	<Row><Cell>ogp_particles_label</Cell><Cell/><Cell>Particles</Cell></Row>
+	<Row><Cell>ogp_particles_tooltip</Cell><Cell/><Cell></Cell></Row>
+
 	<Row><Cell>ogp_physics_label</Cell><Cell/><Cell>Physics</Cell></Row>
 	<Row><Cell>ogp_physics_tooltip</Cell><Cell/><Cell></Cell></Row>
 
