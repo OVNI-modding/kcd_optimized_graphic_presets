@@ -12,6 +12,9 @@ function ogp.Init()
 	Script.ReloadScript( "Scripts/ogp_localization.lua" )
 	Script.ReloadScript( "Scripts/ogp_advanced_menu.lua" )
 
+	ogp.LoadMenuDefinition()
+	ogp.LoadSettings()
+
 	ogp.AddConsoleCommands()
 	ogp.LogInfo("initialized")
 end

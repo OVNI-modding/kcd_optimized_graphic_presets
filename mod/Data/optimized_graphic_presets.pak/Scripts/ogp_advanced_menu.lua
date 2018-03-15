@@ -70,7 +70,3 @@ function ogp.SaveSettings()
 		ogp.LogError( "Failed to save settings: " .. error )
 	end
 end
-
-
-ogp.LoadMenuDefinition()
--- ogp.LoadSettings()
