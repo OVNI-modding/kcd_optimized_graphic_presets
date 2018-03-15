@@ -1,6 +1,6 @@
 #!/usr/bin/env python3.6
 
-version='3.0.0'
+version='3.0.1'
 projectName='optimized_graphic_presets'
 outputDir='builds'
 

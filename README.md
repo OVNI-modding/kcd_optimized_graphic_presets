@@ -59,6 +59,9 @@ It's the only way to display more buttons in the menu.
 ChangeLog
 =========
 
+3.0.1
+- FIX: Misleading outdated error message in ogp_setup.bat
+
 3.0.0
 - NEW: Can set all-in-one profile in (standard) graphic menu.
 - NEW: Can change sub-profiles in advanced graphic menu
