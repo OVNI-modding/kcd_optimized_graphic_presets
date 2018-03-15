@@ -63,7 +63,10 @@ function ogp.SaveSettings()
 		}
 		table.insert( root.settings, setting )
 	end
-	CryAction.SaveXML( "ogp_settings_def.xml", ogp.settingsPath, root )
+	local succeeded, error = pcall( CryAction.SaveXML, "ogp_settings_def.xml", ogp.settingsPath, root )
+	if not succeeded then
+		ogp.LogError( "Failed to save settings: " .. error )
+	end
 end
 
 
