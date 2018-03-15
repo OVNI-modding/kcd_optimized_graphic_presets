@@ -56,6 +56,7 @@ end
 --- Saves settings to ogp.settingsPath using button's value.
 ---
 function ogp.SaveSettings()
+	ogp.LogInfo("Saving settings...")
 	local root = {}
 	root.settings = {}
 	for _,button in ipairs(ogp.buttons) do
@@ -66,7 +67,9 @@ function ogp.SaveSettings()
 		table.insert( root.settings, setting )
 	end
 	local succeeded, error = pcall( CryAction.SaveXML, "ogp_settings_def.xml", ogp.settingsPath, root )
-	if not succeeded then
+	if succeeded then
+		ogp.LogInfo("Settings loaded.")
+	else
 		ogp.LogError( "Failed to save settings: " .. error )
 	end
 end
