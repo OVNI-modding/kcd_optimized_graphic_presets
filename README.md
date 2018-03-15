@@ -3,7 +3,13 @@ Optimized Graphic Presets for Kingdom Come Deliverance by OVNI
 ==============================================================
 
 - Better performances and/or quality.
-- More options in advanced settings menu.
+- Added graphic settings in menus.
+
+
+Compatibility
+=============
+
+This mod is not compatible with mod that modify "Graphic Settings" or "Advanced Graphics settings" menus.
 
 
 Installation / Update
@@ -15,13 +21,13 @@ eg: "C:\Program Files (x86)\Steam\steamapps\common\KingdomComeDeliverance"
 2. Extract zip content there, overwrite files if asked (it will only overwrite files from older OGP version, not games files).
 "ogp_setup.bat" and "optimized_graphic_presets" should be in game root folder.
 
-3. Launch ogp_setup.bat and select "Install"
+3. Launch ogp_setup.bat and select "Install or Update"
 
 
 Removal
 =======
 
-Launch ogp_setup.bat (from game's root folder) and select uninstall
+Launch ogp_setup.bat (from game's root folder) and select "Uninstall"
 
 
 Hotkeys
@@ -36,7 +42,7 @@ FAQ / TROUBLESHOOTING
 =====================
 
 **Q: How to fix blocky faces ?**
-Set an higher global illumination setting, or turn it off.
+Set an higher global illumination setting, or choose "baked".
 
 **Q: How to disable native fullscreen auto-switch ?**
 Delete Mods\optimized_graphic_presets\Data\force_native_fullscreen.pak
@@ -52,10 +58,27 @@ ChangeLog
 =========
 
 3.0.0
-- GUI integration
-- settings load/saving
-- added texture setting with fixed anisotropic values.
-- Removed some settings (AA, motionblur, grass wind, grass shadows) so they can be set independently.
+- NEW: Can set all-in-one profile in (standard) graphic menu.
+- NEW: Can change sub-profiles in advanced graphic menu
+- NEW: Settings load/saving from user profile
+- NEW: more SSDO presets (old one is "strong").
+- NEW: Unlimited range for rainy/wet terrain shader (practically free, and the seam looked weird).
+- NEW: Added baked GI setting, replaces GI off (which made barns and interiors pitch black).
+- NEW: Extended FOV choices
+- NEW: texture sub-profile with consistent anisotropic values.
+- NEW: drunk sharpening on/off
+- NEW: 3PL on/off
+- NEW: grass wind on/off
+- NEW: DoF on/off
+- MOD: Hotkeys are set using lua to avoid using user.cfg (also mod.cfg is broken...)
+- MOD: Decoupled some settings (AA, motionblur, grass wind, etc.) from profiles so they can be set on their own.
+- MOD: Reduced GI flickering even more.
+- MOD: GI Settings closer to vanilla look (except baked).
+- MOD: Kept only shadows settings with best quality/cost ratio, reduced flickering with lower setting.
+- MOD: Redone grass, traded distance for fewer pop-in.
+- FIX: "ugly preset crashing game"
+- FIX: "Ultra preset typos"
+- FIX: "heads disappearing using ugly preset"
 
 2.3
 - BUGFIX commented vsync off in user.cfg
