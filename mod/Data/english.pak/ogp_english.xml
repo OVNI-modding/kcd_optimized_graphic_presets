@@ -86,4 +86,7 @@
 
 	<Row><Cell>ogp_weather_label</Cell><Cell/><Cell>Weather Effects</Cell></Row>
 	<Row><Cell>ogp_weather_tooltip</Cell><Cell/><Cell></Cell></Row>
+
+	<Row><Cell>ogp_3pl_label</Cell><Cell/><Cell>Three-point lighting</Cell></Row>
+	<Row><Cell>ogp_3pl_tooltip</Cell><Cell/><Cell>Recommended: on, to prevent devil black eyes on NPCs.</Cell></Row>
 </Table>

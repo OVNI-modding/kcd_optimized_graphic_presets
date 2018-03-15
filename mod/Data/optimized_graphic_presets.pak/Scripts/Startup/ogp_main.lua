@@ -39,6 +39,7 @@ function ogp.AddConsoleCommands()
 	System.AddCCommand( 'ogp_set_texture', 'ogp.SetCVar("sys_spec_ogp_texture", %1)', ogp_set_xxx_doc )
 	System.AddCCommand( 'ogp_set_water', 'ogp.SetCVar("sys_spec_ogp_water", %1)', ogp_set_xxx_doc )
 	System.AddCCommand( 'ogp_set_weather', 'ogp.SetCVar("sys_spec_ogp_weather", %1)', ogp_set_xxx_doc )
+	System.AddCCommand( 'ogp_set_weather', 'System.SetCVar("sys_spec_ogp_3pl", %1)', ogp_set_xxx_doc )
 
 end
 

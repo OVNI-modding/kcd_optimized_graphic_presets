@@ -86,4 +86,8 @@
 
 	<Row><Cell>ogp_weather_label</Cell><Cell/><Cell>Effets météo</Cell></Row>
 	<Row><Cell>ogp_weather_tooltip</Cell><Cell/><Cell></Cell></Row>
+
+	<Row><Cell>ogp_3pl_label</Cell><Cell/><Cell>Éclairage trois points</Cell></Row>
+	<Row><Cell>ogp_3pl_tooltip</Cell><Cell/><Cell>Recommandé: on, pour éviter les yeux noirs du diable sur les PNJs.</Cell></Row>
+
 </Table>
