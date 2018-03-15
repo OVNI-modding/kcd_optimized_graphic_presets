@@ -36,7 +36,7 @@
 	<Row><Cell>ogp_grass_shadow_label</Cell><Cell/><Cell>Ombre de l'herbe</Cell></Row>
 	<Row><Cell>ogp_grass_shadow_tooltip</Cell><Cell/><Cell></Cell></Row>
 
-	<Row><Cell>ogp_drunk_sharpening_label</Cell><Cell/><Cell>Neteté quand ivre</Cell></Row>
+	<Row><Cell>ogp_drunk_sharpening_label</Cell><Cell/><Cell>Netteté quand ivre</Cell></Row>
 	<Row><Cell>ogp_drunk_sharpening_tooltip</Cell><Cell/><Cell>Très fort éffet de neteté quand ivre.</Cell></Row>
 
 	<Row><Cell>ogp_dof_label</Cell><Cell/><Cell>Profondeur de champ</Cell></Row>
@@ -64,7 +64,7 @@
 	<Row><Cell>ogp_physics_label</Cell><Cell/><Cell>Physique</Cell></Row>
 	<Row><Cell>ogp_physics_tooltip</Cell><Cell/><Cell></Cell></Row>
 
-	<Row><Cell>ogp_shading_label</Cell><Cell/><Cell>Ombrage</Cell></Row>
+	<Row><Cell>ogp_shading_label</Cell><Cell/><Cell>Ombrage (shader)</Cell></Row>
 	<Row><Cell>ogp_shading_tooltip</Cell><Cell/><Cell></Cell></Row>
 
 	<Row><Cell>ogp_shadows_label</Cell><Cell/><Cell>Ombres</Cell></Row>
@@ -75,11 +75,11 @@
 
 	<Row><Cell>ogp_texture_label</Cell><Cell/><Cell>Textures</Cell></Row>
 	<Row><Cell>ogp_texture_tooltip</Cell><Cell/><Cell></Cell></Row>
-	<Row><Cell>ogp_texture_ugly_tooltip</Cell><Cell/><Cell>Necessite 1Go VRAM</Cell></Row>
-	<Row><Cell>ogp_texture_low_tooltip</Cell><Cell/><Cell>Necessite 1.5Go VRAM</Cell></Row>
-	<Row><Cell>ogp_texture_medium_tooltip</Cell><Cell/><Cell>Necessite 2Go VRAM</Cell></Row>
-	<Row><Cell>ogp_texture_high_tooltip</Cell><Cell/><Cell>Necessite 3Go VRAM</Cell></Row>
-	<Row><Cell>ogp_texture_ultra_tooltip</Cell><Cell/><Cell>Necessite 6Go VRAM</Cell></Row>
+	<Row><Cell>ogp_texture_ugly_tooltip</Cell><Cell/><Cell>Nécessite 1Go VRAM</Cell></Row>
+	<Row><Cell>ogp_texture_low_tooltip</Cell><Cell/><Cell>Nécessite 1.5Go VRAM</Cell></Row>
+	<Row><Cell>ogp_texture_medium_tooltip</Cell><Cell/><Cell>Nécessite 2Go VRAM</Cell></Row>
+	<Row><Cell>ogp_texture_high_tooltip</Cell><Cell/><Cell>Nécessite 3Go VRAM</Cell></Row>
+	<Row><Cell>ogp_texture_ultra_tooltip</Cell><Cell/><Cell>Nécessite 6Go VRAM</Cell></Row>
 
 	<Row><Cell>ogp_water_label</Cell><Cell/><Cell>Eau</Cell></Row>
 	<Row><Cell>ogp_water_tooltip</Cell><Cell/><Cell></Cell></Row>
