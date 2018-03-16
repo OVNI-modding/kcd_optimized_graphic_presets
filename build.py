@@ -44,7 +44,4 @@ for pak in Path('mod/Data').glob('*.pak'):
 # README
 zout.write( 'README.md', Path(f'Mods/{projectName}/README.md') )
 
-# ogp_uninstall
-zout.write( 'ogp_uninstall.bat', Path(f'Mods/ogp_uninstall.bat') )
-
 zout.close()
