@@ -71,7 +71,7 @@
 	<Row><Cell>ogp_shadows_label</Cell><Cell/><Cell>Shadows</Cell></Row>
 	<Row><Cell>ogp_shadows_tooltip</Cell><Cell/><Cell></Cell></Row>
 
-	<Row><Cell>ogp_drunk_ssdo_label</Cell><Cell/><Cell>Ambiant occlusion</Cell></Row>
+	<Row><Cell>ogp_drunk_ssdo_label</Cell><Cell/><Cell>Ambient occlusion</Cell></Row>
 	<Row><Cell>ogp_drunk_ssdo_tooltip</Cell><Cell/><Cell>If on, the strength of the effect has no impact on performances.</Cell></Row>
 
 	<Row><Cell>ogp_texture_label</Cell><Cell/><Cell>Textures</Cell></Row>
