@@ -5,6 +5,7 @@ ogp = {}
 --- Inits ogp.
 ---
 function ogp.Init()
+	Script.ReloadScript( "Scripts/ogp_testing.lua" )
 	Script.ReloadScript( "Scripts/ogp_logging.lua" )
 	Script.ReloadScript( "Scripts/ogp_string_util.lua" )
 	Script.ReloadScript( "Scripts/ogp_menu_util.lua" )
@@ -17,6 +18,15 @@ function ogp.Init()
 
 	ogp.AddConsoleCommands()
 	ogp.LogInfo("initialized")
+
+end
+
+--
+-- Run all unit tests
+--
+function ogp.RunTests()
+	Script.ReloadScript( "Scripts/tests/ogp_cvar_util.lua" )
+	ogp.test.Run()
 end
 
 ---
@@ -28,6 +38,7 @@ function ogp.AddConsoleCommands()
 	System.AddCCommand( "ogp_apply_settings", "ogp.ApplySettings()", "" )
 	System.AddCCommand( "ogp_save_settings", "ogp.SaveSettings()", "" )
 	System.AddCCommand( "ogp_set_profile", "ogp.SetProfile(%1)", "" )
+	System.AddCCommand( 'ogp_run_tests', 'ogp.RunTests()', 'runs unit tests' )
 
 	local ogp_set_xxx_doc="-1,-2,-3,-4,-5 for ogp // 1,2,3,4,7 for vanilla"
 	System.AddCCommand( 'ogp_set_cvar', 'ogp.SetCVar(%1, %2)', '' )
