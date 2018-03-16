@@ -104,3 +104,25 @@ function ogp.LoadSettings()
 		ogp.LogError("Settings cannot be loaded: "..root)
 	end
 end
+
+---
+--- Saves settings to ogp.settingsPath using current cvar's values.
+---
+function ogp.SaveSettingsFromCVars()
+	ogp.LogInfo("Saving settings...")
+	local root = {}
+	root.settings = {}
+	for _,button in ipairs(ogp.buttons) do
+		local setting = {
+			cvar = button.cvar,
+			value = ogp.GetCVar( setting.cvar, setting.value )
+		}
+		table.insert( root.settings, setting )
+	end
+	local succeeded, error = pcall( CryAction.SaveXML, 'ogp_settings_def.xml', ogp.settingsPath, root )
+	if succeeded then
+		ogp.LogInfo("Settings saved.")
+	else
+		ogp.LogError( "Failed to save settings: " .. error )
+	end
+end
