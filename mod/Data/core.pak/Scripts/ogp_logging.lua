@@ -1,18 +1,42 @@
 
+ogp.debuglogLevel=4
+ogp.infologLevel=3
+ogp.warninglogLevel=2
+ogp.errorlogLevel=1
+ogp.mutedlogLevel=0
+
+--
+-- Used to filter log (eg: for unit tests)
+--
+ogp.logLevel=ogp.debuglogLevel
+
+
 function ogp.Log(msg)
 	System.LogAlways( "[OGP] " .. tostring(msg) )
 end
 
+function ogp.LogDebug(msg)
+	if ogp.logLevel >= ogp.debuglogLevel then
+		ogp.Log( "Debug: " .. msg )
+	end
+end
+
 function ogp.LogInfo(msg)
-	ogp.Log( msg )
+	if ogp.logLevel >= ogp.infologLevel then
+		ogp.Log( msg )
+	end
 end
 
 function ogp.LogWarning(msg)
-	ogp.Log( "Warning: " .. tostring(msg) )
+	if ogp.logLevel >= ogp.warninglogLevel then
+		ogp.Log( "Warning: " .. tostring(msg) )
+	end
 end
 
 function ogp.LogError(msg)
-	ogp.Log( "Error: " .. tostring(msg) )
+	if ogp.logLevel >= ogp.errorlogLevel then
+		ogp.Log( "Error: " .. tostring(msg) )
+	end
 end
 
 -- from https://gist.github.com/hashmal/874792
