@@ -15,21 +15,16 @@ This mod is not compatible with mod that modify "Graphic Settings" or "Advanced 
 Installation / Update
 =====================
 
-1. Go to game's root folder
-eg: "C:\Program Files (x86)\Steam\steamapps\common\KingdomComeDeliverance"
-
-2. Extract zip content there, overwrite files if asked (it will only overwrite files from older OGP version, not games files).
-"ogp_setup.bat" and "optimized_graphic_presets" should be in game root folder.
-
-3. Launch ogp_setup.bat and select "Install or Update"
-
-4. Launch the game and enable the new presets/options using in-game menus, or hotkeys.
+1. Put the zip in game root folder (eg: "C:\Program Files (x86)\Steam\steamapps\common\KingdomComeDeliverance")
+2. With 7zip (probably similar with other unzippers) right click on it and select "Extract Here"
+3. Overwrite everything if asked (it will NOT overwrite any game files, only previous versions of this mod)
 
 
 Removal
 =======
 
-Launch ogp_setup.bat (from game's root folder) and select "Uninstall"
+Download 'ogp_uninstall.bat' from optional files and run it from game root folder
+(eg: "C:\Program Files (x86)\Steam\steamapps\common\KingdomComeDeliverance")
 
 
 Hotkeys
@@ -63,6 +58,7 @@ ChangeLog
 	FIX: "Settings aren't saved" issue on Windows10
 	FIX: ogp_set_3pl console command now works (to apply 3po)
 	MOD: Settings are now loaded from lua instead of flowgraph
+	MOD: Removed ogp_setup.bat (symb link no longer needed)
 
 3.0.2
 - FIX: 75, 95, 100 fov settings
