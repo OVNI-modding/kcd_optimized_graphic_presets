@@ -1,5 +1,3 @@
-if ogp.loadedFiles['tests/ogp_cvar_util_SetCVar.lua']==nil then ogp.loadedFiles['tests/ogp_cvar_util_SetCVar.lua']=1
-
 
 ogp.test.suites.SetCVar = {
 
@@ -90,5 +88,3 @@ ogp.test.suites.SetCVar = {
 	end,
 
 }
-
-end
