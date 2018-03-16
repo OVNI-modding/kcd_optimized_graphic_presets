@@ -15,9 +15,8 @@ This mod is not compatible with mod that modify "Graphic Settings" or "Advanced 
 Installation / Update
 =====================
 
-1. Put the zip in game root folder (eg: "C:\Program Files (x86)\Steam\steamapps\common\KingdomComeDeliverance")
-2. With 7zip (probably similar with other unzippers) right click on it and select "Extract Here"
-3. Overwrite everything if asked (it will NOT overwrite any game files, only previous versions of this mod)
+Extract the content of the zip directly in game's root folder (eg: "C:\Program Files (x86)\Steam\steamapps\common\KingdomComeDeliverance")
+Overwrite files if asked (it will only overwrite previous versions of this mod)
 
 
 Removal
@@ -55,10 +54,10 @@ ChangeLog
 =========
 
 3.1.0
-	FIX: "Settings aren't saved" issue on Windows10
-	FIX: ogp_set_3pl console command now works (to apply 3po)
-	MOD: Settings are now loaded from lua instead of flowgraph
-	MOD: Removed ogp_setup.bat (symb link no longer needed)
+- FIX: "Settings aren't saved" issue on Windows10
+- FIX: ogp_set_3pl console command now works (to apply 3po)
+- MOD: Settings are now loaded from lua instead of flowgraph
+- MOD: Removed ogp_setup.bat (symb link no longer needed)
 
 3.0.2
 - FIX: 75, 95, 100 fov settings
@@ -72,7 +71,7 @@ ChangeLog
 - NEW: Settings load/saving from user profile
 - NEW: In adv Graphic Menu, disabled DoF and vignette effect to see applied changes.
 - NEW: Adv Graphic Menu contains 13 options instead of 7
-	NEW: in Adv Graphic Menu, Apply does not require confirmation.
+-	NEW: in Adv Graphic Menu, Apply does not require confirmation.
 - NEW: more SSDO presets (old one is "strong").
 - NEW: Unlimited range for rainy/wet terrain shader (practically free, and the seam looked weird).
 - NEW: Added baked GI setting, replaces GI off (which made barns and interiors pitch black).
