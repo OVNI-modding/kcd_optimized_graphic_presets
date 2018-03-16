@@ -1,7 +1,7 @@
-if ogp.loadedFiles.ogp_cvar_util_SetCVar==nil then ogp.loadedFiles.ogp_cvar_util_SetCVar=1
+if ogp.loadedFiles['tests/ogp_cvar_util_SetCVar.lua']==nil then ogp.loadedFiles['tests/ogp_cvar_util_SetCVar.lua']=1
 
 
-ogp.tests.SetCVar = {
+ogp.test.suites.SetCVar = {
 
 	["can set positive value to vanilla cvar"] = function()
 		-- setup
@@ -12,7 +12,7 @@ ogp.tests.SetCVar = {
 		ogp.SetCVar( cvar, expected )
 		-- verify
 		local actual = System.GetCVar(cvar)
-		ogp.Assert( actual == expected )
+		ogp.test.Assert( actual == expected )
 		-- cleanup
 		ogp.SetCVar( cvar, initial )
 	end,
@@ -26,7 +26,7 @@ ogp.tests.SetCVar = {
 		ogp.SetCVar( cvar, expected )
 		-- verify
 		local actual = System.GetCVar(cvar)
-		ogp.Assert( actual == expected )
+		ogp.test.Assert( actual == expected )
 		-- cleanup
 		ogp.SetCVar( cvar, initial )
 	end,
@@ -40,7 +40,7 @@ ogp.tests.SetCVar = {
 		ogp.SetCVar( cvar, expected )
 		-- verify
 		local actual = System.GetCVar(cvar)
-		ogp.Assert( actual == expected )
+		ogp.test.Assert( actual == expected )
 		-- cleanup
 		ogp.SetCVar( cvar, initial )
 	end,
@@ -55,7 +55,7 @@ ogp.tests.SetCVar = {
 		ogp.SetCVar( cvar, expected )
 		-- verify
 		local actual = System.GetCVar(cvar)
-		ogp.Assert( actual == expected )
+		ogp.test.Assert( actual == expected )
 		-- cleanup
 		ogp.SetCVar( cvar, initial )
 	end,
@@ -69,7 +69,7 @@ ogp.tests.SetCVar = {
 		ogp.SetCVar( cvar, expected )
 		-- verify
 		local actual = System.GetCVar(cvar)
-		ogp.Assert( actual == expected )
+		ogp.test.Assert( actual == expected )
 		-- cleanup
 		ogp.SetCVar( cvar, initial )
 	end,
@@ -84,9 +84,11 @@ ogp.tests.SetCVar = {
 		ogp.SetCVar( cvar, expected )
 		-- verify
 		local actual = System.GetCVar(cvar_vanilla)
-		ogp.Assert( actual == expected )
+		ogp.test.Assert( actual == expected )
 		-- cleanup
 		ogp.SetCVar( cvar_vanilla, initial )
 	end,
 
 }
+
+end
