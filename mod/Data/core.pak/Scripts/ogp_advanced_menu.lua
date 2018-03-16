@@ -35,8 +35,7 @@ function ogp.ApplySettings()
 end
 
 ---
---- This function does not work because LUA can only read files that are within pak files...
---- (Left there for documentation purpose)
+--- Loads Settings from ogp.settingsPath.
 ---
 function ogp.LoadSettings()
 	ogp.LogInfo("Loading settings...")
