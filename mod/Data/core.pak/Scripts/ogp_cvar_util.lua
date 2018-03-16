@@ -115,7 +115,7 @@ function ogp.SaveSettingsFromCVars()
 	for _,button in ipairs(ogp.buttons) do
 		local setting = {
 			cvar = button.cvar,
-			value = ogp.GetCVar( setting.cvar, setting.value )
+			value = ogp.GetCVar( button.cvar )
 		}
 		table.insert( root.settings, setting )
 	end
