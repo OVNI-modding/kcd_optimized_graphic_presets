@@ -55,7 +55,7 @@ ChangeLog
 
 3.1.0
 - FIX: "Settings aren't saved" issue on Windows10
-- FIX: ogp_set_3pl console command now works (to apply 3po)
+- FIX: ogp_set_3pl console command now works (to apply 3point lightning settings)
 - MOD: Settings are now loaded from lua instead of flowgraph
 - MOD: Removed ogp_setup.bat (symb link no longer needed)
 
