@@ -1,4 +1,5 @@
 ogp = {}
+ogp.loadedScripts = {}
 
 
 ---
@@ -19,6 +20,14 @@ function ogp.Init()
 	ogp.AddConsoleCommands()
 	ogp.LogInfo("initialized")
 
+end
+
+
+function ogp.LoadScript( file )
+	if ogp.loadedScripts[file] == nil then
+		ogp.loadedScripts[file] = 1
+		Script.ReloadScript(file)
+	end
 end
 
 --

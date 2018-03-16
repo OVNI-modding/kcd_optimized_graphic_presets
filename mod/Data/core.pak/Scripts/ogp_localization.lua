@@ -13,8 +13,8 @@ end
 --- Loads Lua localization files.
 ---
 function ogp.LoadLuaLocalization()
-	Script.ReloadScript( 'ogp_english.lua' ) -- fallback
-	Script.ReloadScript( 'ogp_' .. System.GetCVar('g_language') .. '.lua' )
+	ogp.LoadScript( 'ogp_english.lua' ) -- fallback
+	ogp.LoadScript( 'ogp_' .. System.GetCVar('g_language') .. '.lua' )
 end
 
 ---
