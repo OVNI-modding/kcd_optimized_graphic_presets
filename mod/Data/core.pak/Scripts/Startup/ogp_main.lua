@@ -26,7 +26,7 @@ end
 function ogp.LoadScript( file )
 	if ogp.loadedScripts[file] == nil then
 		ogp.loadedScripts[file] = 1
-		ogp.LoadScript(file)
+		Script.ReloadScript(file)
 	end
 end
 
