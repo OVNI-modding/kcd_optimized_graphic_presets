@@ -28,7 +28,7 @@ function ogp.LogTable(tbl, indent)
     elseif type(v) == 'boolean' then
       System.LogAlways(formatting .. tostring(v))
     else
-      System.LogAlways(formatting .. v)
+      System.LogAlways(formatting .. tostring(v))
     end
   end
 end
