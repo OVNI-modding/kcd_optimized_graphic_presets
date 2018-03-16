@@ -83,11 +83,11 @@ goto :EOF
 	echo Note that user.cfg was not removed (since it is not specific to OGP)
 	echo                You may want to remove it youself.
 	echo.
-	echo This program must now exit to self-destruct. So long cruel world :'(
+	REM echo This program must now exit to self-destruct. So long cruel world :'(
 	echo.
 	echo =====================================================================
 	echo.
 	pause
 	REM .bat self-destruction must be the last line
 	REM see https://stackoverflow.com/questions/2888976/how-to-make-bat-file-delete-it-self-after-completion/20333152#20333152
-	(goto) 2>nul & del "%~f0"
+	REM (goto) 2>nul & del "%~f0"
