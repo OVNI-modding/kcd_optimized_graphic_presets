@@ -19,7 +19,7 @@ for file in Path('mod').glob('*.*'):
 	if file.is_file():
 		zout.write(
 			str(file),
-			Path(f'Mods/{projectName}/{file.name}')
+			str( Path(f'Mods/{projectName}/{file.name}') )
 		)
 
 # Create in-memory package for each folder with .pak folder in mod/Data
@@ -31,17 +31,17 @@ for pak in Path('mod/Data').glob('**/*.pak'):
 			pakage.write( file, file.relative_to(pak) )
 		pakage.close()
 		pathInZip = Path(f'Data/{pak.name}') if pak.name.startswith('zzz') else Path(f'Mods/{projectName}/Data/{pak.name}')
-		zout.writestr( pathInZip,	gamePackage.getvalue() )
+		zout.writestr( str( pathInZip ),	str( gamePackage.getvalue() ) )
 
 # And .pak (dependencies) files
 for pak in Path('mod/Data').glob('*.pak'):
 	if pak.is_file():
 		zout.write(
 			str(pak),
-			Path(f'Mods/{projectName}/Data/{pak.name}')
+			str( Path(f'Mods/{projectName}/Data/{pak.name}') )
 		)
 
 # README
-zout.write( 'README.md', Path(f'Mods/{projectName}/README.md') )
+zout.write( 'README.md', str( Path(f'Mods/{projectName}/README.md') ) )
 
 zout.close()
