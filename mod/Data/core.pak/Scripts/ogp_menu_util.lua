@@ -82,7 +82,7 @@ function ogp.menu_util.SetChoice( buttonId, value )
 end
 
 ---
----
+--- CallbackName(elementName, instanceId, eventName, argTable)
 ---
 function ogp.menu_util.AddEventListener( eventName, callbackObject, callbackFunctionName )
 	UIAction.RegisterElementListener(callbackObject, 'MainMenu', -1, eventName, callbackFunctionName)
