@@ -1,0 +1,22 @@
+<Graph Description="" Group="ogp" enabled="1" MultiPlayer="ClientServer">
+ <Nodes>
+  <Node Id="2" Class="UI:Action:End" pos="54,180,0">
+   <Inputs UseAsState="1" Args=""/>
+  </Node>
+  <Node Id="3806" Class="UI:Action:Start" pos="-558,18,0">
+   <Inputs UseAsState="1"/>
+  </Node>
+  <Node Id="3861" Class="Debug:ExecuteString" pos="-180,18,0">
+   <Inputs String="ogp_load_settings" NextFrame="0"/>
+  </Node>
+  <Node Id="3864" Class="Time:FrameDelay" pos="-180,180,0">
+   <Inputs />
+  </Node>
+ </Nodes>
+ <Edges>
+  <Edge nodeIn="3861" nodeOut="3806" portIn="Set" portOut="StartAction" enabled="1"/>
+  <Edge nodeIn="3864" nodeOut="3806" portIn="in" portOut="StartAction" enabled="1"/>
+  <Edge nodeIn="2" nodeOut="3864" portIn="EndAction" portOut="out" enabled="1"/>
+ </Edges>
+ <GraphTokens />
+</Graph>
