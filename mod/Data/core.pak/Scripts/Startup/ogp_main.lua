@@ -35,7 +35,7 @@ end
 --
 function ogp.RunTests()
 	ogp.LoadScript( 'Scripts/tests/ogp_cvar_util.lua' )
-	ogp.test.Run(true)
+	ogp.test.Run()
 end
 
 ---
