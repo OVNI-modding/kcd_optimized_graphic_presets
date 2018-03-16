@@ -11,9 +11,9 @@
 
 	echo This will remove files from any version of OGP.
 
-	set /M Do you want to continue [Y,N] ?
-	if Errorlevel 1 goto :UNINSTALL
-
+	choice /M "Do you want to continue"
+	if %ERRORLEVEL% == 1 goto :UNINSTALL
+	
 goto :EOF
 
 
