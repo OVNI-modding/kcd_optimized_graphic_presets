@@ -67,10 +67,6 @@ goto :EOF
 	del "Data\user_profile\ogp_settings.xml" 2>nul
 	rmdir "Data\user_profile" 2>nul
 
-	REM v3.0.x and up
-
-	del "Data\zzz_optimized_graphic_presets.pak" 2>nul
-
 	REM v3 and up
 	del "Data\zzz_optimized_graphic_presets.pak" 2>nul
 	rmdir /S /Q "Mods\optimized_graphic_presets" 2>nul
