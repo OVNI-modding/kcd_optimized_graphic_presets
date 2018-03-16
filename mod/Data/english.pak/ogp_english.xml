@@ -25,7 +25,8 @@
 	<Row><Cell>ogp_antialiasing_tooltip</Cell><Cell/><Cell></Cell></Row>
 	<Row><Cell>ogp_fxaa_tooltip</Cell><Cell/><Cell>Fast but blurry</Cell></Row>
 	<Row><Cell>ogp_smaa_tooltip</Cell><Cell/><Cell>Less blurry but leaves lot of aliasing.</Cell></Row>
-	<Row><Cell>ogp_smaa2tx_tooltip</Cell><Cell/><Cell>Temporal AA, removes most aliasing.</Cell></Row>
+	<Row><Cell>ogp_smaa2tx_tooltip</Cell><Cell/><Cell>Temporal AA without subsampling.</Cell></Row>
+	<Row><Cell>ogp_smaa2txss_tooltip</Cell><Cell/><Cell>Temporal AA with subsampling. Removes most aliasing but may cause flickering.</Cell></Row>
 	<Row><Cell>ogp_ssaa2x_tooltip</Cell><Cell/><Cell>VERY expensive, best quality tho...</Cell></Row>
 
 	<Row><Cell>ogp_motionblur_tooltip</Cell><Cell/><Cell>Recommended: off</Cell></Row>
