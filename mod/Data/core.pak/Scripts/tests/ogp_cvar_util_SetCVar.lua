@@ -12,7 +12,7 @@ ogp.test.suites.SetCVar = {
 		local actual = System.GetCVar(cvar)
 		ogp.test.Assert( actual == expected )
 		-- cleanup
-		ogp.SetCVar( cvar, initial )
+		System.SetCVar( cvar, initial )
 	end,
 
 	["can set 0 to vanilla cvar"] = function()
@@ -26,7 +26,7 @@ ogp.test.suites.SetCVar = {
 		local actual = System.GetCVar(cvar)
 		ogp.test.Assert( actual == expected )
 		-- cleanup
-		ogp.SetCVar( cvar, initial )
+		System.SetCVar( cvar, initial )
 	end,
 
 	["can set negative value to vanilla cvar"] = function()
@@ -40,7 +40,7 @@ ogp.test.suites.SetCVar = {
 		local actual = System.GetCVar(cvar)
 		ogp.test.Assert( actual == expected )
 		-- cleanup
-		ogp.SetCVar( cvar, initial )
+		System.SetCVar( cvar, initial )
 	end,
 
 
@@ -55,7 +55,7 @@ ogp.test.suites.SetCVar = {
 		local actual = System.GetCVar(cvar)
 		ogp.test.Assert( actual == expected )
 		-- cleanup
-		ogp.SetCVar( cvar, initial )
+		System.SetCVar( cvar, initial )
 	end,
 
 	["maps 0 value assignement to sys_spec_ogp_xxx"] = function()
@@ -69,7 +69,7 @@ ogp.test.suites.SetCVar = {
 		local actual = System.GetCVar(cvar)
 		ogp.test.Assert( actual == expected )
 		-- cleanup
-		ogp.SetCVar( cvar, initial )
+		System.SetCVar( cvar, initial )
 	end,
 
 	["maps positive value assignement to sys_spec_ogp_xxx_vanilla"] = function()
@@ -84,7 +84,7 @@ ogp.test.suites.SetCVar = {
 		local actual = System.GetCVar(cvar_vanilla)
 		ogp.test.Assert( actual == expected )
 		-- cleanup
-		ogp.SetCVar( cvar_vanilla, initial )
+		System.SetCVar( cvar_vanilla, initial )
 	end,
 
 }
