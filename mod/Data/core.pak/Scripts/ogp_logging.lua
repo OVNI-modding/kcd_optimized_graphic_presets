@@ -29,13 +29,13 @@ end
 
 function ogp.LogWarning(msg)
 	if ogp.logLevel >= ogp.warninglogLevel then
-		ogp.Log( "Warning: " .. tostring(msg) )
+		ogp.Log( "$6Warning: " .. tostring(msg) )
 	end
 end
 
 function ogp.LogError(msg)
 	if ogp.logLevel >= ogp.errorlogLevel then
-		ogp.Log( "Error: " .. tostring(msg) )
+		ogp.Log( "$4Error: " .. tostring(msg) )
 	end
 end
 
