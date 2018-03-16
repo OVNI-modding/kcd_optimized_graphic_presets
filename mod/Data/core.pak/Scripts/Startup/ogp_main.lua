@@ -15,7 +15,6 @@ function ogp.Init()
 	ogp.LoadScript( 'Scripts/ogp_advanced_menu.lua' )
 
 	ogp.LoadMenuDefinition()
-	ogp.LoadSettings()
 
 	ogp.AddConsoleCommands()
 	ogp.LogInfo("initialized")
