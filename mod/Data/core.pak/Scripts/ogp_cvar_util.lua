@@ -18,7 +18,7 @@
 function ogp.GetCVar( cvar )
 	local succeeded, retval
 	if ogp.string.Starts( cvar, "sys_spec_ogp_") then
-		succeeded, retval = pcall( ogp.GetOgpCVar, cvar )
+		succeeded, retval = pcall( ogp._GetOgpCVar, cvar )
 	else
 		succeeded, retval = pcall( System.GetCVar, cvar )
 	end
@@ -32,7 +32,7 @@ end
 ---
 --- Returns the value of cvar; or if it's 0 returns the value of cvar_vanilla instead.
 ---
-function ogp.GetOgpCVar( cvar )
+function ogp._GetOgpCVar( cvar )
 	local value = System.GetCVar(cvar)
 	local succeeded
 	if value == -999 then
@@ -52,7 +52,7 @@ end
 function ogp.SetCVar( cvar, value )
 	local succeeded, errorMessage
 	if ogp.string.Starts( cvar, "sys_spec_ogp_") then
-		succeeded, errorMessage = pcall( ogp.SetOgpCVar, cvar, value )
+		succeeded, errorMessage = pcall( ogp._SetOgpCVar, cvar, value )
 	else
 		ogp.LogInfo( cvar .. " = " .. value )
 		succeeded, errorMessage = pcall( System.SetCVar, cvar, value )
@@ -66,7 +66,7 @@ end
 --- If value is <= 0 assigns value to cvar, otherwise assigns it to cvar_vanilla.
 --- Should not be used directly, use SetCVar instead.
 ---
-function ogp.SetOgpCVar( cvar, value )
+function ogp._SetOgpCVar( cvar, value )
 	local succeeded, errorMessage
 	value = tonumber(value)
 	if value > 0 then
