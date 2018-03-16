@@ -38,7 +38,7 @@ end
 --- Saves settings to ogp.settingsPath using button's value.
 ---
 function ogp.SaveSettingsFromButtons()
-	ogp.LogInfo("Saving settings...")
+	ogp.LogInfo("Saving settings from ui...")
 	local root = {}
 	root.settings = {}
 	for _,button in ipairs(ogp.buttons) do

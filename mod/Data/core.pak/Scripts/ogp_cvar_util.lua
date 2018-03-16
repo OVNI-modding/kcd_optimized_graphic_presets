@@ -109,7 +109,7 @@ end
 --- Saves settings to ogp.settingsPath using current cvar's values.
 ---
 function ogp.SaveSettingsFromCVars()
-	ogp.LogInfo("Saving settings...")
+	ogp.LogInfo("Saving settings from cvars...")
 	local root = {}
 	root.settings = {}
 	for _,button in ipairs(ogp.buttons) do
