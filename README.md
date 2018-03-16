@@ -59,6 +59,7 @@ ChangeLog
 - FIX: "Loaded settings overridden by vanilla ones"
 - FIX: "no sunshafts even when r_sunshafts=1"
 - FIX: ambient occlusion typo
+- FIX: removed false-alarm error log when setting custom profile
 
 3.1.0
 - FIX: "Settings aren't saved" issue on Windows10

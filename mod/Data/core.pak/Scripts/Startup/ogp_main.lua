@@ -71,7 +71,10 @@ end
 ---
 function ogp.SetProfile( value )
 	value = tonumber(value)
-	if value == -1 then
+	if value == 0 then
+		-- custom profile, do nothing
+		return
+	elseif value == -1 then
 		System.ExecuteCommand( 'exec Config/ogp_ugly' )
 	elseif value == -2 then
 		System.ExecuteCommand( 'exec Config/ogp_low' )
