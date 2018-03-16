@@ -25,7 +25,8 @@
 	<Row><Cell>ogp_antialiasing_tooltip</Cell><Cell/><Cell></Cell></Row>
 	<Row><Cell>ogp_fxaa_tooltip</Cell><Cell/><Cell>Rapide mais flou</Cell></Row>
 	<Row><Cell>ogp_smaa_tooltip</Cell><Cell/><Cell>Moins flou, mais laisse beaucoup de crénelage.</Cell></Row>
-	<Row><Cell>ogp_smaa2tx_tooltip</Cell><Cell/><Cell>Anticrénelage temporel, enlève la pluspart du crénelage.</Cell></Row>
+	<Row><Cell>ogp_smaa2tx_tooltip</Cell><Cell/><Cell>Anticrénelage temporel sans suréchantillonnage.</Cell></Row>
+	<Row><Cell>ogp_smaa2txss_tooltip</Cell><Cell/><Cell>Anticrénelage temporel avec suréchantillonnage. Enlève la plupart du crénelage mais peut provoquer du clignottement.</Cell></Row>
 	<Row><Cell>ogp_ssaa2x_tooltip</Cell><Cell/><Cell>TRES coûteux, mais bon rendu...</Cell></Row>
 
 	<Row><Cell>ogp_motionblur_tooltip</Cell><Cell/><Cell>Recommandé: off</Cell></Row>
