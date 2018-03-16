@@ -13,7 +13,7 @@
 
 	choice /M "Do you want to continue"
 	if %ERRORLEVEL% == 1 goto :UNINSTALL
-	
+
 goto :EOF
 
 
@@ -72,7 +72,7 @@ goto :EOF
 	del "Data\zzz_optimized_graphic_presets.pak" 2>nul
 
 	REM v3 and up
-
+	del "Data\zzz_ogp_config.pak" 2>nul
 	rmdir /S /Q "Mods\optimized_graphic_presets" 2>nul
 
 	echo.
