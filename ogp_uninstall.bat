@@ -28,8 +28,6 @@ goto :EOF
 :UNINSTALL
 	cls
 
-	if NOT exist "optimized_graphic_presets" goto :ERROR_OGP_FOLDER_ABSENT
-
 	REM Remove files from versions 1.x and 2.x
 
 	del "ogp_hotkeys.cfg" 2>nul
