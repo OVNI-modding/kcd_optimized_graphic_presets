@@ -1,11 +1,11 @@
 
-ogp.settingsPath = "%USER%/ogp_settings.xml"
+ogp.settingsPath = '%USER%/ogp_settings.xml'
 
 ---
 --- Load menu's structure.
 ---
 function ogp.LoadMenuDefinition()
-	local root = CryAction.LoadXML( "ogp_advancedSettingsMenu_def.xml", "ogp_advancedSettingsMenu.xml" )
+	local root = CryAction.LoadXML( 'ogp_advancedSettingsMenu_def.xml', 'ogp_advancedSettingsMenu.xml' )
 	ogp.buttons = root.buttons;
 end
 
@@ -31,7 +31,7 @@ function ogp.ApplySettings()
 		local value = ogp.menu_util.GetChoice(button.cvar)
 		ogp.SetCVar( button.cvar, value )
 	end
-	System.ExecuteCommand( "e_UberlodActivate" )
+	System.ExecuteCommand( 'e_UberlodActivate' )
 end
 
 ---
@@ -40,7 +40,7 @@ end
 ---
 function ogp.LoadSettings()
 	ogp.LogInfo("Loading settings...")
-	local succeeded, root = pcall( CryAction.LoadXML, "ogp_settings_def.xml", ogp.settingsPath )
+	local succeeded, root = pcall( CryAction.LoadXML, 'ogp_settings_def.xml', ogp.settingsPath )
 	-- LoadXML seems not to fail if xml doesn't exist, just returns empty root...
 	if succeeded then
 		if root ~= nil and root.settings ~= nil then
@@ -70,7 +70,7 @@ function ogp.SaveSettings()
 		}
 		table.insert( root.settings, setting )
 	end
-	local succeeded, error = pcall( CryAction.SaveXML, "ogp_settings_def.xml", ogp.settingsPath, root )
+	local succeeded, error = pcall( CryAction.SaveXML, 'ogp_settings_def.xml', ogp.settingsPath, root )
 	if succeeded then
 		ogp.LogInfo("Settings saved.")
 	else
