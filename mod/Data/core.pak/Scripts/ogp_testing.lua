@@ -18,10 +18,26 @@ ogp.test = {
 	passed = '',
 
 	--
+	-- internal
+	--
+	failureMessage = '',
+
+	--
 	-- Adds message to ogp.testsResult
 	--
 	Assert = function( boolean )
-		passed = boolean
+		ogp.test.failureMessage = ''
+		ogp.test.passed = boolean
+	end,
+
+	--
+	-- Adds message to ogp.testsResult
+	--
+	AssertEquals = function( actual, expected )
+		ogp.test.Assert( actual==expected )
+		if not ogp.test.passed then
+			ogp.test.failureMessage = ": Expected '"..expected.."' but was '"..actual.."'"
+		end
 	end,
 
 	--
@@ -37,13 +53,13 @@ ogp.test = {
 		for suiteName,suite in pairs(ogp.test.suites) do
 			for caseName,case in pairs(suite) do
 				case()
-				if passed then
-					message = ' ✅ '
+				if ogp.test.passed then
+					ogp.test.message = ' ✅ '
 				else
-					message = ' ❎ '
+					ogp.test.message = ' ❎ '
 				end
-				message = message .. suiteName ..' '.. caseName
-				ogp.Log( message )
+				ogp.test.message = ogp.test.message .. suiteName .." ".. caseName .." "..ogp.test.failureMessage
+				ogp.Log( ogp.test.message )
 			end
 		end
 		ogp.logLevel = initialLogLevel
