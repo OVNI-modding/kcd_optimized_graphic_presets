@@ -58,7 +58,7 @@ end
 ---
 --- Saves settings to ogp.settingsPath using button's value.
 ---
-function ogp.SaveSettings()
+function ogp.SaveSettingsFromButtons()
 	ogp.LogInfo("Saving settings...")
 	local root = {}
 	root.settings = {}

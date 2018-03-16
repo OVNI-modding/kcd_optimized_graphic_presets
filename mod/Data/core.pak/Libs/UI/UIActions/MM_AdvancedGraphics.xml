@@ -60,8 +60,8 @@
   <Node Id="3825" Class="Logic:Any" pos="-3582,-5004,0" InHideMask="1016">
    <Inputs />
   </Node>
-  <Node Id="3826" Class="Debug:ExecuteString" pos="-3978,-5310,0">
-   <Inputs String="ogp_save_settings" NextFrame="0"/>
+  <Node Id="3826" Class="Debug:ExecuteString" pos="-4014,-5310,0">
+   <Inputs String="ogp_save_settings_from_buttons" NextFrame="0"/>
   </Node>
   <Node Id="3829" Class="UI:Functions:MainMenu:SetMenuColor" pos="-5346,-6696,0">
    <Inputs instanceID="-1" isInGameMenu="0"/>
