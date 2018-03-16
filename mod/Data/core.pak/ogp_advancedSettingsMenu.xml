@@ -14,6 +14,7 @@
 				<choice label="FXAA" tooltip="@ogp_fxaa_tooltip" value="-10" />
 				<choice label="SMAA" tooltip="@ogp_smaa_tooltip" value="-20" />
 				<choice label="SMAA 2Tx" tooltip="@ogp_smaa2tx_tooltip" value="-41" />
+				<choice label="SMAA2Tx" tooltip="@ogp_smaa2tx_tooltip" value="-40" />
 				<choice label="SSAA 2x" tooltip="@ogp_ssaa2x_tooltip" value="-50" />
 			</choices>
 		</button>
