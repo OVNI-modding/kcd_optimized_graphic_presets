@@ -53,6 +53,13 @@ It's the only way to display more buttons in the menu.
 ChangeLog
 =========
 
+3.2.0
+- NEW: Added SMAA T2x without subsampling as flicker-free AA option
+- NEW: Save settings when leaving Simple Graphic Menu
+- FIX: "Loaded settings overridden by vanilla ones"
+- FIX: "no sunshafts even when r_sunshafts=1"
+- FIX: ambient occlusion typo
+
 3.1.0
 - FIX: "Settings aren't saved" issue on Windows10
 - FIX: ogp_set_3pl console command now works (to apply 3point lightning settings)
