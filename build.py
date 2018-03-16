@@ -14,16 +14,13 @@ from pathlib import Path
 
 zout = zipfile.ZipFile( Path(outputDir, zipFilename), 'w', compression=zipfile.ZIP_DEFLATED )
 
-# README
-zout.write( 'README.md', Path(f'{projectName}/README.md') )
-
-# setup
-zout.write( 'ogp_setup.bat', Path(f'ogp_setup.bat') )
-
 # Files in mod (not in sub dirs)
 for file in Path('mod').glob('*.*'):
 	if file.is_file():
-		zout.write( str(file), Path(f'{projectName}/{file.name}') )
+		zout.write(
+			str(file),
+			Path(f'Mods/{projectName}/{file.name}')
+		)
 
 # Create in-memory package for each folder with .pak folder in mod/Data
 for pak in Path('mod/Data').glob('**/*.pak'):
