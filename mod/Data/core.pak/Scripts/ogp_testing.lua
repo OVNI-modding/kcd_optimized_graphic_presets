@@ -10,32 +10,38 @@ ogp.test = {
 	--
 	-- internal
 	--
-	results = {},
+	passed = '',
 
 	--
 	-- Adds message to ogp.testsResult
 	--
 	Assert = function( boolean )
-		if boolean then
-			ogp.test.results[#ogp.test.results] = ' ✅ ' .. ogp.test.results[#ogp.test.results]
-		else
-			ogp.test.results[#ogp.test.results] = ' ❎ ' .. ogp.test.results[#ogp.test.results]
-		end
+		passed = boolean
 	end,
 
 	--
 	-- Runs test suites
 	--
-	Run = function()
+	Run = function( muteLogging )
+		-- note: do not store messages to display them after since it can be conveniant to see
+		-- debug logging printed in the correct order.
+		local initialLogLevel = ogp.logLevel
+		if muteLogging then
+			ogp.logLevel = ogp.mutedlogLevel
+		end
 		for suiteName,suite in pairs(ogp.test.suites) do
 			for caseName,case in pairs(suite) do
-				ogp.test.results[#ogp.test.results+1] = suiteName ..' '.. caseName
 				case()
+				if passed then
+					message = ' ✅ '
+				else
+					message = ' ❎ '
+				end
+				message = message .. suiteName ..' '.. caseName
+				ogp.Log( message )
 			end
 		end
-		for _,line in pairs(ogp.test.results) do
-			ogp.LogInfo(line )
-		end
+		ogp.logLevel = initialLogLevel
 	end,
 
 }
