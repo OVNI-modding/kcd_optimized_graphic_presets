@@ -30,7 +30,7 @@ for pak in Path('mod/Data').glob('**/*.pak'):
 		for file in pak.glob('**/*.*'):
 			pakage.write( file, file.relative_to(pak) )
 		pakage.close()
-		pathInZip = Path(f'Data/{pak.name}') if pak.name.startwith('zzz') else Path(f'Mods/{projectName}/Data/{pak.name}')
+		pathInZip = Path(f'Data/{pak.name}') if pak.name.startswith('zzz') else Path(f'Mods/{projectName}/Data/{pak.name}')
 		zout.writestr( pathInZip,	gamePackage.getvalue() )
 
 # And .pak (dependencies) files
