@@ -56,6 +56,7 @@ ChangeLog
 3.2.0
 - NEW: Added SMAA T2x without subsampling as flicker-free AA option
 - NEW: Save settings when leaving Simple Graphic Menu
+- MOD: SMAA2TxSS uses x3 subsampling (was x2 previously)
 - FIX: "Loaded settings overridden by vanilla ones"
 - FIX: "no sunshafts even when r_sunshafts=1"
 - FIX: ambient occlusion typo
