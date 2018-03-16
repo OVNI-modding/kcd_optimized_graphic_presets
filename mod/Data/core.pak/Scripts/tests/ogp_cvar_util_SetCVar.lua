@@ -10,7 +10,7 @@ ogp.test.suites.SetCVar = {
 		ogp.SetCVar( cvar, expected )
 		-- verify
 		local actual = System.GetCVar(cvar)
-		ogp.test.Assert( actual == expected )
+		ogp.test.AssertEquals( actual, expected )
 		-- cleanup
 		System.SetCVar( cvar, initial )
 	end,
@@ -24,7 +24,7 @@ ogp.test.suites.SetCVar = {
 		ogp.SetCVar( cvar, expected )
 		-- verify
 		local actual = System.GetCVar(cvar)
-		ogp.test.Assert( actual == expected )
+		ogp.test.AssertEquals( actual, expected )
 		-- cleanup
 		System.SetCVar( cvar, initial )
 	end,
@@ -38,7 +38,7 @@ ogp.test.suites.SetCVar = {
 		ogp.SetCVar( cvar, expected )
 		-- verify
 		local actual = System.GetCVar(cvar)
-		ogp.test.Assert( actual == expected )
+		ogp.test.AssertEquals( actual, expected )
 		-- cleanup
 		System.SetCVar( cvar, initial )
 	end,
@@ -53,7 +53,7 @@ ogp.test.suites.SetCVar = {
 		ogp.SetCVar( cvar, expected )
 		-- verify
 		local actual = System.GetCVar(cvar)
-		ogp.test.Assert( actual == expected )
+		ogp.test.AssertEquals( actual, expected )
 		-- cleanup
 		System.SetCVar( cvar, initial )
 	end,
@@ -67,7 +67,7 @@ ogp.test.suites.SetCVar = {
 		ogp.SetCVar( cvar, expected )
 		-- verify
 		local actual = System.GetCVar(cvar)
-		ogp.test.Assert( actual == expected )
+		ogp.test.AssertEquals( actual, expected )
 		-- cleanup
 		System.SetCVar( cvar, initial )
 	end,
@@ -82,7 +82,7 @@ ogp.test.suites.SetCVar = {
 		ogp.SetCVar( cvar, expected )
 		-- verify
 		local actual = System.GetCVar(cvar_vanilla)
-		ogp.test.Assert( actual == expected )
+		ogp.test.AssertEquals( actual, expected )
 		-- cleanup
 		System.SetCVar( cvar_vanilla, initial )
 	end,
