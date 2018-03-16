@@ -30,11 +30,21 @@ for pak in Path('mod/Data').glob('**/*.pak'):
 		for file in pak.glob('**/*.*'):
 			pakage.write( file, file.relative_to(pak) )
 		pakage.close()
-		zout.writestr( str(Path(projectName, 'Data', pak.name)), gamePackage.getvalue() )
+		pathInZip = Path(f'Data/{pak.name}') if pak.name.startwith('zzz') else Path(f'Mods/{projectName}/Data/{pak.name}')
+		zout.writestr( pathInZip,	gamePackage.getvalue() )
 
 # And .pak (dependencies) files
 for pak in Path('mod/Data').glob('*.pak'):
 	if pak.is_file():
-		zout.write( str(pak), str(Path(projectName, 'Data', pak.name)) )
+		zout.write(
+			str(pak),
+			Path(f'Mods/{projectName}/Data/{pak.name}')
+		)
+
+# README
+zout.write( 'README.md', Path(f'Mods/{projectName}/README.md') )
+
+# ogp_uninstall
+zout.write( 'ogp_uninstall.bat', Path(f'Mods/ogp_uninstall.bat') )
 
 zout.close()
