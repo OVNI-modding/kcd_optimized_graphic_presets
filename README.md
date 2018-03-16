@@ -58,6 +58,7 @@ ChangeLog
 - NEW: Save settings when leaving Simple Graphic Menu
 - MOD: SMAA2TxSS uses x3 subsampling (was x2 previously)
 - FIX: "Loaded settings overridden by vanilla ones"
+- FIX: 3 points lightning setting actual value / gui value mismatch
 - FIX: "no sunshafts even when r_sunshafts=1"
 - FIX: ambient occlusion typo
 - FIX: removed false-alarm error log when setting custom profile
