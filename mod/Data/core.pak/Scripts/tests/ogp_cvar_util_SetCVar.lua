@@ -116,9 +116,10 @@ ogp.test.suites.SetCVar = {
 
 	["is console-compatible (works with arguments as strings)"] = function()
 		-- exec
-		local succeeded = pcall( ogp.SetCVar, 'sys_spec_ogp_gi', '5' )
+		local succeeded, error = pcall( ogp.SetCVar, 'sys_spec_ogp_gi', '5' )
 		-- verify
 		ogp.test.Assert( succeeded )
+		if not succeeded then ogp.LogError(error) end
 	end,
 
 }
