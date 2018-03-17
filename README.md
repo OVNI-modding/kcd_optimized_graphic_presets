@@ -63,7 +63,7 @@ ChangeLog
 - FIX: ogp_set_cvar does not try to assign positive values to inexistent xxx_vanilla cvar (was causing inconstant sys_spec_ogp_dof_state value)
 - FIX: "no sunshafts even when r_sunshafts=1"
 - FIX: ambient occlusion typo
-- FIX: removed false-alarm error log when setting custom profile
+- FIX: removed false-alarm error log when setting custom profile from (simple) graphic setting menu.
 
 3.1.0
 - FIX: "Settings aren't saved" issue on Windows10
@@ -83,7 +83,7 @@ ChangeLog
 - NEW: Settings load/saving from user profile
 - NEW: In adv Graphic Menu, disabled DoF and vignette effect to see applied changes.
 - NEW: Adv Graphic Menu contains 13 options instead of 7
--	NEW: in Adv Graphic Menu, Apply does not require confirmation.
+- NEW: in Adv Graphic Menu, Apply does not require confirmation.
 - NEW: more SSDO presets (old one is "strong").
 - NEW: Unlimited range for rainy/wet terrain shader (practically free, and the seam looked weird).
 - NEW: Added baked GI setting, replaces GI off (which made barns and interiors pitch black).
