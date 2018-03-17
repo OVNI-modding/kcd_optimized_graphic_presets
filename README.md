@@ -15,7 +15,10 @@ This mod is not compatible with mod that modify "Graphic Settings" or "Advanced 
 Installation / Update
 =====================
 
-Extract the content of the zip directly in game's root folder (eg: "C:\Program Files (x86)\Steam\steamapps\common\KingdomComeDeliverance")
+- If you installed pre v3.x.x versions of this mod before, remove it first (cf Removal section).
+(You only need to do this once. You don't need to do it for each updates)
+
+- Download "kcd_optimized_graphic_presets" and extract its content directly in game's root folder (eg: "C:\Program Files (x86)\Steam\steamapps\common\KingdomComeDeliverance")
 Overwrite files if asked (it will only overwrite previous versions of this mod)
 
 
