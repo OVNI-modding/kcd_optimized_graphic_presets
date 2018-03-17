@@ -9,7 +9,9 @@ Optimized Graphic Presets for Kingdom Come Deliverance by OVNI
 Compatibility
 =============
 
-This mod is not compatible with mod that modify "Graphic Settings" or "Advanced Graphics settings" menus.
+- Requires game's version 1.3.1 or +
+
+- Not compatible with mods that modify "Graphic Settings" or "Advanced Graphics settings" menus.
 
 
 Installation / Update
