@@ -45,7 +45,7 @@ end
 function ogp.LogTable(tbl, indent)
   if not indent then indent = 0 end
   for k, v in pairs(tbl) do
-    formatting = string.rep("  ", indent) .. k .. ": "
+    formatting = string.rep(" - ", indent) .. k .. ": "
     if type(v) == "table" then
       System.LogAlways(formatting)
       ogp.LogTable(v, indent+1)
