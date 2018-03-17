@@ -54,7 +54,7 @@ function ogp.SetCVar( cvar, value )
 		return
 	end
 	-- combo
-	if value <= 0 then
+	if tonumber(value) <= 0 then
 		ogp.SetCVarAndLog( cvar, value )
 	else
 		ogp.SetCVarAndLog( cvar, -999 )
