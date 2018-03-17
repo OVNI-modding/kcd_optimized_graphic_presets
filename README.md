@@ -53,6 +53,10 @@ It's the only way to display more buttons in the menu.
 ChangeLog
 =========
 
+3.2.1
+- FIX: Reset settings as they were where leaving adv settings menu without saving changes.
+- FIX: Force LOD system to refresh sooner, in main menu ("Reload the game, I get washed (blur) background" bug)
+
 3.2.0
 - NEW: Save settings when leaving Simple Graphic Menu
 - NEW: Added SMAA T2x without subsampling as flicker-free AA option
