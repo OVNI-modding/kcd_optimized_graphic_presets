@@ -43,7 +43,7 @@ ogp.test.suites.GetCVar = {
 		System.SetCVar( cvar, initial )
 	end,
 
-	["returns sys_spec_ogp_xxx_vanilla instead sys_spec_ogp_xxx when its value is negative"] = function()
+	["returns sys_spec_ogp_xxx_vanilla instead of sys_spec_ogp_xxx when its value is negative"] = function()
 		-- setup
 		local cvar = 'sys_spec_ogp_gi'
 		System.SetCVar(cvar, -547) --set negative value
