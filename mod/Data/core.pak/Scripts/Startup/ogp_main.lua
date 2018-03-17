@@ -32,9 +32,9 @@ end
 --
 -- Run all unit tests
 --
-function ogp.RunTests()
+function ogp.RunTests( verbose )
 	ogp.LoadScript( 'Scripts/tests/ogp_cvar_util.lua' )
-	ogp.test.Run()
+	ogp.test.Run( verbose )
 end
 
 ---
@@ -47,7 +47,7 @@ function ogp.AddConsoleCommands()
 	System.AddCCommand( 'ogp_save_settings_from_cvars', 'ogp.SaveSettingsFromCVars()', "" )
 	System.AddCCommand( 'ogp_save_settings_from_buttons', 'ogp.SaveSettingsFromButtons()', "" )
 	System.AddCCommand( 'ogp_set_profile', 'ogp.SetProfile(%1)', "" )
-	System.AddCCommand( 'ogp_run_tests', 'ogp.RunTests(%1)', "(bool verbose) runs unit tests" )
+	System.AddCCommand( 'ogp_run_tests', 'ogp.RunTests(%1)', "ogp_run_tests( verbose[0/1] ) runs unit tests" )
 
 	local ogp_set_xxx_doc="-1,-2,-3,-4,-5 for ogp // 1,2,3,4,7 for vanilla"
 	System.AddCCommand( 'ogp_set_cvar', 'ogp.SetCVar(%1, %2)', '' )

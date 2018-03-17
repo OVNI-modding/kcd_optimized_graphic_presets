@@ -42,7 +42,7 @@ ogp.test = {
 		-- note: do not store messages to display them after since it can be conveniant to see
 		-- debug logging printed in the correct order.
 		local initialLogLevel = ogp.logLevel
-		if not verbose then
+		if tonumber(verbose) == 0 then
 			ogp.logLevel = ogp.mutedlogLevel
 		end
 		for suiteName,suite in pairs(ogp.test.suites) do
