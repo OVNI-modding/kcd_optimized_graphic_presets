@@ -90,6 +90,7 @@ function ogp.LoadSettings()
 	for _,setting in ipairs(root.settings) do
 		ogp.SetCVar( setting.cvar, setting.value )
 	end
+	System.ExecuteCommand( 'e_UberlodActivate' )
 	ogp.LogInfo("Loaded "..tostring(#root.settings).." settings from ".. ogp.settingsPath )
 end
 
