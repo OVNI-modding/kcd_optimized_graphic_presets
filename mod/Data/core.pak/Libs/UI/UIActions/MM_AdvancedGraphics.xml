@@ -69,6 +69,9 @@
   <Node Id="3830" Class="Time:FrameDelay" pos="-3924,-5184,0">
    <Inputs />
   </Node>
+  <Node Id="3831" Class="Debug:ExecuteString" pos="-4230,-5076,0">
+   <Inputs String="ogp_load_settings" NextFrame="0"/>
+  </Node>
  </Nodes>
  <Edges>
   <Edge nodeIn="3824" nodeOut="3689" portIn="Set" portOut="out" enabled="1"/>
@@ -80,6 +83,7 @@
   <Edge nodeIn="3825" nodeOut="3696" portIn="in2" portOut="false" enabled="1"/>
   <Edge nodeIn="3826" nodeOut="3696" portIn="Set" portOut="true" enabled="1"/>
   <Edge nodeIn="3830" nodeOut="3696" portIn="in" portOut="true" enabled="1"/>
+  <Edge nodeIn="3831" nodeOut="3696" portIn="Set" portOut="false" enabled="1"/>
   <Edge nodeIn="3804" nodeOut="3801" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="3805" nodeOut="3801" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="3802" nodeOut="3803" portIn="entityId" portOut="entityId" enabled="1"/>
