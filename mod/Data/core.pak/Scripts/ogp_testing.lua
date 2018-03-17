@@ -8,11 +8,6 @@ ogp.test = {
 	suites = {},
 
 	--
-	-- Mute logging, except for results.
-	--
-	muteLogging = true,
-
-	--
 	-- internal
 	--
 	passed = '',
@@ -43,11 +38,11 @@ ogp.test = {
 	--
 	-- Runs test suites
 	--
-	Run = function()
+	Run = function( verbose )
 		-- note: do not store messages to display them after since it can be conveniant to see
 		-- debug logging printed in the correct order.
 		local initialLogLevel = ogp.logLevel
-		if ogp.test.muteLogging then
+		if not verbose then
 			ogp.logLevel = ogp.mutedlogLevel
 		end
 		for suiteName,suite in pairs(ogp.test.suites) do
