@@ -87,4 +87,11 @@ ogp.test.suites.SetCVar = {
 		System.SetCVar( cvar_vanilla, initial )
 	end,
 
+	["is console-compatible (works with arguments as strings)"] = function()
+		-- exec
+		local succeeded = pcall( ogp.SetCVar, 'sys_spec_ogp_gi', '5' )
+		-- verify
+		ogp.test.Assert( succeeded )
+	end,
+
 }
