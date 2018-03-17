@@ -82,6 +82,29 @@ function ogp.menu_util.SetChoice( buttonId, value )
 end
 
 ---
+---
+--- int value
+---
+function ogp.menu_util.SetButtonChoice( button, value )
+	local containerIndex = 0
+	local buttonId = button.cvar
+
+	ogp.LogInfo( "Setting button choice: "..buttonId.. " = "..value )
+
+	-- clamp choice to available values
+	local minValue = button.choices[1].value
+	local maxValue = minValue
+	for _,choice in ipairs(button.choices) do
+		if choice.value < minValue then minValue = choice.value end
+		if choice.value > maxValue then maxValue = choice.value end
+	end
+	if value < minValue then value = minValue end
+	if value > maxValue then value = maxValue end
+
+	UIAction.CallFunction( 'MainMenu', -1, 'SetChoice', buttonId, containerIndex, value )
+end
+
+---
 --- CallbackName(elementName, instanceId, eventName, argTable)
 ---
 function ogp.menu_util.AddEventListener( eventName, callbackObject, callbackFunctionName )

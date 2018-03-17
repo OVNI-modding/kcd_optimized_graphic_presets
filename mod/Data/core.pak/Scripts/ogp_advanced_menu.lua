@@ -19,7 +19,8 @@ function ogp.CreateAdvancedSettingsButtons()
 			ogp.menu_util.AddChoiceOption( button.cvar, choice.label, choice.tooltip, choice.value )
 		end
 		local value = ogp.GetCVar(button.cvar)
-		ogp.menu_util.SetChoice( button.cvar, value )
+		-- ogp.menu_util.SetChoice( button.cvar, value )
+		ogp.menu_util.SetButtonChoice( button, value )
 	end
 end
 
