@@ -76,19 +76,21 @@ end
 function ogp.LoadSettings()
 	ogp.LogInfo("Loading settings...")
 	local succeeded, root = pcall( CryAction.LoadXML, 'ogp_settings_def.xml', ogp.settingsPath )
-	-- LoadXML seems not to fail if xml doesn't exist, just returns empty root...
-	if succeeded then
-		if root ~= nil and root.settings ~= nil then
-			for _,setting in ipairs(root.settings) do
-				ogp.SetCVar( setting.cvar, setting.value )
-			end
-			ogp.LogInfo("Loaded "..tostring(#root.settings).." settings from ".. ogp.settingsPath )
-		else
-			ogp.LogInfo("Could not load " .. ogp.settingsPath )
-		end
-	else
+	-- failed to lad file
+	if not succeeded then
 		ogp.LogError("Settings cannot be loaded: "..root)
+		return
 	end
+	-- LoadXML seems not to fail if xml doesn't exist, just returns empty root...
+	if root == nil or root.settings == nil then
+		ogp.LogInfo("Could not load " .. ogp.settingsPath )
+		return
+	end
+	-- ok
+	for _,setting in ipairs(root.settings) do
+		ogp.SetCVar( setting.cvar, setting.value )
+	end
+	ogp.LogInfo("Loaded "..tostring(#root.settings).." settings from ".. ogp.settingsPath )
 end
 
 ---
