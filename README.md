@@ -54,11 +54,12 @@ ChangeLog
 =========
 
 3.2.0
-- NEW: Added SMAA T2x without subsampling as flicker-free AA option
 - NEW: Save settings when leaving Simple Graphic Menu
+- NEW: Added SMAA T2x without subsampling as flicker-free AA option
 - MOD: SMAA2TxSS uses x3 subsampling (was x2 previously)
 - FIX: "Loaded settings overridden by vanilla ones"
 - FIX: 3 points lightning setting actual value / gui value mismatch
+- FIX: clamp button choices, so buttons wont get an arbitrary value when there's no choice corresponding to cvar's value (eg: ogp_set_physics -5 made menu show Physics: Ugly instead of Medium (the highest choice) )
 - FIX: "no sunshafts even when r_sunshafts=1"
 - FIX: ambient occlusion typo
 - FIX: removed false-alarm error log when setting custom profile
