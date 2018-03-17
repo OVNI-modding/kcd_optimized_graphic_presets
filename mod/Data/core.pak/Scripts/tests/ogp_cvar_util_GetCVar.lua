@@ -43,13 +43,27 @@ ogp.test.suites.GetCVar = {
 		System.SetCVar( cvar, initial )
 	end,
 
-	["returns sys_spec_ogp_xxx_vanilla instead of sys_spec_ogp_xxx when its value is negative"] = function()
+	["returns xxx_vanilla counterpart when xxx value is -999"] = function()
 		-- setup
 		local cvar = 'sys_spec_ogp_gi'
-		System.SetCVar(cvar, -547) --set negative value
 		local cvar_vanilla = cvar .. '_vanilla'
 		local initial = System.GetCVar(cvar)
 		local expected = System.GetCVar(cvar_vanilla)
+		System.SetCVar(cvar, -999) --set negative value
+		-- exec
+		local actual = ogp.GetCVar(cvar)
+		-- verify
+		ogp.test.AssertEquals( actual, expected )
+		-- cleanup
+		System.SetCVar( cvar, initial )
+	end,
+
+	["returns xxx when xxx value is -999, but no xxx_vanilla exists"] = function()
+		-- setup
+		local expected = -999
+		local cvar = 'sys_spec_ogp_dof_state'
+		local initial = System.GetCVar(cvar)
+		System.SetCVar(cvar, expected)
 		-- exec
 		local actual = ogp.GetCVar(cvar)
 		-- verify

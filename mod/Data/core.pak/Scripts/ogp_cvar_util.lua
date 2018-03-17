@@ -11,36 +11,34 @@
 -- vanilla cvargroups.
 --
 
+--
+-- Returns true if given cvar exists, false otherwise.
+--
+function ogp.CVarExists( cvar )
+	return System.GetCVar(cvar) ~= nil
+end
+
+--
+-- Returns true if given cvar exists and is a combo cvar,
+-- ie: a cvar that has a cvar..'_vanilla' counterpart that is used for stricly positive values.
+--
+function ogp.IsComboCVar( cvar )
+	return ogp.CVarExists(cvar) and ogp.CVarExists(cvar..'_vanilla')
+end
+
 ---
 --- Returns the value of given vanilla cvar, or given sys_spec_ogp cvargoups
 --- (either sys_spec_ogp_x or sys_spec_ogp_x_vanilla depending on its value).
 ---
 function ogp.GetCVar( cvar )
-	local succeeded, retval
-	if ogp.string.Starts( cvar, 'sys_spec_ogp_') then
-		succeeded, retval = pcall( ogp._GetOgpCVar, cvar )
-	else
-		succeeded, retval = pcall( System.GetCVar, cvar )
+	-- vanilla bahavior
+	if not ogp.IsComboCVar(cvar) then
+		return System.GetCVar(cvar)
 	end
-	if not succeeded then
-		ogp.LogError(retval)
-		retval = 0
-	end
-	return retval
-end
-
----
---- Returns the value of cvar; or if it's 0 returns the value of cvar_vanilla instead.
----
-function ogp._GetOgpCVar( cvar )
+	-- combo
 	local value = System.GetCVar(cvar)
-	local succeeded
 	if value == -999 then
-		succeeded, value = pcall( System.GetCVar, cvar..'_vanilla' )
-		if not succeeded then
-			ogp.LogError(value)
-			return 0
-		end
+		return System.GetCVar(cvar..'_vanilla')
 	end
 	return value
 end
@@ -50,38 +48,26 @@ end
 --- (either sys_spec_ogp_x or sys_spec_ogp_x_vanilla depending on the value)
 ---
 function ogp.SetCVar( cvar, value )
-	local succeeded, errorMessage
-	if ogp.string.Starts( cvar, 'sys_spec_ogp_') then
-		succeeded, errorMessage = pcall( ogp._SetOgpCVar, cvar, value )
-	else
-		ogp.LogInfo( cvar .. " = " .. value )
-		succeeded, errorMessage = pcall( System.SetCVar, cvar, value )
+	-- vanilla bahavior
+	if not ogp.IsComboCVar(cvar) then
+		System.SetCVar(cvar, value)
+		return
 	end
-	if not succeeded then
-		ogp.LogError(errorMessage)
+	-- combo
+	if tonumber(value) <= 0 then
+		ogp.SetCVarAndLog( cvar, value )
+	else
+		ogp.SetCVarAndLog( cvar, -999 )
+		ogp.SetCVarAndLog( cvar..'_vanilla', value )
 	end
 end
 
----
---- If value is <= 0 assigns value to cvar, otherwise assigns it to cvar_vanilla.
---- Should not be used directly, use SetCVar instead.
----
-function ogp._SetOgpCVar( cvar, value )
-	local succeeded, errorMessage
-	value = tonumber(value)
-	if value > 0 then
-		-- reset sys_spec_ogp_xxx
-		ogp.LogInfo( cvar .. ' = -999' )
-		succeeded, errorMessage = pcall( System.SetCVar, cvar, -999 )
-		if not succeeded then ogp.LogError(errorMessage) end
-		-- will set value to sys_spec_ogp_xxx_vanilla
-		cvar = cvar .. '_vanilla'
-	end
-	ogp.LogInfo( cvar .. " = " .. value )
-	succeeded, errorMessage = pcall( System.SetCVar, cvar, value )
-	if not succeeded then
-		ogp.LogError(errorMessage)
-	end
+--
+--
+--
+function ogp.SetCVarAndLog( cvar, value )
+	ogp.LogInfo( cvar..' = '..value )
+	System.SetCVar( cvar, value )
 end
 
 ---
