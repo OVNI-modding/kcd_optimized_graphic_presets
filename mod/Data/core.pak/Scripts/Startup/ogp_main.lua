@@ -33,7 +33,7 @@ end
 -- Run all unit tests
 --
 function ogp.RunTests( verbose )
-	ogp.LoadScript( 'Scripts/tests/ogp_cvar_util.lua' )
+	ogp.LoadScript( 'Scripts/tests/ogp_tests.lua' )
 	ogp.test.Run( verbose )
 end
 
