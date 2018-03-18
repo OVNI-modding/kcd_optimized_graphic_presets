@@ -99,4 +99,8 @@ function ogp.SetProfile( value )
 	end
 end
 
-ogp.Init()
+
+local succeeded, error = pcall( ogp.Init )
+if not succeeded then
+	ogp.LogError( error )
+end
