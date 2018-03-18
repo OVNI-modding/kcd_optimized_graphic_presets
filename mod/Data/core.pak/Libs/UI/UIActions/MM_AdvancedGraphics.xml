@@ -37,7 +37,7 @@
    <Inputs UseAsState="1"/>
   </Node>
   <Node Id="3808" Class="UI:Functions:MainMenu:AddButton" pos="-4428,-6354,0">
-   <Inputs instanceID="-1" id="ID_APPLY_ADVANCED_GRAPHICS" containerIndex="1" uiText="Apply (without leaving)" actionType="apply" tooltip="" disable="0" sound=""/>
+   <Inputs instanceID="-1" id="ID_APPLY_ADVANCED_GRAPHICS" containerIndex="1" uiText="@ui_apply" actionType="apply" tooltip="" disable="0" sound=""/>
   </Node>
   <Node Id="3809" Class="UI:Functions:MainMenu:AddButton" pos="-3960,-6354,0">
    <Inputs instanceID="-1" id="IDD_Back" containerIndex="1" uiText="@ui_back" actionType="back" tooltip="" disable="0" sound=""/>
