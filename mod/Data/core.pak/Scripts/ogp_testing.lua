@@ -12,6 +12,12 @@ ogp.test = {
 	--
 	passed = '',
 
+
+	--
+	-- internal
+	--
+	skipped = false,
+
 	--
 	-- internal
 	--
@@ -23,6 +29,7 @@ ogp.test = {
 	Assert = function( boolean )
 		ogp.test.failureMessage = ''
 		ogp.test.passed = boolean
+		ogp.test.skipped = false
 	end,
 
 	--
@@ -58,8 +65,11 @@ ogp.test = {
 		end
 		for suiteName,suite in pairs(ogp.test.suites) do
 			for caseName,case in pairs(suite) do
+				ogp.test.skipped = true
 				case()
-				if ogp.test.passed then
+				if ogp.test.skipped then
+					ogp.test.message = ' 🌕 '
+				elseif ogp.test.passed then
 					ogp.test.message = ' ✅ '
 				else
 					ogp.test.message = ' ❎ '
@@ -71,5 +81,4 @@ ogp.test = {
 		ogp.logLevel = initialLogLevel
 		System.SetCVar('log_Verbosity', initialLogVerbosityCVar )
 	end,
-
 }
