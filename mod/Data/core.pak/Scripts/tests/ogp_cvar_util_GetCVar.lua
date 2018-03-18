@@ -1,5 +1,5 @@
 
-ogp.test.suites.GetCVar = {
+ogp.test.suites.cvar_util_GetCVar = {
 
 	["always returns vanilla cvar's value, even when its value is 'magic' (-999)"] = function()
 		-- setup
@@ -73,11 +73,7 @@ ogp.test.suites.GetCVar = {
 	end,
 
 	["does not crash when trying to use inexistant cvar"] = function()
-		-- exec
-		local succeeded, error = pcall( ogp.GetCVar, 'tezgrezgzrefgz', '5' )
-		-- verify
-		ogp.test.Assert( succeeded )
-		if not succeeded then ogp.LogError(error) end
+		ogp.test.AssertNoError( ogp.GetCVar, 'tezgrezgzrefgz', '5' )
 	end,
 
 }

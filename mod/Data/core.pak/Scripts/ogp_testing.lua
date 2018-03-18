@@ -36,6 +36,15 @@ ogp.test = {
 	end,
 
 	--
+	-- Adds message to ogp.testsResult
+	--
+	AssertNoError = function( func, ... )
+		local succeeded, error = pcall( func, unpack(arg) )
+		ogp.test.Assert( succeeded )
+		if not succeeded then ogp.LogError(error) end
+	end,
+
+	--
 	-- Runs test suites
 	--
 	Run = function( verbose )

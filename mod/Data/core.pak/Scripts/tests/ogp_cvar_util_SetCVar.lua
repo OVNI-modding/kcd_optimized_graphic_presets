@@ -1,5 +1,5 @@
 
-ogp.test.suites.SetCVar = {
+ogp.test.suites.cvar_util_SetCVar = {
 
 	["can set positive value to vanilla cvar"] = function()
 		-- setup
@@ -123,10 +123,6 @@ ogp.test.suites.SetCVar = {
 	end,
 
 	["does not crash when trying to use inexistant cvar"] = function()
-		-- exec
-		local succeeded, error = pcall( ogp.SetCVar, 'tezgrezgzrefgz', '5' )
-		-- verify
-		ogp.test.Assert( succeeded )
-		if not succeeded then ogp.LogError(error) end
+		ogp.test.AssertNoError( ogp.SetCVar, 'tezgrezgzrefgz', '5' )
 	end,
 }
