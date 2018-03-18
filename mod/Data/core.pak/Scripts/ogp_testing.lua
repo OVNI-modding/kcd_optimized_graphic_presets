@@ -40,7 +40,7 @@ end
 ogp.test.AssertEquals = function( actual, expected )
 	ogp.test.Assert( actual==expected )
 	if not ogp.test.passed then
-		ogp.test.failureMessage = ": Expected '"..expected.."' but was '"..actual.."'"
+		ogp.test.failureMessage = ": Expected '"..tostring(expected).."' but was '"..tostring(actual).."'"
 		-- TODO concat message ?
 	end
 end
