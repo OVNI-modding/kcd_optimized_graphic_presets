@@ -72,4 +72,12 @@ ogp.test.suites.GetCVar = {
 		System.SetCVar( cvar, initial )
 	end,
 
+	["does not crash when trying to use inexistant cvar"] = function()
+		-- exec
+		local succeeded, error = pcall( ogp.GetCVar, 'tezgrezgzrefgz', '5' )
+		-- verify
+		ogp.test.Assert( succeeded )
+		if not succeeded then ogp.LogError(error) end
+	end,
+
 }
