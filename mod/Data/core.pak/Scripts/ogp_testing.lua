@@ -42,8 +42,10 @@ ogp.test = {
 		-- note: do not store messages to display them after since it can be conveniant to see
 		-- debug logging printed in the correct order.
 		local initialLogLevel = ogp.logLevel
+		local initialLogVerbosityCVar = System.GetCVar('log_Verbosity')
 		if tonumber(verbose) == 0 then
 			ogp.logLevel = ogp.mutedlogLevel
+			System.SetCVar('log_Verbosity', 0 )
 		end
 		for suiteName,suite in pairs(ogp.test.suites) do
 			for caseName,case in pairs(suite) do
@@ -58,6 +60,7 @@ ogp.test = {
 			end
 		end
 		ogp.logLevel = initialLogLevel
+		System.SetCVar('log_Verbosity', initialLogVerbosityCVar )
 	end,
 
 }
