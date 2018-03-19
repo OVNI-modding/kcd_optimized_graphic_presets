@@ -1,5 +1,8 @@
 <Table>
 
+	<Row><Cell>ogp_apply</Cell><Cell/><Cell>Apply &amp; Save</Cell></Row>
+	<Row><Cell>ogp_back</Cell><Cell/><Cell>Back</Cell></Row>
+
 	<Row><Cell>ogp_ugly</Cell><Cell/><Cell>Ugly</Cell></Row>
 	<Row><Cell>ogp_low</Cell><Cell/><Cell>Low</Cell></Row>
 	<Row><Cell>ogp_medium</Cell><Cell/><Cell>Medium</Cell></Row>

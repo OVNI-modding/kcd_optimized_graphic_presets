@@ -1,11 +1,10 @@
 
-ogp.strings = {}
 
 ---
 --- Init lua and xml localization.
 ---
 function ogp.InitLocalization()
-	ogp.LoadLuaLocalization()
+	-- ogp.LoadLuaLocalization()
 	ogp.LoadXmlLocalization()
 end
 

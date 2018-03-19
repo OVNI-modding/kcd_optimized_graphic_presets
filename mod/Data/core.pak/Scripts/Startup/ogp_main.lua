@@ -41,6 +41,8 @@ local function Init()
 
 	LoadScript( 'Scripts/tests/ogp_tests.lua' )
 
+	ogp.console.AddAllCommands()
+
 	ogp.LogInfo("initialized")
 end
 

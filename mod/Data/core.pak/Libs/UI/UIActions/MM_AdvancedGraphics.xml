@@ -72,7 +72,7 @@
   <Node Id="3845" Class="Logic:Any" pos="-5850,-6480,0">
    <Inputs />
   </Node>
-  <Node Id="3848" Class="UI:Functions:Settings:SetAdvancedGraphics" pos="-4752,-5454,0">
+  <Node Id="3848" Class="UI:Functions:Settings:SetAdvancedGraphics" pos="-4770,-5454,0">
    <Inputs instanceID="-1" ObjectDetail="1" GameEffects="1" LightDetail="1" ParticlesDetail="1" PhysicsDetail="1" PostProcessingDetail="1" ShadingDetail="1" ShadowDetail="1" TextureDetail="1" WaterDetail="1" VolumetricEffectsDetail="1" VegetationDetail="1" MotionBlur="1"/>
   </Node>
   <Node Id="3849" Class="Debug:ExecuteString" pos="-3546,-5418,0">

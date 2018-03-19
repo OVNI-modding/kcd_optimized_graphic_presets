@@ -1,5 +1,8 @@
 <Table>
 
+	<Row><Cell>ogp_apply</Cell><Cell/><Cell>Appliquer &amp; Sauvegarder</Cell></Row>
+	<Row><Cell>ogp_back</Cell><Cell/><Cell>Retour</Cell></Row>
+
 	<Row><Cell>ogp_ugly</Cell><Cell/><Cell>Moche</Cell></Row>
 	<Row><Cell>ogp_low</Cell><Cell/><Cell>Bas</Cell></Row>
 	<Row><Cell>ogp_medium</Cell><Cell/><Cell>Moyen</Cell></Row>

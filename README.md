@@ -58,6 +58,12 @@ It's the only way to display more buttons in the menu.
 ChangeLog
 =========
 
+3.3.0
+- NEW/FIX: Texture settings is now correctly applied (also fixes "texture setting stuck at lowest" bug)
+- MOD: Simplified menu: no more confirmations. Makes flowSHARTs a bit less unmanageable... Plus actionscript behavior isn't the same in every menu anyway...
+- MOD: When changing profile in the basic settings menu, texture is always set to medium. WONFIX (it would only lead to flowSHARTs chaos...), use advanced settings to change it.
+- MOD: improved grass settings (increased grass-terrain color bending distance)
+
 3.2.1
 - FIX: Reset settings as they were where leaving adv settings menu without saving changes.
 - FIX: Force LOD system to refresh sooner, in main menu ("Reload the game, I get washed (blur) background" bug)
