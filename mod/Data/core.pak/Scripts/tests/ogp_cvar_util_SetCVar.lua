@@ -1,16 +1,16 @@
 
-ogp.test.suites.cvar_util_SetCVar = {
+ogp.test.TestRunner.AddSuite( 'ogp.cvar_util.SetCVar', {
 
 	["can set positive value to vanilla cvar"] = function()
 		-- setup
 		local expected = 5
 		local cvar = 'r_DrawNearFoV'
 		local initial = System.GetCVar(cvar)
-		-- exec
+		-- action
 		ogp.SetCVar( cvar, expected )
 		-- verify
 		local actual = System.GetCVar(cvar)
-		ogp.test.AssertEquals( actual, expected )
+		ogp.test.Assert.Equals( actual, expected )
 		-- cleanup
 		System.SetCVar( cvar, initial )
 	end,
@@ -20,11 +20,11 @@ ogp.test.suites.cvar_util_SetCVar = {
 		local expected = 0
 		local cvar = 'r_DrawNearFoV'
 		local initial = System.GetCVar(cvar)
-		-- exec
+		-- action
 		ogp.SetCVar( cvar, expected )
 		-- verify
 		local actual = System.GetCVar(cvar)
-		ogp.test.AssertEquals( actual, expected )
+		ogp.test.Assert.Equals( actual, expected )
 		-- cleanup
 		System.SetCVar( cvar, initial )
 	end,
@@ -34,11 +34,11 @@ ogp.test.suites.cvar_util_SetCVar = {
 		local expected = -999
 		local cvar = 'r_DrawNearFoV'
 		local initial = System.GetCVar(cvar)
-		-- exec
+		-- action
 		ogp.SetCVar( cvar, expected )
 		-- verify
 		local actual = System.GetCVar(cvar)
-		ogp.test.AssertEquals( actual, expected )
+		ogp.test.Assert.Equals( actual, expected )
 		-- cleanup
 		System.SetCVar( cvar, initial )
 	end,
@@ -48,11 +48,11 @@ ogp.test.suites.cvar_util_SetCVar = {
 		local expected = -5
 		local cvar = 'r_DrawNearFoV'
 		local initial = System.GetCVar(cvar)
-		-- exec
+		-- action
 		ogp.SetCVar( cvar, expected )
 		-- verify
 		local actual = System.GetCVar(cvar)
-		ogp.test.AssertEquals( actual, expected )
+		ogp.test.Assert.Equals( actual, expected )
 		-- cleanup
 		System.SetCVar( cvar, initial )
 	end,
@@ -62,11 +62,11 @@ ogp.test.suites.cvar_util_SetCVar = {
 		local expected = -5
 		local cvar = 'sys_spec_ogp_gi'
 		local initial = System.GetCVar(cvar)
-		-- exec
+		-- action
 		ogp.SetCVar( cvar, expected )
 		-- verify
 		local actual = System.GetCVar(cvar)
-		ogp.test.AssertEquals( actual, expected )
+		ogp.test.Assert.Equals( actual, expected )
 		-- cleanup
 		System.SetCVar( cvar, initial )
 	end,
@@ -76,11 +76,11 @@ ogp.test.suites.cvar_util_SetCVar = {
 		local expected = 0
 		local cvar = 'sys_spec_ogp_gi'
 		local initial = System.GetCVar(cvar)
-		-- exec
+		-- action
 		ogp.SetCVar( cvar, expected )
 		-- verify
 		local actual = System.GetCVar(cvar)
-		ogp.test.AssertEquals( actual, expected )
+		ogp.test.Assert.Equals( actual, expected )
 		-- cleanup
 		System.SetCVar( cvar, initial )
 	end,
@@ -91,11 +91,11 @@ ogp.test.suites.cvar_util_SetCVar = {
 		local cvar = 'sys_spec_ogp_gi'
 		local cvar_vanilla = cvar ..'_vanilla'
 		local initial = System.GetCVar(cvar)
-		-- exec
+		-- action
 		ogp.SetCVar( cvar, expected )
 		-- verify
 		local actual = System.GetCVar(cvar_vanilla)
-		ogp.test.AssertEquals( actual, expected )
+		ogp.test.Assert.Equals( actual, expected )
 		-- cleanup
 		System.SetCVar( cvar_vanilla, initial )
 	end,
@@ -105,24 +105,21 @@ ogp.test.suites.cvar_util_SetCVar = {
 		local expected = 5
 		local cvar = 'sys_spec_ogp_dof_state'
 		local initial = System.GetCVar(cvar)
-		-- exec
+		-- action
 		ogp.SetCVar( cvar, expected )
 		-- verify
 		local actual = System.GetCVar(cvar)
-		ogp.test.AssertEquals( actual, expected )
+		ogp.test.Assert.Equals( actual, expected )
 		-- cleanup
 		System.SetCVar( cvar, initial )
 	end,
 
 	["is console-compatible (works with arguments as strings)"] = function()
-		-- exec
-		local succeeded, error = pcall( ogp.SetCVar, 'sys_spec_ogp_gi', '5' )
-		-- verify
-		ogp.test.Assert( succeeded )
-		if not succeeded then ogp.LogError(error) end
+		ogp.test.Assert.NoError( ogp.GetCVar, 'sys_spec_ogp_gi', '5' )
 	end,
 
 	["does not crash when trying to use inexistant cvar"] = function()
-		ogp.test.AssertNoError( ogp.SetCVar, 'tezgrezgzrefgz', '5' )
+		ogp.test.Assert.NoError( ogp.SetCVar, 'tezgrezgzrefgz', '5' )
 	end,
-}
+
+})

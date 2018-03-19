@@ -1,5 +1,5 @@
 
-ogp.test.suites.cvar_util_GetCVar = {
+ogp.test.TestRunner.AddSuite( 'ogp.cvar_util.GetCVar', {
 
 	["always returns vanilla cvar's value, even when its value is 'magic' (-999)"] = function()
 		-- setup
@@ -7,10 +7,10 @@ ogp.test.suites.cvar_util_GetCVar = {
 		local cvar = 'r_DrawNearFoV'
 		local initial = System.GetCVar(cvar)
 		System.SetCVar(cvar, expected)
-		-- exec
+		-- action
 		local actual = ogp.GetCVar(cvar)
 		-- verify
-		ogp.test.AssertEquals( actual, expected )
+		ogp.test.Assert.Equals( actual, expected )
 		-- cleanup
 		System.SetCVar( cvar, initial )
 	end,
@@ -21,10 +21,10 @@ ogp.test.suites.cvar_util_GetCVar = {
 		local cvar = 'sys_spec_ogp_gi'
 		local initial = System.GetCVar(cvar)
 		System.SetCVar(cvar, expected)
-		-- exec
+		-- action
 		local actual = ogp.GetCVar(cvar)
 		-- verify
-		ogp.test.AssertEquals( actual, expected )
+		ogp.test.Assert.Equals( actual, expected )
 		-- cleanup
 		System.SetCVar( cvar, initial )
 	end,
@@ -35,10 +35,10 @@ ogp.test.suites.cvar_util_GetCVar = {
 		local cvar = 'sys_spec_ogp_gi'
 		local initial = System.GetCVar(cvar)
 		System.SetCVar(cvar, expected)
-		-- exec
+		-- action
 		local actual = ogp.GetCVar(cvar)
 		-- verify
-		ogp.test.AssertEquals( actual, expected )
+		ogp.test.Assert.Equals( actual, expected )
 		-- cleanup
 		System.SetCVar( cvar, initial )
 	end,
@@ -50,10 +50,10 @@ ogp.test.suites.cvar_util_GetCVar = {
 		local initial = System.GetCVar(cvar)
 		local expected = System.GetCVar(cvar_vanilla)
 		System.SetCVar(cvar, -999) --set negative value
-		-- exec
+		-- action
 		local actual = ogp.GetCVar(cvar)
 		-- verify
-		ogp.test.AssertEquals( actual, expected )
+		ogp.test.Assert.Equals( actual, expected )
 		-- cleanup
 		System.SetCVar( cvar, initial )
 	end,
@@ -64,16 +64,16 @@ ogp.test.suites.cvar_util_GetCVar = {
 		local cvar = 'sys_spec_ogp_dof_state'
 		local initial = System.GetCVar(cvar)
 		System.SetCVar(cvar, expected)
-		-- exec
+		-- action
 		local actual = ogp.GetCVar(cvar)
 		-- verify
-		ogp.test.AssertEquals( actual, expected )
+		ogp.test.Assert.Equals( actual, expected )
 		-- cleanup
 		System.SetCVar( cvar, initial )
 	end,
 
 	["does not crash when trying to use inexistant cvar"] = function()
-		ogp.test.AssertNoError( ogp.GetCVar, 'tezgrezgzrefgz', '5' )
+		ogp.test.Assert.NoError( ogp.GetCVar, 'tezgrezgzrefgz', '5' )
 	end,
 
-}
+})
