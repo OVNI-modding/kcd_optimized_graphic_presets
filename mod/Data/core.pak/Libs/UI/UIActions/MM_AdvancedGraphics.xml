@@ -54,7 +54,7 @@
   <Node Id="3820" Class="UI:Action:End" pos="-3384,-5004,0">
    <Inputs UseAsState="0" Args=""/>
   </Node>
-  <Node Id="3824" Class="Debug:ExecuteString" pos="-3168,-5742,0">
+  <Node Id="3824" Class="Debug:ExecuteString" pos="-3078,-5742,0">
    <Inputs String="ogp_apply_settings" NextFrame="0"/>
   </Node>
   <Node Id="3825" Class="Logic:Any" pos="-3582,-5004,0" InHideMask="1016">
@@ -73,10 +73,16 @@
    <Inputs String="ogp_load_settings" NextFrame="0"/>
   </Node>
   <Node Id="3832" Class="UI:Functions:Settings:SetAdvancedGraphics" pos="-3600,-5742,0">
-   <Inputs instanceID="-1" ObjectDetail="1" GameEffects="1" LightDetail="1" ParticlesDetail="1" PhysicsDetail="1" PostProcessingDetail="1" ShadingDetail="1" ShadowDetail="1" TextureDetail="1" WaterDetail="1" VolumetricEffectsDetail="1" VegetationDetail="1" MotionBlur="0"/>
+   <Inputs ObjectDetail="1" GameEffects="1" LightDetail="1" ParticlesDetail="1" PhysicsDetail="1" PostProcessingDetail="1" ShadingDetail="1" ShadowDetail="1" TextureDetail="1" WaterDetail="1" VolumetricEffectsDetail="1" VegetationDetail="1" MotionBlur="0"/>
   </Node>
   <Node Id="3834" Class="UI:Functions:MainMenu:GetChoice" pos="-4014,-5472,0">
    <Inputs instanceID="-1" id="sys_spec_ogp_texture" containerIndex="0"/>
+  </Node>
+  <Node Id="3837" Class="Time:FrameDelay" pos="-3078,-5580,0">
+   <Inputs />
+  </Node>
+	<Node Id="3839" Class="UI:Functions:Settings:FinializeAdvancedSettings" pos="2322,4590,0" flags="0">
+   <Inputs />
   </Node>
  </Nodes>
  <Edges>
@@ -104,8 +110,10 @@
   <Edge nodeIn="3820" nodeOut="3825" portIn="EndAction" portOut="out" enabled="1"/>
   <Edge nodeIn="3825" nodeOut="3830" portIn="in1" portOut="out" enabled="1"/>
   <Edge nodeIn="3824" nodeOut="3832" portIn="Set" portOut="OnEvent" enabled="1"/>
-  <Edge nodeIn="3832" nodeOut="3834" portIn="Send" portOut="ReturnVal" enabled="1"/>
+  <Edge nodeIn="3837" nodeOut="3832" portIn="in" portOut="OnEvent" enabled="1"/>
+  <Edge nodeIn="3832" nodeOut="3834" portIn="Send" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="3832" nodeOut="3834" portIn="TextureDetail" portOut="ReturnVal" enabled="1"/>
+  <Edge nodeIn="3839" nodeOut="3837" portIn="Send" portOut="out" enabled="1"/>
  </Edges>
  <GraphTokens>
   <Token Name="SettingNames" Type="5"/>
