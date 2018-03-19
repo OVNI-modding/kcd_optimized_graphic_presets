@@ -69,19 +69,13 @@
   <Node Id="3830" Class="Time:FrameDelay" pos="-3852,-5202,0">
    <Inputs />
   </Node>
-  <Node Id="3831" Class="Debug:ExecuteString" pos="-4302,-4914,0">
+  <Node Id="3831" Class="Debug:ExecuteString" pos="-4428,-4896,0">
    <Inputs String="ogp_load_settings" NextFrame="0"/>
   </Node>
-  <Node Id="3832" Class="UI:Functions:Settings:SetAdvancedGraphics" pos="-2304,-5526,0">
-   <Inputs instanceID="-1" ObjectDetail="1" GameEffects="1" LightDetail="1" ParticlesDetail="1" PhysicsDetail="1" PostProcessingDetail="1" ShadingDetail="1" ShadowDetail="1" TextureDetail="1" WaterDetail="1" VolumetricEffectsDetail="1" VegetationDetail="1" MotionBlur="0"/>
-  </Node>
-  <Node Id="3834" Class="UI:Functions:MainMenu:GetChoice" pos="-2682,-5292,0">
-   <Inputs instanceID="-1" id="sys_spec_ogp_texture" containerIndex="0"/>
-  </Node>
-  <Node Id="3837" Class="Time:FrameDelay" pos="-2520,-5706,0">
+  <Node Id="3837" Class="Time:FrameDelay" pos="-2106,-6048,0">
    <Inputs />
   </Node>
-  <Node Id="3839" Class="UI:Functions:Settings:FinializeAdvancedSettings" pos="-2322,-5706,0" flags="0">
+  <Node Id="3839" Class="UI:Functions:Settings:FinializeAdvancedSettings" pos="-1458,-6192,0" flags="0">
    <Inputs />
   </Node>
   <Node Id="3840" Class="UI:Functions:MainMenu:GetChoice" pos="-5418,-6264,0">
@@ -90,20 +84,26 @@
   <Node Id="3841" Class="Mission:GameTokenSet" pos="-5040,-6264,0">
    <Inputs gametoken_Token="prevTexture" Value=""/>
   </Node>
-  <Node Id="3842" Class="Mission:GameTokenGet" pos="-3402,-5580,0">
+  <Node Id="3842" Class="Mission:GameTokenGet" pos="-3348,-5598,0">
    <Inputs gametoken_Token="prevTexture"/>
   </Node>
-  <Node Id="3843" Class="UI:Functions:MainMenu:GetChoice" pos="-3402,-5490,0">
+  <Node Id="3843" Class="UI:Functions:MainMenu:GetChoice" pos="-3384,-5508,0">
    <Inputs instanceID="-1" id="sys_spec_ogp_texture" containerIndex="0"/>
   </Node>
-  <Node Id="3844" Class="Math:EqualCheck" pos="-2898,-5580,0">
+  <Node Id="3844" Class="Math:EqualCheck" pos="-2880,-5544,0">
    <Inputs A="0" B="0"/>
   </Node>
   <Node Id="3845" Class="Logic:Any" pos="-5850,-6462,0">
    <Inputs />
   </Node>
-  <Node Id="3846" Class="Time:FrameDelay" pos="-4338,-4806,0">
+  <Node Id="3846" Class="Time:FrameDelay" pos="-4446,-4752,0">
    <Inputs />
+  </Node>
+  <Node Id="3847" Class="UI:Functions:Settings:FinializeAdvancedSettings" pos="-4266,-4752,0" flags="0">
+   <Inputs />
+  </Node>
+  <Node Id="3848" Class="UI:Functions:Settings:SetAdvancedGraphics" pos="-2574,-6048,0">
+   <Inputs instanceID="-1" ObjectDetail="0" GameEffects="0" LightDetail="0" ParticlesDetail="0" PhysicsDetail="0" PostProcessingDetail="0" ShadingDetail="0" ShadowDetail="0" TextureDetail="0" WaterDetail="0" VolumetricEffectsDetail="0" VegetationDetail="0" MotionBlur="0"/>
   </Node>
  </Nodes>
  <Edges>
@@ -130,8 +130,6 @@
   <Edge nodeIn="3825" nodeOut="3817" portIn="in3" portOut="onEvent" enabled="1"/>
   <Edge nodeIn="3820" nodeOut="3825" portIn="EndAction" portOut="out" enabled="1"/>
   <Edge nodeIn="3825" nodeOut="3830" portIn="in1" portOut="out" enabled="1"/>
-  <Edge nodeIn="3832" nodeOut="3834" portIn="Send" portOut="OnCall" enabled="1"/>
-  <Edge nodeIn="3832" nodeOut="3834" portIn="TextureDetail" portOut="ReturnVal" enabled="1"/>
   <Edge nodeIn="3839" nodeOut="3837" portIn="Send" portOut="out" enabled="1"/>
   <Edge nodeIn="3845" nodeOut="3839" portIn="in2" portOut="OnEvent" enabled="1"/>
   <Edge nodeIn="3841" nodeOut="3840" portIn="Trigger" portOut="OnCall" enabled="1"/>
@@ -139,12 +137,15 @@
   <Edge nodeIn="3844" nodeOut="3842" portIn="A" portOut="OutValue" enabled="1"/>
   <Edge nodeIn="3844" nodeOut="3843" portIn="Check" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="3844" nodeOut="3843" portIn="B" portOut="ReturnVal" enabled="1"/>
-  <Edge nodeIn="3837" nodeOut="3844" portIn="in" portOut="false" enabled="1"/>
+  <Edge nodeIn="3848" nodeOut="3843" portIn="TextureDetail" portOut="ReturnVal" enabled="1"/>
+  <Edge nodeIn="3848" nodeOut="3844" portIn="Call" portOut="false" enabled="1"/>
   <Edge nodeIn="3801" nodeOut="3845" portIn="Call" portOut="out" enabled="1"/>
   <Edge nodeIn="3802" nodeOut="3845" portIn="Disabled" portOut="out" enabled="1"/>
   <Edge nodeIn="3829" nodeOut="3845" portIn="Call" portOut="out" enabled="1"/>
   <Edge nodeIn="3840" nodeOut="3845" portIn="Call" portOut="out" enabled="1"/>
-  <Edge nodeIn="3825" nodeOut="3846" portIn="in2" portOut="out" enabled="1"/>
+  <Edge nodeIn="3847" nodeOut="3846" portIn="Send" portOut="out" enabled="1"/>
+  <Edge nodeIn="3825" nodeOut="3847" portIn="in2" portOut="OnEvent" enabled="1"/>
+  <Edge nodeIn="3837" nodeOut="3848" portIn="in" portOut="OnEvent" enabled="1"/>
  </Edges>
  <GraphTokens>
   <Token Name="prevTexture" Type="1"/>
