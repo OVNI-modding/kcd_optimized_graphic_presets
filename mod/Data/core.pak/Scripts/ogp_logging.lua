@@ -1,3 +1,5 @@
+if ogp.Log then return end
+
 
 ogp.debuglogLevel=4
 ogp.infologLevel=3

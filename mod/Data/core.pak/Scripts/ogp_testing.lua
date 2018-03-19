@@ -3,70 +3,98 @@ ogp.LoadScript( 'Scripts/ogp_console.lua' )
 ogp.LoadScript( 'Scripts/ogp_logging.lua' )
 
 
-ogp.test = {}
 
---
--- Table of test cases.
---
-ogp.test.suites = {}
+local Spy = {}
+Spy.__index = Spy
 
---
--- internal
---
-ogp.test.passed = false
-
---
--- internal
---
-ogp.test.skipped = false
-
---
--- internal
---
-ogp.test.failureMessage = ""
-
---
---
---
-ogp.test.Assert = function( boolean )
-	ogp.test.failureMessage = ""
-	ogp.test.passed = boolean
-	ogp.test.skipped = false
+function Spy.Create( func )
+	local o = {
+		func = func,
+		wasCalled = false,
+		callCount = 0,
+		lastCallArgs = {},
+	}
+	setmetatable(o, Spy)
+	return o
 end
 
+function Spy:Call( ... )
+	self.wasCalled = true
+	self.callCount = self.callCount + 1
+	self.lastCallArgs = arg
+	if self.func then self.func( unpack(arg) ) end
+end
+
+
+
+local Assert = {
+	failureMessage = "",
+	skipped = false,
+	passed = false,
+}
 --
+-- Internal
 --
---
-ogp.test.AssertEquals = function( actual, expected )
-	ogp.test.Assert( actual==expected )
-	if not ogp.test.passed then
-		ogp.test.failureMessage = ": Expected '"..tostring(expected).."' but was '"..tostring(actual).."'"
-		-- TODO concat message ?
+Assert.Reset = function()
+	Assert.failureMessage = ""
+	Assert.skipped = false
+	Assert.passed = false
+end
+
+Assert.Pass = function()
+	Assert.skipped = false
+	Assert.passed = true
+end
+
+Assert.Fail = function( message )
+	message = message or ''
+	Assert.skipped = false
+	Assert.passed = false
+	Assert.failureMessage = Assert.failureMessage .. tostring(message)
+end
+
+Assert.Equals = function( actual, expected )
+	if actual==expected then
+		Assert.Pass()
+	else
+		Assert.Fail( " Expected '"..tostring(expected).."' but was '"..tostring(actual).."'" )
 	end
 end
 
---
---
---
-ogp.test.AssertNoError = function( func, ... )
+Assert.True = function( bool )
+	Assert.Equals( bool, true )
+end
+
+Assert.False = function( bool )
+	Assert.Equals( bool, false )
+end
+
+Assert.NoError = function( func, ... )
 	local succeeded, error = pcall( func, unpack(arg) )
-	ogp.test.Assert( succeeded )
-	if not succeeded then ogp.LogError(error) end
-end
-
---
---
---
-ogp.test.AddSuite = function( sSuiteName, tSuite )
-	ogp.test.suites[sSuiteName] = tSuite
+	if succeeded then Assert.Pass() else Assert.Fail(error) end
 end
 
 
-ogp.console.AddCommand( 'ogp_run_tests', 'ogp.test.Run(%1)',[[
-Runs unit tests.
-@arg verbose [0/1]
-]])
-ogp.test.Run = function( verbose )
+
+TestRunner = {
+	--
+	-- Table of test cases.
+	--
+	suites = {}
+}
+--
+-- Adds a suite to the test runner.
+--
+TestRunner.AddSuite = function( name, cases )
+	table.insert( TestRunner.suites, {
+		name = name,
+		cases = cases,
+	})
+end
+--
+-- Start tests in addition order.
+--
+TestRunner.Start = function( verbose )
 	-- note: do not store messages to display them after since it can be conveniant to see
 	-- debug logging printed in the correct order.
 	local initialLogLevel = ogp.logLevel
@@ -75,22 +103,34 @@ ogp.test.Run = function( verbose )
 		ogp.logLevel = ogp.mutedlogLevel
 		System.SetCVar('log_Verbosity', 0 )
 	end
-	for suiteName,suite in pairs(ogp.test.suites) do
-		for caseName,case in pairs(suite) do
-			ogp.test.skipped = true
+	for _,suite in ipairs(TestRunner.suites) do
+		for caseName,case in pairs(suite.cases) do
+			Assert.Reset()
 			case()
-			if ogp.test.skipped then
-				-- ogp.test.message = ' 🌕 '
-				ogp.test.message = ' ❎ '
-			elseif ogp.test.passed then
-				ogp.test.message = ' ✅ '
+			if Assert.passed then
+				if System.IsEditor() then message = ' ✅ ' else message = ' [o] ' end
 			else
-				ogp.test.message = ' ❎ '
+				if System.IsEditor() then message = ' ❎ ' else message = ' [X] ' end
 			end
-			ogp.test.message = ogp.test.message .. suiteName .." ".. caseName .." "..ogp.test.failureMessage
-			ogp.Log( ogp.test.message )
+			message = message .. suite.name .. ' ' .. caseName .. ' ' .. Assert.failureMessage
+			ogp.Log( message )
 		end
 	end
 	ogp.logLevel = initialLogLevel
 	System.SetCVar('log_Verbosity', initialLogVerbosityCVar )
 end
+
+
+
+ogp.test = {
+	Spy = Spy,
+	Assert = Assert,
+	TestRunner = TestRunner,
+}
+
+
+
+ogp.console.AddCommand( 'ogp_run_tests', 'ogp.test.TestRunner.Start(%1)',[[
+Runs unit tests.
+@arg verbose [0/1]
+]])

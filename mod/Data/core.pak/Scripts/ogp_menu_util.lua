@@ -1,3 +1,6 @@
+if ogp.menu_util then return end
+ogp.LoadScript( 'Scripts/ogp_logging.lua' )
+
 
 ogp.menu_util = {}
 
@@ -86,6 +89,12 @@ end
 --- int value
 ---
 function ogp.menu_util.SetButtonChoice( button, value )
+
+	if button == nil then return end
+	if button.cvar == nil then return end
+	if button.choices == nil then return end
+	if value == nil then return end
+
 	local containerIndex = 0
 	local buttonId = button.cvar
 

@@ -1,44 +1,71 @@
-ogp = {}
-ogp.loadedScripts = {}
+
+
+
+local lastUid = 0
+--
+--
+--
+local function GetUid()
+	lastUid = lastUid + 1
+	return lastUid
+end
+
+
+
+local loadedScripts = {}
+--
+--
+--
+local function LoadScript( file )
+	if loadedScripts[file] == nil then
+		loadedScripts[file] = 1
+		Script.ReloadScript(file)
+	end
+end
+
 
 
 ---
 --- Inits ogp.
 ---
-function ogp.Init()
-	ogp.LoadScript( 'Scripts/ogp_testing.lua' )
-	ogp.LoadScript( 'Scripts/ogp_logging.lua' )
-	ogp.LoadScript( 'Scripts/ogp_string_util.lua' )
-	ogp.LoadScript( 'Scripts/ogp_menu_util.lua' )
-	ogp.LoadScript( 'Scripts/ogp_cvar_util.lua' )
-	ogp.LoadScript( 'Scripts/ogp_localization.lua' )
-	ogp.LoadScript( 'Scripts/ogp_advanced_menu.lua' )
-	ogp.LoadScript( 'Scripts/ogp_console.lua' )
+local function Init()
+	LoadScript( 'Scripts/ogp_testing.lua' )
+	LoadScript( 'Scripts/ogp_logging.lua' )
+	LoadScript( 'Scripts/ogp_string_util.lua' )
+	LoadScript( 'Scripts/ogp_menu_util.lua' )
+	LoadScript( 'Scripts/ogp_cvar_util.lua' )
+	LoadScript( 'Scripts/ogp_localization.lua' )
+	LoadScript( 'Scripts/ogp_advanced_menu.lua' )
 
 	ogp.LoadMenuDefinition()
 
-	ogp.AddConsoleCommands()
+	LoadScript( 'Scripts/tests/ogp_tests.lua' )
+
 	ogp.LogInfo("initialized")
-
 end
 
---
---
---
-function ogp.LoadScript( file )
-	if ogp.loadedScripts[file] == nil then
-		ogp.loadedScripts[file] = 1
-		Script.ReloadScript(file)
-	end
+
+
+ogp = {
+	GetUid = GetUid,
+	LoadScript = LoadScript,
+}
+
+
+
+local succeeded, error = pcall( Init )
+if not succeeded then
+	ogp.LogError( error )
 end
 
---
--- Run all unit tests
---
-function ogp.RunTests( verbose )
-	ogp.LoadScript( 'Scripts/tests/ogp_tests.lua' )
-	ogp.test.Run( verbose )
-end
+
+
+
+
+
+
+
+
 
 ---
 --- Sets all-in-on graphic profile : -1 to -5 for ogp, 1,2,3,4,7 for vanilla
@@ -71,10 +98,4 @@ function ogp.SetProfile( value )
 	else
 		ogp.LogError('in SetProfile, unknown value:' .. value)
 	end
-end
-
-
-local succeeded, error = pcall( ogp.Init )
-if not succeeded then
-	ogp.LogError( error )
 end

@@ -1,4 +1,4 @@
-
+if ogp.string then return end
 
 ogp.string = {}
 
