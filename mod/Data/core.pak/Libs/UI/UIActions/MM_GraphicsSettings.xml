@@ -9,18 +9,18 @@
   <Node Id="7" Class="UI:Functions:Settings:GetResolutionList" pos="1962,-18,0" flags="0">
    <Inputs />
   </Node>
-  <Node Id="29" Name="Setup_page" Class="_commentbox" pos="-1674,-2988.1797,0">
+  <Node Id="29" Name="Setup_page" Class="_commentbox" pos="-1674,-2988.1519,0">
    <Inputs TextSize="1" Color="0.27451,0.352941,0.705882" DisplayFilled="1" DisplayBox="1" SortPriority="16"/>
    <ResizeBorder X="0" Y="0" Width="7218" Height="3294"/>
-   <NodeSize Width="7218" Height="3328.3286"/>
+   <NodeSize Width="7218" Height="3328.3008"/>
   </Node>
-  <Node Id="39" Name="Handle_events" Class="_commentbox" pos="-1680,354.52008,0">
+  <Node Id="39" Name="Handle_events" Class="_commentbox" pos="-1680,354.54669,0">
    <Inputs TextSize="1" Color="0.27451,0.352941,0.705882" DisplayFilled="1" DisplayBox="1" SortPriority="16"/>
    <ResizeBorder X="0" Y="0" Width="4860" Height="4266"/>
-   <NodeSize Width="4860" Height="4300.3286"/>
+   <NodeSize Width="4860" Height="4300.3008"/>
   </Node>
   <Node Id="42" Class="UI:Functions:Settings:SetGraphics" pos="972,3510,0" flags="0">
-   <Inputs Resolution="0" Quality="1" FullScreen="0" VSync="0" FPS="0" Gamma="0" FOV="0"/>
+   <Inputs Resolution="0" Quality="4" FullScreen="0" VSync="0" FPS="0" Gamma="0" FOV="0"/>
   </Node>
   <Node Id="52" Class="UI:Functions:Settings:GetCurrGraphics" pos="1962,54,0" flags="0">
    <Inputs />
