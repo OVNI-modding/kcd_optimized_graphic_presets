@@ -36,16 +36,16 @@
   <Node Id="3806" Class="UI:Action:Start" pos="-6264,-6480,0">
    <Inputs UseAsState="1"/>
   </Node>
-  <Node Id="3808" Class="UI:Functions:MainMenu:AddButton" pos="-4428,-6354,0">
+  <Node Id="3808" Class="UI:Functions:MainMenu:AddButton" pos="-4212,-6426,0">
    <Inputs instanceID="-1" id="ID_APPLY_ADVANCED_GRAPHICS" containerIndex="1" uiText="@ui_apply" actionType="apply" tooltip="" disable="0" sound=""/>
   </Node>
-  <Node Id="3809" Class="UI:Functions:MainMenu:AddButton" pos="-3960,-6354,0">
+  <Node Id="3809" Class="UI:Functions:MainMenu:AddButton" pos="-3726,-6426,0">
    <Inputs instanceID="-1" id="IDD_Back" containerIndex="1" uiText="@ui_back" actionType="back" tooltip="" disable="0" sound=""/>
   </Node>
-  <Node Id="3811" Class="Debug:ExecuteString" pos="-4644,-6462,0">
+  <Node Id="3811" Class="Debug:ExecuteString" pos="-4590,-6588,0">
    <Inputs String="ogp_create_advanced_settings_buttons" NextFrame="0"/>
   </Node>
-  <Node Id="3812" Class="Time:FrameDelay" pos="-4644,-6354,0">
+  <Node Id="3812" Class="Time:FrameDelay" pos="-4482,-6426,0">
    <Inputs />
   </Node>
   <Node Id="3817" Class="UI:Events:MainMenu:OnButton" pos="-5634,-4464,0">
@@ -78,10 +78,10 @@
   <Node Id="3839" Class="UI:Functions:Settings:FinializeAdvancedSettings" pos="-1458,-6192,0" flags="0">
    <Inputs />
   </Node>
-  <Node Id="3840" Class="UI:Functions:MainMenu:GetChoice" pos="-5418,-6264,0">
+  <Node Id="3840" Class="UI:Functions:MainMenu:GetChoice" pos="-4266,-6156,0">
    <Inputs instanceID="-1" id="sys_spec_ogp_texture" containerIndex="0"/>
   </Node>
-  <Node Id="3841" Class="Mission:GameTokenSet" pos="-5040,-6264,0">
+  <Node Id="3841" Class="Mission:GameTokenSet" pos="-3888,-6156,0">
    <Inputs gametoken_Token="prevTexture" Value=""/>
   </Node>
   <Node Id="3842" Class="Mission:GameTokenGet" pos="-3348,-5598,0">
@@ -127,6 +127,7 @@
   <Edge nodeIn="3845" nodeOut="3806" portIn="in1" portOut="StartAction" enabled="1"/>
   <Edge nodeIn="3809" nodeOut="3808" portIn="Call" portOut="OnCall" enabled="1"/>
   <Edge nodeIn="3808" nodeOut="3812" portIn="Call" portOut="out" enabled="1"/>
+  <Edge nodeIn="3840" nodeOut="3812" portIn="Call" portOut="out" enabled="1"/>
   <Edge nodeIn="3825" nodeOut="3817" portIn="in3" portOut="onEvent" enabled="1"/>
   <Edge nodeIn="3820" nodeOut="3825" portIn="EndAction" portOut="out" enabled="1"/>
   <Edge nodeIn="3825" nodeOut="3830" portIn="in1" portOut="out" enabled="1"/>
@@ -142,7 +143,6 @@
   <Edge nodeIn="3801" nodeOut="3845" portIn="Call" portOut="out" enabled="1"/>
   <Edge nodeIn="3802" nodeOut="3845" portIn="Disabled" portOut="out" enabled="1"/>
   <Edge nodeIn="3829" nodeOut="3845" portIn="Call" portOut="out" enabled="1"/>
-  <Edge nodeIn="3840" nodeOut="3845" portIn="Call" portOut="out" enabled="1"/>
   <Edge nodeIn="3847" nodeOut="3846" portIn="Send" portOut="out" enabled="1"/>
   <Edge nodeIn="3825" nodeOut="3847" portIn="in2" portOut="OnEvent" enabled="1"/>
   <Edge nodeIn="3837" nodeOut="3848" portIn="in" portOut="OnEvent" enabled="1"/>
